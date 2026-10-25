@@ -1,0 +1,46 @@
+{
+ "prenda": "falda",
+ "talle": 38,
+ "opciones": {
+  "talle": 38,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 38,
+  "busto": 84,
+  "cadera": 82,
+  "posCadera": 12,
+  "sisa": 18,
+  "puno": 15,
+  "manga": 40,
+  "total": 56
+ },
+ "holgura": 8,
+ "largo": 58,
+ "manga": 30,
+ "piezas": [
+  {
+   "zona": "pretina",
+   "nombre": "Pretina",
+   "ancho": 70,
+   "alto": 5,
+   "cantidad": 1
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Panel",
+   "ancho": 45,
+   "alto": 46,
+   "cantidad": 2
+  },
+  {
+   "zona": "volado",
+   "nombre": "Volado",
+   "ancho": 122,
+   "alto": 12,
+   "cantidad": 1
+  }
+ ]
+}

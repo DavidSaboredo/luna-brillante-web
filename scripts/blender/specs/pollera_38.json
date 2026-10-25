@@ -1,0 +1,54 @@
+{
+ "prenda": "pollera",
+ "talle": 38,
+ "opciones": {
+  "talle": 38,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 38,
+  "busto": 84,
+  "cadera": 82,
+  "posCadera": 12,
+  "sisa": 18,
+  "puno": 15,
+  "manga": 40,
+  "total": 56
+ },
+ "holgura": 8,
+ "largo": 52,
+ "manga": 30,
+ "piezas": [
+  {
+   "zona": "pretina",
+   "nombre": "Pretina",
+   "ancho": 70,
+   "alto": 6,
+   "cantidad": 1
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Panel",
+   "ancho": 66,
+   "alto": 38,
+   "cantidad": 2,
+   "nota": "aumentos cada pocas hileras"
+  },
+  {
+   "zona": "volado",
+   "nombre": "Volado",
+   "ancho": 162,
+   "alto": 14,
+   "cantidad": 1
+  },
+  {
+   "zona": "lazo",
+   "nombre": "Lazo",
+   "ancho": 5,
+   "alto": 150,
+   "cantidad": 1
+  }
+ ]
+}

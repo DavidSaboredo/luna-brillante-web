@@ -1,0 +1,69 @@
+{
+ "prenda": "sueter",
+ "talle": 52,
+ "opciones": {
+  "talle": 52,
+  "manga": "larga",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 52,
+  "busto": 112,
+  "cadera": 116,
+  "posCadera": 16,
+  "sisa": 22,
+  "puno": 22,
+  "manga": 47,
+  "total": 65
+ },
+ "holgura": 8,
+ "largo": 69,
+ "manga": 47,
+ "piezas": [
+  {
+   "zona": "cuerpo",
+   "nombre": "Espalda",
+   "ancho": 60,
+   "alto": 68,
+   "cantidad": 1
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Delantero",
+   "ancho": 60,
+   "alto": 68,
+   "cantidad": 1
+  },
+  {
+   "zona": "mangas",
+   "nombre": "Manga",
+   "ancho": 42,
+   "alto": 47,
+   "cantidad": 2,
+   "nota": "baja hasta 25 cm en el puño"
+  },
+  {
+   "zona": "cuello",
+   "nombre": "Cuello",
+   "ancho": 48,
+   "alto": 8,
+   "cantidad": 1,
+   "nota": "se levantan puntos alrededor del escote"
+  },
+  {
+   "zona": "puños",
+   "nombre": "Puño",
+   "ancho": 24,
+   "alto": 6,
+   "cantidad": 2
+  },
+  {
+   "zona": "borde",
+   "nombre": "Borde",
+   "ancho": 120,
+   "alto": 6,
+   "cantidad": 1
+  }
+ ]
+}

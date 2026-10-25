@@ -1,0 +1,49 @@
+{
+ "prenda": "bikini",
+ "talle": 42,
+ "opciones": {
+  "talle": 42,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 42,
+  "busto": 88,
+  "cadera": 90,
+  "posCadera": 14,
+  "sisa": 19,
+  "puno": 16,
+  "manga": 43,
+  "total": 59
+ },
+ "holgura": 8,
+ "largo": 20,
+ "manga": 32,
+ "piezas": [
+  {
+   "zona": "tazas",
+   "nombre": "Taza",
+   "ancho": 15,
+   "alto": 13,
+   "cantidad": 2,
+   "nota": "triángulo: aumentando desde la punta"
+  },
+  {
+   "zona": "bombacha",
+   "nombre": "Bombacha",
+   "ancho": 23,
+   "alto": 20,
+   "cantidad": 1,
+   "nota": "empieza en la entrepierna"
+  },
+  {
+   "zona": "tiras",
+   "nombre": "Tira",
+   "ancho": 3,
+   "alto": 65,
+   "cantidad": 4,
+   "nota": "cordones de cadeneta o punto bajo"
+  }
+ ]
+}

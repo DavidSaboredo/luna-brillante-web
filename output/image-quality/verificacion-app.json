@@ -1,0 +1,32 @@
+{
+  "build": "npm run build: correcto (243 p?ginas)",
+  "lint": "sin errores; una advertencia previa en scripts/revista/dibujo.mjs",
+  "comparador": "JavaScript v?lido",
+  "rutas": [
+    {
+      "ruta": "/puntos/single_crochet",
+      "estado": 200,
+      "usaMejoradas": true
+    },
+    {
+      "ruta": "/puntos/wheel_filet",
+      "estado": 200,
+      "usaMejoradas": true
+    },
+    {
+      "ruta": "/proyectos/blusa-brisa-de-verano",
+      "estado": 200,
+      "usaMejoradas": true
+    },
+    {
+      "ruta": "/guia",
+      "estado": 200,
+      "usaMejoradas": true
+    },
+    {
+      "ruta": "/crear",
+      "estado": 200,
+      "usaMejoradas": true
+    }
+  ]
+}

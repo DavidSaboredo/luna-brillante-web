@@ -1,0 +1,107 @@
+{
+  "chain": {
+    "src": "/revista/pasos/chain-1.webp",
+    "tipo": "foto",
+    "titulo": "Punto cadena",
+    "pasos": [
+      "Para empezar una cadeneta, pasá la hebra 2 veces (2 lazadas) alrededor de la aguja, en sentido contrario a las agujas del reloj.",
+      "Pasá la aguja por el centro de la lazada. Tomá otra lazada, pasala a través del punto anterior y sujetala. Así se obtiene el nudo inicial.",
+      "A partir del nudo inicial se hace la cantidad necesaria de puntos cadena."
+    ],
+    "extra": "Para contar las cadenas: los puntos de una cadeneta se cuentan desde el 1.º, a partir del punto que está ubicado en la aguja hacia atrás. Para controlar la tensión conviene deslizar la cadena hacia abajo, entre el pulgar y el índice, a medida que avanzás. Si la cadeneta inicial queda demasiado larga, podés deshacer el nudo inicial y destejer los puntos cadena de más."
+  },
+  "single_crochet": {
+    "src": "/revista/pasos/single_crochet-1.webp",
+    "tipo": "foto",
+    "titulo": "Medio punto (punto bajo)",
+    "pasos": [
+      "Tomando todo el punto, clavá la aguja en el 1.º punto siguiente y hacé una lazada.",
+      "Pasala a través del punto (quedan 2 puntos en la aguja).",
+      "Tomá otra lazada y pasala por los 2 puntos juntos. Así queda formado el medio punto."
+    ]
+  },
+  "half_double_crochet": {
+    "src": "/revista/pasos/half_double_crochet-1.webp",
+    "tipo": "foto",
+    "titulo": "Media vareta",
+    "pasos": [
+      "Tomando todo el punto, hacé una lazada y clavá la aguja en el punto siguiente de la hilera subyacente.",
+      "Hacé una lazada y pasala solo a través de la labor.",
+      "Tomá otra lazada y pasala por los 3 puntos juntos."
+    ]
+  },
+  "double_crochet": {
+    "src": "/revista/pasos/double_crochet-1.webp",
+    "tipo": "foto",
+    "titulo": "Punto vareta, tomando todo el punto",
+    "pasos": [
+      "Tomá una lazada y clavá la aguja tomando todo el punto de la hilera anterior. Sacá una lazada solo a través del punto de base.",
+      "Tomá otra lazada y sacá 2 puntos.",
+      "Volvé a tomar una lazada y pasala a través de los 2 puntos que están en la aguja."
+    ]
+  },
+  "treble_crochet": {
+    "src": "/revista/pasos/treble_crochet-1.webp",
+    "tipo": "esquema",
+    "titulo": "Punto vareta doble",
+    "pasos": [
+      "Hacé varios puntos cadena. Tomá 2 veces la hebra y picá la aguja en la 6.ª cadena. Sacá la lazada: quedan 4 puntos en la aguja.",
+      "Tomá la hebra y sacá 2 puntos; quedan 3 puntos en la aguja.",
+      "Tomá la hebra nuevamente y sacá 2 puntos. Quedan 3 puntos en la aguja. Hacé el procedimiento 2 veces más."
+    ],
+    "extra": "Varetas triple y cuádruple: se hacen igual que la vareta doble, pero empezando con 3 o 4 lazadas (según corresponda) en la aguja, e introduciéndola en las 7.ª y 8.ª cadenas. Para finalizar se van sacando las lazadas de a 2."
+  },
+  "back_post_double_crochet": {
+    "src": "/revista/pasos/back_post_double_crochet-1.webp",
+    "tipo": "foto",
+    "titulo": "Punto vareta en relieve tomado por detrás",
+    "pasos": [
+      "Tomá 1 lazada con la aguja e introducila de atrás hacia adelante, envolviendo el punto correspondiente de la hilera anterior.",
+      "Tomá una lazada y sacala a través del punto; tomá otra lazada.",
+      "Terminá como un punto vareta común."
+    ]
+  },
+  "front_post_double_crochet": {
+    "src": "/revista/pasos/front_post_double_crochet-1.webp",
+    "tipo": "foto",
+    "titulo": "Punto vareta en relieve tomado por delante",
+    "pasos": [
+      "Hacé una lazada y clavá la aguja de adelante hacia atrás, envolviendo el punto de la hilera anterior.",
+      "Tomá una nueva lazada y pasala a través del punto. Tomá otra lazada.",
+      "Terminá el punto de la forma habitual."
+    ]
+  },
+  "dc_increase": {
+    "src": "/revista/pasos/dc_increase-1.webp",
+    "tipo": "esquema",
+    "titulo": "Aumentos",
+    "pasos": ["Tejé 2 puntos en un mismo punto de base. Ej.: mangas, cuerpo, cuellos, etc."],
+    "extra": "Para aumentar varios puntos sobre 1 lateral hay que hacer tantos puntos cadena como aumentos se requieran, más los puntos necesarios para levantar a la hilera siguiente; después se teje sobre esas cadenas con el punto que se está haciendo."
+  },
+  "dc2tog": {
+    "src": "/revista/pasos/dc2tog-1.webp",
+    "tipo": "esquema",
+    "titulo": "Disminuciones",
+    "pasos": ["Tejé 1 punto y, sin terminarlo, hacé otro, también sin terminarlo, en el siguiente punto de base. Luego tomá una lazada con la aguja y pasala dentro de los 3 puntos."]
+  },
+  "reverse_single_crochet": {
+    "src": "/revista/pasos/reverse_single_crochet-1.webp",
+    "tipo": "esquema",
+    "titulo": "Punto cangrejo",
+    "pasos": [
+      "Tomá el último punto de la hilera anterior. Picá la aguja en el penúltimo punto y sacá una lazada hacia adelante. Así quedan 2 puntos en la aguja.",
+      "Tomá una lazada sobre la aguja y con ella cerrá los 2 puntos que tenías en la aguja, como si fuese 1 medio punto.",
+      "Clavá la aguja en el siguiente punto (de izquierda a derecha) y repetí los pasos 1 y 2."
+    ]
+  },
+  "slip_stitch": {
+    "src": "/revista/pasos/slip_stitch-1.webp",
+    "tipo": "foto",
+    "titulo": "Punto pasado (enano, bajo o deslizado)",
+    "pasos": [
+      "Clavá la aguja en la 2.ª cadena y hacé una lazada.",
+      "Pasá la hebra a través del punto de base y del que está en la aguja.",
+      "Punto terminado. Se utiliza para hacer costuras, terminaciones, bordados, etc."
+    ]
+  }
+}

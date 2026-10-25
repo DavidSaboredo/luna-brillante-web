@@ -1,0 +1,46 @@
+{
+ "prenda": "bufanda",
+ "talle": 44,
+ "opciones": {
+  "talle": 44,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 44,
+  "busto": 92,
+  "cadera": 94,
+  "posCadera": 14,
+  "sisa": 20,
+  "puno": 17,
+  "manga": 44,
+  "total": 60
+ },
+ "holgura": 8,
+ "largo": 170,
+ "manga": 33,
+ "piezas": [
+  {
+   "zona": "cuerpo",
+   "nombre": "Bufanda",
+   "ancho": 22,
+   "alto": 170,
+   "cantidad": 1
+  },
+  {
+   "zona": "borde",
+   "nombre": "Borde",
+   "ancho": 3,
+   "alto": 400,
+   "cantidad": 1
+  },
+  {
+   "zona": "flecos",
+   "nombre": "Flecos",
+   "ancho": 22,
+   "alto": 15,
+   "cantidad": 2
+  }
+ ]
+}

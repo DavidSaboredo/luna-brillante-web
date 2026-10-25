@@ -1,0 +1,61 @@
+{
+ "prenda": "blusa",
+ "talle": 50,
+ "opciones": {
+  "talle": 50,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 50,
+  "busto": 108,
+  "cadera": 112,
+  "posCadera": 15,
+  "sisa": 22,
+  "puno": 20,
+  "manga": 46,
+  "total": 63
+ },
+ "holgura": 8,
+ "largo": 63,
+ "manga": 35,
+ "piezas": [
+  {
+   "zona": "mangas",
+   "nombre": "Manga",
+   "ancho": 41,
+   "alto": 35,
+   "cantidad": 2,
+   "nota": "baja hasta 23 cm en el puño"
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Espalda",
+   "ancho": 58,
+   "alto": 53,
+   "cantidad": 1
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Delantero",
+   "ancho": 58,
+   "alto": 53,
+   "cantidad": 1
+  },
+  {
+   "zona": "canesu",
+   "nombre": "Canesú",
+   "ancho": 58,
+   "alto": 9,
+   "cantidad": 2
+  },
+  {
+   "zona": "borde",
+   "nombre": "Borde",
+   "ancho": 116,
+   "alto": 5,
+   "cantidad": 1
+  }
+ ]
+}

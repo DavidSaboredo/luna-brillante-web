@@ -1,0 +1,54 @@
+{
+ "prenda": "musculosa",
+ "talle": 48,
+ "opciones": {
+  "talle": 48,
+  "manga": "sin",
+  "largo": "medio",
+  "ajuste": "ajustado"
+ },
+ "medidas": {
+  "talle": 48,
+  "busto": 102,
+  "cadera": 105,
+  "posCadera": 15,
+  "sisa": 21,
+  "puno": 19,
+  "manga": 46,
+  "total": 61
+ },
+ "holgura": 2,
+ "largo": 53,
+ "manga": 0,
+ "piezas": [
+  {
+   "zona": "cuerpo",
+   "nombre": "Espalda",
+   "ancho": 52,
+   "alto": 41,
+   "cantidad": 1
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Delantero",
+   "ancho": 52,
+   "alto": 41,
+   "cantidad": 1
+  },
+  {
+   "zona": "breteles",
+   "nombre": "Bretel",
+   "ancho": 4,
+   "alto": 45,
+   "cantidad": 2,
+   "nota": "4 o 5 cadenas de ancho, del largo deseado"
+  },
+  {
+   "zona": "borde",
+   "nombre": "Borde",
+   "ancho": 104,
+   "alto": 3,
+   "cantidad": 1
+  }
+ ]
+}

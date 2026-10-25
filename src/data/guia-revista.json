@@ -1,0 +1,85 @@
+{
+  "equivalencias": [
+    { "revista": "Punto cadena · cadeneta", "abrev": "p.c. · c.", "app": "cad", "punto": "chain" },
+    { "revista": "Punto pasado (enano, bajo o deslizado)", "abrev": "p.e.", "app": "pr", "punto": "slip_stitch" },
+    { "revista": "Medio punto", "abrev": "m.p.", "app": "pb (punto bajo)", "punto": "single_crochet" },
+    { "revista": "Punto media vareta", "abrev": "m.v.", "app": "mpa (medio punto alto)", "punto": "half_double_crochet" },
+    { "revista": "Punto vareta", "abrev": "v.", "app": "pa (punto alto)", "punto": "double_crochet" },
+    { "revista": "Punto vareta doble", "abrev": "v.d.", "app": "pad (punto alto doble)", "punto": "treble_crochet" },
+    { "revista": "Punto vareta triple", "abrev": "v.t.", "app": "pat (punto alto triple)", "punto": "double_treble_crochet" },
+    { "revista": "Punto vareta cuádruple", "abrev": "—", "app": "pac (punto alto cuádruple)", "punto": "triple_treble_crochet" },
+    { "revista": "Punto vareta en relieve por delante", "abrev": "—", "app": "pa rel ad", "punto": "front_post_double_crochet" },
+    { "revista": "Punto vareta en relieve por detrás", "abrev": "—", "app": "pa rel at", "punto": "back_post_double_crochet" },
+    { "revista": "Punto cangrejo", "abrev": "—", "app": "pc (punto cangrejo)", "punto": "reverse_single_crochet" },
+    { "revista": "Picot: 3 p. cadena y 1 p. pasado sobre el 3.er p. contado desde la aguja", "abrev": "—", "app": "picot", "punto": "picot" }
+  ],
+  "palabras": [
+    { "palabra": "Hilera (h.)", "significa": "Cada fila de puntos. Las «hileras de ida y vuelta» son las que se tejen girando la labor." },
+    { "palabra": "Punto (p.)", "significa": "Cada puntada. También se dice «punto de base» al punto de la hilera anterior donde se teje." },
+    { "palabra": "Lazada", "significa": "El hilo que se toma con la aguja («tomar una lazada»). Los puntos que quedan en la aguja se cuentan como lazadas." },
+    { "palabra": "Clavar o picar la aguja", "significa": "Meter la aguja en un punto para tejer en él." },
+    { "palabra": "Sacar una lazada", "significa": "Pasar el hilo por el punto hacia el frente, sin cerrar todavía." },
+    { "palabra": "Hilera subyacente", "significa": "La hilera de abajo, la que ya está tejida." },
+    { "palabra": "Dar altura a la hilera", "significa": "Al girar, tejer cadenas para que el primer punto llegue a la altura del resto." },
+    { "palabra": "Levantar", "significa": "Hacer las cadenetas de giro que suben la labor a la hilera siguiente." },
+    { "palabra": "Fantasía", "significa": "El punto decorativo principal de una prenda, que se repite según el diagrama." },
+    { "palabra": "Esquema · molde", "significa": "El dibujo de la prenda con sus medidas (esquema) o el patrón de papel sobre el que se apoyan los paños (molde)." },
+    { "palabra": "Paño", "significa": "Cada pieza tejida de una prenda: espalda, delantero, manga." },
+    { "palabra": "Orillo", "significa": "El borde lateral de la labor." },
+    { "palabra": "Sisa", "significa": "La curva de la prenda donde se une la manga." },
+    { "palabra": "Presilla", "significa": "Ojal tejido con cadenetas para pasar un botón." },
+    { "palabra": "Hilado", "significa": "El hilo o la lana con la que se teje." },
+    { "palabra": "Tejedoras zurdas", "significa": "Pueden leer los diagramas colocando un espejo sobre el lateral izquierdo." }
+  ],
+  "alturaHilera": [
+    { "punto": "Medio punto", "cadenas": 1 },
+    { "punto": "Media vareta", "cadenas": 2 },
+    { "punto": "Vareta", "cadenas": 3 },
+    { "punto": "Vareta doble", "cadenas": 4 }
+  ],
+  "tablaMedidas": {
+    "titulo": "Tabla de medidas para mujeres (en cm)",
+    "nota": "Las medidas son estimativas. Todos los proyectos de las revistas se hicieron en un solo talle y pueden variar según el hilado, la aguja y la mano de la tejedora.",
+    "columnas": ["Talle", "Contorno busto", "Contorno cadera", "Posición cadera", "Sisa", "Contorno puño", "Largo manga", "Largo total"],
+    "filas": [
+      [38, 84, 82, 12, 18, 15, 40, 56],
+      [40, 84, 86, 13, 19, 16, 42, 57],
+      [42, 88, 90, 14, 19, 16, 43, 59],
+      [44, 92, 94, 14, 20, 17, 44, 60],
+      [46, 98, 98, 14, 21, 18, 46, 60],
+      [48, 102, 105, 15, 21, 19, 46, 61],
+      [50, 108, 112, 15, 22, 20, 46, 63],
+      [52, 112, 116, 16, 22, 22, 47, 65],
+      [54, 118, 120, 17, 23, 23, 47, 66]
+    ]
+  },
+  "muestra": [
+    "Antes de empezar un tejido, hacé una muestra: un cuadrado de unos 15 cm de lado con la aguja y el hilado elegidos para la prenda.",
+    "Dejala reposar durante un día para que el tejido se asiente, y después medila.",
+    "Tomá como parámetro 10 cm de tejido lineal y contá cuántos puntos caben en esa medida.",
+    "La cuenta es una regla de tres simple: dividí la cantidad de puntos por 10 y multiplicá el resultado por los centímetros que necesitás para empezar tu labor.",
+    "Si tejés flojito, elegí una aguja más fina; si tejés apretado, una más gruesa. El grosor de la hebra marca el cabezal de la aguja: hebras finas, cabezal fino; medianas, cabezales medianos; gruesas, agujas de cabezales gruesos."
+  ],
+  "lecturaDiagramas": [
+    "Los distintos puntos de tejido están representados por signos que mantienen siempre el mismo color.",
+    "El diagrama se lee de abajo hacia arriba. La cadena base se interpreta de izquierda a derecha; las hileras impares, de derecha a izquierda, y las pares, de izquierda a derecha.",
+    "En los tejidos en redondo, la lectura se hace desde el centro, en sentido contrario a las agujas del reloj.",
+    "Si sos zurda, podés leer los diagramas colocando un espejo sobre el lateral izquierdo."
+  ],
+  "terminaciones": [
+    "Para evitar que las disminuciones queden escalonadas (por ejemplo en la cintura o en las sisas), si el punto lo permite, hacelas a 2 o 3 puntos del orillo. Si necesitás disminuir 2 puntos, hacelo como muestra la figura 2 de la revista.",
+    "Para que los aumentos no queden escalonados, si el punto lo permite, hacelos a 2 o 3 puntos del orillo."
+  ],
+  "moldes": "Conviene hacer un molde de papel con las medidas de la prenda y apoyar los paños sobre él a medida que los vas tejiendo. Así corregís los errores a tiempo.",
+  "agujaHebra": [
+    { "titulo": "Cómo tomar la aguja · opción 1", "texto": "Tomá la aguja con una mano como si fuera un lápiz." },
+    { "titulo": "Cómo tomar la aguja · opción 2", "texto": "Poné el dedo índice sobre la aguja y el pulgar debajo." },
+    { "titulo": "Cómo tomar la hebra", "texto": "Sostené la hebra con la otra mano y tensala." }
+  ],
+  "unir": [
+    { "titulo": "Con aguja de crochet y punto pasado", "texto": "Enfrentá los derechos de los paños que querés unir y tomá una lazada con el mismo hilado de la prenda. Pasala a través de la lazada anterior, para formar el punto pasado, y repetí hasta terminar la unión." },
+    { "titulo": "Con aguja de costura, por el revés", "texto": "Enfrentá los derechos y enhebrá una aguja con hilado al tono de la prenda. Hacé pequeñas puntadas de punto atrás (de atrás hacia delante)." },
+    { "titulo": "Con aguja de costura, del derecho", "texto": "Ubicá los 2 paños del derecho en forma paralela y, con hilado al tono, hacé pequeñas puntadas tomando 1 punto de cada paño en forma de zigzag. Tirá del hilado para cerrar la costura: es la manera más prolija de unir los paños, pero no todos los puntos admiten esta unión." },
+    { "titulo": "Unión de motivos cuadrados", "texto": "Del derecho, con costura invisible: ubicá ambos motivos en forma paralela y hacé pequeñas puntadas en zigzag; luego de varias puntadas, tirá del hilo y la costura queda invisible. Del revés, con punto pasado: enfrentá los derechos de los motivos y tejé en punto pasado con un hilo al tono." }
+  ]
+}

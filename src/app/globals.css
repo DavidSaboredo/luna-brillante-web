@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Paleta Luna Brillante: pasteles suaves sobre fondo crema */
+@theme {
+  --color-crema: #fbf7f4;
+  --color-papel: #ffffff;
+  --color-tinta: #4a4458;
+  --color-tinta-suave: #8a8399;
+  --color-borde: #ede6ee;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-lavanda: #d9cdf0;
+  --color-lavanda-fuerte: #8e7cc3;
+  --color-rosa: #f6d5dc;
+  --color-rosa-fuerte: #d98a9c;
+  --color-menta: #cfe8dc;
+  --color-menta-fuerte: #6fae93;
+  --color-manteca: #f7e9bd;
+  --color-cielo: #d3e4f3;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-titulo: var(--font-cormorant);
+  --font-sans: var(--font-nunito);
+
+  --radius-suave: 1.25rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-crema);
+  color: var(--color-tinta);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-titulo), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Tarjeta base reutilizable */
+@utility tarjeta {
+  background: var(--color-papel);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radius-suave);
+  box-shadow: 0 4px 20px -12px rgb(142 124 195 / 0.25);
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-borde);
+  background: var(--color-papel);
+  transition: all 0.15s ease;
+}
+
+/* Texto generado por la IA */
+.markdown h2,
+.markdown h3 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1.25rem;
+}
+.markdown p {
+  margin: 0.45rem 0;
+}
+.markdown ul,
+.markdown ol {
+  margin: 0.4rem 0 0.4rem 1.2rem;
+}
+.markdown ul {
+  list-style: disc;
+}
+.markdown ol {
+  list-style: decimal;
+}
+.markdown li {
+  margin: 0.2rem 0;
+}
+.markdown strong {
+  color: var(--color-lavanda-fuerte);
+}
+.markdown table {
+  margin: 0.6rem 0;
+  font-size: 0.9rem;
+  border-collapse: collapse;
+}
+.markdown th,
+.markdown td {
+  border: 1px solid var(--color-borde);
+  padding: 0.3rem 0.6rem;
 }

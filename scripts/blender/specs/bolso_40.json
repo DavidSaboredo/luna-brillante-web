@@ -1,0 +1,55 @@
+{
+ "prenda": "bolso",
+ "talle": 40,
+ "opciones": {
+  "talle": 40,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 40,
+  "busto": 84,
+  "cadera": 86,
+  "posCadera": 13,
+  "sisa": 19,
+  "puno": 16,
+  "manga": 42,
+  "total": 57
+ },
+ "holgura": 8,
+ "largo": 24,
+ "manga": 32,
+ "piezas": [
+  {
+   "zona": "asa",
+   "nombre": "Asa",
+   "ancho": 3,
+   "alto": 55,
+   "cantidad": 2,
+   "nota": "o asas de cuero con herrajes"
+  },
+  {
+   "zona": "cuerpo",
+   "nombre": "Frente o espalda",
+   "ancho": 32,
+   "alto": 24,
+   "cantidad": 2
+  },
+  {
+   "zona": "solapa",
+   "nombre": "Borde",
+   "ancho": 90,
+   "alto": 5,
+   "cantidad": 1,
+   "nota": "4 o 5 vueltas de punto alto"
+  },
+  {
+   "zona": "base",
+   "nombre": "Base",
+   "ancho": 32,
+   "alto": 12,
+   "cantidad": 1
+  }
+ ]
+}

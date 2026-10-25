@@ -1,0 +1,140 @@
+{
+  "filet_mesh": {
+    "intro": "El filet se arma con espacios (huecos) y bloques (llenos). Este es el espacio: 2 cadenetas entre dos pa.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 3 + 5", "d": "Armá cadenetas en múltiplo de 3 y sumá 5. Cada espacio usa 3 cadenetas de base.", "n": "3n + 5 cad." },
+      { "t": "Fila 1", "r": "pa en la 8.ª cad, *2 cad, saltar 2, 1 pa en la siguiente*", "d": "Contá 8 cadenetas desde la aguja y tejé 1 pa en la 8.ª. Después, 2 cad, salteá 2 cadenetas de la base y 1 pa en la siguiente. Repetí hasta el final.", "n": "Fila de espacios." },
+      { "t": "Fila 2", "r": "5 cad, girar, *pa en el pa siguiente, 2 cad*; pa en la 3.ª cad del giro", "d": "Hacé 5 cad (cuentan como 1 pa y 1 espacio), girá. Tejé 1 pa en el pa siguiente, 2 cad, y así hasta el final. Cerrá con 1 pa en la 3.ª cad de las 5 cad del giro.", "n": "Mismos espacios." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Todas las filas son iguales: los pa quedan uno arriba del otro y los espacios forman cuadraditos.", "n": "Malla de cuadraditos." }
+    ]
+  },
+  "filet_block": {
+    "intro": "El bloque es el cuadradito «lleno» del filet. Es lo que dibuja la figura.",
+    "vueltas": [
+      { "t": "Bloque sobre un espacio", "r": "2 pa en el espacio de 2 cad, 1 pa en el pa siguiente", "d": "Cuando abajo hay un espacio, tejé 2 pa dentro del espacio de 2 cad y 1 pa en el pa que viene. Así el bloque queda de 3 pa.", "n": "Bloque de 3 pa." },
+      { "t": "Bloque sobre otro bloque", "r": "1 pa en cada uno de los 3 pa", "d": "Si abajo ya había un bloque, tejé 1 pa en cada uno de sus 3 pa.", "n": "Bloque de 3 pa." },
+      { "t": "Leer el gráfico", "r": "casilla llena = bloque · vacía = espacio", "d": "Cada cuadradito del gráfico es un bloque (lleno) o un espacio (vacío). Leé las filas de derecha a izquierda en las de ida y de izquierda a derecha en las de vuelta.", "n": "Dibujo en relieve." }
+    ]
+  },
+  "solomon_knot": {
+    "intro": "Un nudo largo y abierto que se teje de a uno y se ancla con pb. Hace encajes livianos y bufandas muy rápidas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Estirar la lazada unos 2 cm", "d": "Con la lazada de la aguja, tirá hacia arriba hasta que mida unos 2 cm.", "n": "Lazada larga." },
+      { "t": "Paso 2", "r": "Hilo y pasar por la lazada larga", "d": "Echá hilo y pasalo por esa lazada larga (como una cadeneta).", "n": "1 lazada." },
+      { "t": "Paso 3", "r": "pb en la hebra trasera de la lazada larga", "d": "Mirá la lazada larga que quedó: tiene dos hebras. Metí la aguja en la hebra trasera, sacá lazada y cerrá como un pb.", "n": "1 nudo." },
+      { "t": "Repetir y anclar", "r": "Anclar con pb cada 2 nudos", "d": "Repetí. Para unir con la fila de abajo, hacé 1 pb cada dos nudos.", "n": "Encaje de nudos." }
+    ]
+  },
+  "broomstick_lace": {
+    "intro": "Se arma con una aguja gruesa (o un palo de escoba) que sostiene las lazadas grandes, y se cierra de a 5 con el ganchillo.",
+    "vueltas": [
+      { "t": "Fila base", "r": "pb en cada cad", "d": "Armá una cadena base y tejé una fila de pb. Es el «piso» donde van a nacer las lazadas.", "n": "Fila de pb." },
+      { "t": "Cargar lazadas", "r": "Sacar lazada de cada punto y pasarla a la aguja gruesa", "d": "Estirá la lazada del ganchillo y pasala a la aguja gruesa. Después sacá una lazada de cada punto de la fila y pasala también a la aguja gruesa.", "n": "Una lazada por punto." },
+      { "t": "Cerrar de a 5", "r": "Insertar por 5 lazadas juntas, 1 cad, 5 pb en ese grupo", "d": "Con el ganchillo tomá 5 lazadas de la aguja gruesa y sacalas, tirá una hebra de hilo, hacé 1 cad y tejé 5 pb dentro del grupo.", "n": "Grupo de 5 lazadas cerrado." },
+      { "t": "Repetir", "r": "Cada grupo de 5 lazadas", "d": "Seguí con los otros grupos de 5. Se puede repetir la fila base entre medio.", "n": "Encaje de escoba." }
+    ]
+  },
+  "granny_square": {
+    "intro": "El cuadrado de la abuela: se teje en redondo desde el centro, vuelta a vuelta. Es la base de mantas, chalecos y bolsos.",
+    "vueltas": [
+      { "t": "Inicio", "r": "4 cad unidas en anillo (o anillo mágico)", "d": "Hacé 4 cadenetas y unílas con 1 pr en la primera para formar un aro. También podés empezar con anillo mágico.", "n": "Aro de 4 cad." },
+      { "t": "Vuelta 1", "r": "3 cad (=1 pa), 2 pa, 2 cad, *3 pa, 2 cad* 3 veces; pr en la 3.ª cad", "d": "3 cad cuentan como el primer pa. Tejé 2 pa más dentro del aro, 2 cad (esquina), y repetí 3 veces «3 pa, 2 cad». Cerrá con 1 pr en la 3.ª cad del inicio.", "n": "4 grupos de 3 pa y 4 esquinas." },
+      { "t": "Vuelta 2", "r": "pr hasta el espacio de esquina; en cada esquina (3 pa, 2 cad, 3 pa), 1 cad entre esquinas", "d": "Hacé pr hasta llegar al hueco de 2 cad. En cada esquina, 3 pa, 2 cad y 3 pa. Entre esquina y esquina, 1 cad.", "n": "Un cuadrado más grande." },
+      { "t": "Vuelta 3 y siguientes", "r": "Esquinas igual · en los lados 3 pa en cada espacio de 1 cad, con 1 cad entre grupos", "d": "Las esquinas siempre son (3 pa, 2 cad, 3 pa). En los lados, 3 pa dentro del espacio de 1 cad de la vuelta de abajo y 1 cad entre grupos. Cada vuelta suma un grupo por lado.", "n": "Cuadrado de lados parejos." }
+    ]
+  },
+  "corner_to_corner": {
+    "intro": "Se teje en diagonal, mosaico a mosaico, de una esquina a la opuesta. Muy usado para gráficos con colores.",
+    "vueltas": [
+      { "t": "Fila 1", "r": "6 cad, 1 pa en la 4.ª cad desde la aguja y en las 2 siguientes", "d": "Hacé 6 cad y tejé 1 pa en la 4.ª cadeneta y en las 2 siguientes. Ese es el primer mosaico.", "n": "1 mosaico." },
+      { "t": "Fila 2 (aumentando)", "r": "6 cad, pa en la 4.ª cad y 2 siguientes; pr en el espacio de 3 cad del mosaico anterior, 3 cad, 3 pa en ese espacio", "d": "Girá. Armá un mosaico nuevo con 6 cad y 3 pa; uní con 1 pr en el espacio de 3 cad del mosaico de abajo; tejé 3 cad y 3 pa en ese mismo espacio.", "n": "2 mosaicos." },
+      { "t": "Filas siguientes", "r": "Agregar un mosaico por fila", "d": "Cada fila suma un mosaico hasta llegar al ancho que querés. Después disminuí con pr para cerrar la esquina opuesta.", "n": "Diagonal creciente." },
+      { "t": "Color", "r": "1 casilla = 1 mosaico", "d": "Cambiá de color según el gráfico: cada cuadradito es un mosaico.", "n": "Dibujo en diagonal." }
+    ]
+  },
+  "picot": {
+    "intro": "Una puntita que adorna los bordes.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "3 cad", "d": "Tejé 3 cadenetas.", "n": "3 cad." },
+      { "t": "Paso 2", "r": "1 pr en la 3.ª cad desde la aguja", "d": "Metí la aguja en la primera de esas 3 cad (la 3.ª contando desde la aguja) o en la parte superior del punto anterior, y hacé 1 pr: el nudito cierra la puntita.", "n": "1 picot." },
+      { "t": "Seguir", "r": "Seguir con el borde", "d": "Continuá con los puntos del borde.", "n": "Borde con picots." }
+    ]
+  },
+  "reverse_single_crochet": {
+    "intro": "Es un pb que se teje hacia atrás, de izquierda a derecha, sin girar. Hace un borde retorcido, prolijo y firme.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Sin girar, insertar en el punto de la derecha", "d": "No gires la labor. Metí la aguja en el punto que está a la derecha del que acabás de hacer.", "n": "Aguja a la derecha." },
+      { "t": "Paso 2", "r": "Sacar lazada por debajo de la lazada de la aguja", "d": "Echá hilo y sacá una lazada (2 lazadas en la aguja).", "n": "2 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por las 2", "d": "Echá hilo y cerrá como un pb.", "n": "1 pc." },
+      { "t": "Avanzar", "r": "Un punto a la derecha cada vez", "d": "Seguí avanzando hacia la derecha, un punto a la vez.", "n": "Borde cangrejo." }
+    ]
+  },
+  "scallop_edging": {
+    "intro": "Un borde de conchitas que se aplica sobre una pieza ya terminada.",
+    "vueltas": [
+      { "t": "Preparación", "r": "Borde con múltiplo de 6 + 1 puntos", "d": "Contá los puntos del borde: tienen que ser un múltiplo de 6 más 1.", "n": "6n + 1 puntos." },
+      { "t": "Inicio", "r": "pb en el primero", "d": "Tejé 1 pb en el primer punto.", "n": "1 pb." },
+      { "t": "Concha", "r": "*Saltar 2, 5 pa en el siguiente, saltar 2, pb en el siguiente*", "d": "Salteá 2 puntos, tejé 5 pa en el siguiente (la concha), salteá 2 y 1 pb. Repetí.", "n": "Conchas." },
+      { "t": "Esquinas", "r": "7 pa en la concha", "d": "En las esquinas, la concha lleva 7 pa en vez de 5 para que el borde gire sin tirar.", "n": "Esquina redondeada." }
+    ]
+  },
+  "bullion_stitch": {
+    "intro": "Un punto largo y enroscado como un gusanito. Se ve en flores y en bordes.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Enrollar el hilo 7 a 10 veces en la aguja", "d": "Dale entre 7 y 10 vueltas al hilo alrededor de la aguja, sin apretar.", "n": "Aguja envuelta." },
+      { "t": "Paso 2", "r": "Insertar en el punto y sacar lazada", "d": "Metí la aguja en el punto y sacá una lazada.", "n": "Lazada larga." },
+      { "t": "Paso 3", "r": "Hilo y pasar con cuidado por todas las vueltas", "d": "Sosteniendo las vueltas con los dedos, echá hilo y pasalo por todas.", "n": "Aguja liberada." },
+      { "t": "Paso 4", "r": "Hilo y pasar por la lazada restante (o 1 cad)", "d": "Echá hilo y pasá por la lazada restante, o cerrá con 1 cad.", "n": "1 roc." }
+    ]
+  },
+  "loop_stitch": {
+    "intro": "Un punto que deja bucles colgando por el revés: da textura de felpa o de lana de oveja.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Insertar en el punto", "d": "Metí la aguja en el punto.", "n": "Aguja dentro." },
+      { "t": "Paso 2", "r": "Hilo por encima de un dedo", "d": "Pasá el hilo por encima de un dedo para formar el bucle y tomá el hilo de atrás del dedo con la aguja.", "n": "Bucle sobre el dedo." },
+      { "t": "Paso 3", "r": "Sacar las 2 hebras por el punto", "d": "Sacá las dos hebras por el punto (3 lazadas en la aguja).", "n": "3 lazadas." },
+      { "t": "Paso 4", "r": "Hilo y pasar por las 3 · soltar el dedo", "d": "Echá hilo y pasá por las 3 lazadas; después soltá el dedo.", "n": "1 riz." }
+    ]
+  },
+  "tunisian_simple_stitch": {
+    "intro": "En el tunecino se teje en dos tiempos: la ida carga lazadas en la aguja y la vuelta las descarga. Nunca se gira la labor.",
+    "vueltas": [
+      { "t": "Ida", "r": "Insertar bajo la barra vertical delantera, sacar lazada", "d": "Con la aguja larga, entrá de derecha a izquierda bajo la barra vertical que ves adelante, sacá lazada y dejala en la aguja.", "n": "+1 lazada." },
+      { "t": "Ida · repetir", "r": "En cada barra hasta el final", "d": "Repetí en cada barra hasta el final. Tenés todas las lazadas cargadas.", "n": "Aguja llena." },
+      { "t": "Vuelta", "r": "Hilo y pasar por 1 · *hilo y pasar por 2* hasta quedar con 1", "d": "Echá hilo y pasá por 1 lazada. Después, *hilo y pasá por 2 lazadas*, y repetí hasta que quede 1 sola.", "n": "1 lazada. Fila completa." }
+    ]
+  },
+  "tunisian_knit_stitch": {
+    "intro": "Parece un tejido de punto jersey con agujas. Tejés entre las patas de la «V».",
+    "vueltas": [
+      { "t": "Ida", "r": "Insertar entre las 2 patas de la V, de adelante hacia atrás", "d": "Entrá con la aguja de adelante hacia atrás, entre las dos patas de la «V» de la fila de abajo, por debajo de las barras horizontales. Sacá lazada y dejala en la aguja.", "n": "+1 lazada." },
+      { "t": "Ida · repetir", "r": "En cada punto", "d": "Repetí en cada «V» hasta el final.", "n": "Aguja llena." },
+      { "t": "Vuelta", "r": "Como el tunecino simple", "d": "Hilo y pasá por 1; *hilo y pasá por 2* hasta quedar con 1.", "n": "Fila completa." }
+    ]
+  },
+  "tunisian_purl_stitch": {
+    "intro": "El revés del tunecino: parece un punto revés de dos agujas, con relieve de rayitas.",
+    "vueltas": [
+      { "t": "Ida", "r": "Hilo adelante · insertar bajo la barra vertical · sacar lazada", "d": "Llevá el hilo hacia adelante de la labor. Metí la aguja bajo la barra vertical delantera como en el simple, tomá el hilo y sacá lazada.", "n": "+1 lazada." },
+      { "t": "Ida · repetir", "r": "En cada barra", "d": "Repetí en cada barra hasta el final.", "n": "Aguja llena." },
+      { "t": "Vuelta", "r": "Como el tunecino simple", "d": "Hilo y pasá por 1; *hilo y pasá por 2* hasta quedar con 1.", "n": "Fila completa." }
+    ]
+  },
+  "tunisian_full_stitch": {
+    "intro": "Se teje entre las barras verticales, atravesando todo el tejido: queda un tejido tupido y estable.",
+    "vueltas": [
+      { "t": "Ida", "r": "Insertar entre 2 barras verticales, a través del tejido", "d": "Metí la aguja en el espacio que hay entre dos barras verticales, de adelante hacia atrás. Sacá lazada.", "n": "+1 lazada." },
+      { "t": "Ida · repetir", "r": "En cada espacio", "d": "Repetí en cada espacio hasta el final.", "n": "Aguja llena." },
+      { "t": "Vuelta", "r": "Como el tunecino simple", "d": "Hilo y pasá por 1; *hilo y pasá por 2* hasta quedar con 1.", "n": "Fila completa." }
+    ]
+  },
+  "tunisian_honeycomb": {
+    "intro": "Panal: combina puntos simples y revés alternados para dibujar cuadraditos.",
+    "vueltas": [
+      { "t": "Ida fila 1", "r": "*1 tunecino simple, 1 tunecino revés*", "d": "Cargá las lazadas alternando un punto simple y un revés a lo largo de la fila.", "n": "Aguja llena." },
+      { "t": "Vuelta", "r": "Vuelta normal", "d": "Descargá la aguja como siempre: hilo y pasá por 1; *hilo y pasá por 2* hasta quedar con 1.", "n": "Fila completa." },
+      { "t": "Ida fila 2", "r": "*1 tunecino revés, 1 tunecino simple*", "d": "Ahora desplazá: donde antes hiciste simple, hacé revés y viceversa.", "n": "Aguja llena." },
+      { "t": "Repetir", "r": "Filas 1 y 2", "d": "Seguí alternando las dos filas de ida.", "n": "Panal." }
+    ]
+  }
+}

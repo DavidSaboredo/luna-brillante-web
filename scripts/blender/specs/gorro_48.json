@@ -1,0 +1,47 @@
+{
+ "prenda": "gorro",
+ "talle": 48,
+ "opciones": {
+  "talle": 48,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 48,
+  "busto": 102,
+  "cadera": 105,
+  "posCadera": 15,
+  "sisa": 21,
+  "puno": 19,
+  "manga": 46,
+  "total": 61
+ },
+ "holgura": 8,
+ "largo": 22,
+ "manga": 35,
+ "piezas": [
+  {
+   "zona": "copa",
+   "nombre": "Copa",
+   "ancho": 54,
+   "alto": 18,
+   "cantidad": 1,
+   "nota": "en redondo, empezando por el anillo mágico"
+  },
+  {
+   "zona": "puño",
+   "nombre": "Puño",
+   "ancho": 52,
+   "alto": 6,
+   "cantidad": 1
+  },
+  {
+   "zona": "pompon",
+   "nombre": "Pompón",
+   "ancho": 8,
+   "alto": 8,
+   "cantidad": 1
+  }
+ ]
+}

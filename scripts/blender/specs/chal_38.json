@@ -1,0 +1,48 @@
+{
+ "prenda": "chal",
+ "talle": 38,
+ "opciones": {
+  "talle": 38,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 38,
+  "busto": 84,
+  "cadera": 82,
+  "posCadera": 12,
+  "sisa": 18,
+  "puno": 15,
+  "manga": 40,
+  "total": 56
+ },
+ "holgura": 8,
+ "largo": 80,
+ "manga": 30,
+ "piezas": [
+  {
+   "zona": "cuerpo",
+   "nombre": "Chal",
+   "ancho": 160,
+   "alto": 80,
+   "cantidad": 1,
+   "nota": "se empieza por el centro y se aumenta a los lados"
+  },
+  {
+   "zona": "borde",
+   "nombre": "Puntilla",
+   "ancho": 3,
+   "alto": 260,
+   "cantidad": 1
+  },
+  {
+   "zona": "flecos",
+   "nombre": "Flecos",
+   "ancho": 6,
+   "alto": 28,
+   "cantidad": 40,
+   "nota": "hebras de 25 a 30 cm"
+  }
+ ]
+}

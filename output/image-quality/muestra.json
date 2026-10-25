@@ -1,0 +1,98 @@
+[
+  {
+    "original": "/fotos/back_post_double_crochet-2.jpg",
+    "mejorada": "/mejoradas/fotos/back_post_double_crochet-2.webp",
+    "tipo": "foto",
+    "sha256Original": "b6734cf6aa00c3f54a5b5993a2f43d8d08841292bca3e915ee9f1d06a1cb420e",
+    "dimensionesOriginales": [
+      1280,
+      960
+    ],
+    "recorte": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 960
+    },
+    "dimensiones": [
+      1600,
+      1200
+    ],
+    "bytes": 633702,
+    "color": "lavanda pastel; máscara selectiva",
+    "fondo": "Madera neutralizada a gris, con textura original.",
+    "limitacion": null
+  },
+  {
+    "original": "/fotos/bean_stitch-2.jpg",
+    "mejorada": "/mejoradas/fotos/bean_stitch-2.webp",
+    "tipo": "foto",
+    "sha256Original": "03b569f73e38fb3ea3a546e51a568357bbdd2d99979231a4c035c1e32fbf64be",
+    "dimensionesOriginales": [
+      1280,
+      960
+    ],
+    "recorte": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 960
+    },
+    "dimensiones": [
+      1600,
+      1200
+    ],
+    "bytes": 737316,
+    "color": "lavanda pastel; máscara selectiva",
+    "fondo": "Madera neutralizada a gris, con textura original.",
+    "limitacion": null
+  },
+  {
+    "original": "/fotos/single_crochet-1.jpg",
+    "mejorada": "/mejoradas/fotos/single_crochet-1.webp",
+    "tipo": "foto",
+    "sha256Original": "fd0b7f969800403376434cf45b8414346aa3f89e300860ca42cd0d2ac68c4ab0",
+    "dimensionesOriginales": [
+      1280,
+      960
+    ],
+    "recorte": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 960
+    },
+    "dimensiones": [
+      1600,
+      1200
+    ],
+    "bytes": 805798,
+    "color": "lavanda pastel; máscara selectiva",
+    "fondo": "Madera neutralizada a gris, con textura original.",
+    "limitacion": null
+  },
+  {
+    "original": "/fotos/slip_stitch-2.jpg",
+    "mejorada": "/mejoradas/fotos/slip_stitch-2.webp",
+    "tipo": "foto",
+    "sha256Original": "5e7897861fdabe947c78d91789f26bf555429610ad20ec7c0866213bd90f2e18",
+    "dimensionesOriginales": [
+      1280,
+      960
+    ],
+    "recorte": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 960
+    },
+    "dimensiones": [
+      1600,
+      1200
+    ],
+    "bytes": 850196,
+    "color": "lavanda pastel; máscara selectiva",
+    "fondo": "Madera neutralizada a gris, con textura original.",
+    "limitacion": null
+  }
+]

@@ -1,0 +1,1058 @@
+{
+ "slip_knot": [
+  {
+   "archivo": "/fotos/slip_knot-1.jpg",
+   "leyenda": "Cómo hacer el nudo corredizo",
+   "autor": "Postmodest",
+   "licencia": "CC0",
+   "urlLicencia": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "pagina": "https://commons.wikimedia.org/wiki/File:How_to_tie_a_crochet_slip_knot.jpg"
+  }
+ ],
+ "magic_ring": [
+  {
+   "archivo": "/fotos/magic_ring-1.jpg",
+   "leyenda": "Anillo mágico armado",
+   "autor": "Valki77",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Szyde%C5%82kowe_magiczne_k%C3%B3%C5%82ko.jpg"
+  }
+ ],
+ "chain": [
+  {
+   "archivo": "/fotos/chain-1.jpg",
+   "leyenda": "Cadeneta",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Chain_Stitch.jpg"
+  }
+ ],
+ "slip_stitch": [
+  {
+   "archivo": "/fotos/slip_stitch-1.jpg",
+   "leyenda": "Punto raso, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Slip_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/slip_stitch-2.jpg",
+   "leyenda": "Punto raso, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Slip_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "single_crochet": [
+  {
+   "archivo": "/fotos/single_crochet-1.jpg",
+   "leyenda": "Punto bajo, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Single_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/single_crochet-2.jpg",
+   "leyenda": "Punto bajo, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Single_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "half_double_crochet": [
+  {
+   "archivo": "/fotos/half_double_crochet-1.jpg",
+   "leyenda": "Medio punto alto, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Half_Double_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/half_double_crochet-2.jpg",
+   "leyenda": "Medio punto alto, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Half_Double_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "double_crochet": [
+  {
+   "archivo": "/fotos/double_crochet-1.jpg",
+   "leyenda": "Punto alto, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Double_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/double_crochet-2.jpg",
+   "leyenda": "Punto alto, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Double_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "treble_crochet": [
+  {
+   "archivo": "/fotos/treble_crochet-1.jpg",
+   "leyenda": "Punto alto doble, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Treble.jpg"
+  },
+  {
+   "archivo": "/fotos/treble_crochet-2.jpg",
+   "leyenda": "Punto alto doble, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Treble_(Wrong_Side).jpg"
+  }
+ ],
+ "foundation_single_crochet": [
+  {
+   "archivo": "/fotos/foundation_single_crochet-1.jpg",
+   "leyenda": "Punto bajo sin cadeneta base",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Foundation_Single_Stitch.jpg"
+  }
+ ],
+ "foundation_double_crochet": [
+  {
+   "archivo": "/fotos/foundation_double_crochet-1.jpg",
+   "leyenda": "Punto alto sin cadeneta base",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Foundation_Double_Stitch.jpg"
+  }
+ ],
+ "crochet_cord": [
+  {
+   "archivo": "/fotos/crochet_cord-1.jpg",
+   "leyenda": "Cordón de punto bajo",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Cord.jpg"
+  }
+ ],
+ "back_loop_only": [
+  {
+   "archivo": "/fotos/back_loop_only-1.jpg",
+   "leyenda": "Punto bajo en hebra trasera, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Back_Loop_Single_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/back_loop_only-2.jpg",
+   "leyenda": "Punto bajo en hebra trasera, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Back_Loop_Single_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "extended_single_crochet": [
+  {
+   "archivo": "/fotos/extended_single_crochet-1.jpg",
+   "leyenda": "Punto bajo extendido, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Extended_Single_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/extended_single_crochet-2.jpg",
+   "leyenda": "Punto bajo extendido, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Extended_Single_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "waistcoat_stitch": [
+  {
+   "archivo": "/fotos/waistcoat_stitch-1.jpg",
+   "leyenda": "Punto chaleco, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Waistcoat_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/waistcoat_stitch-2.jpg",
+   "leyenda": "Punto chaleco, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Waistcoat_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "slip_stitch_fabric": [
+  {
+   "archivo": "/fotos/slip_stitch_fabric-1.jpg",
+   "leyenda": "Tejido en punto raso por hebra trasera",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Back_Loop_Slip_Stitch.jpg"
+  }
+ ],
+ "back_post_double_crochet": [
+  {
+   "archivo": "/fotos/back_post_double_crochet-1.jpg",
+   "leyenda": "Punto alto en relieve por detrás, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Back_Post_Double_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/back_post_double_crochet-2.jpg",
+   "leyenda": "Punto alto en relieve por detrás, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Back_Post_Double_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "moss_stitch": [
+  {
+   "archivo": "/fotos/moss_stitch-1.jpg",
+   "leyenda": "Punto musgo, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Moss_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/moss_stitch-2.jpg",
+   "leyenda": "Punto musgo, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Moss_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "trinity_stitch": [
+  {
+   "archivo": "/fotos/trinity_stitch-1.jpg",
+   "leyenda": "Punto trinidad, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Trinity_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/trinity_stitch-2.jpg",
+   "leyenda": "Punto trinidad, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Trinity_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "bean_stitch": [
+  {
+   "archivo": "/fotos/bean_stitch-1.jpg",
+   "leyenda": "Punto frijol, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Bean_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/bean_stitch-2.jpg",
+   "leyenda": "Punto frijol, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Bean_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "loop_stitch": [
+  {
+   "archivo": "/fotos/loop_stitch-1.jpg",
+   "leyenda": "Punto bucle, derecho",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Loop_Stitch.jpg"
+  },
+  {
+   "archivo": "/fotos/loop_stitch-2.jpg",
+   "leyenda": "Punto bucle, revés",
+   "autor": "Stilfehler",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Crochet_Loop_Stitch_(Wrong_Side).jpg"
+  }
+ ],
+ "broomstick_lace": [
+  {
+   "archivo": "/fotos/broomstick_lace-1.jpg",
+   "leyenda": "Encaje de escoba",
+   "autor": "Kravk",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Close_up_broomstick_lace.jpg"
+  }
+ ],
+ "picot": [
+  {
+   "archivo": "/fotos/picot-1.jpg",
+   "leyenda": "Borde de picots",
+   "autor": "Most Craft",
+   "licencia": "CC BY 2.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by/2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Picot_edging.jpg"
+  }
+ ],
+ "pineapple_lace": [
+  {
+   "archivo": "/fotos/pineapple_lace-1.jpg",
+   "leyenda": "Encaje de piña",
+   "autor": "Ederporto",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Pineapple_lace_-_detail.jpg"
+  }
+ ],
+ "granny_square": [
+  {
+   "archivo": "/fotos/granny_square-1.jpg",
+   "leyenda": "Cuadrado granny",
+   "autor": "Durova",
+   "licencia": "CC BY-SA 4.0",
+   "urlLicencia": "https://creativecommons.org/licenses/by-sa/4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Granny_square.jpg"
+  }
+ ],
+ "filet_mesh": [
+  {
+   "archivo": "/fotos/filet_mesh-1.jpg",
+   "leyenda": "Crochet filet",
+   "autor": "Ryj",
+   "licencia": "Public domain",
+   "urlLicencia": null,
+   "pagina": "https://commons.wikimedia.org/wiki/File:H%C3%A4kelfilet_2.jpg"
+  }
+ ],
+ "leaves_lace": [
+  {
+   "archivo": "/fotos/leaves_lace-1.webp",
+   "leyenda": "Hojas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/leaves_lace-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "sunflowers_stitch": [
+  {
+   "archivo": "/fotos/sunflowers_stitch-1.webp",
+   "leyenda": "Girasoles, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/sunflowers_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "marvel_stitch": [
+  {
+   "archivo": "/fotos/marvel_stitch-1.webp",
+   "leyenda": "Maravilla, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/marvel_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "artistic_edging": [
+  {
+   "archivo": "/fotos/artistic_edging-1.webp",
+   "leyenda": "Guarda artística, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/artistic_edging-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fabric_weave_stitch": [
+  {
+   "archivo": "/fotos/fabric_weave_stitch-1.webp",
+   "leyenda": "Trama o tela, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fabric_weave_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "diagonal_chickpeas": [
+  {
+   "archivo": "/fotos/diagonal_chickpeas-1.webp",
+   "leyenda": "Garbanzos en diagonal, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/diagonal_chickpeas-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "bicolor_spike_stitch": [
+  {
+   "archivo": "/fotos/bicolor_spike_stitch-1.webp",
+   "leyenda": "Fantasía bicolor, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/bicolor_spike_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "net_stitch": [
+  {
+   "archivo": "/fotos/net_stitch-1.webp",
+   "leyenda": "Red, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/net_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "aligned_blocks": [
+  {
+   "archivo": "/fotos/aligned_blocks-1.webp",
+   "leyenda": "Bloques alineados, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/aligned_blocks-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "dc_pineapples_mesh": [
+  {
+   "archivo": "/fotos/dc_pineapples_mesh-1.webp",
+   "leyenda": "Piñas de varetas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/dc_pineapples_mesh-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "slanted_ovals_filet": [
+  {
+   "archivo": "/fotos/slanted_ovals_filet-1.webp",
+   "leyenda": "Óvalos apaisados, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/slanted_ovals_filet-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "triple_dc_ribbing": [
+  {
+   "archivo": "/fotos/triple_dc_ribbing-1.webp",
+   "leyenda": "Vainilla de varetas triples, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/triple_dc_ribbing-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fans_and_vs_lace": [
+  {
+   "archivo": "/fotos/fans_and_vs_lace-1.webp",
+   "leyenda": "Abanicos y V, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fans_and_vs_lace-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "crossed_dc_arch_mesh": [
+  {
+   "archivo": "/fotos/crossed_dc_arch_mesh-1.webp",
+   "leyenda": "Varetas cruzadas con arcos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/crossed_dc_arch_mesh-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "crossed_dc_bands": [
+  {
+   "archivo": "/fotos/crossed_dc_bands-1.webp",
+   "leyenda": "Bandas de varetas cruzadas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/crossed_dc_bands-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "dc_v_bands": [
+  {
+   "archivo": "/fotos/dc_v_bands-1.webp",
+   "leyenda": "Varetas y «V» en bandas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/dc_v_bands-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "arch_dc_garbanzo_lace": [
+  {
+   "archivo": "/fotos/arch_dc_garbanzo_lace-1.webp",
+   "leyenda": "Arcos y garbanzos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/arch_dc_garbanzo_lace-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fan_v_columns": [
+  {
+   "archivo": "/fotos/fan_v_columns-1.webp",
+   "leyenda": "Columnas de V abiertas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fan_v_columns-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "chained_v_stitch": [
+  {
+   "archivo": "/fotos/chained_v_stitch-1.webp",
+   "leyenda": "Cadena de V, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/chained_v_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "braided_crossed_dc": [
+  {
+   "archivo": "/fotos/braided_crossed_dc-1.webp",
+   "leyenda": "Varetas trenzadas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/braided_crossed_dc-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "filet_with_fan_rows": [
+  {
+   "archivo": "/fotos/filet_with_fan_rows-1.webp",
+   "leyenda": "Filet con abanicos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/filet_with_fan_rows-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "crossed_dc_grid": [
+  {
+   "archivo": "/fotos/crossed_dc_grid-1.webp",
+   "leyenda": "Cuadrícula de cruces, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/crossed_dc_grid-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fan_diamonds_dc": [
+  {
+   "archivo": "/fotos/fan_diamonds_dc-1.webp",
+   "leyenda": "Rombos de abanicos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fan_diamonds_dc-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "big_fan_arch_lace": [
+  {
+   "archivo": "/fotos/big_fan_arch_lace-1.webp",
+   "leyenda": "Abanico grande entre arcos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/big_fan_arch_lace-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "long_leaf_stitch": [
+  {
+   "archivo": "/fotos/long_leaf_stitch-1.webp",
+   "leyenda": "Hojas largas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/long_leaf_stitch-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "garbanzo_sc_dc_waves": [
+  {
+   "archivo": "/fotos/garbanzo_sc_dc_waves-1.webp",
+   "leyenda": "Garbanzos y ondas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/garbanzo_sc_dc_waves-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "butterfly_filet": [
+  {
+   "archivo": "/fotos/butterfly_filet-1.webp",
+   "leyenda": "Filet con mariposas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/butterfly_filet-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "wheel_filet": [
+  {
+   "archivo": "/fotos/wheel_filet-1.webp",
+   "leyenda": "Filet con ruedas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/wheel_filet-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "dc_triangles": [
+  {
+   "archivo": "/fotos/dc_triangles-1.webp",
+   "leyenda": "Triángulos de varetas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/dc_triangles-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "solomon_crossed_dc": [
+  {
+   "archivo": "/fotos/solomon_crossed_dc-1.webp",
+   "leyenda": "Nudos de Salomón y cruces, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/solomon_crossed_dc-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fans_diamond_lace": [
+  {
+   "archivo": "/fotos/fans_diamond_lace-1.webp",
+   "leyenda": "Abanicos y rombos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fans_diamond_lace-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "solomon_net": [
+  {
+   "archivo": "/fotos/solomon_net-1.webp",
+   "leyenda": "Red de nudos de Salomón, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/solomon_net-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "spring_filet": [
+  {
+   "archivo": "/fotos/spring_filet-1.webp",
+   "leyenda": "Filet con resortes, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/spring_filet-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "solomon_dc_bands": [
+  {
+   "archivo": "/fotos/solomon_dc_bands-1.webp",
+   "leyenda": "Bandas de Salomón, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/solomon_dc_bands-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "slanted_dc_diamonds": [
+  {
+   "archivo": "/fotos/slanted_dc_diamonds-1.webp",
+   "leyenda": "Rombos de varetas inclinadas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/slanted_dc_diamonds-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fan_zigzag": [
+  {
+   "archivo": "/fotos/fan_zigzag-1.webp",
+   "leyenda": "Zigzag de abanicos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fan_zigzag-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "diagonal_cross_relief": [
+  {
+   "archivo": "/fotos/diagonal_cross_relief-1.webp",
+   "leyenda": "Cruz en relieve, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/diagonal_cross_relief-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fans_on_dc": [
+  {
+   "archivo": "/fotos/fans_on_dc-1.webp",
+   "leyenda": "Abanicos sobre varetas, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fans_on_dc-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ],
+ "fans_with_picots_dc": [
+  {
+   "archivo": "/fotos/fans_with_picots_dc-1.webp",
+   "leyenda": "Abanicos con piquitos, muestra tejida",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  },
+  {
+   "archivo": "/fotos/fans_with_picots_dc-2.webp",
+   "leyenda": "Diagrama original de la revista",
+   "autor": "Revista (uso autorizado)",
+   "licencia": "uso autorizado",
+   "urlLicencia": null,
+   "pagina": ""
+  }
+ ]
+}

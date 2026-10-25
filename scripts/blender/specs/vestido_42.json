@@ -1,0 +1,61 @@
+{
+ "prenda": "vestido",
+ "talle": 42,
+ "opciones": {
+  "talle": 42,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "ajustado"
+ },
+ "medidas": {
+  "talle": 42,
+  "busto": 88,
+  "cadera": 90,
+  "posCadera": 14,
+  "sisa": 19,
+  "puno": 16,
+  "manga": 43,
+  "total": 59
+ },
+ "holgura": 2,
+ "largo": 97,
+ "manga": 32,
+ "piezas": [
+  {
+   "zona": "tirantes",
+   "nombre": "Tirante",
+   "ancho": 4,
+   "alto": 40,
+   "cantidad": 2
+  },
+  {
+   "zona": "corpino",
+   "nombre": "Corpiño",
+   "ancho": 45,
+   "alto": 24,
+   "cantidad": 2
+  },
+  {
+   "zona": "falda",
+   "nombre": "Falda",
+   "ancho": 66,
+   "alto": 67,
+   "cantidad": 2,
+   "nota": "vuelo con aumentos"
+  },
+  {
+   "zona": "cintura",
+   "nombre": "Cintura",
+   "ancho": 36,
+   "alto": 4,
+   "cantidad": 2
+  },
+  {
+   "zona": "ruedo",
+   "nombre": "Ruedo",
+   "ancho": 150,
+   "alto": 6,
+   "cantidad": 1
+  }
+ ]
+}

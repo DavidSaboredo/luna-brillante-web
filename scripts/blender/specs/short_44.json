@@ -1,0 +1,46 @@
+{
+ "prenda": "short",
+ "talle": 44,
+ "opciones": {
+  "talle": 44,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 44,
+  "busto": 92,
+  "cadera": 94,
+  "posCadera": 14,
+  "sisa": 20,
+  "puno": 17,
+  "manga": 44,
+  "total": 60
+ },
+ "holgura": 8,
+ "largo": 42,
+ "manga": 33,
+ "piezas": [
+  {
+   "zona": "pretina",
+   "nombre": "Pretina",
+   "ancho": 76,
+   "alto": 5,
+   "cantidad": 1
+  },
+  {
+   "zona": "piernas",
+   "nombre": "Pierna",
+   "ancho": 53,
+   "alto": 37,
+   "cantidad": 2
+  },
+  {
+   "zona": "puños",
+   "nombre": "Puño",
+   "ancho": 55,
+   "alto": 5,
+   "cantidad": 2
+  }
+ ]
+}

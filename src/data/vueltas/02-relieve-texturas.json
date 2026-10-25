@@ -1,0 +1,291 @@
+{
+  "blo_ribbing": {
+    "intro": "Un elástico de puntos bajos tejido de lado: se arma «a lo ancho» del puño y después se une al cuerpo. Queda como el punto elástico de dos agujas.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × alto del elástico + 1", "d": "Armá tantas cadenetas como puntos de alto quieras que tenga el puño (por ejemplo 8) y sumá 1 de giro.", "n": "N + 1 cad." },
+      { "t": "Fila 1", "r": "pb en la 2.ª cad y en cada cad", "d": "Metí la aguja en la 2.ª cad desde la aguja y tejé 1 pb en cada cadeneta.", "n": "N pb." },
+      { "t": "Fila 2 y siguientes", "r": "1 cad, girar, pb ht en cada punto", "d": "Hacé 1 cad, girá y tejé 1 pb en cada punto, tomando solo la hebra trasera. Esa hebra que queda libre marca las costillas.", "n": "N pb ht." },
+      { "t": "Largo del elástico", "r": "Repetir hasta cubrir el contorno", "d": "Seguí tejiendo filas hasta que la tira, apenas estirada, abrace el puño, cuello o cintura. Después cosés o unís con pr los dos extremos.", "n": "Tira lista para unir." }
+    ]
+  },
+  "front_post_double_crochet": {
+    "intro": "Un pa que se teje alrededor del «cuerpo» del punto de abajo, no en la parte de arriba. Con él el punto sale hacia vos y forma costillas o trenzas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Echar hilo", "d": "Echá hilo sobre la aguja como para un pa.", "n": "1 lazada extra." },
+      { "t": "Paso 2", "r": "Insertar de adelante hacia atrás, a la derecha del pa", "d": "Mirá el pa de la fila anterior. Metí la aguja desde delante hacia atrás por el costado derecho de su «tronco».", "n": "Aguja detrás del tronco." },
+      { "t": "Paso 3", "r": "Volver hacia adelante por la izquierda", "d": "Sacá la aguja hacia adelante por el costado izquierdo del mismo tronco: ahora el tronco queda abrazado por la aguja.", "n": "Aguja adelante otra vez." },
+      { "t": "Paso 4", "r": "Sacar lazada y completar el pa", "d": "Echá hilo y sacá lazada (3 lazadas). Cerrá como un pa común: hilo y pasar por 2, hilo y pasar por 2.", "n": "1 pa rel ad." }
+    ]
+  },
+  "back_post_double_crochet": {
+    "intro": "Es el gemelo del relieve por delante: el punto se hunde hacia atrás. Combinando los dos se arman elásticos y canastos.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Echar hilo", "d": "Echá hilo sobre la aguja.", "n": "1 lazada extra." },
+      { "t": "Paso 2", "r": "Insertar de atrás hacia adelante, a la derecha del tronco", "d": "Rodeá el pa de la fila anterior por detrás: metí la aguja desde atrás por el costado derecho del tronco.", "n": "Aguja adelante del tronco." },
+      { "t": "Paso 3", "r": "Volver hacia atrás por la izquierda", "d": "Sacá la aguja hacia atrás por el costado izquierdo del mismo tronco.", "n": "Tronco abrazado por detrás." },
+      { "t": "Paso 4", "r": "Sacar lazada y completar el pa", "d": "Echá hilo, sacá lazada (3 lazadas) y cerrá como un pa común.", "n": "1 pa rel at." }
+    ]
+  },
+  "post_ribbing": {
+    "intro": "Elástico hecho con columnas en relieve: un punto sale hacia adelante y el siguiente se hunde. Se estira mucho y vuelve a su lugar.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 2 + 2", "d": "Armá una cantidad par de cadenetas y 2 más.", "n": "Múltiplo de 2 + 2 cad." },
+      { "t": "Fila 1", "r": "pa en cada punto", "d": "Tejé 1 pa en la 4.ª cad y en cada cadeneta siguiente.", "n": "Fila de pa." },
+      { "t": "Fila 2", "r": "2 cad, *1 pa rel ad, 1 pa rel at*, termina 1 pa", "d": "Girá con 2 cad. Alterná 1 pa en relieve por delante y 1 por detrás hasta el final. Terminá con 1 pa común en la cadeneta de giro.", "n": "Costillas alternadas." },
+      { "t": "Filas siguientes", "r": "Tejer el punto como se ve", "d": "En las filas siguientes tejé en relieve por delante los puntos que sobresalen y por detrás los que se hunden: así la costilla sube recta.", "n": "Elástico en relieve." }
+    ]
+  },
+  "basketweave_stitch": {
+    "intro": "Bloques de columnas que sobresalen y se hunden, como las tiras de un canasto. Se cambia la dirección cada 3 o 4 filas.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 8 + 4", "d": "Armá una cantidad de cadenetas que sea múltiplo de 8, más 4.", "n": "8n + 4 cad." },
+      { "t": "Fila 1", "r": "pa en cada punto", "d": "Una fila de pa común es la base.", "n": "Fila de pa." },
+      { "t": "Filas 2 a 4", "r": "*4 pa rel ad, 4 pa rel at*", "d": "Alterná bloques de 4 pa en relieve por delante con 4 en relieve por detrás.", "n": "Bloques de costillas." },
+      { "t": "Filas 5 a 7", "r": "*4 pa rel at, 4 pa rel ad*", "d": "Invertí: donde tejiste por delante ahora tejé por detrás y al revés. Así los bloques se vuelven cuadros.", "n": "Efecto canasto." },
+      { "t": "Repetir", "r": "Filas 2 a 7", "d": "Seguí alternando cada 3 filas.", "n": "Tejido en damero." }
+    ]
+  },
+  "waffle_stitch": {
+    "intro": "Columnas que sobresalen formando cuadraditos, como un waffle. Es un tejido grueso que abriga.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 3 + 2", "d": "Múltiplo de 3, más 2 cadenetas.", "n": "3n + 2 cad." },
+      { "t": "Fila 1", "r": "pa en cada punto", "d": "Fila de pa para armar la base.", "n": "Fila de pa." },
+      { "t": "Fila 2", "r": "2 cad, 1 pa en el primero, *1 pa rel ad, 1 pa en cada uno de los 2 siguientes*", "d": "Girá con 2 cad. Alterná 1 pa en relieve por delante (el primero) con 2 pa comunes sobre los puntos siguientes.", "n": "Columnas cada 3 puntos." },
+      { "t": "Fila 3", "r": "2 cad, 1 pa en el primero, *1 pa en el pa rel ad, 1 pa rel ad alrededor de cada uno de los 2 siguientes*", "d": "Ahora el pa común va sobre el relieve y los dos relieves alrededor de los otros dos. Por eso las columnas se desplazan.", "n": "Cuadros alternados." },
+      { "t": "Repetir", "r": "Filas 2 y 3", "d": "Seguí alternando las dos filas.", "n": "Textura waffle." }
+    ]
+  },
+  "alpine_stitch": {
+    "intro": "Alterna filas lisas con filas de relieve que cruzan por delante de dos filas hacia abajo, formando ramitas.",
+    "vueltas": [
+      { "t": "Fila 1 (derecho)", "r": "pa en cada punto", "d": "Tejé una fila de pa.", "n": "Fila de pa." },
+      { "t": "Fila 2 (revés)", "r": "pb en cada punto", "d": "Girá con 1 cad y tejé pb en cada punto.", "n": "Fila de pb." },
+      { "t": "Fila 3", "r": "2 cad, *1 pa rel ad alrededor del pa de dos filas abajo, 1 pa en el pb siguiente*", "d": "Alterná un pa en relieve alrededor del pa que está dos filas más abajo con un pa común en el pb. Se ve como una «V» tendida.", "n": "Ramitas." },
+      { "t": "Fila 4", "r": "pb en cada punto", "d": "Una fila de pb para aplanar.", "n": "Fila de pb." },
+      { "t": "Fila 5", "r": "Como la 3, corrida 1 punto", "d": "Repetí la fila 3 pero empezando un punto más allá para que las ramitas queden desencajadas.", "n": "Alpino armado." },
+      { "t": "Repetir", "r": "Filas 2 a 5", "d": "Seguí con el ciclo.", "n": "Tejido alpino." }
+    ]
+  },
+  "cable_stitch": {
+    "intro": "Una trenza en relieve que cruza dos columnas sobre otras dos. Es más fácil de lo que parece.",
+    "vueltas": [
+      { "t": "Fondo", "r": "pb o pa con columnas de 4 pa rel ad", "d": "Tejé el fondo liso y marcá columnas de 4 pa en relieve por delante: ahí va a pasar la trenza.", "n": "Columnas listas." },
+      { "t": "Fila del cruce", "r": "Saltar 2 · 1 pad rel ad alrededor de cada uno de los 2 siguientes", "d": "Salteá los primeros 2 puntos de la columna y tejé 1 pad en relieve por delante alrededor de cada uno de los 2 siguientes.", "n": "2 pad adelante." },
+      { "t": "Completar el cruce", "r": "1 pad rel ad alrededor de cada uno de los 2 saltados", "d": "Volvé a los 2 puntos que salteaste y tejé 1 pad en relieve por delante alrededor de cada uno, pasando por delante de los recién tejidos.", "n": "Trenza cruzada." },
+      { "t": "Filas intermedias", "r": "pa rel ad en las filas de entre cruces", "d": "Tejé 3 filas con pa en relieve sobre la columna y repetí el cruce cada 4 filas.", "n": "Trenza que sube." }
+    ]
+  },
+  "spike_stitch": {
+    "intro": "Un punto bajo que se teje bien abajo y se estira hasta la fila actual: forma una línea vertical que atraviesa las filas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Insertar 1 a 3 filas más abajo", "d": "En lugar de meter la aguja en el punto de la fila actual, metela en el punto que está 1, 2 o 3 filas por debajo, siguiendo la misma columna.", "n": "Aguja abajo." },
+      { "t": "Paso 2", "r": "Sacar una lazada larga", "d": "Echá hilo y sacá la lazada hasta la altura de la fila actual, sin que tire la labor.", "n": "2 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por 2", "d": "Echá hilo y cerrá las 2 lazadas como un pb.", "n": "1 pb largo." }
+    ]
+  },
+  "crossed_double_crochet": {
+    "intro": "Dos puntos altos que se cruzan en forma de «X».",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Saltar 1 · 1 pa en el siguiente", "d": "Salteá un punto y tejé 1 pa en el siguiente.", "n": "1 pa corrido." },
+      { "t": "Paso 2", "r": "1 pa en el punto saltado, por delante", "d": "Volvé al punto saltado y tejé 1 pa en él, pasando la aguja por delante del pa que acabás de hacer (por detrás si el patrón lo pide).", "n": "Cruz armada." },
+      { "t": "Repetir", "r": "Saltar 1 · pa · pa", "d": "Repetí a lo largo de la fila.", "n": "Fila de cruces." }
+    ]
+  },
+  "moss_stitch": {
+    "intro": "Un tejido liso y tupido, con punto bajo y cadeneta alternados. Nunca se frunce y hace una tela muy cómoda.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × par", "d": "Armá una cantidad par de cadenetas.", "n": "Par de cad." },
+      { "t": "Fila 1", "r": "pb en la 4.ª cad, *1 cad, saltar 1, 1 pb en la siguiente*", "d": "Metí la aguja en la 4.ª cad desde la aguja y tejé 1 pb. Después: 1 cad, salteá 1 cadeneta y 1 pb en la siguiente. Seguí hasta el final.", "n": "pb y espacios de 1 cad." },
+      { "t": "Fila 2", "r": "2 cad, girar, pb en el primer espacio, *1 cad, pb en el siguiente espacio*; termina con pb en el espacio de giro", "d": "Girá con 2 cad. Tejé 1 pb en el primer espacio de 1 cad y repetí: 1 cad, pb en el siguiente espacio. Al final, 1 pb en la cadeneta de giro.", "n": "Mismo ritmo." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Siempre el pb va dentro del espacio de la fila anterior.", "n": "Tejido musgo." }
+    ]
+  },
+  "griddle_stitch": {
+    "intro": "Alterna pb y pa en un patrón de damero que forma un punto semilla.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × par", "d": "Armá una cantidad par de cadenetas.", "n": "Par de cad." },
+      { "t": "Fila 1", "r": "pb en la 2.ª cad, *pa en la siguiente, pb en la siguiente*; termina en pa", "d": "Empezá con 1 pb y alterná pa y pb hasta el final.", "n": "Alternados." },
+      { "t": "Fila 2", "r": "1 cad, girar, *pb en el pa, pa en el pb*", "d": "Girá con 1 cad y tejé al revés de lo que ves: pb sobre cada pa y pa sobre cada pb. Así se forma el damero.", "n": "Semilla." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí igual.", "n": "Tejido semilla." }
+    ]
+  },
+  "suzette_stitch": {
+    "intro": "Pares de punto bajo y punto alto en el mismo punto, saltando uno: queda un tejido liviano de textura fina.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × par", "d": "Cantidad par de cadenetas.", "n": "Par de cad." },
+      { "t": "Fila 1", "r": "(pb, pa) en la 2.ª cad, *saltar 1, (pb, pa) en la siguiente*; terminá con pb", "d": "En la misma cadeneta tejé 1 pb y 1 pa. Salteá una cad y repetí. Al final, 1 pb solo.", "n": "Pares (pb, pa)." },
+      { "t": "Fila 2", "r": "1 cad, girar, (pb, pa) en el primer pb, *saltar el pa, (pb, pa) en el pb siguiente*", "d": "En cada pb de la fila anterior tejé el par (pb, pa) y saltá el pa que cae en el medio.", "n": "Pares otra vez." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Tejido Suzette." }
+    ]
+  },
+  "sedge_stitch": {
+    "intro": "Grupos de tres puntos de distinta altura (pb, mpa, pa) que parecen juncos.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 3 + 1", "d": "Armá cadenetas en múltiplo de 3 y sumá 1.", "n": "3n + 1 cad." },
+      { "t": "Fila 1", "r": "(mpa, pa) en la 3.ª cad, *saltar 2, (pb, mpa, pa) en la siguiente*; terminá con pb", "d": "El primer grupo es (mpa, pa); los siguientes son (pb, mpa, pa) saltando 2 cadenetas entre uno y otro.", "n": "Grupos de 3." },
+      { "t": "Fila 2", "r": "2 cad, girar, (mpa, pa) en el primer pb, *saltar 2, (pb, mpa, pa) en el pb siguiente*", "d": "Girá. Cada grupo nuevo nace en el pb del grupo anterior.", "n": "Grupos alineados." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Tejido juncia." }
+    ]
+  },
+  "wattle_stitch": {
+    "intro": "Grupos (pb, cad, pa) en cada hueco: una tela con textura de trama, bien ligera.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 3 + 2", "d": "Múltiplo de 3, más 2.", "n": "3n + 2 cad." },
+      { "t": "Fila 1", "r": "saltar 2 cad, (pb, 1 cad, pa) en la siguiente, *saltar 2, (pb, 1 cad, pa) en la siguiente*; saltar 1, pb en la última", "d": "Cada grupo es un pb, una cadeneta y un pa, en la misma cadeneta de base.", "n": "Grupos con ojal." },
+      { "t": "Fila 2", "r": "1 cad, girar, *(pb, 1 cad, pa) en cada espacio de 1 cad*; pb en la cadeneta de giro", "d": "En el espacio de cada grupo tejé otro (pb, 1 cad, pa).", "n": "Grupos alineados." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Trama wattle." }
+    ]
+  },
+  "trinity_stitch": {
+    "intro": "Se arma con grupos de 3 pb cerrados juntos; en las filas siguientes se teje en los huecos. Resulta en una textura gordita y bien tupida.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × par", "d": "Armá una cantidad par de cadenetas.", "n": "Par de cad." },
+      { "t": "Cómo se teje el grupo", "r": "pb3jun", "d": "Sacá una lazada en el punto donde terminó el grupo anterior, otra en el siguiente y otra en el siguiente (4 lazadas). Echá hilo y pasá por todas.", "n": "Grupo de 3 cerrado." },
+      { "t": "Separador", "r": "1 cad", "d": "Cerrá con una cadeneta que separa un grupo del siguiente.", "n": "1 grupo + 1 cad." },
+      { "t": "Fila siguiente", "r": "El primer pie va en el espacio de la 1 cad", "d": "En la fila de vuelta, el primer pie del grupo va en el espacio de la cad y los otros dos, en los dos puntos siguientes. Así el tejido se «teje» solo.", "n": "Tejido trinidad." }
+    ]
+  },
+  "star_stitch": {
+    "intro": "Estrellas de 5 patas que se cierran con un ojo en el medio; se alternan con filas de mpa.",
+    "vueltas": [
+      { "t": "Primera estrella", "r": "6 lazadas · hilo y pasar por todas · 1 cad", "d": "Sacá lazada en la 2.ª cad desde la aguja y en cada una de las 4 siguientes (6 lazadas en la aguja). Echá hilo y pasá por todas. Hacé 1 cad: esa es el ojo de la estrella.", "n": "1 estrella." },
+      { "t": "Estrellas siguientes", "r": "Sacar lazada en el ojo, en la última pata, en la misma cad y en las 2 siguientes", "d": "Sacá una lazada en el ojo de la estrella anterior, otra en la última pata de esa estrella, otra en la misma cad de esa pata y 2 más en las cad siguientes (6 lazadas). Cerrá y hacé 1 cad.", "n": "Fila de estrellas." },
+      { "t": "Fila de vuelta", "r": "2 cad, girar, 2 mpa en cada ojo", "d": "Girá con 2 cad y tejé 2 mpa en el ojo de cada estrella.", "n": "Fila de mpa." },
+      { "t": "Repetir", "r": "Alternar fila de estrellas y fila de mpa", "d": "Seguí así.", "n": "Tejido estrella." }
+    ]
+  },
+  "wave_stitch": {
+    "intro": "Una ola que sube y baja según la altura de los puntos: pb, mpa, pa, pad y vuelta a bajar.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 8 + 1", "d": "Armá cadenetas en múltiplo de 8 y sumá 1.", "n": "8n + 1 cad." },
+      { "t": "Fila de olas", "r": "*1 pb, 1 mpa, 1 pa, 2 pad, 1 pa, 1 mpa, 1 pb*", "d": "Subí de a poco: pb, mpa, pa, y en la cima 2 pad. Después bajá en espejo: pa, mpa, pb.", "n": "Una ola." },
+      { "t": "Fila de relleno", "r": "pad sobre pb, pb sobre pad", "d": "En la fila siguiente invertí las alturas: donde había un punto bajo va uno alto y al revés, para que el borde quede derecho.", "n": "Tira nivelada." },
+      { "t": "Repetir", "r": "Cambiando de color", "d": "Repetí las dos filas cambiando de color para marcar las olas.", "n": "Tejido ola." }
+    ]
+  },
+  "ripple_stitch": {
+    "intro": "El clásico zigzag para mantas: picos arriba y valles abajo en una misma fila.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 12 + 3", "d": "Armá cadenetas en múltiplo de 12, más 3.", "n": "12n + 3 cad." },
+      { "t": "Fila de picos", "r": "*4 pa, 3pa jun (valle), 4 pa, (2 pa, 1 cad, 2 pa) en el mismo punto (pico)*", "d": "Subí con 4 pa, hacé el valle cerrando 3 pa juntos, subí otros 4 pa y en el pico tejé (2 pa, 1 cad, 2 pa) en el mismo punto.", "n": "Un zigzag." },
+      { "t": "Repetir", "r": "La misma fila", "d": "Cada fila repite lo mismo: los picos van sobre los picos y los valles sobre los valles. Si cambiás de color, el zigzag queda marcado.", "n": "Ripple." }
+    ]
+  },
+  "dc_between_stitches": {
+    "intro": "En vez de tejer en la parte de arriba de cada punto, entrás entre un pa y el siguiente. Queda un tejido más abierto y flexible.",
+    "vueltas": [
+      { "t": "Fila 1", "r": "pa en cada punto", "d": "Tejé una fila de pa común.", "n": "Fila de pa." },
+      { "t": "Fila 2", "r": "pa en cada espacio entre dos pa", "d": "Girá con 3 cad. Mirá la fila de abajo: entre pa y pa hay un hueco. Metí la aguja ahí (de adelante hacia atrás) y tejé 1 pa en cada hueco.", "n": "Pa en los huecos." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí.", "n": "Tejido ep." }
+    ]
+  },
+  "puff_stitch": {
+    "intro": "Un abultado suave: varias lazadas largas en el mismo punto, cerradas juntas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "*Echar hilo, insertar en el punto, sacar una lazada alta*", "d": "Echá hilo, metí la aguja en el punto y sacá una lazada alta (casi hasta la altura de un pa).", "n": "3 lazadas." },
+      { "t": "Paso 2", "r": "Repetir 3 a 5 veces", "d": "Repetí en el mismo punto: más repeticiones, más gordo el puff.", "n": "Varias lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por todas", "d": "Echá hilo y pasá por todas las lazadas de una vez.", "n": "Puff cerrado." },
+      { "t": "Paso 4", "r": "1 cad", "d": "Cerrá con 1 cad para asegurarlo. Mantené las lazadas a la misma altura antes de cerrar para que el puff quede parejo.", "n": "1 puff." }
+    ]
+  },
+  "bobble_stitch": {
+    "intro": "Una motita abultada: varios pa incompletos en el mismo punto, cerrados juntos. Se hace en filas del revés para que sobresalga hacia el derecho.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "*Hilo, insertar, lazada, hilo y pasar por 2*", "d": "Echá hilo, metí la aguja en el punto, sacá lazada y pasá por 2 lazadas. Queda una lazada de más sin cerrar.", "n": "+1 lazada." },
+      { "t": "Paso 2", "r": "Repetir 5 veces en el mismo punto", "d": "Repetí el paso anterior 5 veces en el mismo punto.", "n": "6 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por todas", "d": "Echá hilo y pasalas todas de una vez.", "n": "1 mota." },
+      { "t": "Dónde van las motas", "r": "Filas del revés, entre filas de pb", "d": "Tejé las motas cuando el revés de la labor mira hacia vos, intercaladas con filas de pb, así sobresalen hacia el derecho.", "n": "Motitas en relieve." }
+    ]
+  },
+  "popcorn_stitch": {
+    "intro": "Es como una mota, pero se arma con pa completos y se «cierra» a mano. Salta hacia adelante como un grano de pochoclo.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "5 pa en el mismo punto", "d": "Tejé 5 pa completos en el mismo punto.", "n": "5 pa." },
+      { "t": "Paso 2", "r": "Sacar la aguja de la lazada", "d": "Sacá la aguja de la última lazada y dejala descansando (no la sueltes).", "n": "Lazada suelta." },
+      { "t": "Paso 3", "r": "Insertar en el 1.er pa del grupo, de adelante hacia atrás", "d": "Metí la aguja de adelante hacia atrás en el primer pa del grupo y retomá la lazada suelta.", "n": "Lazada tomada." },
+      { "t": "Paso 4", "r": "Pasar la lazada por el 1.er pa", "d": "Pasá esa lazada por el primer pa: los 5 pa se juntan y se abomban.", "n": "Pochoclo cerrado." },
+      { "t": "Paso 5", "r": "1 cad", "d": "Cerrá con 1 cad para asegurar.", "n": "1 pop." }
+    ]
+  },
+  "cluster_stitch": {
+    "intro": "Varios puntos altos incompletos que convergen en la punta: forma triángulos y puntas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "*Hilo, insertar, lazada, hilo y pasar por 2*", "d": "En el punto indicado, hacé un pa dejando la última lazada sin cerrar.", "n": "2 lazadas." },
+      { "t": "Paso 2", "r": "Repetir 3 veces (4 lazadas)", "d": "Repetí en el mismo punto o en puntos distintos según el patrón.", "n": "4 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por todas", "d": "Echá hilo y cerrá todas las lazadas de una vez.", "n": "1 racimo." },
+      { "t": "Paso 4", "r": "Cad según el patrón", "d": "Seguí con las cadenetas que indique el patrón.", "n": "Racimo asegurado." }
+    ]
+  },
+  "bean_stitch": {
+    "intro": "Un punto en forma de frijol: lazadas sacadas en el mismo punto y cerradas juntas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Insertar y sacar lazada", "d": "Metí la aguja en el punto y sacá una lazada.", "n": "2 lazadas." },
+      { "t": "Paso 2", "r": "*Hilo, insertar en el mismo punto, sacar lazada*", "d": "Echá hilo, volvé a meter la aguja en el mismo punto y sacá otra lazada. Repetí 2 veces.", "n": "6 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por todas", "d": "Echá hilo y cerrá todas las lazadas.", "n": "1 frijol." },
+      { "t": "Paso 4", "r": "1 cad", "d": "Cerrá con 1 cad para asegurar.", "n": "Frijol terminado." }
+    ]
+  },
+  "v_puff_stitch": {
+    "intro": "Dos puffs unidos por una cadeneta forman una «V» abultada.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 2 + 1", "d": "Cantidad impar de cadenetas.", "n": "Impar de cad." },
+      { "t": "Fila 1", "r": "(puff, 1 cad, puff) en un punto, saltar 1; repetir", "d": "En el mismo punto tejé un puff, 1 cad y otro puff. Salteá 1 y repetí.", "n": "Fila de V." },
+      { "t": "Filas siguientes", "r": "(puff, 1 cad, puff) en cada espacio de 1 cad del centro de la V", "d": "Cada V nueva nace en el espacio de 1 cad de la V de abajo.", "n": "V alineadas." }
+    ]
+  },
+  "blackberry_stitch": {
+    "intro": "Motas de 4 pa sobre un fondo liso de pb: parecen granitos de zarzamora.",
+    "vueltas": [
+      { "t": "Fila 1 (derecho)", "r": "pb en cada punto", "d": "Tejé una fila de pb.", "n": "Fila lisa." },
+      { "t": "Fila 2 (revés)", "r": "1 cad, *1 pb, 1 mota de 4 pa*; terminá con pb", "d": "Tejé 1 pb, 1 mota de 4 pa en el siguiente punto, y repetí. Terminá con 1 pb.", "n": "Motas alternadas." },
+      { "t": "Fila 3", "r": "pb en cada punto", "d": "Una fila de pb común.", "n": "Fila lisa." },
+      { "t": "Fila 4", "r": "Como la 2, corrida 1 punto", "d": "Repetí la fila 2 empezando un punto más allá, para que las motas queden en damero.", "n": "Zarzamora." }
+    ]
+  },
+  "v_stitch": {
+    "intro": "Grupos de (pa, cad, pa) que forman una «V» y dejan un espacio aireado.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 3 + 1", "d": "Cadenetas en múltiplo de 3, más 1.", "n": "3n + 1 cad." },
+      { "t": "Fila 1", "r": "(1 pa, 1 cad, 1 pa) en la 5.ª cad, *saltar 2, (1 pa, 1 cad, 1 pa) en la siguiente*", "d": "En la 5.ª cadeneta desde la aguja tejé 1 pa, 1 cad, 1 pa. Salteá 2 cad y repetí.", "n": "Fila de V." },
+      { "t": "Fila 2", "r": "3 cad, girar, (1 pa, 1 cad, 1 pa) en cada espacio de 1 cad", "d": "Girá con 3 cad. En el espacio de la cad de cada V tejé (pa, cad, pa).", "n": "V alineadas." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Tejido en V." }
+    ]
+  },
+  "shell_stitch": {
+    "intro": "Conchas de 5 pa que se alternan con pb: un clásico de bordes, mantas y ropa de bebé.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 6 + 2", "d": "Cadenetas en múltiplo de 6, más 2.", "n": "6n + 2 cad." },
+      { "t": "Fila 1", "r": "pb en la 2.ª cad, *saltar 2, 5 pa en la siguiente, saltar 2, 1 pb en la siguiente*", "d": "1 pb en la 2.ª cad. Salteá 2, tejé 5 pa en la siguiente cad (la concha), salteá 2 y 1 pb.", "n": "Conchas separadas por pb." },
+      { "t": "Fila 2", "r": "3 cad, girar, 2 pa en el primer pb, *1 pb en el pa central de la concha, 5 pa en el pb siguiente*; terminá con 3 pa en el último pb", "d": "Las conchas nuevas nacen en los pb; el pb va en el pa del medio de la concha anterior.", "n": "Conchas desplazadas." },
+      { "t": "Fila 3", "r": "1 cad, girar, pb en el primero, *5 pa en el pb, 1 pb en el pa central*", "d": "Mismo ritmo, siempre concha sobre pb y pb sobre el centro de la concha.", "n": "Pb y conchas." },
+      { "t": "Repetir", "r": "Filas 2 y 3", "d": "Seguí alternando.", "n": "Tejido concha." }
+    ]
+  },
+  "fan_stitch": {
+    "intro": "Abanicos abiertos con un espacio en el centro: (2 pa, 2 cad, 2 pa).",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 4 + 2", "d": "Cadenetas en múltiplo de 4, más 2.", "n": "4n + 2 cad." },
+      { "t": "Fila 1", "r": "(2 pa, 2 cad, 2 pa) en la 6.ª cad, *saltar 3, (2 pa, 2 cad, 2 pa) en la siguiente*", "d": "Cada abanico es de 2 pa, 2 cad y 2 pa en una misma cadeneta. Salteá 3 entre abanico y abanico.", "n": "Fila de abanicos." },
+      { "t": "Fila 2", "r": "3 cad, girar, (2 pa, 2 cad, 2 pa) en cada espacio de 2 cad", "d": "El abanico nuevo nace en el hueco de 2 cad del abanico de abajo.", "n": "Abanicos alineados." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Tejido abanico." }
+    ]
+  },
+  "granny_stitch": {
+    "intro": "Grupos de 3 pa separados por espacios: la base de las mantas granny.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 3 + 2", "d": "Cadenetas en múltiplo de 3, más 2.", "n": "3n + 2 cad." },
+      { "t": "Fila 1", "r": "pa en la 4.ª cad, *saltar 2, 3 pa en la siguiente*; 2 pa en la última", "d": "1 pa en la 4.ª cad, y después grupos de 3 pa en cada cadeneta saltando 2. Terminá con 2 pa.", "n": "Grupos de 3 pa." },
+      { "t": "Fila 2", "r": "3 cad, girar, *3 pa en el espacio entre grupos*; 1 pa en la cadeneta de giro", "d": "Los grupos nuevos se tejen en los espacios entre los grupos de abajo. Cerrá con 1 pa en la cad de giro.", "n": "Grupos alineados." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Tejido granny." }
+    ]
+  },
+  "chain_arc_mesh": {
+    "intro": "Una red liviana de arcos de cadeneta sujetos con pb.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × múltiplo de 4 + 2", "d": "Cadenetas en múltiplo de 4, más 2.", "n": "4n + 2 cad." },
+      { "t": "Fila 1", "r": "pb en la 6.ª cad, *5 cad, saltar 3, pb en la siguiente*", "d": "1 pb en la 6.ª cad. Armá un arco de 5 cad, salteá 3 cadenetas de la base y sujetá con 1 pb.", "n": "Fila de arcos." },
+      { "t": "Fila 2", "r": "*5 cad, pb en el arco siguiente*; terminá con 2 cad y 1 pa en el último pb", "d": "Hacé 5 cad y 1 pb en el arco de la fila anterior, y repetí. Al final, 2 cad y 1 pa en el último pb para darle altura.", "n": "Arcos alineados." },
+      { "t": "Repetir", "r": "Fila 2", "d": "Seguí así.", "n": "Red de arcos." }
+    ]
+  }
+}

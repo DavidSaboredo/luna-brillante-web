@@ -1,0 +1,46 @@
+{
+ "prenda": "chaleco",
+ "talle": 38,
+ "opciones": {
+  "talle": 38,
+  "manga": "sin",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 38,
+  "busto": 84,
+  "cadera": 82,
+  "posCadera": 12,
+  "sisa": 18,
+  "puno": 15,
+  "manga": 40,
+  "total": 56
+ },
+ "holgura": 8,
+ "largo": 62,
+ "manga": 0,
+ "piezas": [
+  {
+   "zona": "espalda",
+   "nombre": "Espalda",
+   "ancho": 46,
+   "alto": 62,
+   "cantidad": 1
+  },
+  {
+   "zona": "delanteros",
+   "nombre": "Delantero",
+   "ancho": 25,
+   "alto": 62,
+   "cantidad": 2
+  },
+  {
+   "zona": "ribete",
+   "nombre": "Ribete del frente y el escote",
+   "ancho": 3,
+   "alto": 164,
+   "cantidad": 1
+  }
+ ]
+}

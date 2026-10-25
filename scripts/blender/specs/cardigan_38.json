@@ -1,0 +1,54 @@
+{
+ "prenda": "cardigan",
+ "talle": 38,
+ "opciones": {
+  "talle": 38,
+  "manga": "larga",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 38,
+  "busto": 84,
+  "cadera": 82,
+  "posCadera": 12,
+  "sisa": 18,
+  "puno": 15,
+  "manga": 40,
+  "total": 56
+ },
+ "holgura": 8,
+ "largo": 66,
+ "manga": 40,
+ "piezas": [
+  {
+   "zona": "espalda",
+   "nombre": "Espalda",
+   "ancho": 46,
+   "alto": 66,
+   "cantidad": 1
+  },
+  {
+   "zona": "delanteros",
+   "nombre": "Delantero",
+   "ancho": 25,
+   "alto": 66,
+   "cantidad": 2
+  },
+  {
+   "zona": "mangas",
+   "nombre": "Manga",
+   "ancho": 33,
+   "alto": 40,
+   "cantidad": 2,
+   "nota": "baja hasta 18 cm en el puño"
+  },
+  {
+   "zona": "ribete",
+   "nombre": "Ribete",
+   "ancho": 3,
+   "alto": 172,
+   "cantidad": 1
+  }
+ ]
+}

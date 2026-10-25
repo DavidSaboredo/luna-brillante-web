@@ -1,0 +1,249 @@
+{
+  "slip_knot": {
+    "intro": "Es el primer lazo que va en la aguja. Todo trabajo en crochet arranca de acá (salvo el anillo mágico).",
+    "vueltas": [
+      { "t": "Paso 1 · El lazo", "r": "Lazo con cola de 10 cm", "d": "Dejá una cola de unos 10 cm y cruzá el hilo sobre sí mismo para formar un lazo, como una letra «a». La cola queda atrás y el hilo del ovillo adelante.", "n": "Un lazo con el cruce sujeto entre pulgar e índice." },
+      { "t": "Paso 2 · La lazada", "r": "Sacar lazada por el lazo", "d": "Con la aguja tomá el hilo del ovillo (el que viene hacia el ovillo, no la cola) y pasalo por dentro del lazo, tirando hacia vos.", "n": "Un segundo lazo más chico dentro del primero." },
+      { "t": "Paso 3 · Ajustar", "r": "Tirar de cola y ovillo", "d": "Tirá de la cola con una mano y del hilo del ovillo con la otra hasta que el nudo se cierre sobre la aguja. Tiene que correr suave: si lo apretás de más no vas a poder meter la aguja en las cadenetas.", "n": "1 lazada en la aguja (no cuenta como punto)." }
+    ]
+  },
+  "magic_ring": {
+    "intro": "Anillo ajustable para trabajar en redondo sin dejar agujero en el centro (amigurumis, flores, gorros). Tejé la primera vuelta ADENTRO del anillo y después cerrá tirando de la cola.",
+    "vueltas": [
+      { "t": "Paso 1 · Armar el anillo", "r": "Enrollar el hilo 2 veces en los dedos", "d": "Poné la cola sobre el índice y el medio de la mano izquierda y dale dos vueltas al hilo. El hilo del ovillo queda sobre el dedo, formando una X donde se cruza.", "n": "Un aro de hilo sobre los dedos." },
+      { "t": "Paso 2 · Sacar lazada", "r": "Insertar en el aro, lazada, sacar", "d": "Metí la aguja por dentro del aro (por debajo de las dos hebras), tomá el hilo del ovillo y sacá una lazada hacia vos.", "n": "1 lazada en la aguja." },
+      { "t": "Paso 3 · Cadeneta de seguridad", "r": "1 cad", "d": "Echá hilo y pasalo por la lazada de la aguja: es una cadeneta que traba el anillo. No cuenta como punto.", "n": "Anillo trabado, listo para tejer." },
+      { "t": "Vuelta 1", "r": "6 pb en el anillo", "d": "Insertá la aguja por dentro del aro y tejé 6 pb, abrazando con cada punto las dos hebras del aro y la cola. Podés cambiar 6 por la cantidad que pida tu patrón.", "n": "6 pb." },
+      { "t": "Cierre", "r": "Tirar de la cola · pr en el 1.er pb", "d": "Tirá de la cola: se cierra el centro como una bolsita. Unís con 1 pr en el primer pb de la vuelta (o seguís en espiral si el patrón lo pide).", "n": "Centro cerrado, 6 puntos." }
+    ]
+  },
+  "chain": {
+    "intro": "La cadeneta es la base de casi todo: forma la «cadena base» donde se teje la primera fila.",
+    "vueltas": [
+      { "t": "Cada cadeneta", "r": "1 cad", "d": "Con el nudo corredizo en la aguja, pasá el hilo por detrás de la aguja hacia adelante (eso es «echar hilo» o «hacer una lazada») y tirá de ese hilo a través de la lazada que tenías. La aguja queda otra vez con una sola lazada.", "n": "+1 cadeneta. Repetí." },
+      { "t": "Al contar", "r": "No contar el nudo ni la lazada de la aguja", "d": "Cada «V» que se ve por delante es 1 cadeneta. La lazada que está en la aguja y el nudo corredizo del principio no se cuentan.", "n": "Cantidad pedida por el patrón." },
+      { "t": "Ojo con la tensión", "r": "Cadena pareja", "d": "Sostené la cadena cerca de la aguja con el pulgar y el índice y mantené el mismo tironcito en cada puntada. Si te queda apretada, probá con una aguja un número más grande para la base.", "n": "Cadena con las «V» parejas." }
+    ]
+  },
+  "slip_stitch": {
+    "intro": "El punto más bajito de todos. Sirve para unir vueltas, desplazarte sin agregar altura y hacer terminaciones.",
+    "vueltas": [
+      { "t": "Cada punto raso", "r": "Insertar · hilo · pasar todo", "d": "Metí la aguja en el punto que pide el patrón, echá hilo y sacá esa lazada directo por el punto Y por la lazada que ya tenías en la aguja, todo en un solo movimiento.", "n": "1 lazada en la aguja, +1 pr." },
+      { "t": "Para unir una vuelta", "r": "pr en el 1.er punto", "d": "Al terminar la vuelta, insertá la aguja en el primer punto que tejiste (no en la cadeneta de inicio) y hacé 1 pr: queda cerrada como un anillo.", "n": "Vuelta cerrada." }
+    ]
+  },
+  "single_crochet": {
+    "intro": "El punto bajo es el más usado y el primero que se aprende: queda firme, compacto y no deja espacios. Es el «ladrillito» del amigurumi.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × cualquier cantidad", "d": "Armá tantas cadenetas como puntos quieras y sumá 1 más: esa cadeneta extra es la «de giro» que sube la altura.", "n": "N + 1 cad." },
+      { "t": "Fila 1", "r": "1 pb en la 2.ª cad desde la aguja, 1 pb en cada cad", "d": "Salteá la cadeneta que está pegada a la aguja y metí la aguja en la 2.ª. Echá hilo, sacá lazada (2 lazadas en la aguja), echá hilo y pasalo por las 2. Eso es 1 pb. Seguí así, 1 pb en cada cadeneta hasta el final.", "n": "N pb." },
+      { "t": "Fila 2", "r": "1 cad, girar, 1 pb en cada pb", "d": "Hacé 1 cad (sube la altura, NO cuenta como punto), girá la labor como una página de libro y tejé 1 pb en cada punto de la fila anterior, tomando las dos hebras de arriba de cada «V». Al final fijate que el último pb caiga en el último punto de la fila de abajo.", "n": "N pb." },
+      { "t": "Filas siguientes", "r": "Repetir la fila 2", "d": "Repetí «1 cad, girar, N pb» hasta el largo que necesites. Contá los puntos cada tanto: tienen que ser siempre los mismos.", "n": "N pb en cada fila." }
+    ]
+  },
+  "half_double_crochet": {
+    "intro": "Un punto intermedio entre el bajo y el alto: más rápido que el pb y más tupido que el pa. Queda un tejido flexible, ideal para prendas.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × N + 2", "d": "Armá la cantidad de puntos que querés más 2 cadenetas (que van a hacer de «escalón» de la primera fila).", "n": "N + 2 cad." },
+      { "t": "Fila 1", "r": "1 mpa en la 3.ª cad desde la aguja, 1 mpa en cada cad", "d": "Echá hilo (1 lazada sobre la aguja), metí la aguja en la 3.ª cadeneta, echá hilo y sacá lazada: tenés 3 lazadas en la aguja. Echá hilo y pasalo por las 3 a la vez. Seguí con 1 mpa en cada cadeneta.", "n": "N mpa (las 2 cad salteadas cuentan como el primer mpa)." },
+      { "t": "Fila 2", "r": "2 cad, girar, 1 mpa en cada punto", "d": "Hacé 2 cad, girá y tejé 1 mpa en cada punto de la fila de abajo. El primer punto de abajo queda tapado por las 2 cad, así que empezá en el 2.º punto y al final tejé el último mpa en la parte de arriba de las 2 cad de la fila anterior.", "n": "N mpa." },
+      { "t": "Filas siguientes", "r": "Repetir la fila 2", "d": "Repetí «2 cad, girar, mpa en cada punto». Contá los puntos al terminar cada fila.", "n": "N mpa en cada fila." }
+    ]
+  },
+  "double_crochet": {
+    "intro": "El punto alto es la base de calados, mantas y granny squares. Crece rápido porque es alto.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × N + 2", "d": "Armá los puntos que querés y sumá 2 cadenetas de más.", "n": "N + 2 cad." },
+      { "t": "Fila 1", "r": "1 pa en la 4.ª cad desde la aguja, 1 pa en cada cad", "d": "Echá hilo, metí la aguja en la 4.ª cad, echá hilo y sacá lazada (3 lazadas). Echá hilo y pasá por 2 lazadas (quedan 2). Echá hilo y pasá por las 2 restantes. Eso es 1 pa. Seguí con 1 pa en cada cadeneta.", "n": "N pa (las 3 cad salteadas cuentan como el 1.er pa)." },
+      { "t": "Fila 2", "r": "3 cad, girar, 1 pa en cada pa", "d": "Hacé 3 cad (cuentan como el primer pa), girá y saltá el primer punto de abajo, que queda tapado por las cad. Tejé 1 pa en cada punto siguiente y, el último, en la 3.ª cad del giro de la fila anterior.", "n": "N pa." },
+      { "t": "Filas siguientes", "r": "Repetir la fila 2", "d": "Repetí «3 cad, girar, pa en cada punto». Los bordes quedan parejos si siempre cerrás en la cadeneta de giro.", "n": "N pa en cada fila." }
+    ]
+  },
+  "treble_crochet": {
+    "intro": "Punto alto doble: más alto todavía que el pa, para calados abiertos y de caída suave.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × N + 3", "d": "Los puntos que necesites más 3 cadenetas.", "n": "N + 3 cad." },
+      { "t": "Fila 1", "r": "1 pad en la 5.ª cad desde la aguja, 1 pad en cada cad", "d": "Echá hilo 2 veces, metí la aguja en la 5.ª cad, echá hilo y sacá lazada (4 lazadas). *Echá hilo y pasá por 2 lazadas*, 3 veces, hasta que quede 1 sola. Seguí con 1 pad en cada cadeneta.", "n": "N pad (las 4 cad salteadas cuentan como el 1.er pad)." },
+      { "t": "Fila 2", "r": "4 cad, girar, 1 pad en cada punto", "d": "Hacé 4 cad (cuentan como primer pad), girá, saltá el primer punto de abajo y tejé 1 pad en cada punto siguiente. El último va en la 4.ª cad del giro de la fila anterior.", "n": "N pad." },
+      { "t": "Filas siguientes", "r": "Repetir la fila 2", "d": "Repetí hasta el largo que quieras.", "n": "N pad." }
+    ]
+  },
+  "double_treble_crochet": {
+    "intro": "Punto alto triple: muy alto, se usa en calados grandes y para estirar bucles.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × N + 4", "d": "Los puntos que necesites más 4 cadenetas.", "n": "N + 4 cad." },
+      { "t": "Fila 1", "r": "1 pat en la 6.ª cad desde la aguja, 1 pat en cada cad", "d": "Echá hilo 3 veces, metí la aguja en la 6.ª cad, echá hilo y sacá lazada (5 lazadas). *Echá hilo y pasá por 2*, 4 veces, hasta que quede 1.", "n": "N pat." },
+      { "t": "Fila 2", "r": "5 cad, girar, 1 pat en cada punto", "d": "Hacé 5 cad (cuentan como el 1.er pat), girá, saltá el primer punto y tejé 1 pat en cada uno hasta cerrar en la 5.ª cad de la fila anterior.", "n": "N pat." }
+    ]
+  },
+  "triple_treble_crochet": {
+    "intro": "Punto alto cuádruple: el más alto de los básicos. Lo vas a ver en motivos especiales y en calados muy aireados.",
+    "vueltas": [
+      { "t": "Cadena base", "r": "cad × N + 5", "d": "Los puntos que necesites más 5 cadenetas.", "n": "N + 5 cad." },
+      { "t": "Fila 1", "r": "1 pac en la 7.ª cad desde la aguja, 1 pac en cada cad", "d": "Echá hilo 4 veces, metí la aguja en la 7.ª cad, echá hilo y sacá lazada (6 lazadas). *Echá hilo y pasá por 2*, 5 veces.", "n": "N pac." },
+      { "t": "Fila 2", "r": "6 cad, girar, 1 pac en cada punto", "d": "6 cad de giro (cuentan como el 1.er pac); tejé 1 pac en cada punto de abajo, cerrando en la 6.ª cad.", "n": "N pac." }
+    ]
+  },
+  "foundation_single_crochet": {
+    "intro": "Hace la cadena base y la primera fila de pb al mismo tiempo. La base queda elástica (ideal para prendas) y te ahorra contar cadenetas.",
+    "vueltas": [
+      { "t": "El primer punto", "r": "2 cad · pb en la 2.ª cad desde la aguja", "d": "Hacé 2 cad. Metí la aguja en la 2.ª, echá hilo y sacá lazada (2 lazadas en la aguja).", "n": "2 lazadas en la aguja." },
+      { "t": "La «cadeneta» del punto", "r": "Hilo y pasar por 1 lazada", "d": "Echá hilo y pasalo por solo 1 lazada. Esa «V» que se forma es la cadeneta base de este punto.", "n": "2 lazadas en la aguja." },
+      { "t": "Cerrar el pb", "r": "Hilo y pasar por 2", "d": "Echá hilo y pasalo por las 2 lazadas. Ya hay 1 pb con su cadeneta abajo.", "n": "1 pbsc." },
+      { "t": "Los siguientes", "r": "Insertar en la cadeneta de abajo, repetir", "d": "Metí la aguja en la cadeneta (la «V» de abajo) del punto anterior, sacá lazada, echá hilo y pasá por 1, echá hilo y pasá por 2. Repetí hasta el largo que necesites.", "n": "N pbsc." }
+    ]
+  },
+  "foundation_double_crochet": {
+    "intro": "Igual que el pbsc pero en punto alto: base y primera fila juntas, bien elásticas.",
+    "vueltas": [
+      { "t": "El primer punto", "r": "3 cad · echar hilo, insertar en la 3.ª cad", "d": "Hacé 3 cad, echá hilo y metí la aguja en la 3.ª cad desde la aguja. Echá hilo y sacá lazada (3 lazadas).", "n": "3 lazadas en la aguja." },
+      { "t": "La «cadeneta» del punto", "r": "Hilo y pasar por 1 lazada", "d": "Echá hilo y pasá por 1 lazada: esa es la cadeneta base de este punto.", "n": "3 lazadas en la aguja." },
+      { "t": "Cerrar el pa", "r": "*Hilo y pasar por 2* × 2", "d": "Echá hilo y pasá por 2 lazadas; echá hilo y pasá por las 2 que quedan.", "n": "1 pasc." },
+      { "t": "Los siguientes", "r": "Hilo · insertar en la cadeneta de abajo", "d": "Echá hilo, metí la aguja en la cadeneta del punto anterior y repetí desde «sacar lazada». Seguí hasta el largo que necesites.", "n": "N pasc." }
+    ]
+  },
+  "spiral_rounds": {
+    "intro": "Tejés en redondo sin unir ni girar: la labor sube como un resorte. Es el estilo de los amigurumis.",
+    "vueltas": [
+      { "t": "Vuelta 1", "r": "6 pb en anillo mágico", "d": "Tejé 6 pb dentro del anillo mágico y tirá de la cola para cerrar. NO unas con punto raso.", "n": "6 pb." },
+      { "t": "Marcador", "r": "Marcar el 1.er punto", "d": "Colocá un marcador de puntos (o un hilito de otro color) en el primer pb de la vuelta. Cada vez que llegues a él, empezás una vuelta nueva.", "n": "Marcador puesto." },
+      { "t": "Vuelta 2", "r": "aum × 6", "d": "Tejé 2 pb en cada punto (es decir, un aumento en cada uno).", "n": "12 pb." },
+      { "t": "Vuelta 3", "r": "*1 pb, aum* × 6", "d": "Tejé 1 pb en el primer punto y 2 pb en el siguiente; repetí 6 veces.", "n": "18 pb." },
+      { "t": "Vueltas siguientes", "r": "Mover el marcador", "d": "Al terminar cada vuelta, pasá el marcador al primer punto de la vuelta que empieza. Si lo perdés, contá los puntos y te vas a dar cuenta por dónde ibas.", "n": "Aumentá 6 por vuelta hasta el tamaño que quieras." }
+    ]
+  },
+  "crochet_cord": {
+    "intro": "Un cordoncito redondo y firme, ideal para tiras, cordones y asas. Se teje girando la labor en cada punto.",
+    "vueltas": [
+      { "t": "Inicio", "r": "2 cad · 1 pb en la 2.ª cad", "d": "Hacé 2 cadenetas y 1 pb en la 2.ª cad desde la aguja.", "n": "1 pb." },
+      { "t": "Giro", "r": "Girar · 1 pb en la lazada lateral izquierda de la 1.ª cad", "d": "Girá la pieza hacia vos para ver el costado izquierdo del punto. Metí la aguja en la hebra lateral izquierda de la primera cadeneta y tejé 1 pb.", "n": "2 pb." },
+      { "t": "Repetir", "r": "*Girar · 1 pb en las 2 lazadas del costado izquierdo* hasta el largo", "d": "Girá de nuevo y tejé 1 pb en las dos hebras del costado del punto que recién hiciste. Seguí girando en cada punto, siempre hacia el mismo lado.", "n": "El cordón se enrolla solo." }
+    ]
+  },
+  "tapestry_crochet": {
+    "intro": "Tejés con dos colores a la vez: el que no usás lo llevás escondido dentro de los puntos. Con eso se dibujan motivos a partir de un gráfico.",
+    "vueltas": [
+      { "t": "Preparación", "r": "Dos ovillos · base en pb", "d": "Armá la cadena base y la primera fila en pb con el color de fondo. Tené los dos ovillos a mano, uno a cada lado.", "n": "N pb." },
+      { "t": "Llevar el hilo", "r": "Tejer sobre el hilo del 2.º color", "d": "Apoyá el hilo que no usás sobre los puntos de la fila anterior y tejé los pb por encima, envolviéndolo dentro del punto.", "n": "El hilo queda oculto." },
+      { "t": "Cambiar de color", "r": "Último paso del pb con el nuevo color", "d": "En el punto anterior al cambio, hacé la primera parte del pb y, al pasar por las 2 lazadas, usá el color nuevo. Ahora el color viejo pasa a ser el que llevás.", "n": "Cambio limpio." },
+      { "t": "Leer el gráfico", "r": "1 casilla = 1 pb", "d": "Cada cuadradito del gráfico es 1 pb del color indicado. En las filas de ida leé de derecha a izquierda y en las de vuelta, de izquierda a derecha.", "n": "El dibujo aparece de a poco." },
+      { "t": "Tensión", "r": "Hilo llevado flojo", "d": "Si tirás de más el hilo llevado, la labor se frunce. Dejalo sin tensión.", "n": "Tejido plano." }
+    ]
+  },
+  "sc_increase": {
+    "intro": "Un aumento agrega un punto: sirve para ensanchar la labor.",
+    "vueltas": [
+      { "t": "El aumento", "r": "aum = 2 pb en el mismo punto", "d": "Tejé 1 pb en el punto como siempre. Sin avanzar, metí la aguja otra vez en ese mismo punto y tejé un segundo pb.", "n": "De 1 punto salen 2." },
+      { "t": "Ejemplo · fila de 5 pb", "r": "1 pb, aum, 1 pb, aum, 1 pb", "d": "Si repartís los aumentos, la fila crece de a poco: acá pasa de 5 a 7 puntos. Para que el borde no se tuerza, no pongas los aumentos siempre en el mismo lugar de cada fila.", "n": "7 pb." }
+    ]
+  },
+  "sc2tog": {
+    "intro": "Une dos puntos en uno: sirve para achicar la labor.",
+    "vueltas": [
+      { "t": "Primera mitad", "r": "Insertar · sacar lazada", "d": "Metí la aguja en el punto, echá hilo y sacá lazada (2 lazadas en la aguja). No cierres.", "n": "2 lazadas." },
+      { "t": "Segunda mitad", "r": "Insertar en el siguiente · sacar lazada", "d": "Sin cerrar, metí la aguja en el punto siguiente, echá hilo y sacá otra lazada.", "n": "3 lazadas." },
+      { "t": "Cerrar", "r": "Hilo y pasar por las 3", "d": "Echá hilo y pasalo por las 3 lazadas a la vez.", "n": "2 puntos convertidos en 1." },
+      { "t": "Ejemplo · fila de 6 pb", "r": "1 pb, dism, 1 pb, dism", "d": "Así la fila baja de 6 a 4 puntos.", "n": "4 pb." }
+    ]
+  },
+  "invisible_decrease": {
+    "intro": "Disminución «invisible»: se teje sólo por la hebra delantera y casi no se nota. Es la favorita para amigurumis.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Insertar en la hebra delantera del siguiente punto", "d": "Metí la aguja solo bajo la hebra delantera (la más cercana a vos) del punto siguiente, sin sacar nada.", "n": "Aguja en el 1.er punto." },
+      { "t": "Paso 2", "r": "Insertar en la hebra delantera del otro", "d": "Sin sacar la aguja, hacelo igual en el punto que sigue: tenés la aguja pasando por 2 hebras delanteras.", "n": "Aguja en 2 hebras." },
+      { "t": "Paso 3", "r": "Hilo y sacar por las 2 hebras", "d": "Echá hilo y sacá una lazada por las 2 hebras a la vez.", "n": "2 lazadas." },
+      { "t": "Paso 4", "r": "Hilo y pasar por las 2 lazadas", "d": "Echá hilo y cerrá las 2 lazadas.", "n": "2 puntos convertidos en 1." }
+    ]
+  },
+  "dc_increase": {
+    "intro": "Agrega un punto alto en la fila.",
+    "vueltas": [
+      { "t": "El aumento", "r": "aum pa = 2 pa en el mismo punto", "d": "Tejé 1 pa en el punto. Sin avanzar, tejé un segundo pa en ese mismo punto.", "n": "De 1 punto salen 2." },
+      { "t": "Ejemplo · fila de 4 pa", "r": "1 pa, aum, 1 pa, aum", "d": "Así la fila crece de 4 a 6 puntos.", "n": "6 pa." }
+    ]
+  },
+  "dc2tog": {
+    "intro": "Dos puntos altos cerrados juntos en la punta.",
+    "vueltas": [
+      { "t": "1.er pa a medias", "r": "Hilo · insertar · lazada · hilo y pasar por 2", "d": "Echá hilo, metí la aguja en el punto, sacá lazada y pasá por 2 lazadas. No cierres el último paso.", "n": "2 lazadas." },
+      { "t": "2.º pa a medias", "r": "Hilo · insertar en el siguiente · lazada · hilo y pasar por 2", "d": "Repetí en el punto siguiente.", "n": "3 lazadas." },
+      { "t": "Cerrar", "r": "Hilo y pasar por las 3", "d": "Echá hilo y pasá por las 3 lazadas.", "n": "2 puntos convertidos en 1." }
+    ]
+  },
+  "dc3tog": {
+    "intro": "Tres puntos altos cerrados juntos: una disminución más fuerte.",
+    "vueltas": [
+      { "t": "Tres pa a medias", "r": "*Hilo · insertar · lazada · hilo y pasar por 2* × 3", "d": "En cada uno de los 3 puntos siguientes, hacé un pa dejando el último paso sin cerrar.", "n": "4 lazadas." },
+      { "t": "Cerrar", "r": "Hilo y pasar por las 4", "d": "Echá hilo y pasá por las 4 lazadas a la vez.", "n": "3 puntos convertidos en 1." }
+    ]
+  },
+  "back_loop_only": {
+    "intro": "Tejés en una sola de las dos hebras de arriba de cada «V»: la otra queda como un surquito que da relieve.",
+    "vueltas": [
+      { "t": "Ubicar la hebra", "r": "ht = hebra trasera", "d": "Mirá la «V» de arriba de cada punto: tiene dos hebras. La trasera es la que está más lejos de vos.", "n": "Hebra identificada." },
+      { "t": "Tejer", "r": "1 pb ht en cada punto", "d": "Metí la aguja solo bajo la hebra trasera y completá el pb como siempre.", "n": "Un surco por fila." },
+      { "t": "Truco", "r": "Cambiar de color cada 2 filas", "d": "Las rayas con relieve se ven más lindas si alternás colores.", "n": "Tejido con rayas marcadas." }
+    ]
+  },
+  "front_loop_only": {
+    "intro": "Igual que la hebra trasera pero tomando la más cercana a vos.",
+    "vueltas": [
+      { "t": "Ubicar la hebra", "r": "hd = hebra delantera", "d": "De las dos hebras de la «V» de arriba, la delantera es la más cercana a vos.", "n": "Hebra identificada." },
+      { "t": "Tejer", "r": "1 pb hd en cada punto", "d": "Metí la aguja solo bajo esa hebra y completá el pb.", "n": "Escalón visible en el revés." }
+    ]
+  },
+  "camel_stitch": {
+    "intro": "Se teje en la «tercera hebra», una barrita que está detrás de la «V»: queda un tejido grueso que se parece al punto de dos agujas.",
+    "vueltas": [
+      { "t": "Ubicar la tercera hebra", "r": "Barra horizontal detrás de la «V»", "d": "Mirando el revés del punto, buscá la barrita horizontal que queda detrás de las dos hebras de arriba.", "n": "Tercera hebra a la vista." },
+      { "t": "Tejer", "r": "mpa 3h", "d": "Echá hilo, metí la aguja solo bajo esa barrita y completá el mpa. En cada fila repetí lo mismo.", "n": "mpa 3h en cada punto." }
+    ]
+  },
+  "extended_single_crochet": {
+    "intro": "Un pb con un pasito de más: queda más alto y flexible que el pb común.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Insertar · sacar lazada", "d": "Metí la aguja en el punto y sacá una lazada.", "n": "2 lazadas." },
+      { "t": "Paso 2", "r": "Hilo y pasar por 1 lazada", "d": "Echá hilo y pasalo por solo 1 lazada (es la «cadeneta» extra).", "n": "2 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por las 2", "d": "Echá hilo y cerrá las 2 lazadas.", "n": "1 pbe." }
+    ]
+  },
+  "herringbone_half_double": {
+    "intro": "Un mpa «de lado»: queda una espiga diagonal, casi como un tejido a dos agujas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Hilo · insertar", "d": "Echá hilo y metí la aguja en el punto.", "n": "Aguja dentro." },
+      { "t": "Paso 2", "r": "Hilo y sacar por el punto y la 1.ª lazada", "d": "Echá hilo y sacalo a través del punto Y de la primera lazada de la aguja, todo junto.", "n": "2 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por las 2", "d": "Echá hilo y cerrá las 2 lazadas.", "n": "1 mpa esp." }
+    ]
+  },
+  "linked_double_crochet": {
+    "intro": "Un pa «enlazado» al anterior: se cierra la separación entre puntos y queda un tejido muy firme, sin agujeritos.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Insertar en la barra del medio del pa anterior", "d": "Mirá el pa de al lado: tiene una barrita horizontal en el medio. Metí la aguja ahí y sacá una lazada.", "n": "2 lazadas." },
+      { "t": "Paso 2", "r": "Insertar en el punto siguiente", "d": "Metí la aguja en el punto de la fila anterior y sacá lazada.", "n": "3 lazadas." },
+      { "t": "Paso 3", "r": "*Hilo y pasar por 2* × 2", "d": "Cerrá como un pa común, dos veces.", "n": "1 pa enl." }
+    ]
+  },
+  "waistcoat_stitch": {
+    "intro": "Se teje metiendo la aguja en el centro de la «V» (entre las patitas). Parece un tejido de punto jersey con dos agujas.",
+    "vueltas": [
+      { "t": "Paso 1", "r": "Ubicar la «V»", "d": "Mirá el punto de la vuelta anterior: forma una «V». Entre las dos patitas hay un huequito.", "n": "Hueco identificado." },
+      { "t": "Paso 2", "r": "Insertar entre las patas", "d": "Metí la aguja por ese huequito (no debajo de las hebras de arriba) y sacá lazada.", "n": "2 lazadas." },
+      { "t": "Paso 3", "r": "Hilo y pasar por 2", "d": "Cerrá el pb como siempre.", "n": "1 pb ch." }
+    ]
+  },
+  "thermal_stitch": {
+    "intro": "Un pb que une dos filas al mismo tiempo: queda un tejido doble, abrigado y firme.",
+    "vueltas": [
+      { "t": "Fila 1", "r": "pb en cada punto", "d": "Tejé una fila de pb como siempre.", "n": "N pb." },
+      { "t": "Fila 2 y siguientes", "r": "pb tomando 2 hebras", "d": "En cada punto metí la aguja en la hebra trasera del punto de la fila anterior y, a la vez, en la hebra delantera libre de la fila de más abajo. Sacá lazada y cerrá como pb.", "n": "N pb." }
+    ]
+  },
+  "slip_stitch_fabric": {
+    "intro": "Un tejido hecho solamente con puntos rasos en la hebra trasera: queda un elástico muy parecido al de dos agujas.",
+    "vueltas": [
+      { "t": "Fila 1", "r": "1 pr en cada cad", "d": "Armá la cadena base y tejé 1 pr en cada cadeneta.", "n": "N pr." },
+      { "t": "Fila 2", "r": "girar · 1 pr ht en cada pr", "d": "Girá (con o sin 1 cad) y tejé 1 pr solo bajo la hebra trasera de cada punto. Mantené el hilo flojo para poder entrar con la aguja.", "n": "N pr ht." },
+      { "t": "Filas siguientes", "r": "Repetir la fila 2", "d": "Seguí igual. Para que el elástico quede vertical, tejé la tira de largo y no de ancho.", "n": "Elástico estilo punto de dos agujas." }
+    ]
+  }
+}

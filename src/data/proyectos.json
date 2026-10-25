@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "fuente": "Luna Brillante · Moda Crochet · Edición N.º 1 · Primavera-Verano 2026",
+    "nota": "Contenido tomado de la revista y redactado en español rioplatense. Las medidas son aproximadas y dependen del hilo y de la tensión de cada tejedora."
+  },
+  "proyectos": [
+    {
+      "id": "blusa-brisa-de-verano",
+      "numero": 1,
+      "pagina": 4,
+      "titulo": "Blusa Brisa de Verano",
+      "lema": "Elegancia en cada detalle",
+      "nivel": "Intermedio",
+      "nivelNum": 3,
+      "categoria": "Prenda",
+      "talles": ["S", "M", "L", "XL"],
+      "descripcion": "Blusa calada, fresca y femenina, con un motivo central de piñas y punto fantasía en los costados y la parte superior. Lleva mangas 3/4 y un borde de abanicos.",
+      "portada": "/revista/blusa-brisa-de-verano.webp",
+      "imagenes": [
+        { "src": "/revista/blusa-diagrama-pinas.webp", "alt": "Diagrama del punto fantasía con piñas", "pie": "Diagrama del punto fantasía con piñas (se lee de abajo hacia arriba)" },
+        { "src": "/revista/blusa-punto-fantasia.webp", "alt": "Diagrama y muestra del punto fantasía", "pie": "Punto fantasía de los costados y la parte superior" }
+      ],
+      "materiales": [
+        "300 a 350 g de hilo de algodón o mezcla (según talle y largo)",
+        "Aguja de crochet N.º 3 a 3,5 (según el hilo)",
+        "Tijera",
+        "Marcadores de puntos",
+        "Aguja lanera para las terminaciones"
+      ],
+      "puntosUsados": [
+        { "texto": "Cadeneta (cad)", "punto": "chain" },
+        { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
+        { "texto": "Punto alto o vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Punto fantasía", "punto": null },
+        { "texto": "Piña, según diagrama", "punto": "pineapple_lace" },
+        { "texto": "Abanico", "punto": "fan_stitch" }
+      ],
+      "medidas": [
+        "Talle M · ancho del cuerpo: 48 cm",
+        "Alto hasta la sisa: 36 cm · sisa a hombro: 18 cm",
+        "Hombros: 20 cm cada uno",
+        "Manga 3/4: 42 cm de largo × 26 cm de ancho"
+      ],
+      "explicacion": [
+        "La blusa se teje de abajo hacia arriba, en una sola pieza hasta la sisa. Ahí se divide en delantero y espalda.",
+        "El motivo central son tres piñas: dos en la parte baja y una en el centro que se va abriendo, como en el diagrama.",
+        "A los costados y arriba se trabaja el punto fantasía, siguiendo el diagrama.",
+        "Las mangas son 3/4 y también van en punto fantasía. El escote es redondo y termina con una vuelta de abanicos."
+      ],
+      "puntoFantasia": {
+        "titulo": "Punto fantasía (costados, parte superior y espalda)",
+        "texto": "Calado liviano y repetido que forma abanicos pequeños unidos entre sí. 1 motivo = 8 puntos de base (unos 4 cm); 4 filas = unos 2,5 cm.",
+        "filas": [
+          { "t": "Fila 1", "r": "Cadena base múltiplo de 8 + 1. 1 pb en la 2.ª cad desde la aguja y 1 pb en cada cad." },
+          { "t": "Fila 2", "r": "3 cad (cuentan como 1 pa), saltar 2 pb, (3 pa, 2 cad) en el mismo punto, saltar 2, 1 pb en el siguiente. Repetir." },
+          { "t": "Fila 3", "r": "3 cad, 2 pa en el pb, 2 cad, 3 pa en el espacio de 2 cad, 2 cad, 3 pa en el pb siguiente. Repetir." },
+          { "t": "Fila 4", "r": "1 cad, 3 pb en el primer pa, 2 cad, 1 pb en el espacio de 2 cad, 2 cad, 1 pb en el pa siguiente. Repetir." },
+          { "t": "Filas 5 y 6", "r": "Repetir la fila 3 y la fila 4." }
+        ],
+        "aviso": "Estas filas están tal cual figuran en la revista. Antes de publicar la receta conviene tejer una muestra y confirmar que el conteo coincide con el diagrama."
+      },
+      "terminaciones": [
+        "Unir los hombros.",
+        "Tejer el borde del escote con una vuelta de abanicos.",
+        "Coser o unir las mangas.",
+        "Hacer el borde inferior de la blusa y de las mangas con abanicos, como en la foto.",
+        "Esconder las hebras y bloquear la prenda."
+      ],
+      "consejos": [
+        "Hacé una muestra antes de empezar.",
+        "Mantené la tensión pareja.",
+        "Si querés un calce más suelto, usá una aguja más grande.",
+        "Podés ajustar el largo de la blusa y de las mangas a tu gusto.",
+        "Para un mejor acabado, bloqueá la prenda cuando esté terminada."
+      ]
+    },
+    {
+      "id": "sueter-romantico",
+      "numero": 2,
+      "pagina": 12,
+      "titulo": "Suéter Romántico",
+      "lema": "Básico, elegante y atemporal",
+      "nivel": "Principiante / Intermedio",
+      "nivelNum": 2,
+      "categoria": "Prenda",
+      "talles": ["S", "M", "L", "XL"],
+      "descripcion": "Suéter en punto alto con flores aplicadas. Cómodo, versátil y fácil de tejer, ideal para cualquier ocasión.",
+      "portada": "/revista/sueter-romantico.webp",
+      "imagenes": [
+        { "src": "/revista/sueter-flores.webp", "alt": "Diagramas de la flor grande y la flor chica", "pie": "Flor grande (8-9 cm) y flor chica (5-6 cm)" }
+      ],
+      "materiales": [
+        "400 a 600 g de hilo de algodón o mezcla (según talle)",
+        "Aguja de crochet N.º 4, o la que indique tu hilo",
+        "Tijera",
+        "Aguja lanera",
+        "Marcadores de puntos (opcional)"
+      ],
+      "puntosUsados": [
+        { "texto": "Cadeneta (cad)", "punto": "chain" },
+        { "texto": "Punto alto o vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Punto enano o raso (pr)", "punto": "slip_stitch" },
+        { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
+        { "texto": "Anillo mágico", "punto": "magic_ring" },
+        { "texto": "Flores aplicadas, según diagrama", "punto": null }
+      ],
+      "medidas": [
+        "S · busto 92 cm · largo total 54 cm · manga 56 cm",
+        "M · busto 100 cm · largo total 56 cm · manga 57 cm",
+        "L · busto 108 cm · largo total 58 cm · manga 58 cm",
+        "XL · busto 116 cm · largo total 60 cm · manga 59 cm"
+      ],
+      "explicacion": [
+        "Se teje en punto alto, en filas de ida y vuelta, con las piezas por separado: delantero, espalda y mangas."
+      ],
+      "puntoFantasia": {
+        "titulo": "Punto alto en filas (el punto del suéter)",
+        "texto": "El ancho lo da la cantidad de puntos que elijas. Se teje de ida y vuelta. La revista no indica la cadena base: la fila 1 sigue la regla habitual del punto alto (puntos + 2 cadenetas).",
+        "filas": [
+          { "t": "Cadena base", "r": "Cad de la cantidad de puntos que necesites + 2." },
+          { "t": "Fila 1", "r": "1 pa en la 4.ª cad desde la aguja y 1 pa en cada cad." },
+          { "t": "Filas siguientes", "r": "3 cad para subir (equivalen al primer pa), girar y 1 pa en cada pa de la fila anterior. Al final de la fila, girar." },
+          { "t": "Largo", "r": "Repetir las filas hasta llegar a la altura deseada." }
+        ]
+      },
+      "flores": [
+        {
+          "titulo": "Flor grande (8-9 cm)",
+          "pasos": [
+            "Anillo mágico y 12 pb.",
+            "3 cad (cuentan como 1 pa) y 1 pa en el mismo punto.",
+            "2 pa en cada punto de base (24 pa).",
+            "Pétalos: *1 pb, 5 pa, 1 pb* en el mismo punto. Repetir en toda la vuelta.",
+            "Cerrar con un punto raso, cortar el hilo y dejar una cola larga para coser."
+          ]
+        },
+        {
+          "titulo": "Flor chica (5-6 cm)",
+          "pasos": [
+            "Anillo mágico y 10 pb.",
+            "3 cad (cuentan como 1 pa) y 1 pa en el mismo punto.",
+            "2 pa en cada punto (20 pa).",
+            "Pétalos: *1 pb, 4 pa, 1 pb* en el mismo punto. Repetir.",
+            "Cerrar con un punto raso, cortar el hilo y dejar cola larga para coser."
+          ]
+        }
+      ],
+      "terminaciones": [
+        "Tejer delantero, espalda y mangas por separado en punto alto.",
+        "Coser los hombros.",
+        "Levantar puntos alrededor del escote y tejer 2 o 3 filas en punto alto o bajo.",
+        "Coser las mangas y los costados.",
+        "Tejer las flores según los diagramas.",
+        "Distribuir las flores sobre la prenda, sujetarlas con alfileres y coserlas."
+      ],
+      "consejos": [
+        "Las flores llevan un centro de perla o botón: se ve muy delicado.",
+        "Probá la distribución de las flores sobre la prenda antes de coserlas."
+      ]
+    },
+    {
+      "id": "bolso-bolsillo-natural",
+      "numero": 3,
+      "pagina": 20,
+      "titulo": "Bolso Natural Pocket",
+      "lema": "Estilo y funcionalidad",
+      "nivel": "Intermedio",
+      "nivelNum": 3,
+      "categoria": "Accesorio",
+      "talles": [],
+      "descripcion": "Bolso hecho con motivos florales unidos y un borde de punto alto. Amplio, resistente y de diseño atemporal.",
+      "portada": "/revista/bolso-bolsillo-natural.webp",
+      "imagenes": [
+        { "src": "/revista/bolso-motivo.webp", "alt": "Diagrama del motivo floral y del cuadrado completo", "pie": "Motivo floral y cuadrado completo" }
+      ],
+      "materiales": [
+        "Hilo de algodón o mezcla en 3 tonos (crudo, beige y color piel)",
+        "Aguja de crochet N.º 4, o la que indique tu hilo",
+        "Tijera",
+        "Aguja lanera",
+        "2 asas de cuero o ecocuero con herrajes (opcional)",
+        "Forro de tela (opcional)"
+      ],
+      "puntosUsados": [
+        { "texto": "Cadeneta (cad)", "punto": "chain" },
+        { "texto": "Punto enano o raso (pr)", "punto": "slip_stitch" },
+        { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
+        { "texto": "Punto alto o vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Motivo floral, según diagrama", "punto": null },
+        { "texto": "Unión de motivos", "punto": null }
+      ],
+      "medidas": ["Ancho: 32 cm", "Alto: 24 cm", "Profundidad: 12 cm"],
+      "explicacion": [
+        "Cantidad de motivos: frente 6, espalda 6, laterales 2 (de a uno por lado, como se ve en el esquema) y base 3. En total, 17 motivos."
+      ],
+      "puntoFantasia": {
+        "titulo": "Motivo floral cuadrado",
+        "texto": "Se teje en redondo desde el centro, cambiando de color por vuelta, y termina en un cuadrado.",
+        "filas": [
+          { "t": "Vuelta 1", "r": "Anillo mágico y 12 pb." },
+          { "t": "Vuelta 2", "r": "3 cad (cuentan como 1 pa), 1 pa en el mismo punto. *2 cad, 2 pa en el punto siguiente*. Repetir 12 veces (según la revista)." },
+          { "t": "Vuelta 3", "r": "Cambiar de color. 1 pb en cada grupo de pa, con 3 cad entre ellos." },
+          { "t": "Vuelta 4", "r": "Con el color siguiente, formar los pétalos: en cada espacio de 3 cad tejer (1 pb, 3 pa, 1 pb)." },
+          { "t": "Vuelta 5", "r": "Última vuelta en crudo: 1 pb en cada punto y 3 pb en cada esquina para armar el cuadrado. Cerrar con punto raso." }
+        ],
+        "aviso": "El paso 2 de la revista estaba cortado en dos líneas («2 cad» y «2 pa» quedaron separados) y pide repetir 12 veces sobre 12 puntos. Lo ordené como suena más coherente con el diagrama; conviene tejer un motivo de prueba."
+      },
+      "terminaciones": [
+        "Unir los motivos con aguja lanera y el mismo hilo, con pb o puntada invisible por el revés, tomando solo las hebras traseras para que quede prolijo.",
+        "Con todos los motivos unidos, tejer 4 a 5 vueltas de punto alto alrededor de todo el borde superior.",
+        "En las esquinas, tejer 2 puntos en el mismo punto para que acompañe la forma.",
+        "Cerrar con punto raso.",
+        "Fijar las asas con remaches o coserlas firme. Para más resistencia, agregar un forro de tela con bolsillo interior. Opcional: cierre magnético o botón."
+      ],
+      "consejos": [
+        "Usá un hilo firme: el bolso va a cargar peso.",
+        "Probá el forro antes de coser las asas."
+      ]
+    },
+    {
+      "id": "chal-encanto",
+      "numero": 4,
+      "pagina": 26,
+      "titulo": "Chal Encanto",
+      "lema": "Liviano y versátil",
+      "nivel": "Intermedio",
+      "nivelNum": 3,
+      "categoria": "Accesorio",
+      "talles": [],
+      "descripcion": "Chal triangular de calado delicado, con flecos. Un clásico elegante para todas las estaciones.",
+      "portada": "/revista/chal-encanto.webp",
+      "imagenes": [
+        { "src": "/revista/chal-diagrama.webp", "alt": "Diagrama general del chal", "pie": "Diagrama general del chal (se lee de abajo hacia arriba)" }
+      ],
+      "materiales": [
+        "400 g de hilo fino de algodón o acrílico (según el grosor)",
+        "Aguja de crochet de 3,5 a 4 mm (según el hilo)",
+        "Tijera",
+        "Aguja lanera para esconder hebras"
+      ],
+      "puntosUsados": [
+        { "texto": "Cadeneta (cad)", "punto": "chain" },
+        { "texto": "Punto raso (pr)", "punto": "slip_stitch" },
+        { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
+        { "texto": "Medio punto alto (mpa)", "punto": "half_double_crochet" },
+        { "texto": "Punto alto (pa)", "punto": "double_crochet" },
+        { "texto": "Punto alto doble (pad)", "punto": "treble_crochet" },
+        { "texto": "Abanico de 3 pa en el mismo punto", "punto": "fan_stitch" },
+        { "texto": "Arco de cadenetas", "punto": "chain_arc_mesh" }
+      ],
+      "medidas": ["Ancho superior: 160 cm", "Alto en el centro: 80 cm"],
+      "explicacion": [
+        "El chal empieza por el centro del borde superior y crece hacia los costados, en filas de ida y vuelta: se aumenta en el centro y en los dos extremos."
+      ],
+      "puntoFantasia": {
+        "titulo": "Primeras vueltas",
+        "texto": "Las primeras filas arman el abanico central; de la fila 5 en adelante se sigue el diagrama.",
+        "filas": [
+          { "t": "Vuelta 1", "r": "En el centro, 4 cad y cerrar con 1 pr formando un anillo. 3 cad." },
+          { "t": "Vuelta 2", "r": "3 pa, 3 cad, 3 pa dentro del anillo (así se forma el primer abanico central)." },
+          { "t": "Vuelta 3", "r": "Girar. 3 cad. En el espacio de la vuelta anterior, 3 pa, 3 cad, 3 pa. Se forman los primeros aumentos de los costados." },
+          { "t": "Vuelta 4", "r": "Girar. 3 cad. En cada espacio de 3 cad de la vuelta anterior, 3 pa, 3 cad, 3 pa (incluidos los bordes)." },
+          { "t": "Vuelta 5", "r": "Girar. 3 cad. Empezar el patrón del diagrama, aumentando en el centro y a los dos lados." },
+          { "t": "Siguientes", "r": "Seguir el diagrama. Los bordes se trabajan siempre igual. Repetir las vueltas del patrón hasta el tamaño deseado." }
+        ]
+      },
+      "terminaciones": [
+        "Cortar hebras de 25 a 30 cm (según el largo de flecos que quieras).",
+        "Tomar 3 o 4 hebras, doblarlas por la mitad y, con ayuda de la aguja de crochet, pasarlas por los espacios de los lados inferiores del chal.",
+        "Atar y emparejar los nudos.",
+        "Recortar si hace falta para que queden parejos."
+      ],
+      "consejos": [
+        "Bloqueá el chal: el calado se abre y se luce.",
+        "Es un proyecto ideal para practicar abanicos y arcos."
+      ]
+    },
+    {
+      "id": "top-granny",
+      "numero": 5,
+      "pagina": 32,
+      "titulo": "Top Granny",
+      "lema": "Colores que enamoran",
+      "nivel": "Principiante con base de crochet",
+      "nivelNum": 2,
+      "categoria": "Prenda",
+      "talles": ["S", "M", "L", "XL"],
+      "descripcion": "Top de granny squares florales en crudo, verde suave y azul. Fresco, cómodo y versátil, ideal para usar con jean, pollera o short.",
+      "portada": "/revista/top-granny.webp",
+      "imagenes": [
+        { "src": "/revista/top-cuadrado.webp", "alt": "Cuadrado granny floral y su diagrama", "pie": "Cuadrado granny floral y su diagrama" }
+      ],
+      "materiales": [
+        "Hilo de algodón o mezcla en crudo, verde suave y azul",
+        "Aguja de crochet de 3,5 a 4 mm (según el hilo)",
+        "Tijera",
+        "Aguja lanera para esconder hebras",
+        "Centímetro"
+      ],
+      "puntosUsados": [
+        { "texto": "Cadeneta (cad)", "punto": "chain" },
+        { "texto": "Punto raso (pr)", "punto": "slip_stitch" },
+        { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
+        { "texto": "Media vareta (mpa)", "punto": "half_double_crochet" },
+        { "texto": "Vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Anillo mágico", "punto": "magic_ring" },
+        { "texto": "Cuadrado granny", "punto": "granny_square" }
+      ],
+      "medidas": [
+        "S · 80 × 42 cm · 12 granny (3 × 4)",
+        "M · 88 × 44 cm · 15 granny (3 × 5)",
+        "L · 96 × 46 cm · 18 granny (3 × 6)",
+        "XL · 104 × 48 cm · 21 granny (3 × 7)"
+      ],
+      "explicacion": [
+        "Se tejen los cuadrados por separado, se unen según el talle y se agregan los breteles y un borde."
+      ],
+      "puntoFantasia": {
+        "titulo": "Cuadrado granny floral (por color)",
+        "texto": "Cuatro vueltas, una por color.",
+        "filas": [
+          { "t": "Vuelta 1 · crudo", "r": "Anillo mágico, 12 pa y cerrar con 1 pr." },
+          { "t": "Vuelta 2 · azul", "r": "1 cad, 1 pb en el mismo punto, *5 pa en el punto siguiente, 1 pb en el punto siguiente*. Repetir 3 veces. Cerrar con 1 pr." },
+          { "t": "Vuelta 3 · verde suave", "r": "3 cad (cuentan como 1 pa), 2 pa en el mismo punto. 1 cad, 3 pa en el punto siguiente (donde está el pb). Repetir en cada espacio. Cerrar con 1 pr." },
+          { "t": "Vuelta 4 · crudo", "r": "1 cad, 1 pb, 3 cad en cada esquina, y en cada lado 3 pa, 1 cad, 3 pa. Cerrar con 1 pr y cortar el hilo." }
+        ],
+        "aviso": "La vuelta 2 pide repetir 3 veces sobre 12 puntos, pero cada repetición usa solo 2 puntos, así que el conteo no cierra; y la vuelta 3 no aclara cuántos grupos van. Tejé primero un cuadrado de prueba y comparalo con la foto antes de dar la receta como definitiva."
+      },
+      "terminaciones": [
+        "Acomodar los cuadrados según el tamaño que quieras.",
+        "Unir con pb, con aguja lanera o con la técnica que prefieras.",
+        "Para un acabado profesional, tejer una vuelta de pb alrededor de todo el contorno.",
+        "Breteles: tejer una tira de 4 a 5 cadenetas de ancho y el largo deseado, en el punto que prefieras (pb o mpa), y coserla adelante y atrás.",
+        "Terminación: una vuelta de pb hasta el largo deseado. Opcional: borde de conchas para un acabado más delicado."
+      ],
+      "consejos": [
+        "Podés jugar con otros colores según tu estilo.",
+        "Si querés el top más largo, sumá una o dos filas de granny.",
+        "Para que calce perfecto, probátelo mientras lo tejés.",
+        "Ideal si ya conocés los puntos básicos."
+      ]
+    },
+    {
+      "id": "jean-crochet",
+      "numero": 6,
+      "pagina": 38,
+      "titulo": "Jean + Crochet",
+      "lema": "Un clásico renovado",
+      "nivel": "Principiante / Intermedio",
+      "nivelNum": 2,
+      "categoria": "Reciclado",
+      "talles": [],
+      "descripcion": "Short de jean decorado con flores aplicadas y un delicado encaje de crochet en los bajos. Un diseño moderno y femenino, ideal para el verano.",
+      "portada": "/revista/jean-crochet.webp",
+      "imagenes": [
+        { "src": "/revista/jean-encaje.webp", "alt": "Encaje de los bajos y su diagrama", "pie": "Encaje para los bajos del short" }
+      ],
+      "materiales": [
+        "Short de jean (el que quieras)",
+        "Hilo de algodón o mezcla (natural o el color que prefieras)",
+        "Aguja de crochet de 3,5 a 4 mm",
+        "Aguja de coser e hilo (o pegamento textil resistente al lavado)",
+        "Tijera",
+        "Alfileres o clips"
+      ],
+      "puntosUsados": [
+        { "texto": "Cadeneta (cad)", "punto": "chain" },
+        { "texto": "Punto raso (pr)", "punto": "slip_stitch" },
+        { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
+        { "texto": "Medio punto alto (mpa)", "punto": "half_double_crochet" },
+        { "texto": "Punto alto (pa)", "punto": "double_crochet" },
+        { "texto": "Anillo mágico", "punto": "magic_ring" },
+        { "texto": "Abanico de 5 pa en el mismo punto", "punto": "fan_stitch" },
+        { "texto": "Picot", "punto": "picot" }
+      ],
+      "medidas": ["El encaje se adapta al contorno de cada pierna.", "Las flores se distribuyen como prefieras."],
+      "explicacion": [
+        "El encaje se teje aparte y se cose o se pega en los bajos. Las flores se tejen de a una y se aplican sobre el jean."
+      ],
+      "flores": [
+        {
+          "titulo": "Flor aplicada",
+          "pasos": [
+            "En anillo mágico, 3 cad (cuentan como 1 pa) y 11 pa. Cerrar con 1 pr (12 pa).",
+            "5 pétalos: *1 pb, 1 cad, 1 pb, 1 mpa, 3 pa, 1 mpa, 1 pb, 1 cad, 1 pb*. Repetir 5 veces.",
+            "Cerrar y cortar el hilo. Opcional: coser una perlita o un nudito en el centro."
+          ]
+        }
+      ],
+      "puntoFantasia": {
+        "titulo": "Encaje para los bajos",
+        "texto": "Múltiplo de 6 + 1. Se teje primero una base de pb sobre el borde de cada pierna.",
+        "filas": [
+          { "t": "Base", "r": "Una vuelta de pb sobre el borde del short (múltiplo de 6 + 1)." },
+          { "t": "Vuelta 1", "r": "3 cad (cuentan como 1 pa), 4 pa en el mismo punto, saltar 2 puntos, 1 pb, saltar 2 puntos. Repetir." },
+          { "t": "Vuelta 2", "r": "Después de cada pb, tejer un abanico de 5 pa, unidos con 1 pb entre abanico y abanico." },
+          { "t": "Final", "r": "1 vuelta de pb y, si querés, otra de picots: *3 cad, 1 pr en la 1.ª cad, 1 pb*." }
+        ],
+        "aviso": "La vuelta 2 de la revista decía «alanrico», que es una errata de «abanico»."
+      },
+      "terminaciones": [
+        "Probarse el short y marcar con alfileres dónde van el encaje y las flores.",
+        "Cortar el encaje al largo necesario y coserlo al borde de cada pierna (también se puede pegar con pegamento textil).",
+        "Tejer las flores y, si querés, agregar hojitas.",
+        "Distribuir las flores sobre el short (frente, costados o bolsillos).",
+        "Coser o pegar las flores y reforzar bien para que duren.",
+        "Opcional: agregar perlas, cuentas o un botoncito en el centro de las flores."
+      ],
+      "consejos": [
+        "Usá un jean que ya tengas o reciclá uno que no uses.",
+        "Podés combinar flores de distintos tamaños.",
+        "Para un aire más delicado, usá hilo fino y una aguja más chica.",
+        "Si preferís un estilo boho, sumá más flores y hojas.",
+        "El pegamento textil tiene que ser apto para lavar.",
+        "También podés poner el encaje en los bolsillos."
+      ]
+    }
+  ],
+  "guia": {
+    "leerDiagrama": [
+      "Los diagramas se leen de abajo hacia arriba y, en general, de derecha a izquierda.",
+      "Cada símbolo representa un punto.",
+      "Los números indican las vueltas o filas.",
+      "Lo que se repite se marca con llaves o con líneas de repetición.",
+      "Ante la duda, consultá la leyenda de símbolos."
+    ],
+    "simbolos": [
+      { "simbolo": "○", "nombre": "Cadeneta", "abreviatura": "cad", "punto": "chain" },
+      { "simbolo": "●", "nombre": "Punto raso o enano", "abreviatura": "pr", "punto": "slip_stitch" },
+      { "simbolo": "+", "nombre": "Punto bajo", "abreviatura": "pb", "punto": "single_crochet" },
+      { "simbolo": "T", "nombre": "Media vareta (medio punto alto)", "abreviatura": "mpa", "punto": "half_double_crochet" },
+      { "simbolo": "Ƭ", "nombre": "Vareta (punto alto)", "abreviatura": "pa", "punto": "double_crochet" },
+      { "simbolo": "‡", "nombre": "Vareta doble (punto alto doble)", "abreviatura": "pad", "punto": "treble_crochet" },
+      { "simbolo": "Ⅲ", "nombre": "Vareta triple (punto alto triple)", "abreviatura": "pat", "punto": "double_treble_crochet" },
+      { "simbolo": "◯", "nombre": "Anillo mágico", "abreviatura": "AM", "punto": "magic_ring" },
+      { "simbolo": "⬮", "nombre": "Picot (3 cad y 1 pr en la 1.ª cad)", "abreviatura": "pic", "punto": "picot" },
+      { "simbolo": "⌒", "nombre": "Espacio o arco de cadenetas", "abreviatura": "—", "punto": "chain_arc_mesh" }
+    ],
+    "consejos": [
+      { "titulo": "Elegí bien el hilo", "texto": "Usá hilos de buena calidad. El grosor se adapta al proyecto y a la estación: el algodón es ideal para prendas frescas; si buscás abrigo y suavidad, podés mezclar fibras." },
+      { "titulo": "Agujas y herramientas", "texto": "Usá una aguja acorde al grosor del hilo (mirá la etiqueta). Tené siempre a mano tijera, centímetro y aguja lanera. Las agujas con mango ergonómico son más cómodas. Marcá el inicio de cada vuelta con un marcador." },
+      { "titulo": "Tensión", "texto": "Tejé con tensión pareja para que la prenda quede uniforme. Si te queda muy apretado, probá una aguja más grande; si queda muy flojo, una más chica. Hacé siempre una muestra de 10 × 10 cm antes de empezar." },
+      { "titulo": "Bloqueo", "texto": "Bloquear da mejor terminación. Humedecé la prenda, apoyala sobre una superficie plana, dale la forma y sujetala con alfileres hasta que se seque por completo. Probalo en chales, prendas caladas y granny squares." },
+      { "titulo": "Unión de piezas", "texto": "Podés unir con punto bajo, con aguja lanera o con la técnica que prefieras. Cuidá que las uniones queden flexibles y prolijas, y reforzá las costuras si la prenda se va a usar mucho." },
+      { "titulo": "Terminaciones prolijas", "texto": "Escondé bien todas las hebras. Hacé un remate en bordes, escotes y sisas. Si querés, sumá botones, flores, cintas u otros detalles." },
+      { "titulo": "Personalizá", "texto": "Cambiá los colores a tu estilo. Agregá apliques, flecos o bordes. Combiná el crochet con otras telas (jean, lino, algodón). Probá puntos distintos: hacé de cada proyecto algo único." }
+    ],
+    "cuidado": [
+      "Lavar a mano con agua fría y jabón neutro.",
+      "No retorcer; presionar suavemente.",
+      "Secar sobre una superficie plana, a la sombra.",
+      "No colgar, para que no se deformen.",
+      "Guardar dobladas, en un lugar limpio y seco.",
+      "Las prendas con flores o apliques se lavan con cuidado, y si hace falta, dentro de una bolsa de lavado."
+    ]
+  }
+}

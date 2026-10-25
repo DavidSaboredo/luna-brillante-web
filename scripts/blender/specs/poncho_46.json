@@ -1,0 +1,48 @@
+{
+ "prenda": "poncho",
+ "talle": 46,
+ "opciones": {
+  "talle": 46,
+  "manga": "tres_cuartos",
+  "largo": "medio",
+  "ajuste": "normal"
+ },
+ "medidas": {
+  "talle": 46,
+  "busto": 98,
+  "cadera": 98,
+  "posCadera": 14,
+  "sisa": 21,
+  "puno": 18,
+  "manga": 46,
+  "total": 60
+ },
+ "holgura": 8,
+ "largo": 70,
+ "manga": 35,
+ "piezas": [
+  {
+   "zona": "cuerpo",
+   "nombre": "Paño",
+   "ancho": 98,
+   "alto": 98,
+   "cantidad": 2,
+   "nota": "delantero y espalda; o motivos cuadrados unidos"
+  },
+  {
+   "zona": "cuello",
+   "nombre": "Cuello",
+   "ancho": 52,
+   "alto": 10,
+   "cantidad": 1
+  },
+  {
+   "zona": "flecos",
+   "nombre": "Flecos",
+   "ancho": 140,
+   "alto": 12,
+   "cantidad": 1,
+   "nota": "hebras de 25 a 30 cm"
+  }
+ ]
+}

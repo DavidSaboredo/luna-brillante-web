@@ -1,103 +1,90 @@
-import Image from "next/image";
+import Link from "next/link";
+import LogoLuna from "@/components/LogoLuna";
+import TarjetaPunto from "@/components/TarjetaPunto";
+import { buscarPunto, puntos } from "@/lib/puntos";
 
-export default function Home() {
+const DESTACADOS = ["shell_stitch", "puff_stitch", "v_stitch", "granny_square"]
+  .map(buscarPunto)
+  .filter((p) => p !== undefined);
+
+const SECCIONES = [
+  {
+    href: "/puntos",
+    titulo: "Puntos",
+    texto: `${puntos.length} puntos con diagrama, paso a paso y calculadora.`,
+    icono: "✿",
+    fondo: "bg-rosa",
+  },
+  {
+    href: "/proyectos",
+    titulo: "Revista",
+    texto: "Seis diseños con materiales, medidas y vueltas explicadas.",
+    icono: "❀",
+    fondo: "bg-manteca",
+  },
+  {
+    href: "/crear",
+    titulo: "Crear prenda",
+    texto: "Diseñá en 3D 15 prendas con tu talle, telas y puntos favoritos.",
+    icono: "✂",
+    fondo: "bg-menta",
+  },
+  {
+    href: "/asistente",
+    titulo: "Luna IA",
+    texto: "Cuéntale tu idea y te genera el patrón y la guía.",
+    icono: "✦",
+    fondo: "bg-lavanda",
+  },
+];
+
+export default function Inicio() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="space-y-10">
+      <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-lavanda via-rosa to-manteca p-7 md:p-12">
+        <div className="absolute -right-6 -top-6 opacity-60 md:right-8 md:top-6">
+          <LogoLuna size={140} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p className="text-sm tracking-[0.3em] text-tinta-suave">BIENVENIDA</p>
+        <h1 className="mt-2 max-w-md text-5xl leading-[1.05] md:text-6xl">Teje con calma, crea con brillo</h1>
+        <p className="mt-3 max-w-md">
+          Puntos, diseño de prendas y una asistente con IA para acompañarte en cada vuelta.
+        </p>
+        <Link
+          href="/asistente"
+          className="mt-6 inline-block rounded-full bg-tinta px-6 py-3 text-sm text-crema transition hover:opacity-90"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          ✦ Contarle mi idea a Luna
+        </Link>
+      </section>
+
+      <section className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+        {SECCIONES.map((s) => (
+          <Link key={s.href} href={s.href} className="tarjeta flex items-center gap-4 p-5 transition hover:-translate-y-0.5">
+            <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-2xl ${s.fondo}`}>
+              {s.icono}
+            </span>
+            <span>
+              <span className="block font-titulo text-2xl font-semibold">{s.titulo}</span>
+              <span className="text-sm text-tinta-suave">{s.texto}</span>
+            </span>
+          </Link>
+        ))}
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-end justify-between">
+          <h2 className="text-3xl">Puntos para empezar hoy</h2>
+          <Link href="/puntos" className="text-sm text-lavanda-fuerte">
+            Ver todos →
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {DESTACADOS.map((p) => (
+            <TarjetaPunto key={p.id} punto={p} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
