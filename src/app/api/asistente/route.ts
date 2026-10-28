@@ -38,12 +38,36 @@ Cómo escribir un patrón:
 
 Verifica la aritmética de cada vuelta: los totales de puntos deben ser coherentes con los aumentos y disminuciones. Si la idea es ambigua (talle, medidas, tipo de hilo, nivel), haz primero una o dos preguntas cortas, o propone valores razonables y aclara que se pueden ajustar.
 
-Tono: cálido, cercano y alentador, en español neutro (tú). Usa Markdown con títulos cortos y listas; nada de párrafos larguísimos. Si te preguntan algo fuera del tejido, la costura o las manualidades, redirige con amabilidad.
+Tono: cálido, cercano y alentador, en español rioplatense, con voseo (vos, tenés, probá). Usa Markdown con títulos cortos y listas; nada de párrafos larguísimos. Si te preguntan algo fuera del tejido, la costura o las manualidades, redirige con amabilidad.
 
 Biblioteca de puntos de la app:
 La app tiene una sección "Puntos" con los puntos listados abajo, cada uno con diagrama y paso a paso. Cuando un patrón use alguno, llámalo por el mismo nombre que en la biblioteca para que la tejedora lo encuentre ahí. Cuando calcules una cadena base, respeta el múltiplo del punto. Puedes usar puntos que no estén en la lista, pero en ese caso explica cómo se tejen.
 
 ${catalogoPuntos()}`;
+
+// Límite por IP: protege la clave de la IA de abusos. Es en memoria, así que en
+// Vercel (serverless) frena ráfagas por instancia; para un tope global, usar Upstash/Vercel KV.
+const VENTANA_MS = 10 * 60 * 1000;
+const MAX_CONSULTAS = 15;
+const MAX_CARACTERES_TOTAL = 24000;
+const consultas = new Map<string, number[]>();
+
+function excedeLimite(ip: string) {
+  const ahora = Date.now();
+  const recientes = (consultas.get(ip) ?? []).filter((t) => ahora - t < VENTANA_MS);
+  if (recientes.length >= MAX_CONSULTAS) {
+    consultas.set(ip, recientes);
+    return true;
+  }
+  recientes.push(ahora);
+  consultas.set(ip, recientes);
+  if (consultas.size > 5000) {
+    for (const [clave, tiempos] of consultas) {
+      if (tiempos.every((t) => ahora - t >= VENTANA_MS)) consultas.delete(clave);
+    }
+  }
+  return false;
+}
 
 type Mensaje = { role: "user" | "assistant"; content: string };
 
@@ -65,17 +89,24 @@ function validar(cuerpo: unknown): Mensaje[] | null {
 }
 
 export async function POST(req: Request) {
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() || "desconocida";
+  if (excedeLimite(ip)) {
+    return new Response("Hiciste muchas consultas seguidas. Probá de nuevo en unos minutos.", { status: 429 });
+  }
   const mensajes = validar(await req.json().catch(() => null));
   if (!mensajes || mensajes.at(-1)?.role !== "user") {
     return new Response("Mensaje inválido", { status: 400 });
+  }
+  if (mensajes.reduce((total, m) => total + m.content.length, 0) > MAX_CARACTERES_TOTAL) {
+    return new Response("La conversación es muy larga. Empezá una nueva.", { status: 413 });
   }
   if (!process.env.ANTHROPIC_API_KEY) {
     return new Response("Falta configurar la clave de la IA (ANTHROPIC_API_KEY en .env.local).", { status: 503 });
   }
 
   const stream = client.beta.messages.stream({
-    model: "claude-opus-5-5",
-    max_tokens: 64000,
+    model: process.env.ANTHROPIC_MODEL || "claude-sonnet-5-5",
+    max_tokens: 6000,
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default",
     output_config: { effort: "medium" },
@@ -96,7 +127,7 @@ export async function POST(req: Request) {
         if (final.stop_reason === "refusal") {
           controller.enqueue(codificador.encode("\n\nLo siento, no puedo ayudarte con eso. ¿Probamos con otra idea de tejido? 🧶"));
         } else if (final.stop_reason === "max_tokens") {
-          controller.enqueue(codificador.encode("\n\n_(La respuesta quedó cortada. Escribe “continúa” para seguir.)_"));
+          controller.enqueue(codificador.encode("\n\n_(La respuesta quedó cortada. Escribí “continuá” para seguir.)_"));
         }
       } catch (error) {
         console.error("Error en Luna IA:", error);
@@ -104,8 +135,8 @@ export async function POST(req: Request) {
           error instanceof Anthropic.AuthenticationError
             ? "Falta configurar la clave de la IA (ANTHROPIC_API_KEY)."
             : error instanceof Anthropic.RateLimitError
-              ? "Hay muchas consultas en este momento. Intenta de nuevo en un minuto."
-              : "Hubo un problema al conectar con Luna IA. Intenta de nuevo.";
+              ? "Hay muchas consultas en este momento. Intentá de nuevo en un minuto."
+              : "Hubo un problema al conectar con Luna IA. Intentá de nuevo.";
         controller.enqueue(codificador.encode(`\n\n⚠️ ${mensaje}`));
       } finally {
         controller.close();
