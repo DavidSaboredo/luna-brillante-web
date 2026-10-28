@@ -436,6 +436,22 @@ def main():
         if p.nombre == "Manga":
             for j in range(p.nt + 1):
                 aristas.append((v_de(p, j, 0), v_de(p, j, p.ns)))
+    # costura de la manga al cuerpo (la sisa): cada punto del borde de la copa se cose al vértice más cercano del torso
+    torso = [p for p in paneles if p.nombre in ("Delantero", "Espalda", "Canesú")]
+    for p in paneles:
+        if p.nombre != "Manga":
+            continue
+        for i in range(p.ns + 1):
+            vm = v_de(p, 0, i)
+            mejor, dmin = None, 0.22
+            for t in torso:
+                for fila_v in indices[id(t)]:
+                    for vt in fila_v:
+                        d = (vt.co - vm.co).length
+                        if d < dmin:
+                            mejor, dmin = vt, d
+            if mejor is not None:
+                aristas.append((vm, mejor))
     for a, b in aristas:
         try:
             bm.edges.new((a, b))
@@ -490,7 +506,7 @@ def main():
     s.bending_damping = 0.5
     s.air_damping = 2.0
     s.use_sewing_springs = True
-    s.sewing_force_max = 6.0
+    s.sewing_force_max = 0.0
     c = cm.collision_settings
     c.use_collision = True
     c.distance_min = 0.004
