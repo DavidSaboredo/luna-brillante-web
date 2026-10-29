@@ -468,6 +468,7 @@ def main():
                 v[cap_u] = x
                 v[cap_v] = y
     bm.verts.index_update()
+    costuras_idx = [(a.index, b.index) for a, b in aristas]
     fijos = []
     for p in paneles:
         if p.fijar:
@@ -480,6 +481,42 @@ def main():
                     fijos.append(indices[id(p)][0][i].index)
                     if p.nombre == "Pretina":
                         fijos.append(indices[id(p)][p.nt][i].index)
+    # el borde superior fijo se apoya sobre la superficie del cuerpo: así sigue la caída del hombro
+    # en vez de quedar recto y flotando en las puntas
+    from mathutils.bvhtree import BVHTree
+    cdg = bpy.context.evaluated_depsgraph_get()
+    cuerpo_ev = cuerpo.evaluated_get(cdg)
+    me_c = cuerpo_ev.to_mesh()
+    me_c.transform(cuerpo.matrix_world)
+    me_c.calc_loop_triangles()
+    arbol = BVHTree.FromPolygons([v.co.copy() for v in me_c.vertices], [t.vertices[:] for t in me_c.loop_triangles])
+    bm.verts.ensure_lookup_table()
+    pf = next((p for p in paneles if p.fijar and p.nombre == "Delantero"), None)
+    pe = next((p for p in paneles if p.fijar and p.nombre == "Espalda"), None)
+    if pf and pe:
+        # delantero y espalda se unen en una costura de hombro sobre la cresta del hombro (sin hueco entre ambos)
+        sup_e = [indices[id(pe)][0][i] for i in range(pe.ns + 1)]
+        for i in range(pf.ns + 1):
+            vf = indices[id(pf)][0][i]
+            ve = min(sup_e, key=lambda w: abs(w.co.x - vf.co.x))
+            x = (vf.co.x + ve.co.x) / 2
+            z0 = max(vf.co.z, ve.co.z) + 0.05
+            mejor = None
+            for k in range(33):
+                y = -0.16 + 0.32 * k / 32
+                h = arbol.ray_cast(Vector((x, y, z0)), Vector((0, 0, -1)), 0.5)
+                if h[0] is not None and (mejor is None or h[0].z > mejor[0].z):
+                    mejor = h
+            if mejor is not None:
+                vf.co = ve.co = mejor[0] + mejor[1] * 0.008
+    else:
+        for p in paneles:
+            if p.fijar and p.nombre in ("Delantero", "Espalda", "Canesú"):
+                for i in range(p.ns + 1):
+                    v = indices[id(p)][0][i]
+                    hit = arbol.find_nearest(v.co)
+                    if hit[0] is not None and hit[3] < 0.12:
+                        v.co = hit[0] + hit[1] * 0.008
     bm.to_mesh(me)
     bm.free()
     obj = bpy.data.objects.new("prenda", me)
@@ -537,6 +574,27 @@ def main():
     bm2 = bmesh.new()
     bm2.from_mesh(mesh_ev)
     bm2.verts.ensure_lookup_table()
+    # suavizado leve (saca los dientes del hombro) y soldadura de las costuras: las piezas se exportan
+    # como mallas sueltas, así que los vértices cosidos tienen que quedar en el mismo punto
+    fijos_set = set(fijos)
+    for _ in range(4):
+        bmesh.ops.smooth_vert(bm2, verts=[v for v in bm2.verts if v.index not in fijos_set], factor=0.5, use_axis_x=True, use_axis_y=True, use_axis_z=True)
+    padre = list(range(len(bm2.verts)))
+    def raiz(x):
+        while padre[x] != x:
+            padre[x] = padre[padre[x]]
+            x = padre[x]
+        return x
+    for a, b in costuras_idx:
+        padre[raiz(a)] = raiz(b)
+    grupos = {}
+    for v in bm2.verts:
+        grupos.setdefault(raiz(v.index), []).append(v)
+    for g in grupos.values():
+        if len(g) > 1:
+            centro_g = sum((v.co for v in g), Vector()) / len(g)
+            for v in g:
+                v.co = centro_g
     cp = bm2.verts.layers.int.get("panel")
     cu_ = bm2.verts.layers.float.get("uv_x")
     cv_ = bm2.verts.layers.float.get("uv_y")

@@ -127,7 +127,7 @@ function TallerPrenda() {
   const [guardados, setGuardados] = useState<Diseno[]>([]);
   const [vista, setVista] = useState<Tecnica>("crochet");
   const [camara, setCamara] = useState<VistaCamara>("tres_cuartos");
-  const [maniqui, setManiqui] = useState(true);
+  const [maniqui, setManiqui] = useState(false);
   const [girar, setGirar] = useState(false);
   const [simular, setSimular] = useState(true);
   const [relleno, setRelleno] = useState<"textura" | "diagrama">("textura");

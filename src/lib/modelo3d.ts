@@ -152,6 +152,37 @@ function tuboVar(curva: CatmullRomCurve3, t0: number, t1: number, radio: (t: num
   return g;
 }
 
+/** Volado ondulado que cae sobre el cuello: nace pegado en `r0` a altura `y` y se abre y ondula hacia el borde. */
+function volado(r0: number, y: number, ancho: number, caida: number, ondas = 14): BufferGeometry {
+  const seg = 96;
+  const pasos = 6;
+  const pos: number[] = [];
+  const uv: number[] = [];
+  const idx: number[] = [];
+  for (let i = 0; i <= pasos; i++) {
+    const t = i / pasos;
+    for (let j = 0; j <= seg; j++) {
+      const a = (j / seg) * TAU;
+      const onda = Math.sin(a * ondas) * t * 0.012;
+      const r = r0 + ancho * t + onda;
+      const yy = y - caida * t * t + Math.cos(a * ondas) * t * 0.008;
+      pos.push(r * Math.sin(a), yy, r * Math.cos(a));
+      uv.push(j / seg, t);
+    }
+  }
+  for (let i = 0; i < pasos; i++)
+    for (let j = 0; j < seg; j++) {
+      const a = i * (seg + 1) + j;
+      idx.push(a, a + 1, a + seg + 1, a + 1, a + seg + 2, a + seg + 1);
+    }
+  const g = new BufferGeometry();
+  g.setAttribute("position", new Float32BufferAttribute(pos, 3));
+  g.setAttribute("uv", new Float32BufferAttribute(uv, 2));
+  g.setIndex(idx);
+  g.computeVertexNormals();
+  return g;
+}
+
 function fleco(n: number, puntos: (i: number) => V3, largo = 0.1): BufferGeometry {
   const hebras: BufferGeometry[] = [];
   for (let i = 0; i < n; i++) {
@@ -381,31 +412,55 @@ function poncho(prenda: Prenda, o: Opciones): Modelo {
   const yH = Math.max(0.5, k.yDobladillo);
   const R = 0.42 + 0.16 * (k.c.largo / 70);
   const [cx, cz] = cu.centro(1.3);
-  const rFn = (y: number) => {
-    const t = (1.42 - y) / (1.42 - yH);
-    if (t < 0.03) return lerp(cu.radio(1.42) + 0.02, 0.3, t / 0.03);
-    return lerp(0.3, R, Math.pow((t - 0.03) / 0.97, 1.4));
+  const Y_TOP = 1.42;
+  // El poncho cae sobre los hombros y los brazos (los lados) y queda más largo adelante y atrás, en punta.
+  const largoLado = 0.13;
+  const yBorde = (a: number) => yH + largoLado * Math.sin(a) ** 2;
+  const radioEn = (a: number, y: number) => {
+    const w = Math.sin(a) ** 2;
+    const baja = Y_TOP - y;
+    const rLado = Math.min(R, cu.radio(Y_TOP) + 0.05 + 0.75 * baja);
+    const rFrente = Math.max(cu.radio(y) + 0.035, lerp(cu.radio(Y_TOP) + 0.025, R * 0.78, Math.min(1, baja / (Y_TOP - yH)) ** 1.3));
+    return lerp(rFrente, rLado, w);
   };
+  const pasosV = 28;
+  const segH = 72;
+  const pos: number[] = [];
+  const uv: number[] = [];
+  const idx: number[] = [];
+  for (let i = 0; i <= pasosV; i++) {
+    for (let j = 0; j <= segH; j++) {
+      const a = (j / segH) * TAU;
+      const y = lerp(Y_TOP, yBorde(a), i / pasosV);
+      const r = radioEn(a, y);
+      pos.push(r * Math.sin(a), y, r * Math.cos(a));
+      uv.push(j / segH, i / pasosV);
+    }
+  }
+  for (let i = 0; i < pasosV; i++)
+    for (let j = 0; j < segH; j++) {
+      const a = i * (segH + 1) + j;
+      idx.push(a, a + 1, a + segH + 1, a + 1, a + segH + 2, a + segH + 1);
+    }
+  const geoPoncho = new BufferGeometry();
+  geoPoncho.setAttribute("position", new Float32BufferAttribute(pos, 3));
+  geoPoncho.setAttribute("uv", new Float32BufferAttribute(uv, 2));
+  geoPoncho.setIndex(idx);
+  geoPoncho.computeVertexNormals();
   const partes: Parte[] = [
-    { zona: "cuerpo", geo: revolucion(yH, 1.42, rFn, 30, 8), pos: [cx, 0, cz], rep: [TAU * R * 100 * 0.9, (1.42 - yH) * 135] },
-    { zona: "cuello", geo: new CylinderGeometry(cu.radio(1.45) + 0.02, cu.radio(1.43) + 0.026, 0.1, 40, 1, true), pos: [cx, 1.45, cz], rep: [TAU * 0.075 * 100, 10] },
+    { zona: "cuerpo", geo: geoPoncho, pos: [cx, 0, cz], rep: [TAU * R * 100 * 0.9, (Y_TOP - yH) * 135] },
+    { zona: "cuello", geo: volado(cu.radio(1.44) + 0.012, 1.455, 0.1, 0.07), pos: [cx, 0, cz], rep: [TAU * 0.09 * 100, 8] },
   ];
   const n = 96;
-  const vert: V3[] = [];
-  for (let i = 0; i < 8; i++) {
-    const a = (i * TAU) / 8;
-    vert.push([cx + R * Math.sin(a), yH, cz + R * Math.cos(a)]);
-  }
   partes.push({
     zona: "flecos",
     geo: fleco(
       n,
       (i) => {
-        const s = (i / n) * 8;
-        const a = vert[Math.floor(s) % 8],
-          b = vert[(Math.floor(s) + 1) % 8];
-        const f = s - Math.floor(s);
-        return [lerp(a[0], b[0], f), yH, lerp(a[2], b[2], f)];
+        const a = (i / n) * TAU;
+        const y = yBorde(a);
+        const r = radioEn(a, y) - 0.003;
+        return [cx + r * Math.sin(a), y, cz + r * Math.cos(a)];
       },
       0.11,
     ),
@@ -543,6 +598,8 @@ function vestido(prenda: Prenda, o: Opciones): Modelo {
   return { partes, camara: camaraCuerpo(2.5, 0.95), conManiqui: true };
 }
 
+const Y_ENTREPIERNA = 0.84;
+
 function short(prenda: Prenda, o: Opciones): Modelo {
   const k = ctx3d(prenda, o);
   const { cu } = k;
@@ -550,18 +607,19 @@ function short(prenda: Prenda, o: Opciones): Modelo {
   const off = () => k.h * 0.8 + 0.004;
   const partes: Parte[] = [
     { zona: "pretina", geo: envolver(cu, Y_CINTURA - 0.03, Y_CINTURA + 0.04, off, { pasos: 4 }), rep: repEnvolver(cu, 1, 1, 0) },
-    { zona: "piernas", geo: envolver(cu, 0.86, Y_CINTURA - 0.03, off, { pasos: 14 }), rep: repEnvolver(cu, 0.86, 1.0, 0) },
+    { zona: "piernas", geo: envolver(cu, Y_ENTREPIERNA, Y_CINTURA - 0.03, off, { pasos: 14 }), rep: repEnvolver(cu, Y_ENTREPIERNA, 1.0, 0) },
   ];
   const yBajo = Math.min(yH, 0.76);
   for (const lado of [1, -1] as const) {
+    // las piernas arrancan donde termina la cadera, para que no quede un borde suelto al costado
     const pts = Array.from({ length: 6 }, (_, i) => {
-      const y = lerp(0.9, yBajo, i / 5);
+      const y = lerp(Y_ENTREPIERNA, yBajo, i / 5);
       const p = cu.pierna(Math.min(0.76, y));
       return new Vector3(lado * lerp(p.cx, 0.09, sm(0.76, 0.9, y)), y, p.cz);
     });
     const curva = new CatmullRomCurve3(pts);
-    const rad = (t: number) => cu.pierna(Math.min(0.76, lerp(0.9, yBajo, t))).r * lerp(1, 1.08, sm(0.76, 0.9, lerp(0.9, yBajo, t))) + k.h * 0.45 + 0.006;
-    const largoCm = (0.9 - yBajo) * 100;
+    const rad = (t: number) => cu.pierna(Math.min(0.76, lerp(Y_ENTREPIERNA, yBajo, t))).r * lerp(1, 1.08, sm(0.76, 0.9, lerp(Y_ENTREPIERNA, yBajo, t))) + k.h * 0.45 + 0.006 + 0.03 * (1 - sm(0, 0.4, t));
+    const largoCm = (Y_ENTREPIERNA - yBajo) * 100;
     partes.push({ zona: "piernas", geo: tuboVar(curva, 0, 0.9, (t) => rad(t * 0.9), 20, 24), rep: [TAU * rad(0.5) * 100, largoCm * 0.9] });
     partes.push({ zona: "puños", geo: tuboVar(curva, 0.9, 1, (t) => rad(0.9 + t * 0.1) + 0.003, 4, 24), rep: [TAU * rad(1) * 100, 5] });
   }

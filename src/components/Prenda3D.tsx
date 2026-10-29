@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { Component, Suspense, useEffect, type ReactNode, useMemo, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { ContactShadows, OrbitControls, useGLTF } from "@react-three/drei";
 import { BufferAttribute, DoubleSide, Mesh, Vector2, type BufferGeometry, type Texture } from "three";
@@ -49,6 +49,8 @@ function Camara({ objetivo, distancia, vista }: { objetivo: [number, number, num
 useGLTF.preload("/modelos/maniqui.glb");
 
 /** Zonas que se dibujan con la forma aproximada aun cuando el resto de la prenda es simulada. */
+// prendas cuyo cuello ya viene dentro de la malla generada sobre el cuerpo
+const CUELLO_EN_MALLA = new Set(["sueter"]);
 const ZONAS_APROXIMADAS = new Set(["cuello", "lazo", "tirantes", "breteles"]);
 
 /** El maniquí generado con Blender (MPFB), llevado al talle elegido. */
@@ -219,6 +221,16 @@ function GrupoSimulado({ ruta, zonas, zonaActiva, onElegirZona }: { ruta: string
   );
 }
 
+class LimiteError extends Component<{ children: ReactNode; respaldo: ReactNode }, { fallo: boolean }> {
+  state = { fallo: false };
+  static getDerivedStateFromError() {
+    return { fallo: true };
+  }
+  render() {
+    return this.state.fallo ? this.props.respaldo : this.props.children;
+  }
+}
+
 function Escena({ prenda, opciones, zonas, zonaActiva, onElegirZona, conManiqui, girar, vista, rutaSimulada }: Props) {
   const modelo = useMemo(() => construirModelo(prenda, opciones), [prenda, opciones]);
   const controles = useRef<OrbitControlsImpl>(null);
@@ -255,10 +267,18 @@ function Escena({ prenda, opciones, zonas, zonaActiva, onElegirZona, conManiqui,
         {conManiqui && modelo.conManiqui && <Maniqui talle={opciones.talle} />}
         {rutaSimulada ? (
           <>
-            <GrupoSimulado ruta={rutaSimulada} zonas={zonas} zonaActiva={zonaActiva} onElegirZona={onElegirZona} />
+            {/* si el archivo simulado no se puede cargar, se muestra la forma aproximada en vez de romper la página */}
+            <LimiteError
+              key={rutaSimulada}
+              respaldo={modelo.partes.filter((p) => !(p.zona && ZONAS_APROXIMADAS.has(p.zona))).map((p, i) => (
+                <Pieza key={`resp-${i}`} parte={p} eleccion={p.zona ? zonas[p.zona] : undefined} activa={p.zona === zonaActiva} onElegir={p.zona && onElegirZona ? () => onElegirZona(p.zona!) : undefined} />
+              ))}
+            >
+              <GrupoSimulado ruta={rutaSimulada} zonas={zonas} zonaActiva={zonaActiva} onElegirZona={onElegirZona} />
+            </LimiteError>
             {/* accesorios que no se simulan (cuello, lazo, breteles) */}
             {modelo.partes
-              .filter((p) => p.zona && ZONAS_APROXIMADAS.has(p.zona))
+              .filter((p) => p.zona && ZONAS_APROXIMADAS.has(p.zona) && !(p.zona === "cuello" && CUELLO_EN_MALLA.has(prenda.id)) && !(p.zona === "breteles" && prenda.id === "musculosa"))
               .map((p, i) => (
                 <Pieza key={`aprox-${i}`} parte={p} eleccion={zonas[p.zona!]} activa={p.zona === zonaActiva} onElegir={onElegirZona ? () => onElegirZona(p.zona!) : undefined} />
               ))}
