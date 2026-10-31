@@ -1,10 +1,6 @@
-import { Suspense } from "react";
-import ChatLuna from "@/components/ChatLuna";
+import { redirect } from "next/navigation";
 
+// Luna IA está apagada por ahora: se vuelve a la portada hasta que se active.
 export default function PaginaAsistente() {
-  return (
-    <Suspense>
-      <ChatLuna />
-    </Suspense>
-  );
+  redirect("/");
 }

@@ -44,7 +44,7 @@ const es = {
     enPalabras: "En palabras · ",
     alTerminar: "Al terminar:",
     abreviaturas: "Abreviaturas que se usan acá",
-    nota: "La línea gris es la receta original; «En palabras» la dice sin abreviaturas. Si algo no queda claro, preguntale a Luna IA.",
+    nota: "La línea gris es la receta original; «En palabras» la dice sin abreviaturas.",
   },
   pasosRev: {
     titulo: "Cómo lo dicen las tejedoras",
@@ -102,7 +102,7 @@ const en: Dic = {
     enPalabras: "In words · ",
     alTerminar: "When finished:",
     abreviaturas: "Abbreviations used here",
-    nota: "The grey line is the original pattern; “In words” says it without abbreviations. If something is unclear, ask Luna AI.",
+    nota: "The grey line is the original pattern; “In words” says it without abbreviations.",
   },
   pasosRev: {
     titulo: "How crocheters call it",
@@ -158,7 +158,7 @@ const pt: Dic = {
     enPalabras: "Em palavras · ",
     alTerminar: "Ao terminar:",
     abreviaturas: "Abreviaturas usadas aqui",
-    nota: "A linha cinza é a receita original; “Em palavras” diz sem abreviaturas. Se algo não ficar claro, pergunte à Luna IA.",
+    nota: "A linha cinza é a receita original; “Em palavras” diz sem abreviaturas.",
   },
   pasosRev: {
     titulo: "Como as tecelãs chamam",

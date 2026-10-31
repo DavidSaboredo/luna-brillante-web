@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
 import { fmt, nom, textosCrear, type ClaveCrear } from "@/lib/textos-crear";
@@ -22,7 +22,6 @@ import {
   PRENDAS,
   TELAS,
   contexto,
-  describirDiseno,
   infoMaterial,
   opcionesPara,
   type Diseno,
@@ -127,7 +126,6 @@ function TallerPrenda() {
   const k = (c: ClaveCrear, v?: Record<string, string | number>) => (v ? fmt(textosCrear[idioma][c], v) : textosCrear[idioma][c]);
   const n = (t: string) => nom(t, idioma);
   const nombrePunto = (p: { name: { es: string; en: string } }) => (idioma === "es" ? p.name.es : p.name.en);
-  const router = useRouter();
   const params = useSearchParams();
   const visor = useRef<HTMLDivElement>(null);
   const [prendaId, setPrendaId] = useState(PRENDAS[0].id);
@@ -265,9 +263,6 @@ function TallerPrenda() {
   };
 
   const borrar = (id: string) => persistir(guardados.filter((d) => d.id !== id));
-
-  const pedirGuia = () =>
-    router.push(`/asistente?pregunta=${encodeURIComponent(describirDiseno(prenda, zonas, notas, opciones))}`);
 
   const descargar = () => {
     const lienzo = visor.current?.querySelector("canvas");
@@ -685,16 +680,9 @@ function TallerPrenda() {
                   <button
                     onClick={guardar}
                     disabled={!completas}
-                    className="rounded-full border border-lavanda-fuerte px-5 py-2.5 text-sm text-lavanda-fuerte disabled:opacity-40"
-                  >
-                    {k("crear.guardar")}
-                  </button>
-                  <button
-                    onClick={pedirGuia}
-                    disabled={!completas}
                     className="flex-1 rounded-full bg-lavanda-fuerte px-5 py-2.5 text-sm text-white disabled:opacity-40"
                   >
-                    {k("crear.pedirGuia")}
+                    {k("crear.guardar")}
                   </button>
                 </div>
                 {!completas && <p className="text-xs text-tinta-suave">{k("crear.elegiAlMenos")}</p>}
