@@ -5,6 +5,7 @@ import { useIdioma } from "@/components/Idioma";
 import Contador from "@/components/Contador";
 import CalculadoraLana from "@/components/CalculadoraLana";
 import Terminos from "@/components/Terminos";
+import CopiaSeguridad from "@/components/CopiaSeguridad";
 
 const PESTANAS = ["contador", "lana", "terminos"] as const;
 
@@ -36,6 +37,8 @@ export default function Herramientas() {
       {activa === "contador" && <Contador />}
       {activa === "lana" && <CalculadoraLana />}
       {activa === "terminos" && <Terminos />}
+
+      <CopiaSeguridad />
     </div>
   );
 }
