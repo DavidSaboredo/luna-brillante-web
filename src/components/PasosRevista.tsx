@@ -1,18 +1,24 @@
+"use client";
+
 import { equivalenciaRevista, pasosRevista } from "@/lib/revista";
+import { textosPuntos } from "@/lib/textos-puntos";
+import { useIdioma } from "./Idioma";
 
 export default function PasosRevista({ idPunto }: { idPunto: string }) {
+  const { idioma } = useIdioma();
+  const k = textosPuntos[idioma].pasosRev;
   const p = pasosRevista(idPunto);
   const eq = equivalenciaRevista(idPunto);
   if (!p && !eq) return null;
 
   return (
     <section className="tarjeta p-5">
-      <h2 className="text-2xl">Como lo dicen las tejedoras</h2>
+      <h2 className="text-2xl">{k.titulo}</h2>
 
       {eq && (
         <p className="mt-2">
-          En las revistas: <strong>{eq.revista}</strong>
-          {eq.abrev !== "—" && <> ({eq.abrev})</>}. En esta app lo ves como <span className="font-mono">{eq.app}</span>.
+          {k.enRevistas} <strong>{eq.revista}</strong>
+          {eq.abrev !== "—" && <> ({eq.abrev})</>}. {k.enApp} <span className="font-mono">{eq.app}</span>.
         </p>
       )}
 
@@ -22,7 +28,7 @@ export default function PasosRevista({ idPunto }: { idPunto: string }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={p.src} alt={p.titulo} loading="lazy" className="w-full" />
             <figcaption className="bg-crema/60 px-3 py-2 text-xs text-tinta-suave">
-              {p.tipo === "foto" ? "📷 Fotos reales paso a paso" : "✏ Esquema paso a paso"} · {p.titulo} · de las revistas
+              {p.tipo === "foto" ? k.fotos : k.esquema} · {p.titulo} · {k.deRevistas}
             </figcaption>
           </figure>
           <ol className="space-y-2">

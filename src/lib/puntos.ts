@@ -46,14 +46,23 @@ export interface Categoria {
 
 export const puntos = base.stitches as Punto[];
 export const categorias = base.categories as Categoria[];
-export const niveles = base.difficulty_levels.map((n) => ({ nivel: n.level, nombre: n.name.es }));
+export const niveles = base.difficulty_levels.map((n) => ({ nivel: n.level, nombre: n.name as Texto }));
+
+/** Texto del dato según el idioma; el portugués usa el español (los datos solo tienen es y en). */
+export function tx(o: Texto, idioma: "es" | "en" | "pt") {
+  return idioma === "en" ? o.en : o.es;
+}
+export function txLista(o: Lista, idioma: "es" | "en" | "pt") {
+  return idioma === "en" ? o.en : o.es;
+}
 
 export function buscarPunto(id: string) {
   return puntos.find((p) => p.id === id);
 }
 
-export function nombreCategoria(id: string) {
-  return categorias.find((c) => c.id === id)?.name.es ?? id;
+export function nombreCategoria(id: string, idioma: "es" | "en" | "pt" = "es") {
+  const c = categorias.find((x) => x.id === id);
+  return c ? tx(c.name, idioma) : id;
 }
 
 /** Ruta pública del diagrama SVG (los archivos están en public/diagramas). */

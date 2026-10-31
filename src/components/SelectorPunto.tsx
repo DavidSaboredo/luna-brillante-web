@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Nivel } from "./TarjetaPunto";
-import { categorias, coincide, nombreCategoria, puntosParaPrenda, rutaIlustracion, textoRepeticion } from "@/lib/puntos";
+import { categorias, coincide, nombreCategoria, puntosParaPrenda, rutaIlustracion, tx } from "@/lib/puntos";
+import { textosPuntos } from "@/lib/textos-puntos";
+import { useIdioma } from "./Idioma";
 
 const CATEGORIAS_PRENDA = categorias.filter((c) => puntosParaPrenda.some((p) => p.category === c.id));
 
@@ -17,6 +19,8 @@ export default function SelectorPunto({
   seleccionado?: string;
   onElegir: (id: string) => void;
 }) {
+  const { idioma } = useIdioma();
+  const k = textosPuntos[idioma].puntos;
   const [texto, setTexto] = useState("");
   const [filtro, setFiltro] = useState<string>("sugeridos");
 
@@ -36,13 +40,14 @@ export default function SelectorPunto({
         type="search"
         value={texto}
         onChange={(e) => setTexto(e.target.value)}
-        placeholder="Buscar punto…"
+        placeholder={k.buscarPunto}
+        aria-label={k.buscarPunto}
         className="w-full rounded-xl border border-borde px-4 py-2.5 text-sm outline-none focus:border-lavanda-fuerte"
       />
       {!texto.trim() && (
         <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 text-xs">
-          {[{ id: "sugeridos", nombre: "✦ Sugeridos" }, { id: "todos", nombre: "Todos" }]
-            .concat(CATEGORIAS_PRENDA.map((c) => ({ id: c.id, nombre: c.name.es })))
+          {[{ id: "sugeridos", nombre: k.sugeridos }, { id: "todos", nombre: k.todos }]
+            .concat(CATEGORIAS_PRENDA.map((c) => ({ id: c.id, nombre: tx(c.name, idioma) })))
             .map((c) => (
               <button
                 key={c.id}
@@ -68,21 +73,21 @@ export default function SelectorPunto({
                 <img src={rutaIlustracion(p)!} alt="" loading="lazy" className="h-12 w-16 shrink-0 rounded-lg object-cover" />
               )}
               <span className="flex-1">
-                <span className="block font-semibold">{p.name.es}</span>
+                <span className="block font-semibold">{tx(p.name, idioma)}</span>
                 <span className="text-xs text-tinta-suave">
-                  {nombreCategoria(p.category)}
-                  {p.repeat && ` · ${textoRepeticion(p)}`}
+                  {nombreCategoria(p.category, idioma)}
+                  {p.repeat && ` · ${k.multiplo(p.repeat.multiple, p.repeat.plus)}`}
                 </span>
               </span>
               <Nivel nivel={p.difficulty} />
             </button>
           </li>
         ))}
-        {!lista.length && <li className="p-3 text-sm text-tinta-suave">No hay puntos con ese nombre.</li>}
+        {!lista.length && <li className="p-3 text-sm text-tinta-suave">{k.sinNombre}</li>}
       </ul>
       {seleccionado && (
         <Link href={`/puntos/${seleccionado}`} className="block text-xs text-lavanda-fuerte">
-          Ver cómo se teje este punto →
+          {k.verComoSeTeje}
         </Link>
       )}
     </div>

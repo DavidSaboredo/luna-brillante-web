@@ -3,9 +3,13 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import TarjetaPunto from "@/components/TarjetaPunto";
-import { categorias, coincide, niveles, puntos } from "@/lib/puntos";
+import { categorias, coincide, niveles, puntos, tx } from "@/lib/puntos";
+import { useIdioma } from "@/components/Idioma";
+import { textosPuntos } from "@/lib/textos-puntos";
 
 export default function PaginaPuntos() {
+  const { idioma } = useIdioma();
+  const k = textosPuntos[idioma].puntos;
   const [texto, setTexto] = useState("");
   const [categoria, setCategoria] = useState<string | null>(null);
   const [nivel, setNivel] = useState<number | null>(null);
@@ -24,10 +28,10 @@ export default function PaginaPuntos() {
   return (
     <div className="space-y-6">
       <header>
-        <h1 className="text-4xl">Puntos</h1>
-        <p className="text-tinta-suave">{puntos.length} puntos con foto, diagrama y paso a paso</p>
+        <h1 className="text-4xl">{k.titulo}</h1>
+        <p className="text-tinta-suave">{k.sub(puntos.length)}</p>
         <Link href="/puntadas" className="mt-2 inline-block text-sm text-lavanda-fuerte underline">
-          🧵 Mirá cómo se enlaza el hilo en 3D →
+          {k.enlace3d}
         </Link>
       </header>
 
@@ -35,7 +39,8 @@ export default function PaginaPuntos() {
         type="search"
         value={texto}
         onChange={(e) => setTexto(e.target.value)}
-        placeholder="Buscar: concha, puff, vareta, granny…"
+        placeholder={k.buscar}
+        aria-label={k.buscar}
         className="w-full rounded-full border border-borde bg-papel px-5 py-3 outline-none focus:border-lavanda-fuerte"
       />
 
@@ -44,7 +49,7 @@ export default function PaginaPuntos() {
           onClick={() => setCategoria(null)}
           className={`chip shrink-0 ${!categoria ? "!border-lavanda !bg-lavanda" : ""}`}
         >
-          Todos
+          {k.todos}
         </button>
         {categorias.map((c) => (
           <button
@@ -52,7 +57,7 @@ export default function PaginaPuntos() {
             onClick={() => setCategoria(categoria === c.id ? null : c.id)}
             className={`chip shrink-0 ${categoria === c.id ? "!border-lavanda !bg-lavanda" : ""}`}
           >
-            {c.name.es}
+            {tx(c.name, idioma)}
           </button>
         ))}
       </div>
@@ -64,7 +69,7 @@ export default function PaginaPuntos() {
             onClick={() => setNivel(nivel === n.nivel ? null : n.nivel)}
             className={`chip ${nivel === n.nivel ? "!border-rosa !bg-rosa" : ""}`}
           >
-            {n.nombre}
+            {tx(n.nombre, idioma)}
           </button>
         ))}
       </div>
@@ -77,7 +82,7 @@ export default function PaginaPuntos() {
         </div>
       ) : (
         <p className="tarjeta p-8 text-center text-tinta-suave">
-          No encontramos puntos con esa búsqueda. ¿Y si se lo preguntas a Luna IA? ✦
+          {k.vacio}
         </p>
       )}
     </div>

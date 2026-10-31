@@ -3,6 +3,7 @@ import { buscarPunto } from "@/lib/puntos";
 import { guia } from "@/lib/proyectos";
 import { guiaRevista as g } from "@/lib/revista";
 import { imagenMejorada } from "@/lib/imagenes";
+import Tx, { ImgTx } from "@/components/Tx";
 
 export const metadata = { title: "Guía de puntos y símbolos · Luna Brillante" };
 
@@ -10,15 +11,16 @@ export default function PaginaGuia() {
   return (
     <div className="space-y-6">
       <Link href="/proyectos" className="text-sm text-tinta-suave hover:text-tinta">
-        ← Volver a la revista
+        <Tx k="guia.volver" />
       </Link>
       <header>
-        <h1 className="text-4xl">Guía de puntos y símbolos</h1>
-        <p className="text-tinta-suave">Todo lo que necesitás para tejer los proyectos de la revista.</p>
+        <h1 className="text-4xl"><Tx k="guia.titulo" /></h1>
+        <p className="text-tinta-suave"><Tx k="guia.sub" /></p>
+        <p className="mt-1 text-xs text-tinta-suave"><Tx k="guia.aviso" /></p>
       </header>
 
       <section className="tarjeta p-5">
-        <h2 className="text-2xl">Símbolos y abreviaturas</h2>
+        <h2 className="text-2xl"><Tx k="guia.simbolos" /></h2>
         <div className="mt-3 divide-y divide-borde">
           {guia.simbolos.map((s) => {
             const punto = buscarPunto(s.punto);
@@ -43,10 +45,8 @@ export default function PaginaGuia() {
 
 
       <section className="tarjeta p-5">
-        <h2 className="text-2xl">Cómo lo dicen las tejedoras</h2>
-        <p className="mt-1 text-sm text-tinta-suave">
-          En las revistas argentinas los puntos tienen otros nombres que en los patrones en inglés. Esta tabla une los dos mundos.
-        </p>
+        <h2 className="text-2xl"><Tx k="guia.comoLoDicen" /></h2>
+        <p className="mt-1 text-sm text-tinta-suave"><Tx k="guia.comoLoDicenTexto" /></p>
         <div className="mt-3 divide-y divide-borde">
           {g.equivalencias.map((e) => {
             const punto = buscarPunto(e.punto);
@@ -70,7 +70,7 @@ export default function PaginaGuia() {
       </section>
 
       <section className="tarjeta p-5">
-        <h2 className="text-2xl">Palabras de tejedora</h2>
+        <h2 className="text-2xl"><Tx k="guia.palabras" /></h2>
         <dl className="mt-3 grid gap-x-6 gap-y-3 md:grid-cols-2">
           {g.palabras.map((p) => (
             <div key={p.palabra}>
@@ -83,7 +83,7 @@ export default function PaginaGuia() {
 
       <div className="grid gap-4 md:grid-cols-2">
         <section className="tarjeta p-5">
-          <h2 className="text-2xl">Hacer una muestra</h2>
+          <h2 className="text-2xl"><Tx k="guia.muestra" /></h2>
           <ol className="mt-3 space-y-2">
             {g.muestra.map((t, i) => (
               <li key={t} className="flex gap-3">
@@ -95,15 +95,13 @@ export default function PaginaGuia() {
         </section>
 
         <section className="tarjeta p-5">
-          <h2 className="text-2xl">Dar altura a la hilera</h2>
-          <p className="mt-2 text-sm">
-            Al terminar una hilera, girá la labor y hacé cadenetas para que el primer punto quede a la altura del resto.
-          </p>
+          <h2 className="text-2xl"><Tx k="guia.altura" /></h2>
+          <p className="mt-2 text-sm"><Tx k="guia.alturaTexto" /></p>
           <table className="mt-3 w-full text-sm">
             <thead className="text-left text-tinta-suave">
               <tr>
-                <th className="py-1 font-normal">Si la hilera es de…</th>
-                <th className="py-1 font-normal">Cadenetas</th>
+                <th className="py-1 font-normal"><Tx k="guia.siHilera" /></th>
+                <th className="py-1 font-normal"><Tx k="guia.cadenetas" /></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-borde">
@@ -115,7 +113,7 @@ export default function PaginaGuia() {
               ))}
             </tbody>
           </table>
-          <h3 className="mt-5 text-lg">Para leer los diagramas</h3>
+          <h3 className="mt-5 text-lg"><Tx k="guia.leerDiagramas" /></h3>
           <ul className="mt-2 space-y-1.5 text-sm">
             {g.lecturaDiagramas.map((t) => (
               <li key={t} className="flex gap-2">
@@ -151,7 +149,7 @@ export default function PaginaGuia() {
       </section>
 
       <section className="tarjeta p-5">
-        <h2 className="text-2xl">Aguja y hebra: cómo tomarlas</h2>
+        <h2 className="text-2xl"><Tx k="guia.agujaHebra" /></h2>
         <div className="mt-3 grid gap-3 sm:grid-cols-3">
           {g.agujaHebra.map((a) => (
             <div key={a.titulo} className="rounded-2xl bg-crema/60 p-3">
@@ -160,12 +158,11 @@ export default function PaginaGuia() {
             </div>
           ))}
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={imagenMejorada("/revista/pasos/aguja-y-hebra.webp")} alt="Cómo tomar la aguja y la hebra" loading="lazy" className="mt-3 w-full rounded-2xl" />
+        <ImgTx src={imagenMejorada("/revista/pasos/aguja-y-hebra.webp")} k="guia.altAgujaHebra" className="mt-3 w-full rounded-2xl" />
       </section>
 
       <section className="tarjeta p-5">
-        <h2 className="text-2xl">Cómo unir las piezas</h2>
+        <h2 className="text-2xl"><Tx k="guia.unir" /></h2>
         <div className="mt-3 grid gap-3 md:grid-cols-2">
           {g.unir.map((u) => (
             <div key={u.titulo} className="rounded-2xl bg-crema/60 p-4">
@@ -174,11 +171,9 @@ export default function PaginaGuia() {
             </div>
           ))}
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={imagenMejorada("/revista/pasos/union-prendas.webp")} alt="Opciones para unir prendas, paso a paso" loading="lazy" className="mt-3 w-full rounded-2xl" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={imagenMejorada("/revista/pasos/union-motivos.webp")} alt="Unión de motivos cuadrados, paso a paso" loading="lazy" className="mt-3 w-full rounded-2xl" />
-        <h3 className="mt-5 text-lg">Terminaciones prolijas</h3>
+        <ImgTx src={imagenMejorada("/revista/pasos/union-prendas.webp")} k="guia.altUnionPrendas" className="mt-3 w-full rounded-2xl" />
+        <ImgTx src={imagenMejorada("/revista/pasos/union-motivos.webp")} k="guia.altUnionMotivos" className="mt-3 w-full rounded-2xl" />
+        <h3 className="mt-5 text-lg"><Tx k="guia.terminaciones" /></h3>
         <ul className="mt-2 space-y-1.5 text-sm">
           {g.terminaciones.map((t) => (
             <li key={t} className="flex gap-2">
@@ -192,7 +187,7 @@ export default function PaginaGuia() {
 
       <div className="grid gap-4 md:grid-cols-2">
         <section className="tarjeta p-5">
-          <h2 className="text-2xl">Cómo leer un diagrama</h2>
+          <h2 className="text-2xl"><Tx k="guia.leerUnDiagrama" /></h2>
           <ol className="mt-3 space-y-2">
             {guia.leerDiagrama.map((t, i) => (
               <li key={t} className="flex gap-3">
@@ -206,7 +201,7 @@ export default function PaginaGuia() {
         </section>
 
         <section className="tarjeta p-5">
-          <h2 className="text-2xl">Cuidado de tus prendas</h2>
+          <h2 className="text-2xl"><Tx k="guia.cuidado" /></h2>
           <ul className="mt-3 space-y-2">
             {guia.cuidado.map((t) => (
               <li key={t} className="flex gap-2">

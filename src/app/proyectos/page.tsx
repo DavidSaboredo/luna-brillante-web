@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Nivel } from "@/components/TarjetaPunto";
 import { fuenteRevista, proyectos } from "@/lib/proyectos";
+import Tx from "@/components/Tx";
 import RevistasVenta from "@/components/RevistasVenta";
 import { EncabezadoRevista, EnlaceGuia } from "@/components/TextosRevista";
 
@@ -28,7 +29,7 @@ export default function PaginaProyectos() {
             </div>
             <div className="space-y-1 p-4">
               <p className="text-xs text-tinta-suave">
-                {p.categoria} · pág. {p.pagina}
+                {p.categoria} · <Tx k="rev.pag" /> {p.pagina}
               </p>
               <h2 className="text-2xl leading-tight">{p.titulo}</h2>
               <p className="text-sm text-tinta-suave">{p.lema}</p>

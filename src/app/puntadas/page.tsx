@@ -8,11 +8,18 @@ import type { OpcionesVista } from "@/components/Puntadas3D";
 import { PUNTADAS, type ParamsMuestra, type TipoPuntada } from "@/lib/hilo3d";
 import { buscarPunto } from "@/lib/puntos";
 import { COLORES } from "@/lib/taller";
+import { nom, textosCrear, type ClaveCrear } from "@/lib/textos-crear";
+import { useIdioma } from "@/components/Idioma";
 
 const Puntadas3D = dynamic(() => import("@/components/Puntadas3D"), {
   ssr: false,
-  loading: () => <div className="flex h-full items-center justify-center text-sm text-tinta-suave">Tejiendo en 3D…</div>,
+  loading: () => <Cargando />,
 });
+
+function Cargando() {
+  const { idioma } = useIdioma();
+  return <div className="flex h-full items-center justify-center text-sm text-tinta-suave">{textosCrear[idioma]["pun.cargando"]}</div>;
+}
 
 export default function PaginaPuntadas() {
   return (
@@ -59,13 +66,14 @@ function Deslizador({
 }
 
 function Colores({ valor, onElegir }: { valor: string; onElegir: (hex: string) => void }) {
+  const { idioma } = useIdioma();
   return (
     <div className="flex flex-wrap gap-1.5">
       {COLORES.map((c) => (
         <button
           key={c.hex}
-          title={c.nombre}
-          aria-label={c.nombre}
+          title={nom(c.nombre, idioma)}
+          aria-label={nom(c.nombre, idioma)}
           onClick={() => onElegir(c.hex)}
           className={`h-7 w-7 rounded-full border-2 transition ${valor === c.hex ? "scale-110 border-lavanda-fuerte" : "border-papel shadow"}`}
           style={{ background: c.hex }}
@@ -76,6 +84,8 @@ function Colores({ valor, onElegir }: { valor: string; onElegir: (hex: string) =
 }
 
 function Visor() {
+  const { idioma } = useIdioma();
+  const k = (c: ClaveCrear) => textosCrear[idioma][c];
   const params = useSearchParams();
   const visor = useRef<HTMLDivElement>(null);
   const inicial = PUNTADAS.find((p) => p.id === params.get("tipo") || p.punto === params.get("punto"))?.id ?? "bajo";
@@ -115,17 +125,16 @@ function Visor() {
   return (
     <div className="space-y-6">
       <header>
-        <h1 className="text-4xl">Puntadas en 3D</h1>
+        <h1 className="text-4xl">{k("pun.titulo")}</h1>
         <p className="max-w-2xl text-tinta-suave">
-          Mirá cómo el hilo se enlaza: cada puntada es un hilo retorcido que atraviesa la lazada de la hilera de abajo.
-          Acercate con la rueda y girá la muestra para ver las lazadas por detrás.
+          {k("pun.sub")}
         </p>
       </header>
 
       <div className="flex flex-wrap gap-2">
         {PUNTADAS.map((p) => (
           <button key={p.id} onClick={() => setTipo(p.id)} className={`chip ${p.id === tipo ? "!bg-lavanda !border-lavanda" : ""}`}>
-            {p.nombre}
+            {nom(p.nombre, idioma)}
           </button>
         ))}
       </div>
@@ -138,66 +147,66 @@ function Visor() {
             </div>
             <div className="absolute right-3 top-3 flex flex-col gap-1.5 text-xs">
               <button onClick={() => cambiar({ girar: !vista.girar })} className="rounded-full bg-papel/90 px-3 py-1 shadow-sm hover:bg-papel">
-                {vista.girar ? "Parar giro" : "Girar sola"}
+                {vista.girar ? k("pun.parar") : k("pun.girar")}
               </button>
               <button onClick={descargar} className="rounded-full bg-papel/90 px-3 py-1 shadow-sm hover:bg-papel">
-                Descargar imagen
+                {k("pun.descargar")}
               </button>
             </div>
           </div>
-          <p className="text-center text-xs text-tinta-suave">Arrastrá para girar · rueda o pellizco para acercar</p>
+          <p className="text-center text-xs text-tinta-suave">{k("pun.ayuda")}</p>
         </div>
 
         <div className="min-w-0 space-y-4">
           <div className="tarjeta space-y-2 p-5">
-            <h2 className="text-2xl">{info.nombre}</h2>
-            <p className="text-sm">{info.explicacion}</p>
+            <h2 className="text-2xl">{nom(info.nombre, idioma)}</h2>
+            <p className="text-sm">{nom(info.explicacion, idioma)}</p>
             {punto && (
               <Link href={`/puntos/${punto.id}`} className="inline-block text-sm text-lavanda-fuerte underline">
-                Ver el paso a paso →
+                {k("pun.verPaso")}
               </Link>
             )}
           </div>
 
           <div className="tarjeta space-y-4 p-5">
-            <h2 className="text-xl">Muestra</h2>
+            <h2 className="text-xl">{k("pun.muestra")}</h2>
             {tipo !== "cadena" && (
-              <Deslizador titulo="Hileras" valor={filas} min={2} max={10} paso={1} onCambiar={setFilas} />
+              <Deslizador titulo={k("pun.hileras")} valor={filas} min={2} max={10} paso={1} onCambiar={setFilas} />
             )}
-            <Deslizador titulo={tipo === "cadena" ? "Eslabones (÷2)" : "Puntadas por hilera"} valor={columnas} min={3} max={14} paso={1} onCambiar={setColumnas} />
-            <Deslizador titulo="Grosor del hilo" valor={grosor} min={0.07} max={0.18} paso={0.005} onCambiar={setGrosor} formato={(v) => `${Math.round(v * 100) / 10} mm`} />
-            <Deslizador titulo="Tensión" valor={tension} min={0} max={1} paso={0.05} onCambiar={setTension} formato={(v) => (v < 0.35 ? "floja" : v > 0.7 ? "apretada" : "pareja")} />
+            <Deslizador titulo={tipo === "cadena" ? k("pun.eslabones") : k("pun.porHilera")} valor={columnas} min={3} max={14} paso={1} onCambiar={setColumnas} />
+            <Deslizador titulo={k("pun.grosor")} valor={grosor} min={0.07} max={0.18} paso={0.005} onCambiar={setGrosor} formato={(v) => `${Math.round(v * 100) / 10} mm`} />
+            <Deslizador titulo={k("pun.tension")} valor={tension} min={0} max={1} paso={0.05} onCambiar={setTension} formato={(v) => (v < 0.35 ? k("pun.floja") : v > 0.7 ? k("pun.apretada") : k("pun.pareja"))} />
             {tipo !== "cadena" && (
-              <Deslizador titulo="Separar hileras" valor={separacion} min={0} max={1} paso={0.05} onCambiar={setSeparacion} formato={(v) => (v ? `${Math.round(v * 100)}%` : "juntas")} />
+              <Deslizador titulo={k("pun.separar")} valor={separacion} min={0} max={1} paso={0.05} onCambiar={setSeparacion} formato={(v) => (v ? `${Math.round(v * 100)}%` : k("pun.juntas"))} />
             )}
           </div>
 
           <div className="tarjeta space-y-4 p-5">
-            <h2 className="text-xl">Hilo y luz</h2>
+            <h2 className="text-xl">{k("pun.hiloLuz")}</h2>
             <div>
-              <p className="mb-1.5 text-sm text-tinta-suave">Color del hilo</p>
+              <p className="mb-1.5 text-sm text-tinta-suave">{k("pun.colorHilo")}</p>
               <Colores valor={vista.colorA} onElegir={(colorA) => cambiar({ colorA })} />
             </div>
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={vista.bicolor} onChange={(e) => cambiar({ bicolor: e.target.checked })} className="accent-[var(--color-lavanda-fuerte)]" />
-              Hileras en dos colores (se ve mejor el enlace)
+              {k("pun.bicolor")}
             </label>
             {vista.bicolor && (
               <div>
-                <p className="mb-1.5 text-sm text-tinta-suave">Segundo color</p>
+                <p className="mb-1.5 text-sm text-tinta-suave">{k("pun.segundo")}</p>
                 <Colores valor={vista.colorB} onElegir={(colorB) => cambiar({ colorB })} />
               </div>
             )}
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={vista.relieve} onChange={(e) => cambiar({ relieve: e.target.checked })} className="accent-[var(--color-lavanda-fuerte)]" />
-              Relieve del hilo (normal map)
+              {k("pun.relieve")}
             </label>
             {vista.relieve && (
-              <Deslizador titulo="Fuerza del relieve" valor={vista.intensidadRelieve} min={0.2} max={3} paso={0.1} onCambiar={(intensidadRelieve) => cambiar({ intensidadRelieve })} />
+              <Deslizador titulo={k("pun.fuerza")} valor={vista.intensidadRelieve} min={0.2} max={3} paso={0.1} onCambiar={(intensidadRelieve) => cambiar({ intensidadRelieve })} />
             )}
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={vista.alambre} onChange={(e) => cambiar({ alambre: e.target.checked })} className="accent-[var(--color-lavanda-fuerte)]" />
-              Ver la malla (alambre)
+              {k("pun.malla")}
             </label>
           </div>
         </div>

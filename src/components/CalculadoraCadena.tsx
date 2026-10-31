@@ -1,23 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import { calcularCadenaBase, textoRepeticion, type Punto } from "@/lib/puntos";
+import { calcularCadenaBase, type Punto } from "@/lib/puntos";
+import { textosPuntos } from "@/lib/textos-puntos";
+import { useIdioma } from "./Idioma";
 
 /** Calcula cuántas cadenetas montar para un ancho, respetando el múltiplo del punto. */
 export default function CalculadoraCadena({ punto }: { punto: Punto }) {
+  const { idioma } = useIdioma();
+  const k = textosPuntos[idioma];
+  const c = k.calc;
   const [ancho, setAncho] = useState("40");
   const [muestra, setMuestra] = useState("18");
   const r = calcularCadenaBase(punto, Number(ancho), Number(muestra));
 
   return (
     <div className="tarjeta space-y-3 p-5">
-      <h2 className="text-2xl">Calculadora de cadena base</h2>
+      <h2 className="text-2xl">{c.titulo}</h2>
       <p className="text-sm text-tinta-suave">
-        Este punto lleva {textoRepeticion(punto)?.toLowerCase()} cadenetas.
+        {c.lleva(k.puntos.multiplo(punto.repeat!.multiple, punto.repeat!.plus).toLowerCase())}
       </p>
       <div className="grid grid-cols-2 gap-3 text-sm">
         <label className="space-y-1">
-          <span className="text-tinta-suave">Ancho que quieres (cm)</span>
+          <span className="text-tinta-suave">{c.ancho}</span>
           <input
             type="number"
             min="1"
@@ -28,7 +33,7 @@ export default function CalculadoraCadena({ punto }: { punto: Punto }) {
           />
         </label>
         <label className="space-y-1">
-          <span className="text-tinta-suave">Puntos en 10 cm (tu muestra)</span>
+          <span className="text-tinta-suave">{c.muestra}</span>
           <input
             type="number"
             min="1"
@@ -41,11 +46,10 @@ export default function CalculadoraCadena({ punto }: { punto: Punto }) {
       </div>
       {r ? (
         <p className="rounded-xl bg-menta/50 p-3">
-          Monta <strong>{r.cadenas} cadenetas</strong> ({r.repeticiones} repeticiones de {punto.repeat!.multiple}
-          {punto.repeat!.plus ? ` + ${punto.repeat!.plus}` : ""}). Quedará de unos {r.anchoReal.toFixed(1)} cm.
+          {c.monta(r.cadenas, r.repeticiones, punto.repeat!.multiple, punto.repeat!.plus, r.anchoReal.toFixed(1))}
         </p>
       ) : (
-        <p className="text-sm text-tinta-suave">Completa ambos valores para calcular.</p>
+        <p className="text-sm text-tinta-suave">{c.completa}</p>
       )}
     </div>
   );

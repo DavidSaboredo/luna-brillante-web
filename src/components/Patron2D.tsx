@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { patronPlano } from "@/lib/patrones2d";
 import { crearTextura } from "@/lib/texturas3d";
+import { useIdioma } from "./Idioma";
+import { fmt, nom, textosCrear } from "@/lib/textos-crear";
 import { contexto, infoMaterial, type EleccionZona, type Opciones, type Prenda } from "@/lib/taller";
 
 interface Props {
@@ -20,6 +22,8 @@ interface Props {
 const MARGEN = 10;
 
 export default function Patron2D({ prenda, opciones, zonas, zonaActiva, onElegirZona, relleno, puntosEn10, hilerasEn10 }: Props) {
+  const { idioma } = useIdioma();
+  const tc = textosCrear[idioma];
   const ctx = useMemo(() => contexto(prenda, opciones), [prenda, opciones]);
   const plano = useMemo(() => patronPlano(prenda, ctx), [prenda, ctx]);
   const [vista, setVista] = useState({ x: 0, y: 0, k: 1 });
@@ -168,12 +172,12 @@ export default function Patron2D({ prenda, opciones, zonas, zonaActiva, onElegir
                 <g transform={`translate(${f(p.w / 2)} ${f(Math.min(p.h * 0.3, p.h - 4))})`}>
                   <rect x={-Math.min(p.w / 2 - 0.4, 15)} y={-3.4} width={Math.min(p.w - 0.8, 30)} height={p.w > 14 ? 8.6 : 5} rx="0.8" fill="#ffffff" fillOpacity="0.88" />
                   <text textAnchor="middle" y={0.4} fontSize={p.w > 14 ? 3 : 2} fill="#4a4458" fontWeight={600}>
-                    {p.pieza.nombre}
+                    {nom(p.pieza.nombre, idioma)}
                     {p.pieza.cantidad > 1 ? ` ×${p.pieza.cantidad}` : ""}
                   </text>
                   {p.w > 14 && (
                     <text textAnchor="middle" y={3.4} fontSize="2.3" fill="#6c6580">
-                      {pts} pts × {hil} hil.
+                      {fmt(tc["crear.ptsHil"], { p: pts, h: hil })}
                     </text>
                   )}
                 </g>
@@ -191,7 +195,7 @@ export default function Patron2D({ prenda, opciones, zonas, zonaActiva, onElegir
         </g>
       </svg>
 
-      <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-papel/90 px-3 py-1 text-xs shadow-sm">Patrón plano · cuadrícula 1 cm</div>
+      <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-papel/90 px-3 py-1 text-xs shadow-sm">{tc["crear.patronPlano"]}</div>
       <div className="absolute bottom-3 right-3 flex gap-1.5 text-xs">
         <button onClick={() => setVista((v) => ({ ...v, k: Math.min(6, v.k * 1.25) }))} className="rounded-full bg-papel/90 px-3 py-1 shadow-sm hover:bg-papel">
           ＋
@@ -200,7 +204,7 @@ export default function Patron2D({ prenda, opciones, zonas, zonaActiva, onElegir
           －
         </button>
         <button onClick={() => setVista({ x: 0, y: 0, k: 1 })} className="rounded-full bg-papel/90 px-3 py-1 shadow-sm hover:bg-papel">
-          Ajustar
+          {tc["crear.ajustar"]}
         </button>
       </div>
     </div>

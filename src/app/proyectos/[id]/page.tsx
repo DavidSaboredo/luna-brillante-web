@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Tx from "@/components/Tx";
 import { Nivel } from "@/components/TarjetaPunto";
 import { buscarPunto } from "@/lib/puntos";
 import { buscarProyecto, fuenteRevista, notaRevista, proyectos } from "@/lib/proyectos";
@@ -35,7 +36,7 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
   return (
     <article className="space-y-6">
       <Link href="/proyectos" className="text-sm text-tinta-suave hover:text-tinta">
-        ← Volver a la revista
+        <Tx k="rev.volver" />
       </Link>
 
       <header className="grid gap-5 md:grid-cols-[1fr_1.2fr]">
@@ -45,7 +46,7 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
         </div>
         <div className="flex flex-col justify-center gap-3">
           <p className="text-sm text-tinta-suave">
-            Diseño N.º {p.numero} · {p.categoria} · pág. {p.pagina}
+            <Tx k="rev.diseno" /> {p.numero} · {p.categoria} · <Tx k="rev.pag" /> {p.pagina}
           </p>
           <h1 className="text-4xl md:text-5xl">{p.titulo}</h1>
           <p className="text-lg text-tinta-suave">{p.lema}</p>
@@ -56,7 +57,7 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
             </span>
             {p.talles.map((t) => (
               <span key={t} className="chip">
-                Talle {t}
+                <Tx k="rev.talle" /> {t}
               </span>
             ))}
           </div>
@@ -66,18 +67,18 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
       <div className="grid gap-6 md:grid-cols-[1fr_1.6fr]">
         <aside className="space-y-4">
           <section className="tarjeta p-5">
-            <h2 className="text-2xl">Materiales</h2>
+            <h2 className="text-2xl"><Tx k="rev.materiales" /></h2>
             <Lista items={p.materiales} />
           </section>
 
           <section className="tarjeta p-5">
-            <h2 className="text-2xl">Medidas</h2>
+            <h2 className="text-2xl"><Tx k="rev.medidas" /></h2>
             <Lista items={p.medidas} />
             <p className="mt-3 text-xs text-tinta-suave">{notaRevista}</p>
           </section>
 
           <section className="tarjeta p-5">
-            <h2 className="text-2xl">Puntos que se usan</h2>
+            <h2 className="text-2xl"><Tx k="rev.puntosUsados" /></h2>
             <ul className="mt-2 space-y-1.5">
               {p.puntosUsados.map((u) => {
                 const punto = u.punto ? buscarPunto(u.punto) : null;
@@ -105,7 +106,7 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
 
         <div className="space-y-4">
           <section className="tarjeta p-5">
-            <h2 className="text-2xl">Cómo se teje</h2>
+            <h2 className="text-2xl"><Tx k="rev.comoSeTeje" /></h2>
             <div className="mt-2 space-y-2">
               {p.explicacion.map((t) => (
                 <p key={t}>{t}</p>
@@ -157,7 +158,7 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
           ))}
 
           <section className="tarjeta p-5">
-            <h2 className="text-2xl">Terminaciones</h2>
+            <h2 className="text-2xl"><Tx k="rev.terminaciones" /></h2>
             <ol className="mt-3 space-y-2">
               {p.terminaciones.map((t, i) => (
                 <li key={t} className="flex gap-3">
@@ -193,7 +194,9 @@ export default async function DetalleProyecto({ params }: { params: Promise<{ id
           </Link>
         )}
       </nav>
-      <p className="text-center text-xs text-tinta-suave">{fuenteRevista}</p>
+      <p className="text-center text-xs text-tinta-suave">
+        <Tx k="rev.aviso" /> {fuenteRevista}
+      </p>
     </article>
   );
 }
