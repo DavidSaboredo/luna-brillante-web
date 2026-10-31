@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Nunito } from "next/font/google";
 import Navegacion from "@/components/Navegacion";
+import { ProveedorIdioma } from "@/components/Idioma";
 import RegistrarSW from "@/components/RegistrarSW";
 import "./globals.css";
 
@@ -34,9 +35,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${cormorant.variable} ${nunito.variable} antialiased`}>
-        <RegistrarSW />
-        <Navegacion />
-        <main className="mx-auto max-w-5xl px-4 pb-28 pt-6 md:pb-12">{children}</main>
+        <ProveedorIdioma>
+          <RegistrarSW />
+          <Navegacion />
+          <main className="mx-auto max-w-5xl px-4 pb-28 pt-6 md:pb-12">{children}</main>
+        </ProveedorIdioma>
       </body>
     </html>
   );

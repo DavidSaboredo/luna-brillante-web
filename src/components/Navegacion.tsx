@@ -3,17 +3,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoLuna from "./LogoLuna";
+import { SelectorIdioma, useIdioma } from "./Idioma";
 
 const SECCIONES = [
-  { href: "/", label: "Inicio", icono: "☾" },
-  { href: "/puntos", label: "Puntos", icono: "✿" },
-  { href: "/proyectos", label: "Revista", icono: "❀" },
-  { href: "/crear", label: "Crear prenda", icono: "✂" },
-  { href: "/asistente", label: "Luna IA", icono: "✦" },
-];
+  { href: "/", clave: "inicio", icono: "☾" },
+  { href: "/puntos", clave: "puntos", icono: "✿" },
+  { href: "/proyectos", clave: "revista", icono: "❀" },
+  { href: "/crear", clave: "crear", icono: "✂" },
+  { href: "/herramientas", clave: "herramientas", icono: "✚" },
+] as const;
 
 export default function Navegacion() {
   const ruta = usePathname();
+  const { t } = useIdioma();
   const activa = (href: string) => (href === "/" ? ruta === "/" : ruta.startsWith(href));
 
   return (
@@ -39,10 +41,11 @@ export default function Navegacion() {
                   activa(s.href) ? "bg-lavanda text-tinta" : "text-tinta-suave hover:bg-papel"
                 }`}
               >
-                {s.label}
+                {t.nav[s.clave]}
               </Link>
             ))}
           </nav>
+          <SelectorIdioma />
         </div>
       </header>
 
@@ -64,7 +67,7 @@ export default function Navegacion() {
               >
                 {s.icono}
               </span>
-              {s.label}
+              {t.nav[s.clave]}
             </Link>
           ))}
         </div>
