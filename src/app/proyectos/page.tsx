@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Nivel } from "@/components/TarjetaPunto";
 import { fuenteRevista, proyectos } from "@/lib/proyectos";
+import { revistasVenta } from "@/lib/catalogo";
 
 export const metadata = { title: "Revista · Luna Brillante" };
 
@@ -45,6 +46,36 @@ export default function PaginaProyectos() {
           </Link>
         ))}
       </div>
+
+      <section className="space-y-4">
+        <header>
+          <h2 className="text-3xl">Todas las revistas de Luna Brillante</h2>
+          <p className="max-w-2xl text-tinta-suave">
+            Revistas digitales con proyectos paso a paso. Podés ver el catálogo gratis y comprar la que más te guste.
+          </p>
+        </header>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {revistasVenta.map((r) => (
+            <div key={r.titulo} className="tarjeta flex flex-col gap-3 p-5">
+              <div>
+                <h3 className="text-xl leading-tight">{r.titulo}</h3>
+                <p className="text-sm text-tinta-suave">{r.detalle}</p>
+                {r.precio && <p className="mt-1 text-sm font-semibold">{r.precio}</p>}
+              </div>
+              <div className="mt-auto flex flex-wrap gap-2">
+                <a href={r.comprar} target="_blank" rel="noopener noreferrer" className="rounded-full bg-lavanda-fuerte px-4 py-2 text-sm font-semibold text-white">
+                  Comprar
+                </a>
+                {r.catalogo && (
+                  <a href={r.catalogo} target="_blank" rel="noopener noreferrer" className="rounded-full border border-borde px-4 py-2 text-sm">
+                    Ver catálogo gratis
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <Link href="/guia" className="tarjeta flex items-center gap-4 p-5 transition hover:-translate-y-0.5">
         <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-manteca text-2xl">📖</span>
