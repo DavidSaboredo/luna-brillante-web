@@ -43,7 +43,7 @@ const es: Dic = {
     "La aplicación no te pide registrarte ni guarda datos personales en nuestros servidores. Los proyectos y preferencias que armás se guardan solamente en tu dispositivo.",
   "priv.ia": "Fotos y consultas a Luna IA",
   "priv.iaTexto":
-    "Si usás el asistente o subís una foto, el contenido se envía a nuestro proveedor de inteligencia artificial (Anthropic) solo para generar la respuesta. No lo usamos para publicidad ni lo vendemos a terceros.",
+    "Hoy la aplicación no envía fotos ni consultas a ningún servicio externo. Si más adelante se suma el asistente Luna IA y lo usás o subís una foto, el contenido se envía a nuestro proveedor de inteligencia artificial (Anthropic) solo para generar la respuesta. No lo usamos para publicidad ni lo vendemos a terceros.",
   "priv.cookies": "Cookies y publicidad",
   "priv.cookiesTexto": "No usamos publicidad ni rastreadores de terceros.",
   "priv.derechos": "Tus derechos",
@@ -94,7 +94,7 @@ const en: Dic = {
     "The app does not ask you to sign up and does not store personal data on our servers. The projects and preferences you create are saved only on your device.",
   "priv.ia": "Photos and questions to Luna AI",
   "priv.iaTexto":
-    "If you use the assistant or upload a photo, the content is sent to our artificial intelligence provider (Anthropic) only to generate the answer. We do not use it for advertising or sell it to third parties.",
+    "Today the app does not send photos or questions to any external service. If the Luna AI assistant is added later and you use it or upload a photo, the content is sent to our artificial intelligence provider (Anthropic) only to generate the answer. We do not use it for advertising or sell it to third parties.",
   "priv.cookies": "Cookies and advertising",
   "priv.cookiesTexto": "We do not use advertising or third-party trackers.",
   "priv.derechos": "Your rights",
@@ -146,7 +146,7 @@ const pt: Dic = {
     "O aplicativo não pede cadastro e não guarda dados pessoais em nossos servidores. Os projetos e preferências que você cria ficam salvos somente no seu dispositivo.",
   "priv.ia": "Fotos e perguntas à Luna IA",
   "priv.iaTexto":
-    "Se você usar o assistente ou enviar uma foto, o conteúdo é enviado ao nosso provedor de inteligência artificial (Anthropic) apenas para gerar a resposta. Não usamos para publicidade nem vendemos a terceiros.",
+    "Hoje o aplicativo não envia fotos nem perguntas a nenhum serviço externo. Se mais adiante o assistente Luna IA for adicionado e você usá-lo ou enviar uma foto, o conteúdo é enviado ao nosso provedor de inteligência artificial (Anthropic) apenas para gerar a resposta. Não usamos para publicidade nem vendemos a terceiros.",
   "priv.cookies": "Cookies e publicidade",
   "priv.cookiesTexto": "Não usamos publicidade nem rastreadores de terceiros.",
   "priv.derechos": "Seus direitos",

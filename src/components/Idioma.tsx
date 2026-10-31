@@ -37,14 +37,14 @@ export const useIdioma = () => useContext(Contexto);
 export function SelectorIdioma() {
   const { idioma, cambiar, t } = useIdioma();
   return (
-    <div role="group" aria-label={t.nav.idioma} className="flex rounded-full border border-borde bg-papel p-0.5 text-xs">
+    <div role="group" aria-label={t.nav.idioma} className="flex rounded-full border border-borde bg-papel p-0.5 text-sm">
       {IDIOMAS.map((i) => (
         <button
           key={i.id}
           onClick={() => cambiar(i.id)}
           aria-pressed={idioma === i.id}
           title={i.nombre}
-          className={`rounded-full px-2.5 py-1.5 ${idioma === i.id ? "bg-lavanda-fuerte text-white" : "text-tinta-suave"}`}
+          className={`rounded-full px-3 py-2 ${idioma === i.id ? "bg-lavanda-fuerte text-white" : "text-tinta-suave"}`}
         >
           {i.corto}
         </button>

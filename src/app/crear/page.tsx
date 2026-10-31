@@ -293,7 +293,7 @@ function TallerPrenda() {
       <div className="space-y-1.5">
         {GRUPOS.map((g) => (
           <div key={g.id} className="flex items-center gap-2">
-            <span className="w-24 shrink-0 text-[11px] uppercase tracking-wide text-tinta-suave">{n(g.nombre)}</span>
+            <span className="w-28 shrink-0 text-xs uppercase tracking-wide text-tinta-suave">{n(g.nombre)}</span>
             <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1">
               {PRENDAS.filter((p) => p.grupo === g.id).map((p) => (
                 <button

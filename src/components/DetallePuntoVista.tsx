@@ -7,6 +7,7 @@ import PasosRevista from "@/components/PasosRevista";
 import { Nivel } from "@/components/TarjetaPunto";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
+import { fotosTejedora } from "@/lib/fotos-tejedora";
 import {
   buscarPunto,
   fondoCategoria,
@@ -43,6 +44,7 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
   const k = textosPuntos[idioma].puntos;
   const nombre = tx(punto.name, idioma);
   const ilustracion = rutaIlustracion(punto);
+  const muestras = fotosTejedora(punto.id);
   const seTeje = { rows: k.filas, rounds: k.redondo, "n/a": "—" }[punto.worked_in];
   const aka = txLista(punto.aka, idioma);
   const datos: [string, string][] = [
@@ -86,6 +88,21 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
           <figcaption className="mt-2 text-center text-xs text-tinta-suave">{k.diagrama}</figcaption>
         </figure>
       </section>
+
+      {muestras.length > 0 && (
+        <section className="space-y-2">
+          <h2 className="text-xl">{k.muestraReal}</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {muestras.map((m) => (
+              <figure key={m.archivo} className="tarjeta overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={m.archivo} alt={`${nombre}: ${m.leyenda[idioma]}`} loading="lazy" className="max-h-[28rem] w-full object-cover" />
+                <figcaption className="px-3 py-2 text-xs text-tinta-suave">{m.leyenda[idioma]}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="grid gap-6 md:grid-cols-[1fr_1.6fr]">
         <aside className="space-y-4">
