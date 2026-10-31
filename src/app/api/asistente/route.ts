@@ -88,8 +88,18 @@ function validar(cuerpo: unknown): Mensaje[] | null {
   return mensajes as Mensaje[];
 }
 
+export const maxDuration = 60;
+
 export async function POST(req: Request) {
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() || "desconocida";
+  const origen = req.headers.get("origin");
+  if (origen && new URL(origen).host !== req.headers.get("host")) {
+    return new Response("Origen no permitido", { status: 403 });
+  }
+  const ip =
+    req.headers.get("x-real-ip") ||
+    req.headers.get("x-vercel-forwarded-for") ||
+    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+    "desconocida";
   if (excedeLimite(ip)) {
     return new Response("Hiciste muchas consultas seguidas. Probá de nuevo en unos minutos.", { status: 429 });
   }
@@ -97,16 +107,19 @@ export async function POST(req: Request) {
   if (!mensajes || mensajes.at(-1)?.role !== "user") {
     return new Response("Mensaje inválido", { status: 400 });
   }
+  if (mensajes.some((m, i) => m.role !== (i % 2 === 0 ? "user" : "assistant"))) {
+    return new Response("Mensaje inválido", { status: 400 });
+  }
   if (mensajes.reduce((total, m) => total + m.content.length, 0) > MAX_CARACTERES_TOTAL) {
     return new Response("La conversación es muy larga. Empezá una nueva.", { status: 413 });
   }
   if (!process.env.ANTHROPIC_API_KEY) {
-    return new Response("Falta configurar la clave de la IA (ANTHROPIC_API_KEY en .env.local).", { status: 503 });
+    return new Response("El asistente no está disponible por ahora.", { status: 503 });
   }
 
   const stream = client.beta.messages.stream({
     model: process.env.ANTHROPIC_MODEL || "claude-sonnet-5-5",
-    max_tokens: 6000,
+    max_tokens: 4000,
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default",
     output_config: { effort: "medium" },
@@ -133,7 +146,7 @@ export async function POST(req: Request) {
         console.error("Error en Luna IA:", error);
         const mensaje =
           error instanceof Anthropic.AuthenticationError
-            ? "Falta configurar la clave de la IA (ANTHROPIC_API_KEY)."
+            ? "El asistente no está disponible por ahora."
             : error instanceof Anthropic.RateLimitError
               ? "Hay muchas consultas en este momento. Intentá de nuevo en un minuto."
               : "Hubo un problema al conectar con Luna IA. Intentá de nuevo.";
