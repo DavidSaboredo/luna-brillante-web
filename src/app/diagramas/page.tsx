@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useIdioma } from "@/components/Idioma";
-import { diagramas, textosDiagramas, type Grupo } from "@/lib/diagramas";
+import { diagramas, fantasiaSinPunto, textosDiagramas, type Grupo } from "@/lib/diagramas";
 
 const ORDEN: Grupo[] = ["puntilla", "fantasia", "motivo", "esquema"];
 
@@ -24,7 +24,7 @@ export default function PaginaDiagramas() {
         <section key={g} className="space-y-3">
           <h2 className="text-2xl">{k.grupos[g]}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {diagramas[g].map((d) => (
+            {(g === "fantasia" ? fantasiaSinPunto : diagramas[g]).map((d) => (
               <figure key={d.archivo} className="tarjeta overflow-hidden">
                 <a href={d.archivo} target="_blank" rel="noopener noreferrer">
                   {/* eslint-disable-next-line @next/next/no-img-element */}

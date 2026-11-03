@@ -8,6 +8,7 @@ import { Nivel } from "@/components/TarjetaPunto";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
 import { fotosTejedora } from "@/lib/fotos-tejedora";
+import { diagramaDeRevista, textosDiagramas } from "@/lib/diagramas";
 import {
   buscarPunto,
   fondoCategoria,
@@ -45,6 +46,7 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
   const nombre = tx(punto.name, idioma);
   const ilustracion = rutaIlustracion(punto);
   const muestras = fotosTejedora(punto.id);
+  const deRevista = diagramaDeRevista(punto.id);
   const seTeje = { rows: k.filas, rounds: k.redondo, "n/a": "—" }[punto.worked_in];
   const aka = txLista(punto.aka, idioma);
   const datos: [string, string][] = [
@@ -88,6 +90,18 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
           <figcaption className="mt-2 text-center text-xs text-tinta-suave">{k.diagrama}</figcaption>
         </figure>
       </section>
+
+      {deRevista && (
+        <section className="space-y-2">
+          <h2 className="text-xl">{textosDiagramas[idioma].deRevista}</h2>
+          <figure className="tarjeta overflow-hidden">
+            <a href={deRevista.archivo} target="_blank" rel="noopener noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={deRevista.archivo} alt={`${nombre}: ${deRevista.nombre[idioma]}`} loading="lazy" className="max-h-[28rem] w-full bg-papel object-contain" />
+            </a>
+          </figure>
+        </section>
+      )}
 
       {muestras.length > 0 && (
         <section className="space-y-2">
