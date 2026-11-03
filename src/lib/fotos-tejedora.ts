@@ -12,6 +12,10 @@ const f = (archivo: string, es: string, en: string, pt: string): FotoTejedora =>
 
 /** Muestras tejidas por la tejedora de Luna Brillante, por id de punto. */
 const porPunto: Record<string, FotoTejedora[]> = {
+  wattle_stitch: [f("wattle", "Punto wattle", "Wattle stitch", "Ponto wattle")],
+  trinity_stitch: [f("trinidad", "Punto trinidad", "Trinity stitch", "Ponto trindade")],
+  star_stitch: [f("estrella", "Punto estrella", "Star stitch", "Ponto estrela")],
+  wave_stitch: [f("ola", "Punto ola", "Wave stitch", "Ponto onda")],
   herringbone_half_double: [f("espiga", "Punto espiga", "Herringbone stitch", "Ponto espiga")],
   dc_increase: [
     f("aumento-varetas", "Aumentos en varetas (círculos)", "Double crochet increases (circled)", "Aumentos em pontos altos (círculos)"),
