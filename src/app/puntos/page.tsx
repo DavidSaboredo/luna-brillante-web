@@ -6,6 +6,7 @@ import TarjetaPunto from "@/components/TarjetaPunto";
 import { categorias, coincide, niveles, puntos, tx } from "@/lib/puntos";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
+import { textosDiagramas } from "@/lib/diagramas";
 
 export default function PaginaPuntos() {
   const { idioma } = useIdioma();
@@ -32,6 +33,9 @@ export default function PaginaPuntos() {
         <p className="text-tinta-suave">{k.sub(puntos.length)}</p>
         <Link href="/puntadas" className="mt-2 inline-block text-sm text-lavanda-fuerte underline">
           {k.enlace3d}
+        </Link>
+        <Link href="/diagramas" className="mt-2 block text-sm text-lavanda-fuerte underline">
+          {textosDiagramas[idioma].enlace}
         </Link>
       </header>
 
