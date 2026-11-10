@@ -56,7 +56,7 @@ export default function Navegacion() {
             <Link
               key={s.href}
               href={s.href}
-              className={`flex flex-col items-center gap-0.5 min-w-0 py-2.5 text-[10px] min-[360px]:text-xs ${
+              className={`flex flex-col items-center gap-0.5 min-w-0 py-2.5 text-[11px] min-[360px]:text-xs ${
                 activa(s.href) ? "text-lavanda-fuerte" : "text-tinta-suave"
               }`}
             >

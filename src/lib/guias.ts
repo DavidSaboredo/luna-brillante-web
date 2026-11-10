@@ -113,7 +113,6 @@ export const GUIAS: Guia[] = [
       "Tejer la manga en la sisa: levantá puntos alrededor del agujero de la sisa y tejé hacia abajo en redondo, con disminuciones cada pocas vueltas, hasta el puño.",
       "En ambos casos, probá la prenda puesta antes de coser definitivamente.",
     ],
-    nota: "Hay modelos de mangas para blusas en los patrones que Monica le pasó a Camila. Faltan cargar acá.",
   },
   {
     id: "blusa-diagonal",

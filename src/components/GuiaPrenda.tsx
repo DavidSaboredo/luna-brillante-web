@@ -54,7 +54,7 @@ function SueterDesdeCuello({ puntos, vueltas }: { puntos: number; vueltas: numbe
               onChange={(ev) => cambiar(c.id, ev.target.value)}
               className={CAMPO_ENTRADA}
             />
-            <span className="text-xs text-tinta-suave">{c.ayuda}</span>
+            <span className="text-sm text-tinta-suave">{c.ayuda}</span>
           </label>
         ))}
       </div>
@@ -126,8 +126,8 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
         <h3 className="text-lg">Consejos para esta prenda</h3>
         {consejos.map((g) => (
           <details key={g.id} className="rounded-2xl border border-borde bg-papel p-4">
-            <summary className="cursor-pointer text-sm">{g.titulo}</summary>
-            <div className="mt-3 space-y-3 text-sm">
+            <summary className="cursor-pointer py-1 text-base font-medium">{g.titulo}</summary>
+            <div className="mt-3 space-y-3 text-base">
               <p className="text-tinta-suave">{g.resumen}</p>
               <ol className="list-decimal space-y-2 pl-5">
                 {g.pasos.map((p) => (
@@ -150,7 +150,6 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
         <Link href="/diagramas" className="inline-block pt-1 text-sm text-lavanda-fuerte underline">
           📐 Puntillas y diagramas de Monica →
         </Link>
-        <p className="text-xs text-tinta-suave">Guía orientativa en borrador: Monica la tiene que revisar. Solo en español.</p>
       </section>
     </div>
   );

@@ -5,7 +5,7 @@
   --color-crema: #fbf7f4;
   --color-papel: #ffffff;
   --color-tinta: #4a4458;
-  --color-tinta-suave: #8a8399;
+  --color-tinta-suave: #655d75;
   --color-borde: #ede6ee;
 
   --color-lavanda: #d9cdf0;
@@ -21,6 +21,12 @@
   --font-sans: var(--font-nunito);
 
   --radius-suave: 1.25rem;
+
+  /* Letra más grande para que se lea cómodo a cualquier edad */
+  --text-xs: 0.9375rem;
+  --text-xs--line-height: 1.4;
+  --text-sm: 1.0625rem;
+  --text-sm--line-height: 1.5;
 }
 
 body {
@@ -28,6 +34,8 @@ body {
   color: var(--color-tinta);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
+  font-size: 1.0625rem;
+  line-height: 1.6;
 }
 
 h1,
@@ -51,8 +59,9 @@ h3 {
   align-items: center;
   gap: 0.25rem;
   border-radius: 999px;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.85rem;
+  min-height: 2.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
   border: 1px solid var(--color-borde);
   background: var(--color-papel);
   transition: all 0.15s ease;
