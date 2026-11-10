@@ -9,6 +9,7 @@ import { textosPuntos } from "@/lib/textos-puntos";
 import { fmt, nom, textosCrear, type ClaveCrear } from "@/lib/textos-crear";
 import SelectorPunto from "@/components/SelectorPunto";
 import Patron2D from "@/components/Patron2D";
+import GuiaPrenda from "@/components/GuiaPrenda";
 import type { VistaCamara } from "@/components/Prenda3D";
 import { rutaSimulacion, tieneSimulacion } from "@/lib/simulaciones";
 import { medidasTalle, TALLES } from "@/lib/medidas";
@@ -57,12 +58,13 @@ const VISTAS: { id: VistaCamara; nombre: string }[] = [
   { id: "espalda", nombre: "Espalda" },
 ];
 
-type Pestana = "zona" | "medidas" | "piezas" | "armado" | "guardar";
+type Pestana = "zona" | "medidas" | "piezas" | "armado" | "guia" | "guardar";
 const PESTANAS: { id: Pestana; nombre: ClaveCrear; icono: string }[] = [
   { id: "zona", nombre: "crear.pestZona", icono: "🧶" },
   { id: "medidas", nombre: "crear.pestMedidas", icono: "📏" },
   { id: "piezas", nombre: "crear.pestPiezas", icono: "✂" },
   { id: "armado", nombre: "crear.pestArmado", icono: "🪡" },
+  { id: "guia", nombre: "crear.pestGuia", icono: "📖" },
   { id: "guardar", nombre: "crear.pestGuardar", icono: "💾" },
 ];
 
@@ -659,6 +661,8 @@ function TallerPrenda() {
               {idioma !== "es" && <p className="mt-1 text-xs text-tinta-suave">{k("crear.avisoEs")}</p>}
             </div>
           )}
+
+          {pestana === "guia" && <GuiaPrenda prendaId={prenda.id} puntos={puntosMuestra} vueltas={filasMuestra} />}
 
           {pestana === "guardar" && (
             <div className="space-y-5">
