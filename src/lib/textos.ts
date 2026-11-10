@@ -38,7 +38,7 @@ const es = {
       contador: "Para no perder la cuenta. Creá un proyecto y tocá «Sumar vuelta» cada vez que termines una vuelta: queda guardado.",
       lana: "Para calcular cuántos puntos armar y cuánta lana comprar. Primero tejé un cuadradito de prueba de 10 cm.",
       terminos: "Para traducir las abreviaturas de las revistas y de los patrones en inglés.",
-      guias: "Calculá un suéter desde el cuello y mirá cómo arreglar o agrandar ropa con crochet.",
+      guias: "Elegí la prenda, cargá tu muestra y te decimos cuántos puntos y vueltas tejer. Abajo, consejos para arreglar ropa.",
     },
     contador: {
       nuevo: "Nuevo proyecto",
@@ -133,7 +133,7 @@ const en: Dic = {
       contador: "So you never lose count. Create a project and tap “Add row” each time you finish a row: it is saved.",
       lana: "To work out how many stitches to cast on and how much yarn to buy. First crochet a 10 cm test swatch.",
       terminos: "To translate the abbreviations in magazines and English patterns.",
-      guias: "Calculate a top-down sweater and see how to fix or enlarge clothes with crochet.",
+      guias: "Pick the garment, enter your gauge and we tell you how many stitches and rows to work. Below, tips for mending clothes.",
     },
     contador: {
       nuevo: "New project",
@@ -226,7 +226,7 @@ const pt: Dic = {
       contador: "Para não perder a conta. Crie um projeto e toque em «Somar carreira» a cada carreira terminada: fica salvo.",
       lana: "Para calcular quantos pontos montar e quanta lã comprar. Primeiro faça uma amostra de 10 cm.",
       terminos: "Para traduzir as abreviaturas das revistas e dos modelos em inglês.",
-      guias: "Calcule um suéter de cima para baixo e veja como consertar ou aumentar roupas com crochê.",
+      guias: "Escolha a peça, informe sua amostra e mostramos quantos pontos e carreiras tecer. Abaixo, dicas para consertar roupas.",
     },
     contador: {
       nuevo: "Novo projeto",
