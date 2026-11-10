@@ -85,7 +85,7 @@ export default function Contador() {
                 onClick={() => {
                   if (confirm(c.confirmarBorrar)) setLista((l) => l.filter((x) => x.id !== p.id));
                 }}
-                className="shrink-0 text-xs text-tinta-suave underline"
+                className="shrink-0 px-2 py-2 text-sm text-tinta-suave underline"
               >
                 {c.borrar}
               </button>
@@ -100,13 +100,13 @@ export default function Contador() {
                 </p>
               )}
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-col-reverse gap-2 min-[420px]:flex-row min-[420px]:gap-3">
               <button
                 onClick={() => {
                   vibrar();
                   sumar(p.id, "vuelta", -1);
                 }}
-                className="h-16 flex-1 rounded-full border border-borde bg-papel text-base font-semibold"
+                className="h-12 flex-1 rounded-full border border-borde bg-papel px-3 text-base font-semibold min-[420px]:h-16"
               >
                 − {c.restar}
               </button>
@@ -115,7 +115,7 @@ export default function Contador() {
                   vibrar();
                   sumar(p.id, "vuelta", 1);
                 }}
-                className="h-16 flex-[1.6] rounded-full bg-lavanda-fuerte text-lg font-semibold text-white"
+                className="h-16 flex-[1.6] rounded-full bg-lavanda-fuerte px-3 text-lg font-semibold text-white"
               >
                 + {c.sumar}
               </button>
@@ -167,7 +167,7 @@ export default function Contador() {
               />
             </label>
 
-            <button onClick={() => cambiar(p.id, { vuelta: 0, puntos: 0 })} className="text-xs text-tinta-suave underline">
+            <button onClick={() => cambiar(p.id, { vuelta: 0, puntos: 0 })} className="py-2 text-sm text-tinta-suave underline">
               {c.reiniciar}
             </button>
           </article>

@@ -51,12 +51,12 @@ export default function Navegacion() {
 
       {/* Barra inferior en celulares */}
       <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-borde bg-papel/95 backdrop-blur md:hidden">
-        <div className="mx-auto grid max-w-md grid-cols-5 pb-[env(safe-area-inset-bottom)]">
+        <div className="mx-auto grid max-w-md grid-cols-[repeat(5,minmax(0,1fr))] pb-[env(safe-area-inset-bottom)]">
           {SECCIONES.map((s) => (
             <Link
               key={s.href}
               href={s.href}
-              className={`flex flex-col items-center gap-0.5 py-2.5 text-xs ${
+              className={`flex flex-col items-center gap-0.5 min-w-0 py-2.5 text-[10px] min-[360px]:text-xs ${
                 activa(s.href) ? "text-lavanda-fuerte" : "text-tinta-suave"
               }`}
             >
@@ -67,7 +67,7 @@ export default function Navegacion() {
               >
                 {s.icono}
               </span>
-              {t.nav[s.clave]}
+              <span className="max-w-full truncate">{t.nav[s.clave]}</span>
             </Link>
           ))}
         </div>

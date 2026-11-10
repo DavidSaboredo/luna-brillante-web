@@ -21,14 +21,14 @@ export default function Herramientas() {
         <p className="mt-1 max-w-2xl text-tinta-suave">{t.herr.texto}</p>
       </header>
 
-      <div role="tablist" className="flex gap-1 rounded-full border border-borde bg-papel p-1">
+      <div role="tablist" className="grid grid-cols-4 gap-1 rounded-full border border-borde bg-papel p-1">
         {PESTANAS.map((p) => (
           <button
             key={p}
             role="tab"
             aria-selected={activa === p}
             onClick={() => setActiva(p)}
-            className={`flex-1 rounded-full px-3 py-2 text-sm ${activa === p ? "bg-lavanda text-tinta" : "text-tinta-suave"}`}
+            className={`min-w-0 rounded-full px-1 py-2 text-xs min-[380px]:px-3 min-[380px]:text-sm ${activa === p ? "bg-lavanda text-tinta" : "text-tinta-suave"}`}
           >
             {t.herr.pestanas[p]}
           </button>
