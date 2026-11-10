@@ -14,6 +14,7 @@ const TEXTOS = {
     ok: "Copia cargada. Se reemplazaron tus proyectos y diseños.",
     error: "Ese archivo no es una copia válida.",
     vacio: "Todavía no tenés nada para guardar.",
+    cancelar: "Cancelar",
     confirmar: "Esto reemplaza lo que tenés ahora en este celular. ¿Seguimos?",
   },
   en: {
@@ -24,6 +25,7 @@ const TEXTOS = {
     ok: "Backup loaded. Your projects and designs were replaced.",
     error: "That file is not a valid backup.",
     vacio: "You have nothing to save yet.",
+    cancelar: "Cancel",
     confirmar: "This replaces what you have now on this phone. Continue?",
   },
   pt: {
@@ -34,6 +36,7 @@ const TEXTOS = {
     ok: "Cópia carregada. Seus projetos e designs foram substituídos.",
     error: "Esse arquivo não é uma cópia válida.",
     vacio: "Você ainda não tem nada para salvar.",
+    cancelar: "Cancelar",
     confirmar: "Isso substitui o que você tem agora neste celular. Continuar?",
   },
 } as const;
@@ -43,6 +46,7 @@ export default function CopiaSeguridad() {
   const x = TEXTOS[idioma] ?? TEXTOS.es;
   const entrada = useRef<HTMLInputElement>(null);
   const [aviso, setAviso] = useState("");
+  const [pendiente, setPendiente] = useState<{ clave: string; valor: unknown }[] | null>(null);
 
   const exportar = () => {
     const datos: Record<string, unknown> = {};
@@ -69,13 +73,19 @@ export default function CopiaSeguridad() {
       if (j?.app !== "luna-brillante" || typeof j.datos !== "object" || !j.datos) throw new Error();
       const nuevos = CLAVES.filter((c) => Array.isArray(j.datos[c]));
       if (!nuevos.length) throw new Error();
-      if (!window.confirm(x.confirmar)) return;
-      for (const c of nuevos) localStorage.setItem(c, JSON.stringify(j.datos[c]));
-      setAviso(x.ok);
-      setTimeout(() => location.reload(), 1200);
+      setAviso("");
+      setPendiente(nuevos.map((c) => ({ clave: c, valor: j.datos[c] })));
     } catch {
       setAviso(x.error);
     }
+  };
+
+  const aplicar = () => {
+    if (!pendiente) return;
+    for (const d of pendiente) localStorage.setItem(d.clave, JSON.stringify(d.valor));
+    setPendiente(null);
+    setAviso(x.ok);
+    setTimeout(() => location.reload(), 1200);
   };
 
   return (
@@ -101,6 +111,19 @@ export default function CopiaSeguridad() {
           }}
         />
       </div>
+      {pendiente && (
+        <div role="alertdialog" className="space-y-2 rounded-2xl bg-crema p-3 text-sm">
+          <p>{x.confirmar}</p>
+          <div className="flex gap-2">
+            <button onClick={aplicar} className="rounded-full bg-lavanda-fuerte px-4 py-2 font-semibold text-white">
+              {x.importar}
+            </button>
+            <button onClick={() => setPendiente(null)} className="rounded-full border border-borde bg-papel px-4 py-2">
+              {x.cancelar}
+            </button>
+          </div>
+        </div>
+      )}
       {aviso && (
         <p role="status" className="text-sm text-tinta">
           {aviso}
