@@ -5,9 +5,10 @@ import { useIdioma } from "@/components/Idioma";
 import Contador from "@/components/Contador";
 import CalculadoraLana from "@/components/CalculadoraLana";
 import Terminos from "@/components/Terminos";
+import Guias from "@/components/Guias";
 import CopiaSeguridad from "@/components/CopiaSeguridad";
 
-const PESTANAS = ["contador", "lana", "terminos"] as const;
+const PESTANAS = ["contador", "lana", "terminos", "guias"] as const;
 
 export default function Herramientas() {
   const { t } = useIdioma();
@@ -34,9 +35,12 @@ export default function Herramientas() {
         ))}
       </div>
 
+      <p className="rounded-2xl bg-papel px-4 py-3 text-sm">{t.herr.ayuda[activa]}</p>
+
       {activa === "contador" && <Contador />}
       {activa === "lana" && <CalculadoraLana />}
       {activa === "terminos" && <Terminos />}
+      {activa === "guias" && <Guias />}
 
       <CopiaSeguridad />
     </div>

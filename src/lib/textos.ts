@@ -16,7 +16,7 @@ const es = {
     puntosTexto: (n: number) => `${n} puntos con diagrama, paso a paso y calculadora.`,
     revistaTexto: "Las revistas de Luna Brillante, con sus proyectos paso a paso.",
     crearTexto: "Diseñá en 3D 15 prendas con tu talle, telas y puntos favoritos.",
-    herrTexto: "Contador de vueltas, calculadora de lana y traductor de términos.",
+    herrTexto: "Contador de vueltas, calculadora de lana, traductor de términos y guías de prendas.",
     lunaTexto: "Contale tu idea y te genera el patrón y la guía.",
     empezar: "Puntos para empezar hoy",
     verTodos: "Ver todos →",
@@ -33,7 +33,13 @@ const es = {
   herr: {
     titulo: "Herramientas",
     texto: "Todo lo que usás mientras tejés. Se guarda en tu celular y funciona sin internet.",
-    pestanas: { contador: "Contador", lana: "Lana y muestra", terminos: "Términos" },
+    pestanas: { contador: "Contador", lana: "Lana y muestra", terminos: "Términos", guias: "Guías" },
+    ayuda: {
+      contador: "Para no perder la cuenta. Creá un proyecto y tocá «Sumar vuelta» cada vez que termines una vuelta: queda guardado.",
+      lana: "Para calcular cuántos puntos armar y cuánta lana comprar. Primero tejé un cuadradito de prueba de 10 cm.",
+      terminos: "Para traducir las abreviaturas de las revistas y de los patrones en inglés.",
+      guias: "Calculá un suéter desde el cuello y mirá cómo arreglar o agrandar ropa con crochet.",
+    },
     contador: {
       nuevo: "Nuevo proyecto",
       nombre: "Nombre del proyecto",
@@ -121,7 +127,13 @@ const en: Dic = {
   herr: {
     titulo: "Tools",
     texto: "Everything you use while you crochet. It is saved on your phone and works without internet.",
-    pestanas: { contador: "Counter", lana: "Yarn & gauge", terminos: "Terms" },
+    pestanas: { contador: "Counter", lana: "Yarn & gauge", terminos: "Terms", guias: "Guides" },
+    ayuda: {
+      contador: "So you never lose count. Create a project and tap “Add row” each time you finish a row: it is saved.",
+      lana: "To work out how many stitches to cast on and how much yarn to buy. First crochet a 10 cm test swatch.",
+      terminos: "To translate the abbreviations in magazines and English patterns.",
+      guias: "Calculate a top-down sweater and see how to fix or enlarge clothes with crochet.",
+    },
     contador: {
       nuevo: "New project",
       nombre: "Project name",
@@ -207,7 +219,13 @@ const pt: Dic = {
   herr: {
     titulo: "Ferramentas",
     texto: "Tudo o que você usa enquanto tece. Fica salvo no seu celular e funciona sem internet.",
-    pestanas: { contador: "Contador", lana: "Lã e amostra", terminos: "Termos" },
+    pestanas: { contador: "Contador", lana: "Lã e amostra", terminos: "Termos", guias: "Guias" },
+    ayuda: {
+      contador: "Para não perder a conta. Crie um projeto e toque em «Somar carreira» a cada carreira terminada: fica salvo.",
+      lana: "Para calcular quantos pontos montar e quanta lã comprar. Primeiro faça uma amostra de 10 cm.",
+      terminos: "Para traduzir as abreviaturas das revistas e dos modelos em inglês.",
+      guias: "Calcule um suéter de cima para baixo e veja como consertar ou aumentar roupas com crochê.",
+    },
     contador: {
       nuevo: "Novo projeto",
       nombre: "Nome do projeto",
