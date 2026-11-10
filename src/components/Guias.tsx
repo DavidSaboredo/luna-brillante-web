@@ -24,6 +24,8 @@ const ESCOTES: { id: Escote; nombre: string }[] = [
 
 export default function Guias() {
   const [e, setE] = useState<EntradaSueter>(ENTRADA_INICIAL);
+  const [abierta, setAbierta] = useState<string>("sueter");
+  const guia = GUIAS.find((g) => g.id === abierta);
   const r = useMemo(() => calcularSueter(e), [e]);
 
   const cambiar = (id: keyof EntradaSueter, v: string) => setE((a) => ({ ...a, [id]: Math.max(0, Number(v) || 0) }));
@@ -31,7 +33,21 @@ export default function Guias() {
   const valido = e.puntosEn10 > 0 && e.vueltasEn10 > 0 && e.pecho > 0 && e.cuello > 0 && e.brazo > 0;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-5">
+      <nav aria-label="Guías" className="grid gap-2 sm:grid-cols-2">
+        {[{ id: "sueter", titulo: "Suéter desde el cuello (calculadora)" }, ...GUIAS].map((g) => (
+          <button
+            key={g.id}
+            onClick={() => setAbierta(g.id)}
+            aria-pressed={abierta === g.id}
+            className={`rounded-2xl border px-4 py-3 text-left text-sm ${abierta === g.id ? "border-lavanda bg-lavanda" : "border-borde bg-papel"}`}
+          >
+            {g.titulo}
+          </button>
+        ))}
+      </nav>
+
+      {abierta === "sueter" && (
       <section className="tarjeta space-y-4 p-5">
         <h2 className="text-2xl">Suéter desde el cuello</h2>
         <p className="text-tinta-suave">
@@ -106,37 +122,36 @@ export default function Guias() {
           </div>
         )}
       </section>
+      )}
 
-      <section className="space-y-3">
-        <h2 className="text-2xl">Cómo se hace</h2>
-        <p className="rounded-2xl bg-papel px-4 py-3 text-sm text-tinta-suave">
-          Borrador: Monica tiene que revisar estas guías antes de darlas por definitivas.
-        </p>
-        {GUIAS.map((g) => (
-          <details key={g.id} className="tarjeta p-4">
-            <summary className="cursor-pointer text-lg">{g.titulo}</summary>
-            <p className="mt-2 text-tinta-suave">{g.resumen}</p>
-            <ol className="mt-3 list-decimal space-y-2 pl-5">
-              {g.pasos.map((p) => (
-                <li key={p}>{p}</li>
+      {guia && (
+        <section className="tarjeta space-y-3 p-5">
+          <h2 className="text-2xl">{guia.titulo}</h2>
+          <p className="text-tinta-suave">{guia.resumen}</p>
+          <ol className="list-decimal space-y-2 pl-5">
+            {guia.pasos.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ol>
+          {guia.nota && <p className="rounded-2xl bg-papel px-4 py-3 text-sm">{guia.nota}</p>}
+          {guia.puntos && (
+            <p className="flex flex-wrap gap-2">
+              {guia.puntos.map((p) => (
+                <Link key={p.id} href={`/puntos/${p.id}`} className="chip">
+                  {p.nombre}
+                </Link>
               ))}
-            </ol>
-            {g.nota && <p className="mt-3 rounded-2xl bg-papel px-4 py-3 text-sm">{g.nota}</p>}
-            {g.puntos && (
-              <p className="mt-3 flex flex-wrap gap-2">
-                {g.puntos.map((p) => (
-                  <Link key={p.id} href={`/puntos/${p.id}`} className="chip">
-                    {p.nombre}
-                  </Link>
-                ))}
-              </p>
-            )}
-          </details>
-        ))}
+            </p>
+          )}
+          <p className="text-xs text-tinta-suave">Borrador: Monica tiene que revisar esta guía antes de darla por definitiva.</p>
+        </section>
+      )}
+
+      <div>
         <Link href="/diagramas" className="inline-block text-sm text-lavanda-fuerte underline">
           📐 Puntillas y diagramas de Monica →
         </Link>
-      </section>
+      </div>
     </div>
   );
 }

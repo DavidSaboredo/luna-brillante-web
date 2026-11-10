@@ -7,6 +7,13 @@ type Proyecto = { id: string; nombre: string; vuelta: number; puntos: number; ob
 
 const CLAVE = "contador-proyectos";
 
+const nuevoId = () => {
+  try {
+    if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") return crypto.randomUUID();
+  } catch {}
+  return `p-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+};
+
 const vibrar = () => {
   try {
     navigator.vibrate?.(15);
@@ -45,7 +52,7 @@ export default function Contador() {
     e.preventDefault();
     const n = nombre.trim().slice(0, 60);
     if (!n) return;
-    setLista((l) => [{ id: crypto.randomUUID(), nombre: n, vuelta: 0, puntos: 0, objetivo: 0, nota: "" }, ...l]);
+    setLista((l) => [{ id: nuevoId(), nombre: n, vuelta: 0, puntos: 0, objetivo: 0, nota: "" }, ...l]);
     setNombre("");
   };
 
@@ -84,35 +91,33 @@ export default function Contador() {
               </button>
             </div>
 
-            <div className="flex items-center justify-center gap-4">
+            <div className="text-center" aria-live="polite">
+              <p className="text-xs uppercase tracking-widest text-tinta-suave">{c.vuelta}</p>
+              <p className="font-titulo text-7xl font-semibold leading-none">{p.vuelta}</p>
+              {p.objetivo > 0 && (
+                <p className="mt-1 text-sm text-tinta-suave">
+                  {c.de} {p.objetivo}
+                </p>
+              )}
+            </div>
+            <div className="flex gap-3">
               <button
-                aria-label={c.restar}
                 onClick={() => {
                   vibrar();
                   sumar(p.id, "vuelta", -1);
                 }}
-                className="h-14 w-14 rounded-full border border-borde bg-papel text-3xl"
+                className="h-16 flex-1 rounded-full border border-borde bg-papel text-base font-semibold"
               >
-                −
+                − {c.restar}
               </button>
-              <div className="min-w-24 text-center" aria-live="polite">
-                <p className="text-xs uppercase tracking-widest text-tinta-suave">{c.vuelta}</p>
-                <p className="font-titulo text-6xl font-semibold leading-none">{p.vuelta}</p>
-                {p.objetivo > 0 && (
-                  <p className="mt-1 text-xs text-tinta-suave">
-                    {c.de} {p.objetivo}
-                  </p>
-                )}
-              </div>
               <button
-                aria-label={c.sumar}
                 onClick={() => {
                   vibrar();
                   sumar(p.id, "vuelta", 1);
                 }}
-                className="h-20 w-20 rounded-full bg-lavanda-fuerte text-4xl text-white"
+                className="h-16 flex-[1.6] rounded-full bg-lavanda-fuerte text-lg font-semibold text-white"
               >
-                +
+                + {c.sumar}
               </button>
             </div>
 
@@ -144,6 +149,7 @@ export default function Contador() {
                   min={0}
                   max={9999}
                   value={p.objetivo || ""}
+                  placeholder="—"
                   onChange={(e) => cambiar(p.id, { objetivo: Math.max(0, Math.min(9999, Number(e.target.value) || 0)) })}
                   className="mt-1 w-full rounded-full border border-borde bg-papel px-3 py-1.5 text-center text-base text-tinta"
                 />

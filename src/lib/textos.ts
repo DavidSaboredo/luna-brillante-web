@@ -48,7 +48,7 @@ const es = {
       vacio: "Todavía no tenés proyectos. Creá el primero y tu avance queda guardado.",
       vuelta: "Vuelta",
       puntos: "Puntos",
-      objetivo: "Total de vueltas",
+      objetivo: "Total de vueltas (opcional)",
       sumar: "Sumar vuelta",
       restar: "Restar vuelta",
       reiniciar: "Reiniciar",
