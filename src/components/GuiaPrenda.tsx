@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { GUIAS } from "@/lib/guias";
+import { BASICOS, DECORACIONES, GUIA_PRENDAS, PASOS_APLICAR } from "@/lib/guia-prendas";
 import { CUELLO_SUGERIDO, ENTRADA_INICIAL, calcularSueter, type Escote, type EntradaSueter } from "@/lib/sueter";
 
 const CAMPOS: { id: keyof EntradaSueter; nombre: string; ayuda: string }[] = [
@@ -111,9 +112,63 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
   const ids = TEMAS[prendaId] ?? ["terminaciones"];
   const consejos = ids.map((id) => GUIAS.find((g) => g.id === id)).filter((g): g is NonNullable<typeof g> => !!g);
   const raglan = prendaId === "sueter" || prendaId === "cardigan";
+  const g = GUIA_PRENDAS[prendaId];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
+      {g && (
+        <section className="space-y-3 rounded-2xl border border-borde bg-papel p-4">
+          <h3 className="text-lg">Para empezar</h3>
+          <p className="flex flex-wrap gap-2 text-base">
+            <span className="chip">Nivel: {g.nivel}</span>
+            <span className="chip">⏱ {g.tiempo}</span>
+          </p>
+          <div>
+            <p className="font-medium">Qué necesitás</p>
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-base">
+              {g.materiales.map((m) => (
+                <li key={m}>{m}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="font-medium">Paso a paso</p>
+            <ol className="mt-1 list-decimal space-y-3 pl-5 text-base">
+              {g.pasos.map((p) => (
+                <li key={p.titulo}>
+                  <strong>{p.titulo}.</strong> {p.texto}
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <p className="font-medium">Para que te quede bien</p>
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-base">
+              {g.cuidado.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+      <details className="rounded-2xl border border-borde p-4">
+        <summary className="cursor-pointer py-1 text-lg">Palabras que vas a encontrar</summary>
+        <dl className="mt-3 space-y-3 text-base">
+          {BASICOS.map((b) => (
+            <div key={b.termino}>
+              <dt className="font-medium">{b.termino}</dt>
+              <dd className="text-tinta-suave">{b.explicacion}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-3 flex flex-wrap gap-2">
+          <Link href="/puntos/chain" className="chip">Cadeneta</Link>
+          <Link href="/puntos/slip_stitch" className="chip">Punto raso</Link>
+          <Link href="/puntos/single_crochet" className="chip">Punto bajo</Link>
+          <Link href="/puntos/double_crochet" className="chip">Punto alto</Link>
+          <Link href="/puntos/magic_ring" className="chip">Anillo mágico</Link>
+        </p>
+      </details>
       {raglan && (
         <details open className="rounded-2xl border border-borde p-4">
           <summary className="cursor-pointer text-lg">Tejido desde el cuello (raglán)</summary>
@@ -124,20 +179,20 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
       )}
       <section className="space-y-2">
         <h3 className="text-lg">Consejos para esta prenda</h3>
-        {consejos.map((g) => (
-          <details key={g.id} className="rounded-2xl border border-borde bg-papel p-4">
-            <summary className="cursor-pointer py-1 text-base font-medium">{g.titulo}</summary>
+        {consejos.map((c) => (
+          <details key={c.id} className="rounded-2xl border border-borde bg-papel p-4">
+            <summary className="cursor-pointer py-1 text-base font-medium">{c.titulo}</summary>
             <div className="mt-3 space-y-3 text-base">
-              <p className="text-tinta-suave">{g.resumen}</p>
+              <p className="text-tinta-suave">{c.resumen}</p>
               <ol className="list-decimal space-y-2 pl-5">
-                {g.pasos.map((p) => (
+                {c.pasos.map((p) => (
                   <li key={p}>{p}</li>
                 ))}
               </ol>
-              {g.nota && <p className="rounded-2xl bg-rosa/30 px-4 py-3 text-sm">{g.nota}</p>}
-              {g.puntos && (
+              {c.nota && <p className="rounded-2xl bg-rosa/30 px-4 py-3 text-sm">{c.nota}</p>}
+              {c.puntos && (
                 <p className="flex flex-wrap gap-2">
-                  {g.puntos.map((p) => (
+                  {c.puntos.map((p) => (
                     <Link key={p.id} href={`/puntos/${p.id}`} className="chip">
                       {p.nombre}
                     </Link>
@@ -149,6 +204,42 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
         ))}
         <Link href="/diagramas" className="inline-block pt-1 text-sm text-lavanda-fuerte underline">
           📐 Puntillas y diagramas de Monica →
+        </Link>
+      </section>
+
+      <section className="space-y-3 rounded-2xl border border-borde bg-papel p-4">
+        <h3 className="text-lg">Agregale un mandala o una figura</h3>
+        {g && <p className="text-base">{g.decorar}</p>}
+        <p className="text-base text-tinta-suave">Elegí una opción. Se teje aparte y después se cose a la prenda.</p>
+        <div className="space-y-2">
+          {DECORACIONES.map((d) => (
+            <details key={d.id} className="rounded-2xl border border-borde p-4">
+              <summary className="cursor-pointer py-1 text-base font-medium">
+                {d.icono} {d.nombre} <span className="text-tinta-suave">· {d.nivel}</span>
+              </summary>
+              <div className="mt-3 space-y-3 text-base">
+                <p>{d.como}</p>
+                <p className="flex flex-wrap gap-2">
+                  {d.puntos.map((p) => (
+                    <Link key={p.id} href={`/puntos/${p.id}`} className="chip">
+                      {p.nombre}
+                    </Link>
+                  ))}
+                </p>
+              </div>
+            </details>
+          ))}
+        </div>
+        <details className="rounded-2xl border border-borde p-4">
+          <summary className="cursor-pointer py-1 text-base font-medium">Cómo coserlo a la prenda</summary>
+          <ol className="mt-3 list-decimal space-y-2 pl-5 text-base">
+            {PASOS_APLICAR.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ol>
+        </details>
+        <Link href="/diagramas" className="inline-block text-sm text-lavanda-fuerte underline">
+          🌼 Ver más motivos en los diagramas de Monica →
         </Link>
       </section>
     </div>
