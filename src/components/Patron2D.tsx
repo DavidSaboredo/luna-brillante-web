@@ -40,8 +40,14 @@ export default function Patron2D({ prenda, opciones, zonas, zonaActiva, onElegir
   // al cambiar de prenda o de talle, se encuadra de nuevo
   useEffect(() => setVista({ x: 0, y: 0, k: 1 }), [prenda.id, opciones.talle]);
 
+  // las texturas se dibujan con canvas: solo existen en el navegador, así que se generan
+  // después de montar para que el primer render coincida con el del servidor
+  const [montado, setMontado] = useState(false);
+  useEffect(() => setMontado(true), []);
+
   const dataUrls = useMemo(() => {
     const m: Record<string, { textura?: string; tam: number }> = {};
+    if (!montado) return m;
     for (const z of prenda.zonas) {
       const e = zonas[z.id];
       const info = e && infoMaterial(e.material);
@@ -54,7 +60,7 @@ export default function Patron2D({ prenda, opciones, zonas, zonaActiva, onElegir
       }
     }
     return m;
-  }, [prenda, zonas]);
+  }, [prenda, zonas, montado]);
 
   const aplicar = (dx: number, dy: number) => {
     const el = svg.current;

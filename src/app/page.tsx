@@ -3,19 +3,24 @@
 import Link from "next/link";
 import LogoLuna from "@/components/LogoLuna";
 import TarjetaPunto from "@/components/TarjetaPunto";
-import { buscarPunto, puntos } from "@/lib/puntos";
+import { buscarPunto, esGranny, puntos } from "@/lib/puntos";
 import { useIdioma } from "@/components/Idioma";
+import { TarjetaVideo } from "@/components/VideoYoutube";
+import { DESTACADOS as IDS_VIDEOS, buscarVideo, textosVideos } from "@/lib/videos";
 
 const DESTACADOS = ["shell_stitch", "puff_stitch", "v_stitch", "granny_square"]
   .map(buscarPunto)
   .filter((p) => p !== undefined);
 
+const VIDEOS_DESTACADOS = IDS_VIDEOS.map(buscarVideo).filter((v) => v !== undefined);
+
 
 export default function Inicio() {
-  const { t } = useIdioma();
+  const { t, idioma } = useIdioma();
+  const tv = textosVideos[idioma];
   const SECCIONES = [
     { href: "/herramientas", titulo: t.nav.herramientas, texto: t.inicio.herrTexto, icono: "✚", fondo: "bg-menta" },
-    { href: "/puntos", titulo: t.nav.puntos, texto: t.inicio.puntosTexto(puntos.length), icono: "✿", fondo: "bg-rosa" },
+    { href: "/puntos", titulo: t.nav.puntos, texto: t.inicio.puntosTexto(puntos.filter((p) => !esGranny(p)).length), icono: "✿", fondo: "bg-rosa" },
     { href: "/proyectos", titulo: t.nav.revista, texto: t.inicio.revistaTexto, icono: "❀", fondo: "bg-manteca" },
     { href: "/crear", titulo: t.nav.crear, texto: t.inicio.crearTexto, icono: "✂", fondo: "bg-lavanda" },
   ];
@@ -62,6 +67,23 @@ export default function Inicio() {
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {DESTACADOS.map((p) => (
             <TarjetaPunto key={p.id} punto={p} />
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl">{tv.destacados}</h2>
+            <p className="text-tinta-suave">{tv.destacadosSub}</p>
+          </div>
+          <Link href="/videos" className="shrink-0 text-sm text-lavanda-fuerte">
+            {tv.verTodos}
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {VIDEOS_DESTACADOS.map((v) => (
+            <TarjetaVideo key={v.id} video={v} href={`/videos#${v.id}`} />
           ))}
         </div>
       </section>

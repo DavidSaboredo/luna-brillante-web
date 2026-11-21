@@ -38,7 +38,7 @@ export default function RootLayout({
         <ProveedorIdioma>
           <RegistrarSW />
           <Navegacion />
-          <main className="mx-auto max-w-5xl px-4 pb-28 pt-6 md:pb-12">{children}</main>
+          <main className="mx-auto max-w-5xl px-4 pb-28 pt-6 lg:pb-12">{children}</main>
         </ProveedorIdioma>
       </body>
     </html>

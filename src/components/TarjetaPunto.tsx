@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { fondoCategoria, nombreCategoria, rutaDiagrama, rutaIlustracion, tx, type Punto } from "@/lib/puntos";
 import { textosPuntos } from "@/lib/textos-puntos";
+import { fotosTejedora } from "@/lib/fotos-tejedora";
 import { useIdioma } from "./Idioma";
 
 export function Nivel({ nivel }: { nivel: number }) {
@@ -19,18 +20,19 @@ export function Nivel({ nivel }: { nivel: number }) {
 export default function TarjetaPunto({ punto }: { punto: Punto }) {
   const { idioma } = useIdioma();
   const nombre = tx(punto.name, idioma);
-  const ilustracion = rutaIlustracion(punto);
-  const portada = ilustracion;
+  // Si Monica tejió una muestra, se ve su foto real; si no, el modelado 3D.
+  const foto = fotosTejedora(punto.id)[0];
+  const portada = foto?.archivo ?? rutaIlustracion(punto);
   return (
     <Link href={`/puntos/${punto.id}`} className="tarjeta group block overflow-hidden transition hover:-translate-y-0.5">
       {portada ? (
-        <div className="relative aspect-[4/3] overflow-hidden bg-crema">
+        <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-b from-crema to-papel">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={portada}
-            alt={`${nombre}: 3D`}
+            alt={foto ? `${nombre}: ${foto.leyenda[idioma]}` : `${nombre}: 3D`}
             loading="lazy"
-            className="h-full w-full object-contain p-1 transition duration-300 group-hover:scale-105"
+            className={`h-full w-full transition duration-300 group-hover:scale-105 ${foto ? "object-contain p-3 drop-shadow-[0_4px_6px_rgba(60,40,30,0.25)]" : "object-contain p-1"}`}
           />
         </div>
       ) : (

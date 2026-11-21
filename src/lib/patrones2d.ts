@@ -28,14 +28,14 @@ const f = (n: number) => Math.round(n * 100) / 100;
 
 function formaDe(prenda: Prenda, p: Pieza): Forma {
   const n = p.nombre.toLowerCase();
-  if (n.startsWith("manga")) return "manga";
+  if (n.startsWith("manga")) return prenda.id === "kimono" ? "rect" : "manga"; // la manga de kimono es un rectángulo
   if (n === "espalda") return "torso";
-  if (n === "delantero") return prenda.id === "chaleco" || prenda.id === "cardigan" ? "medio_torso" : "torso";
+  if (n === "delantero") return ["chaleco", "cardigan", "campera_jean", "kimono"].includes(prenda.id) ? "medio_torso" : "torso";
   if (n === "corpiño") return "torso";
   if (n === "chal") return "triangulo";
   if (n === "taza") return "triangulo";
   if (n === "bombacha") return "bombacha";
-  if (n === "pompón") return "circulo";
+  if (n === "pompón" || n === "aplicación") return "circulo";
   if (n === "paño") return "paño";
   if (n === "panel" || n === "falda" || n === "pierna") return "trapecio";
   return "rect";
@@ -76,7 +76,7 @@ function trazo(forma: Forma, w: number, h: number, c: Contexto, prenda: Prenda, 
       };
     }
     case "trapecio": {
-      const arriba = prenda.id === "falda" || prenda.id === "pollera" || prenda.id === "vestido" ? Math.max(cintura(c.m) / 2 + 3, w * 0.62) : w;
+      const arriba = ["falda", "pollera", "vestido", "vestido_canesu", "falda_franja"].includes(prenda.id) ? Math.max(cintura(c.m) / 2 + 3, w * 0.62) : w;
       const a = (w - Math.min(arriba, w)) / 2;
       return { d: `M${f(a)} 0 H${f(w - a)} L${f(w)} ${f(h)} H0 Z`, guias };
     }

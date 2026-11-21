@@ -5,6 +5,52 @@ import Link from "next/link";
 import { GUIAS } from "@/lib/guias";
 import { BASICOS, DECORACIONES, GUIA_PRENDAS, PASOS_APLICAR } from "@/lib/guia-prendas";
 import { CUELLO_SUGERIDO, ENTRADA_INICIAL, calcularSueter, type Escote, type EntradaSueter } from "@/lib/sueter";
+import { enlaceYoutube, textosVideos, videosDeDecoracion, videosDePrenda, type Video } from "@/lib/videos";
+import { useIdioma } from "./Idioma";
+import ReproductorVideo, { IconoPlay } from "./VideoYoutube";
+
+/** Video paso a paso de la prenda, con botones para cambiar si hay más de uno. */
+function VideosDePrenda({ videos }: { videos: Video[] }) {
+  const { idioma } = useIdioma();
+  const tv = textosVideos[idioma];
+  const [id, setId] = useState(videos[0].id);
+  const video = videos.find((v) => v.id === id) ?? videos[0];
+
+  return (
+    <section className="space-y-3 rounded-2xl border border-borde bg-papel p-4">
+      <h3 className="flex items-center gap-2 text-lg">
+        <IconoPlay className="h-5 w-5 text-lavanda-fuerte" /> {tv.deLaPrenda}
+      </h3>
+      <p className="text-base text-tinta-suave">{tv.deLaPrendaSub}</p>
+      <ReproductorVideo key={video.id} video={video} etiqueta={tv.reproducir} />
+      <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-base">
+        <strong className="font-medium">{video.titulo}</strong>
+        <span className="text-tinta-suave">⏱ {video.duracion}</span>
+        <a href={enlaceYoutube(video.id)} target="_blank" rel="noopener noreferrer" className="text-sm text-lavanda-fuerte underline">
+          {tv.verEnYoutube} ↗
+        </a>
+      </p>
+      {videos.length > 1 && (
+        <div>
+          <p className="text-sm text-tinta-suave">{tv.otrosVideos}</p>
+          <p className="mt-1 flex flex-wrap gap-2">
+            {videos.map((v) => (
+              <button
+                key={v.id}
+                type="button"
+                aria-pressed={v.id === video.id}
+                onClick={() => setId(v.id)}
+                className={`chip text-left ${v.id === video.id ? "!border-lavanda !bg-lavanda" : ""}`}
+              >
+                {v.titulo} · {v.duracion}
+              </button>
+            ))}
+          </p>
+        </div>
+      )}
+    </section>
+  );
+}
 
 const CAMPOS: { id: keyof EntradaSueter; nombre: string; ayuda: string }[] = [
   { id: "pecho", nombre: "Pecho terminado (cm)", ayuda: "Contorno de pecho + lo suelto que lo quieras" },
@@ -105,6 +151,12 @@ const TEMAS: Record<string, string[]> = {
   falda: ["ampliar-pantalon", "listones-pantalon", "triangulo-oxford", "terminaciones"],
   pollera: ["ampliar-pantalon", "listones-pantalon", "triangulo-oxford", "terminaciones"],
   short: ["ampliar-pantalon", "listones-pantalon", "triangulo-oxford", "terminaciones"],
+  blusa_entredos: ["sisa-corte", "terminaciones"],
+  camisa_mangas: ["sisa-corte", "mandala-tela", "terminaciones"],
+  campera_jean: ["mandala-tela", "terminaciones"],
+  vestido_canesu: ["sisa-corte", "terminaciones"],
+  kimono: ["mandala-tela", "terminaciones"],
+  falda_franja: ["ampliar-pantalon", "terminaciones"],
 };
 
 /** Guía de una prenda: cálculo especial (si lo tiene) y consejos que aplican a ella. Se usa dentro de Crear prenda. */
@@ -113,9 +165,12 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
   const consejos = ids.map((id) => GUIAS.find((g) => g.id === id)).filter((g): g is NonNullable<typeof g> => !!g);
   const raglan = prendaId === "sueter" || prendaId === "cardigan";
   const g = GUIA_PRENDAS[prendaId];
+  const videos = videosDePrenda(prendaId);
+  const tv = textosVideos[useIdioma().idioma];
 
   return (
     <div className="space-y-5">
+      {videos.length > 0 && <VideosDePrenda key={prendaId} videos={videos} />}
       {g && (
         <section className="space-y-3 rounded-2xl border border-borde bg-papel p-4">
           <h3 className="text-lg">Para empezar</h3>
@@ -202,9 +257,14 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
             </div>
           </details>
         ))}
-        <Link href="/diagramas" className="inline-block pt-1 text-sm text-lavanda-fuerte underline">
-          📐 Puntillas y diagramas de Monica →
-        </Link>
+        <p className="flex flex-wrap gap-x-5 gap-y-1 pt-1">
+          <Link href="/diagramas" className="text-sm text-lavanda-fuerte underline">
+            📐 Puntillas y diagramas de Monica →
+          </Link>
+          <Link href="/videos" className="text-sm text-lavanda-fuerte underline">
+            <IconoPlay className="h-3.5 w-3.5 align-[-0.1em]" /> {tv.verVideos}
+          </Link>
+        </p>
       </section>
 
       <section className="space-y-3 rounded-2xl border border-borde bg-papel p-4">
@@ -212,23 +272,41 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
         {g && <p className="text-base">{g.decorar}</p>}
         <p className="text-base text-tinta-suave">Elegí una opción. Se teje aparte y después se cose a la prenda.</p>
         <div className="space-y-2">
-          {DECORACIONES.map((d) => (
-            <details key={d.id} className="rounded-2xl border border-borde p-4">
-              <summary className="cursor-pointer py-1 text-base font-medium">
-                {d.icono} {d.nombre} <span className="text-tinta-suave">· {d.nivel}</span>
-              </summary>
-              <div className="mt-3 space-y-3 text-base">
-                <p>{d.como}</p>
-                <p className="flex flex-wrap gap-2">
-                  {d.puntos.map((p) => (
-                    <Link key={p.id} href={`/puntos/${p.id}`} className="chip">
-                      {p.nombre}
-                    </Link>
-                  ))}
-                </p>
-              </div>
-            </details>
-          ))}
+          {DECORACIONES.map((d) => {
+            const videoDeco = videosDeDecoracion(d.id)[0];
+            return (
+              <details key={d.id} className="rounded-2xl border border-borde p-4">
+                <summary className="cursor-pointer py-1 text-base font-medium">
+                  {d.icono} {d.nombre} <span className="text-tinta-suave">· {d.nivel}</span>
+                  {videoDeco && (
+                    <span className="text-lavanda-fuerte">
+                      {" "}
+                      · <IconoPlay className="h-3.5 w-3.5 align-[-0.1em]" />
+                    </span>
+                  )}
+                </summary>
+                <div className="mt-3 space-y-3 text-base">
+                  <p>{d.como}</p>
+                  {videoDeco && (
+                    <div className="space-y-2">
+                      <p className="text-sm text-tinta-suave">
+                        <IconoPlay className="h-3.5 w-3.5 align-[-0.1em] text-lavanda-fuerte" /> {tv.videoDeco}: {videoDeco.titulo} ·{" "}
+                        {videoDeco.duracion}
+                      </p>
+                      <ReproductorVideo video={videoDeco} etiqueta={tv.reproducir} />
+                    </div>
+                  )}
+                  <p className="flex flex-wrap gap-2">
+                    {d.puntos.map((p) => (
+                      <Link key={p.id} href={`/puntos/${p.id}`} className="chip">
+                        {p.nombre}
+                      </Link>
+                    ))}
+                  </p>
+                </div>
+              </details>
+            );
+          })}
         </div>
         <details className="rounded-2xl border border-borde p-4">
           <summary className="cursor-pointer py-1 text-base font-medium">Cómo coserlo a la prenda</summary>

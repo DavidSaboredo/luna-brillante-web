@@ -32,13 +32,13 @@ const porPunto: Record<string, FotoTejedora[]> = {
   ],
   spiral_rounds: [f("circulo-espiral", "Círculo tejido en espiral", "Circle worked in a spiral", "Círculo feito em espiral")],
   solomon_knot: [f("salomon", "Punto Salomón", "Solomon's knot", "Ponto Salomão")],
-  granny_square: [
-    f("granny", "Granny square", "Granny square", "Granny square"),
-    f("granny-flor", "Granny square con flor", "Granny square with a flower", "Granny square com flor"),
-  ],
+  granny_square: [f("granny", "Granny square", "Granny square", "Granny square")],
+  granny_square_flower: [f("granny-flor", "Granny con flor en relieve", "Granny square with raised flower", "Granny com flor em relevo")],
   treble_crochet: [f("vareta-doble", "Vareta doble", "Treble crochet", "Ponto alto duplo")],
   double_treble_crochet: [f("vareta-triple", "Vareta triple", "Double treble crochet", "Ponto alto triplo")],
   triple_treble_crochet: [f("vareta-cuadruple", "Vareta cuádruple", "Triple treble crochet", "Ponto alto quádruplo")],
 };
 
-export const fotosTejedora = (id: string): FotoTejedora[] => porPunto[id] ?? [];
+// Todos los puntos se muestran con el mismo estilo (render 3D + retoque IA); las fotos reales quedan guardadas pero no se muestran.
+export const MOSTRAR_FOTOS_REALES = false;
+export const fotosTejedora = (id: string): FotoTejedora[] => (MOSTRAR_FOTOS_REALES ? porPunto[id] ?? [] : []);

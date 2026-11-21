@@ -28,6 +28,7 @@ import {
   type Diseno,
   type EleccionZona,
   type Opciones,
+  type Prenda,
   type Tecnica,
 } from "@/lib/taller";
 
@@ -40,6 +41,12 @@ function Cargando() {
   const { idioma } = useIdioma();
   return <div className="flex h-full items-center justify-center text-sm text-tinta-suave">{textosCrear[idioma]["crear.cargando3d"]}</div>;
 }
+
+/** Pestaña (tela o crochet) que se muestra al abrir la primera zona de una prenda. */
+const vistaInicial = (p: Prenda): Tecnica => {
+  const z = p.inicial?.[p.zonas[0].id];
+  return (z && infoMaterial(z.material)?.tecnica) || "crochet";
+};
 
 const CLAVE_DISENOS = "disenos";
 
@@ -132,12 +139,12 @@ function TallerPrenda() {
   const visor = useRef<HTMLDivElement>(null);
   const [prendaId, setPrendaId] = useState(PRENDAS[0].id);
   const [opciones, setOpciones] = useState<Opciones>(opcionesPara(PRENDAS[0]));
-  const [zonas, setZonas] = useState<Record<string, EleccionZona>>({});
+  const [zonas, setZonas] = useState<Record<string, EleccionZona>>(PRENDAS[0].inicial ?? {});
   const [zonaActiva, setZonaActiva] = useState(PRENDAS[0].zonas[0].id);
   const [nombre, setNombre] = useState("");
   const [notas, setNotas] = useState("");
   const [guardados, setGuardados] = useState<Diseno[]>([]);
-  const [vista, setVista] = useState<Tecnica>("crochet");
+  const [vista, setVista] = useState<Tecnica>(vistaInicial(PRENDAS[0]));
   const [camara, setCamara] = useState<VistaCamara>("tres_cuartos");
   const [maniqui, setManiqui] = useState(false);
   const [girar, setGirar] = useState(false);
@@ -169,6 +176,12 @@ function TallerPrenda() {
     const paleta = [COLORES[0].hex, COLORES[1].hex, COLORES[2].hex, COLORES[3].hex, COLORES[4].hex];
     const nuevas: Record<string, EleccionZona> = {};
     p.zonas.forEach((z, i) => {
+      // en las prendas de tela con crochet, las zonas de tela siguen siendo de tela
+      const base = p.inicial?.[z.id];
+      if (base && infoMaterial(base.material)?.tecnica === "tela") {
+        nuevas[z.id] = { material: base.material, color: paleta[(i + 2) % paleta.length] };
+        return;
+      }
       const candidatos = puntosParaPrenda.filter((x) => z.sugeridas.includes(x.category) && x.difficulty <= 3);
       const punto = candidatos.length ? candidatos[(i * 7 + o.talle) % candidatos.length] : buscarPunto("single_crochet")!;
       nuevas[z.id] = { material: punto.id, color: paleta[i % paleta.length] };
@@ -187,7 +200,9 @@ function TallerPrenda() {
       const talle = Number(params.get("talle"));
       const o = opcionesPara(p, TALLES.some((t) => t.talle === talle) ? { talle } : undefined);
       setOpciones(o);
+      setZonas(p.inicial ?? {});
       setZonaActiva(p.zonas[0].id);
+      setVista(vistaInicial(p));
       if (params.get("ejemplo")) ejemplo(p, o);
     }
     const v = params.get("vista") as VistaCamara | null;
@@ -214,9 +229,9 @@ function TallerPrenda() {
     const nueva = PRENDAS.find((p) => p.id === id)!;
     setPrendaId(id);
     setOpciones(opcionesPara(nueva, { talle: opciones.talle }));
-    setZonas({});
+    setZonas(nueva.inicial ?? {});
     setZonaActiva(nueva.zonas[0].id);
-    setVista("crochet");
+    setVista(vistaInicial(nueva));
     setCamara("tres_cuartos");
   };
 
@@ -297,7 +312,7 @@ function TallerPrenda() {
           <div key={g.id} className="flex items-center gap-2">
             <span className="w-28 shrink-0 text-xs uppercase tracking-wide text-tinta-suave">{n(g.nombre)}</span>
             <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1">
-              {PRENDAS.filter((p) => p.grupo === g.id).map((p) => (
+              {PRENDAS.filter((p) => p.grupo === g.id && (!p.retirada || p.id === prendaId)).map((p) => (
                 <button
                   key={p.id}
                   onClick={() => cambiarPrenda(p.id)}
@@ -502,6 +517,7 @@ function TallerPrenda() {
                     key={`${prenda.id}-${zona.id}`}
                     sugeridas={zona.sugeridas}
                     seleccionado={info?.tecnica === "crochet" ? eleccion?.material : undefined}
+                    color={eleccion?.color ?? COLORES[0].hex}
                     onElegir={(id) => elegir({ material: id })}
                   />
                 ) : (

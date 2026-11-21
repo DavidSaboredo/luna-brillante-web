@@ -7,7 +7,7 @@ export const IDIOMAS: { id: Idioma; corto: string; nombre: string }[] = [
 ];
 
 const es = {
-  nav: { inicio: "Inicio", puntos: "Puntos", revista: "Revista", crear: "Crear prenda", herramientas: "Herramientas", luna: "Luna IA", idioma: "Idioma" },
+  nav: { inicio: "Inicio", puntos: "Puntos", revista: "Revista", crear: "Crear prenda", herramientas: "Herramientas", videos: "Videos", luna: "Luna IA", idioma: "Idioma" },
   inicio: {
     bienvenida: "BIENVENIDA",
     titulo: "Teje con calma, crea con brillo",
@@ -22,13 +22,9 @@ const es = {
     verTodos: "Ver todos →",
   },
   revista: {
-    titulo: "Revista",
-    intro: "Los seis diseños de la edición, con materiales, medidas, vueltas y terminaciones. Cada punto que se usa te lleva a su explicación paso a paso.",
     todas: "Revistas de Luna Brillante",
-    todasTexto: "Revistas digitales de crochet con proyectos paso a paso.",
+    todasTexto: "Revistas digitales de crochet con patrones, diagramas y explicaciones paso a paso. Cada una se compra directo en Hotmart.",
     comprar: "Comprar en Hotmart",
-    guiaTitulo: "Guía de puntos y símbolos",
-    guiaTexto: "Cómo leer un diagrama, abreviaturas, consejos y cuidado de las prendas.",
   },
   herr: {
     titulo: "Herramientas",
@@ -102,7 +98,7 @@ const es = {
 type Dic = typeof es;
 
 const en: Dic = {
-  nav: { inicio: "Home", puntos: "Stitches", revista: "Magazines", crear: "Design", herramientas: "Tools", luna: "Luna AI", idioma: "Language" },
+  nav: { inicio: "Home", puntos: "Stitches", revista: "Magazines", crear: "Design", herramientas: "Tools", videos: "Videos", luna: "Luna AI", idioma: "Language" },
   inicio: {
     bienvenida: "WELCOME",
     titulo: "Crochet calmly, create brightly",
@@ -117,13 +113,9 @@ const en: Dic = {
     verTodos: "See all →",
   },
   revista: {
-    titulo: "Magazines",
-    intro: "The six designs of the issue, with materials, sizes, rounds and finishing. Every stitch used links to its step-by-step explanation.",
     todas: "Luna Brillante magazines",
-    todasTexto: "Digital crochet magazines with step-by-step projects.",
+    todasTexto: "Digital crochet magazines with patterns, charts and step-by-step instructions. Each one is bought directly on Hotmart.",
     comprar: "Buy on Hotmart",
-    guiaTitulo: "Stitch and symbol guide",
-    guiaTexto: "How to read a chart, abbreviations, tips and garment care.",
   },
   herr: {
     titulo: "Tools",
@@ -195,7 +187,7 @@ const en: Dic = {
 };
 
 const pt: Dic = {
-  nav: { inicio: "Início", puntos: "Pontos", revista: "Revistas", crear: "Criar peça", herramientas: "Ferramentas", luna: "Luna IA", idioma: "Idioma" },
+  nav: { inicio: "Início", puntos: "Pontos", revista: "Revistas", crear: "Criar peça", herramientas: "Ferramentas", videos: "Vídeos", luna: "Luna IA", idioma: "Idioma" },
   inicio: {
     bienvenida: "BEM-VINDA",
     titulo: "Crochê com calma, crie com brilho",
@@ -210,13 +202,9 @@ const pt: Dic = {
     verTodos: "Ver todos →",
   },
   revista: {
-    titulo: "Revistas",
-    intro: "Os seis modelos da edição, com materiais, medidas, carreiras e acabamentos. Cada ponto usado leva à sua explicação passo a passo.",
     todas: "Revistas da Luna Brillante",
-    todasTexto: "Revistas digitais de crochê com projetos passo a passo.",
+    todasTexto: "Revistas digitais de crochê com padrões, gráficos e explicações passo a passo. Cada uma é comprada direto na Hotmart.",
     comprar: "Comprar na Hotmart",
-    guiaTitulo: "Guia de pontos e símbolos",
-    guiaTexto: "Como ler um gráfico, abreviaturas, dicas e cuidados com as peças.",
   },
   herr: {
     titulo: "Ferramentas",

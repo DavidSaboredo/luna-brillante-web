@@ -75,6 +75,17 @@ export const diagramaDeRevista = (id: string): Diagrama | undefined => {
   return n ? diagramas.fantasia[n - 1] : undefined;
 };
 
+/** Puntos armados en etapas: una lámina de Monica por cada tramo de vueltas, en orden. */
+const porVueltas: Record<string, Diagrama[]> = {
+  granny_square_flower: [
+    fijo("granny-flor-1", "1 · Centro y primera capa (vueltas 1 a 3)", "1 · Center and first layer (rounds 1–3)", "1 · Centro e primeira camada (carreiras 1 a 3)"),
+    fijo("granny-flor-2", "2 · Segunda capa de pétalos (vueltas 4 y 5)", "2 · Second layer of petals (rounds 4–5)", "2 · Segunda camada de pétalas (carreiras 4 e 5)"),
+    fijo("granny-flor-3", "3 · De la flor al cuadrado (vueltas 6 a 8)", "3 · From flower to square (rounds 6–8)", "3 · Da flor ao quadrado (carreiras 6 a 8)"),
+  ],
+};
+
+export const diagramasPorVueltas = (id: string): Diagrama[] => porVueltas[id] ?? [];
+
 const ubicados = new Set(Object.values(porPunto));
 /** Diagramas de fantasía que todavía no tienen punto propio en la biblioteca. */
 export const fantasiaSinPunto: Diagrama[] = diagramas.fantasia.filter((_, i) => !ubicados.has(i + 1));

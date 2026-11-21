@@ -1,5 +1,4 @@
 import datos from "@/data/proyectos.json";
-import { imagenMejorada } from "@/lib/imagenes";
 
 export interface PuntoUsado {
   texto: string;
@@ -29,23 +28,15 @@ export interface Proyecto {
   consejos: string[];
 }
 
-export const fuenteRevista = datos.meta.fuente;
-export const notaRevista = datos.meta.nota;
-export const proyectos = (datos.proyectos as Proyecto[]).map((proyecto) => ({
-  ...proyecto,
-  portada: imagenMejorada(proyecto.portada),
-  imagenes: proyecto.imagenes.map((imagen) => ({ ...imagen, src: imagenMejorada(imagen.src) })),
-}));
+// Los diseños de Moda Crochet N.º 1 ya no se publican en la app (la revista se vende en Hotmart):
+// estos datos solo indican en qué diseño se usa cada punto y alimentan la guía de símbolos.
+const proyectos = datos.proyectos as Proyecto[];
 export const guia = datos.guia as {
   leerDiagrama: string[];
   simbolos: { simbolo: string; nombre: string; abreviatura: string; punto: string }[];
   consejos: { titulo: string; texto: string }[];
   cuidado: string[];
 };
-
-export function buscarProyecto(id: string) {
-  return proyectos.find((p) => p.id === id);
-}
 
 /** Proyectos de la revista donde aparece un punto de la biblioteca. */
 export function proyectosConPunto(idPunto: string) {

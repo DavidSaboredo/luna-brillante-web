@@ -11,7 +11,7 @@
       "es": "Terminología rioplatense/España (pb, mpa, pa)",
       "en": "US terms in text; UK equivalents in abbreviation.uk"
     },
-    "count": 226,
+    "count": 227,
     "content_license_note": "Textos de instrucciones y diagramas SVG: originales, creados para esta base. Imágenes: enlazadas desde Wikimedia Commons; cada una conserva su licencia y autor. Las marcadas 'verify_before_publishing' deben revisarse en source_page para mostrar la atribución correcta.",
     "schema_notes": {
       "difficulty": "1=principiante … 4=avanzado",
@@ -91,7 +91,7 @@
         "es": "Motivos",
         "en": "Motifs"
       },
-      "count": 2
+      "count": 1
     },
     {
       "id": "bordes",
@@ -123,7 +123,7 @@
         "es": "Motivos cuadrados",
         "en": "Square motifs"
       },
-      "count": 6
+      "count": 5
     },
     {
       "id": "flores",
@@ -132,6 +132,14 @@
         "en": "Flowers"
       },
       "count": 8
+    },
+    {
+      "id": "granny",
+      "name": {
+        "es": "Granny squares",
+        "en": "Granny squares"
+      },
+      "count": 3
     }
   ],
   "difficulty_levels": [
@@ -7150,7 +7158,7 @@
         "us": "—",
         "uk": "—"
       },
-      "category": "motivos",
+      "category": "granny",
       "difficulty": 1,
       "difficulty_label": {
         "es": "Principiante",
@@ -7202,7 +7210,8 @@
       ],
       "related": [
         "granny_stitch",
-        "magic_ring"
+        "magic_ring",
+        "granny_square_flower"
       ],
       "diagram": {
         "file": "diagrams/granny_square.svg",
@@ -7254,6 +7263,111 @@
           }
         }
       ],
+      "source_ref": null
+    },
+    {
+      "id": "granny_square_flower",
+      "name": {
+        "es": "Granny con flor en relieve",
+        "en": "Granny square with raised flower"
+      },
+      "aka": {
+        "es": [
+          "Granny square con flor",
+          "Cuadrado con flor"
+        ],
+        "en": [
+          "Flower granny square",
+          "Raised flower square"
+        ]
+      },
+      "abbreviation": {
+        "es": "—",
+        "us": "—",
+        "uk": "—"
+      },
+      "category": "granny",
+      "difficulty": 3,
+      "difficulty_label": {
+        "es": "Intermedio",
+        "en": "Intermediate"
+      },
+      "worked_in": "rounds",
+      "repeat": null,
+      "description": {
+        "es": "Granny con una flor de dos capas de pétalos en relieve en el centro. Primero se teje la flor y, por detrás, se arman los arcos que la convierten en cuadrado. Son 8 vueltas desde el anillo mágico.",
+        "en": "Granny square with a two-layer raised flower in the center. The flower is worked first, then chain loops behind it turn it into a square. 8 rounds from a magic ring."
+      },
+      "steps": {
+        "es": [
+          "Vuelta 1: anillo mágico, 3 cad (=1 pa), 15 pa; pr en la 3.ª cad (16 pa).",
+          "Vuelta 2: 1 cad, 1 pb en el 1.er pa, *3 cad, saltar 1 pa, 1 pb* alrededor; 3 cad, pr en el 1.er pb (8 arcos).",
+          "Vuelta 3: en cada arco (1 pb, 1 mpa, 3 pa, 1 mpa, 1 pb); pr en el 1.er pb (8 pétalos).",
+          "Vuelta 4: por detrás de los pétalos, 1 pb alrededor de cada pb de la vuelta 2 con 5 cad entre ellos; cerrar (8 arcos).",
+          "Vuelta 5: en cada arco (1 pb, 1 mpa, 5 pa, 1 mpa, 1 pb); pr (8 pétalos exteriores).",
+          "Vuelta 6: por detrás de la flor, 1 pb alrededor de cada pb de la vuelta 4 con 5 cad entre ellos; pr (8 arcos).",
+          "Vuelta 7: pr hasta el 1.er arco; *esquina (3 pa, 2 cad, 3 pa), lado 5 mpa* 4 veces; pr en la 3.ª cad.",
+          "Vuelta 8: 3 cad (=1 pa), 1 pa en cada punto; en cada esquina (2 pa, 2 cad, 2 pa); pr, cortar y esconder la hebra."
+        ],
+        "en": [
+          "Round 1: magic ring, ch 3 (counts as dc), 15 dc; sl st to 3rd ch (16 dc).",
+          "Round 2: ch 1, sc in first dc, *ch 3, skip 1 dc, sc in next dc* around; ch 3, sl st to first sc (8 ch-3 loops).",
+          "Round 3: in each loop (sc, hdc, 3 dc, hdc, sc); sl st to first sc (8 petals).",
+          "Round 4: working behind the petals, sc around the post of each Round 2 sc with ch 5 between; join (8 ch-5 loops).",
+          "Round 5: in each ch-5 loop (sc, hdc, 5 dc, hdc, sc); sl st to join (8 outer petals).",
+          "Round 6: behind the flower, sc around the post of each Round 4 sc with ch 5 between; sl st to join (8 loops).",
+          "Round 7: sl st into first loop; *corner (3 dc, ch 2, 3 dc) in one loop, side 5 hdc in the next* 4 times (first dc = ch 3); sl st to 3rd ch.",
+          "Round 8: ch 3 (counts as dc), dc in each st; in each corner space (2 dc, ch 2, 2 dc); sl st to join, fasten off and weave in the end."
+        ]
+      },
+      "tips": {
+        "es": [
+          "Doblá los pétalos hacia adelante para ver bien los puntos bajos de base antes de tejer por detrás.",
+          "Si querés que la flor resalte, tejé las vueltas 1 a 5 en un color y las vueltas 6 a 8 en otro."
+        ],
+        "en": [
+          "Fold the petals forward to see the base stitches clearly before working behind them.",
+          "To make the flower pop, work rounds 1–5 in one color and rounds 6–8 in another."
+        ]
+      },
+      "uses": {
+        "es": [
+          "Mantas",
+          "Almohadones",
+          "Bolsos patchwork"
+        ],
+        "en": [
+          "Blankets",
+          "Cushions",
+          "Patchwork bags"
+        ]
+      },
+      "tags": [
+        "motivo",
+        "redondo",
+        "granny",
+        "flor",
+        "relieve"
+      ],
+      "prerequisites": [
+        "granny_square",
+        "magic_ring",
+        "single_crochet",
+        "half_double_crochet",
+        "double_crochet"
+      ],
+      "related": [
+        "granny_square",
+        "multicolor_granny_square",
+        "layered_flower"
+      ],
+      "diagram": {
+        "file": "diagrams/granny-flor-1.webp",
+        "format": "webp",
+        "style": "monica_sheets",
+        "rows_bottom_to_top": null
+      },
+      "images": [],
       "source_ref": null
     },
     {
@@ -18426,7 +18540,7 @@
         "us": "—",
         "uk": "—"
       },
-      "category": "motivos_cuadrados",
+      "category": "granny",
       "difficulty": 1,
       "difficulty_label": {
         "es": "Principiante",
@@ -18477,7 +18591,8 @@
         "granny_square"
       ],
       "related": [
-        "granny_square"
+        "granny_square",
+        "granny_square_flower"
       ],
       "diagram": {
         "file": "diagrams/multicolor_granny_square.svg",

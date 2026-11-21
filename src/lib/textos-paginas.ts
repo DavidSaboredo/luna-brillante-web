@@ -2,16 +2,6 @@
 type Dic = Record<string, string>;
 
 const es: Dic = {
-  "rev.volver": "← Volver a la revista",
-  "rev.pag": "pág.",
-  "rev.diseno": "Diseño N.º",
-  "rev.talle": "Talle",
-  "rev.materiales": "Materiales",
-  "rev.medidas": "Medidas",
-  "rev.puntosUsados": "Puntos que se usan",
-  "rev.comoSeTeje": "Cómo se teje",
-  "rev.terminaciones": "Terminaciones",
-  "rev.aviso": "Las instrucciones de cada diseño son de la revista y están en español.",
   "guia.volver": "← Volver a la revista",
   "guia.titulo": "Guía de puntos y símbolos",
   "guia.sub": "Todo lo que necesitás para tejer los proyectos de la revista.",
@@ -45,7 +35,7 @@ const es: Dic = {
   "priv.iaTexto":
     "Hoy la aplicación no envía fotos ni consultas a ningún servicio externo. Si más adelante se suma el asistente Luna IA y lo usás o subís una foto, el contenido se envía a nuestro proveedor de inteligencia artificial (Anthropic) solo para generar la respuesta. No lo usamos para publicidad ni lo vendemos a terceros.",
   "priv.cookies": "Cookies y publicidad",
-  "priv.cookiesTexto": "No usamos publicidad ni rastreadores de terceros.",
+  "priv.cookiesTexto": "No usamos publicidad ni rastreadores de terceros. Los videos de Monica se ven con YouTube en modo de privacidad mejorada: la app se conecta con YouTube recién cuando tocás reproducir.",
   "priv.derechos": "Tus derechos",
   "priv.derechosTexto": "Podés borrar los datos guardados limpiando los datos de la aplicación desde tu dispositivo.",
   "priv.contacto": "Contacto",
@@ -54,16 +44,6 @@ const es: Dic = {
 };
 
 const en: Dic = {
-  "rev.volver": "← Back to the magazine",
-  "rev.pag": "p.",
-  "rev.diseno": "Design No.",
-  "rev.talle": "Size",
-  "rev.materiales": "Materials",
-  "rev.medidas": "Measurements",
-  "rev.puntosUsados": "Stitches used",
-  "rev.comoSeTeje": "How it is made",
-  "rev.terminaciones": "Finishing",
-  "rev.aviso": "The instructions for each design come from the magazine and are in Spanish.",
   "guia.volver": "← Back to the magazine",
   "guia.titulo": "Guide to stitches and symbols",
   "guia.sub": "Everything you need to make the magazine projects.",
@@ -96,7 +76,7 @@ const en: Dic = {
   "priv.iaTexto":
     "Today the app does not send photos or questions to any external service. If the Luna AI assistant is added later and you use it or upload a photo, the content is sent to our artificial intelligence provider (Anthropic) only to generate the answer. We do not use it for advertising or sell it to third parties.",
   "priv.cookies": "Cookies and advertising",
-  "priv.cookiesTexto": "We do not use advertising or third-party trackers.",
+  "priv.cookiesTexto": "We do not use advertising or third-party trackers. Monica's videos play through YouTube in privacy-enhanced mode: the app only connects to YouTube when you press play.",
   "priv.derechos": "Your rights",
   "priv.derechosTexto": "You can delete the saved data by clearing the app data from your device.",
   "priv.contacto": "Contact",
@@ -105,16 +85,6 @@ const en: Dic = {
 };
 
 const pt: Dic = {
-  "rev.volver": "← Voltar à revista",
-  "rev.pag": "pág.",
-  "rev.diseno": "Modelo N.º",
-  "rev.talle": "Tamanho",
-  "rev.materiales": "Materiais",
-  "rev.medidas": "Medidas",
-  "rev.puntosUsados": "Pontos usados",
-  "rev.comoSeTeje": "Como se faz",
-  "rev.terminaciones": "Acabamentos",
-  "rev.aviso": "As instruções de cada modelo vêm da revista e estão em espanhol.",
   "guia.volver": "← Voltar à revista",
   "guia.titulo": "Guia de pontos e símbolos",
   "guia.sub": "Tudo o que você precisa para fazer os projetos da revista.",
@@ -148,7 +118,7 @@ const pt: Dic = {
   "priv.iaTexto":
     "Hoje o aplicativo não envia fotos nem perguntas a nenhum serviço externo. Se mais adiante o assistente Luna IA for adicionado e você usá-lo ou enviar uma foto, o conteúdo é enviado ao nosso provedor de inteligência artificial (Anthropic) apenas para gerar a resposta. Não usamos para publicidade nem vendemos a terceiros.",
   "priv.cookies": "Cookies e publicidade",
-  "priv.cookiesTexto": "Não usamos publicidade nem rastreadores de terceiros.",
+  "priv.cookiesTexto": "Não usamos publicidade nem rastreadores de terceiros. Os vídeos da Monica são exibidos pelo YouTube no modo de privacidade aprimorada: o app só se conecta ao YouTube quando você aperta reproduzir.",
   "priv.derechos": "Seus direitos",
   "priv.derechosTexto": "Você pode apagar os dados salvos limpando os dados do aplicativo no seu dispositivo.",
   "priv.contacto": "Contato",

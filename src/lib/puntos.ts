@@ -102,7 +102,12 @@ const COLOR_CATEGORIA: Record<string, string> = {
   tunecino: "bg-cielo",
   motivos_cuadrados: "bg-menta",
   flores: "bg-rosa",
+  granny: "bg-manteca",
 };
+
+/** Subcategoría aparte: estructuras armadas con puntos (cuadrados granny), no puntos sueltos. */
+export const CATEGORIA_GRANNY = "granny";
+export const esGranny = (p: Punto) => p.category === CATEGORIA_GRANNY;
 
 export function fondoCategoria(id: string) {
   return COLOR_CATEGORIA[id] ?? "bg-lavanda";

@@ -15,6 +15,7 @@ import {
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { BRAZOS, Y_BUSTO, Y_CADERA, Y_CINTURA, Y_CUELLO, Y_HOMBRO, crearCuerpo, type Cuerpo } from "./cuerpo3d";
+import { construirPrendaNueva } from "./prendas3d";
 import { contexto, type Contexto, type Opciones, type Prenda } from "./taller";
 
 type V3 = [number, number, number];
@@ -720,6 +721,8 @@ function bufanda(prenda: Prenda, o: Opciones): Modelo {
 }
 
 export function construirModelo(prenda: Prenda, o: Opciones): Modelo {
+  const nueva = construirPrendaNueva(prenda, o);
+  if (nueva) return nueva;
   switch (prenda.id) {
     case "blusa":
       return torso(prenda, o, "blusa");

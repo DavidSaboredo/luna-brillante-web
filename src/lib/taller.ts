@@ -79,6 +79,10 @@ export interface Prenda {
   zonas: Zona[];
   /** Orden de armado, tomado de las terminaciones de las revistas */
   armado: string[];
+  /** Combinación de tela y crochet con la que arranca la prenda */
+  inicial?: Record<string, EleccionZona>;
+  /** Ya no se ofrece para diseños nuevos; se conserva solo para abrir diseños guardados */
+  retirada?: boolean;
 }
 
 export interface Tela {
@@ -105,7 +109,7 @@ export interface Diseno {
 
 const CUERPO = ["texturas", "calados", "variaciones_lazada", "relieve"];
 const BORDES = ["bordes", "calados"];
-const DELICADO = ["calados", "racimos", "flores", "motivos_cuadrados"];
+const DELICADO = ["calados", "racimos", "flores", "motivos_cuadrados", "granny"];
 const FIRME = ["texturas", "relieve", "variaciones_lazada"];
 const ELASTICO = ["relieve", "variaciones_lazada", "texturas"];
 
@@ -148,332 +152,331 @@ const cuerpoTorso = (c: Contexto): Pieza[] => [
 
 const BASE_TORSO = (m: Medidas) => m.total;
 
-export const PRENDAS: Prenda[] = [
+// ---------------------------------------------------------------------------
+// Catálogo nuevo: tela y crochet combinados, como en las revistas
+// ---------------------------------------------------------------------------
+
+const CRUDO = "#f3ece1";
+const tela = (material: string, color: string): EleccionZona => ({ material, color });
+const r = Math.round;
+/** Contorno de la sisa (cm): sirve para la tira de unión de las mangas. */
+const contornoSisa = (c: Contexto) => r(c.m.sisa * 2 + 4);
+const bordeManga = (c: Contexto, nombre: string, alto: number, extra = 6): Pieza[] =>
+  c.manga > 0 ? [{ nombre, ancho: r(c.m.puno + extra), alto, cantidad: 2 }] : [];
+const mangaRecta = (c: Contexto, descuento: number, ancho = c.m.busto * 0.34 + c.holgura / 2): Pieza[] =>
+  c.manga - descuento > 2 ? [{ nombre: "Manga", ancho: r(ancho), alto: r(c.manga - descuento), cantidad: 2 }] : [];
+/** Contorno del ruedo de una falda con vuelo (cm): se abre `pend` cm de radio por cada cm de largo. */
+const ruedoConVuelo = (cinturaCm: number, largoCm: number, pend: number) => r(cinturaCm + Math.PI * 2 * pend * largoCm);
+const SUAVE = ["calados", "bordes", "racimos"];
+
+const NUEVAS: Prenda[] = [
   {
-    id: "blusa",
-    nombre: "Blusa",
+    id: "blusa_entredos",
+    nombre: "Blusa con entredós",
     icono: "👚",
     grupo: "cuerpo",
-    descripcion: "Blusa calada con canesú, como la Brisa de Verano.",
+    descripcion: "Blusa de lino o gasa con una tira de crochet calado al centro del delantero.",
     opciones: ["talle", "manga", "largo", "ajuste"],
-    defecto: { manga: "tres_cuartos" },
-    largoBase: BASE_TORSO,
+    defecto: { manga: "corta" },
+    largoBase: (m) => m.total - 4,
     zonas: [
-      { id: "mangas", nombre: "Mangas", sugeridas: DELICADO, piezas: mangas },
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: CUERPO, piezas: (c) => cuerpoTorso(c).map((p) => ({ ...p, alto: p.alto - 9 })) },
-      { id: "canesu", nombre: "Canesú / cuello", sugeridas: DELICADO, piezas: (c) => [{ nombre: "Canesú", ancho: anchoPanel(c), alto: 9, cantidad: 2 }] },
-      { id: "borde", nombre: "Borde inferior", sugeridas: BORDES, piezas: (c) => [{ nombre: "Borde", ancho: c.m.busto + c.holgura, alto: 5, cantidad: 1 }] },
+      {
+        id: "delantero",
+        nombre: "Delantero",
+        sugeridas: CUERPO,
+        piezas: (c) => [{ nombre: "Delantero", ancho: anchoPanel(c) - 7, alto: c.largo - 5, cantidad: 1, nota: "en dos mitades, una a cada lado del entredós" }],
+      },
+      { id: "espalda", nombre: "Espalda", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Espalda", ancho: anchoPanel(c), alto: c.largo - 5, cantidad: 1 }] },
+      {
+        id: "entredos",
+        nombre: "Entredós",
+        sugeridas: SUAVE,
+        piezas: (c) => [{ nombre: "Entredós", ancho: 7, alto: c.largo - 12, cantidad: 1, nota: "tira vertical al centro del delantero" }],
+      },
+      { id: "mangas", nombre: "Mangas", sugeridas: DELICADO, piezas: (c) => mangaRecta(c, 3) },
+      { id: "escote", nombre: "Escote", sugeridas: BORDES, piezas: (c) => [{ nombre: "Ribete de escote", ancho: r(40 + (c.m.busto - 88) * 0.1), alto: 2.5, cantidad: 1 }] },
+      {
+        id: "ruedo",
+        nombre: "Ruedo",
+        sugeridas: BORDES,
+        piezas: (c) => [
+          { nombre: "Ruedo", ancho: Math.max(c.m.busto, c.m.cadera) + c.holgura + 6, alto: 4.5, cantidad: 1 },
+          ...bordeManga(c, "Borde de manga", 3, 10),
+        ],
+      },
     ],
     armado: [
-      "Tejer espalda y delantero de abajo hacia arriba, en una sola pieza hasta la sisa.",
-      "Dividir en delantero y espalda y seguir cada parte por separado.",
-      "Unir los hombros.",
-      "Tejer el borde del escote con una vuelta de abanicos.",
-      "Coser o unir las mangas.",
-      "Hacer el borde inferior de la blusa y de las mangas, esconder las hebras y bloquear.",
+      "Cortar delantero (en dos mitades) y espalda en la tela; marcar el centro del delantero.",
+      "Tejer el entredós del largo del delantero y coserlo entre las dos mitades, con un pespunte prolijo.",
+      "Unir hombros y costados de la tela.",
+      "Coser las mangas a la sisa, haciendo coincidir la marca del hombro.",
+      "Tejer el ribete sobre el borde del escote: primero una vuelta de punto bajo y después el remate.",
+      "Tejer el ruedo y el borde de las mangas, esconder las hebras y planchar la tela sin aplastar el crochet.",
     ],
+    inicial: {
+      delantero: tela("lino", "#d3e4f3"),
+      espalda: tela("lino", "#d3e4f3"),
+      entredos: tela("fan_stitch", CRUDO),
+      mangas: tela("lino", "#d3e4f3"),
+      escote: tela("shell_stitch", CRUDO),
+      ruedo: tela("shell_stitch", CRUDO),
+    },
   },
   {
-    id: "sueter",
-    nombre: "Suéter",
+    id: "camisa_mangas",
+    nombre: "Camisa con mangas desmontables",
+    icono: "👔",
+    grupo: "cuerpo",
+    descripcion: "Camisa de algodón o lino con canesú y tira de unión tejidos; las mangas se prenden en la sisa.",
+    opciones: ["talle", "manga", "largo", "ajuste"],
+    defecto: { manga: "larga" },
+    largoBase: (m) => m.total - 2,
+    zonas: [
+      {
+        id: "delantero",
+        nombre: "Delantero",
+        sugeridas: CUERPO,
+        piezas: (c) => [{ nombre: "Delantero", ancho: anchoPanel(c) + 4, alto: c.largo, cantidad: 1, nota: "en dos mitades, con tapeta de 3 cm y botones" }],
+      },
+      { id: "espalda", nombre: "Espalda", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Espalda", ancho: anchoPanel(c), alto: c.largo - 7, cantidad: 1 }] },
+      {
+        id: "cuello",
+        nombre: "Cuello",
+        sugeridas: ["texturas", "calados"],
+        piezas: (c) => [{ nombre: "Cuello", ancho: r(38 + (c.m.busto - 88) * 0.1), alto: 7, cantidad: 1, nota: "pie de 3 cm y solapa de 4 cm" }],
+      },
+      { id: "canesu", nombre: "Canesú de espalda", sugeridas: DELICADO, piezas: (c) => [{ nombre: "Canesú", ancho: anchoPanel(c) - 2, alto: 9, cantidad: 1 }] },
+      { id: "mangas", nombre: "Mangas", sugeridas: CUERPO, piezas: (c) => mangaRecta(c, c.manga > 30 ? 9 : 6) },
+      { id: "punos", nombre: "Puños", sugeridas: ELASTICO, piezas: (c) => bordeManga(c, "Puño", c.manga > 30 ? 5.5 : 3, 4) },
+      {
+        id: "union",
+        nombre: "Tira de unión en la sisa",
+        sugeridas: ["calados", "texturas", "bordes"],
+        piezas: (c) => [{ nombre: "Tira de unión", ancho: contornoSisa(c), alto: 3.5, cantidad: 2, nota: "se cose a la sisa; la manga se prende con botones o broches" }],
+      },
+    ],
+    armado: [
+      "Cortar delanteros, espalda, mangas y cuello en la tela; entretelar tapeta y cuello.",
+      "Tejer el canesú y coserlo a la espalda; unir hombros.",
+      "Coser los costados y armar la tapeta con los ojales.",
+      "Tejer la tira de unión sobre el borde de cada sisa: queda como terminación aunque la camisa se use sin mangas.",
+      "Armar las mangas con su puño y prenderlas a la tira con botones chicos o broches.",
+      "Coser el cuello, hacer el dobladillo y pegar los botones.",
+    ],
+    inicial: {
+      delantero: tela("algodon", CRUDO),
+      espalda: tela("algodon", CRUDO),
+      cuello: tela("algodon", CRUDO),
+      canesu: tela("filet_mesh", "#b9cbb1"),
+      mangas: tela("algodon", CRUDO),
+      punos: tela("algodon", CRUDO),
+      union: tela("v_stitch", "#b9cbb1"),
+    },
+  },
+  {
+    id: "campera_jean",
+    nombre: "Campera de jean con aplicación",
     icono: "🧥",
     grupo: "cuerpo",
-    descripcion: "Suéter de manga larga con cuello y puños elásticos.",
+    descripcion: "Campera de denim con canesú y una aplicación tejida en la espalda.",
     opciones: ["talle", "manga", "largo", "ajuste"],
-    defecto: { manga: "larga", ajuste: "normal" },
-    largoBase: (m) => m.total + 4,
+    defecto: { manga: "larga", ajuste: "suelto" },
+    largoBase: (m) => m.total - 10,
     zonas: [
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: CUERPO, piezas: cuerpoTorso },
-      { id: "mangas", nombre: "Mangas", sugeridas: CUERPO, piezas: mangas },
-      { id: "cuello", nombre: "Cuello", sugeridas: ELASTICO, piezas: (c) => [{ nombre: "Cuello", ancho: 48, alto: 8, cantidad: 1, nota: "se levantan puntos alrededor del escote" }] },
-      { id: "puños", nombre: "Puños", sugeridas: ELASTICO, piezas: (c) => (c.manga > 0 ? [{ nombre: "Puño", ancho: Math.round(c.m.puno + 2), alto: 6, cantidad: 2 }] : []) },
-      { id: "borde", nombre: "Borde inferior", sugeridas: ELASTICO, piezas: (c) => [{ nombre: "Borde", ancho: c.m.busto + c.holgura, alto: 6, cantidad: 1 }] },
+      {
+        id: "cuerpo",
+        nombre: "Cuerpo",
+        sugeridas: FIRME,
+        piezas: (c) => [
+          { nombre: "Espalda", ancho: anchoPanel(c), alto: c.largo - 15, cantidad: 1 },
+          { nombre: "Delantero", ancho: r(anchoPanel(c) / 2 + 2), alto: c.largo - 5, cantidad: 2, nota: "con tapeta, botones y bolsillos con tapa" },
+        ],
+      },
+      { id: "mangas", nombre: "Mangas", sugeridas: FIRME, piezas: (c) => mangaRecta(c, 5) },
+      { id: "cuello", nombre: "Cuello", sugeridas: FIRME, piezas: (c) => [{ nombre: "Cuello", ancho: r(42 + (c.m.busto - 88) * 0.1), alto: 10, cantidad: 1 }] },
+      { id: "canesu", nombre: "Canesú de espalda", sugeridas: DELICADO, piezas: (c) => [{ nombre: "Canesú", ancho: anchoPanel(c), alto: 12, cantidad: 1, nota: "en punta al centro" }] },
+      {
+        id: "aplicacion",
+        nombre: "Aplicación en la espalda",
+        sugeridas: ["granny", "motivos_cuadrados", "flores", "motivos"],
+        piezas: () => [{ nombre: "Aplicación", ancho: 20, alto: 20, cantidad: 1, nota: "redonda o cuadrada; se cose sobre la espalda" }],
+      },
+      {
+        id: "punos_cintura",
+        nombre: "Puños y cintura",
+        sugeridas: ELASTICO,
+        piezas: (c) => [{ nombre: "Pretina", ancho: r(c.m.cadera + c.holgura + 4), alto: 5, cantidad: 1 }, ...bordeManga(c, "Puño", 5, 8)],
+      },
     ],
     armado: [
-      "Tejer el delantero, la espalda y las mangas por separado, según el esquema.",
-      "Unir los hombros.",
-      "Levantar puntos alrededor del escote y tejer 2 o 3 hileras (o el cuello elástico).",
-      "Centrar y coser las mangas; cerrar todos los laterales.",
-      "Ribetear el escote, los puños y los bordes inferiores.",
-      "Esconder las hebras y bloquear la prenda.",
+      "Cortar el denim; si el canesú va tejido, cortar la espalda sin canesú y dejar 1 cm de costura.",
+      "Tejer el canesú y coserlo a la espalda con pespunte doble, como las costuras del jean.",
+      "Tejer la aplicación, bloquearla y coserla a mano en el centro de la espalda.",
+      "Unir hombros y costados; armar la tapeta y los bolsillos del pecho.",
+      "Pegar mangas, cuello, puños y pretina.",
+      "Hacer los ojales y colocar los botones.",
     ],
+    inicial: {
+      cuerpo: tela("denim", "#6f93c4"),
+      mangas: tela("denim", "#6f93c4"),
+      cuello: tela("denim", "#6f93c4"),
+      canesu: tela("fan_stitch", CRUDO),
+      aplicacion: tela("granny_square", "#f9d9c4"),
+      punos_cintura: tela("denim", "#6f93c4"),
+    },
   },
   {
-    id: "musculosa",
-    nombre: "Musculosa",
-    icono: "🎽",
-    grupo: "cuerpo",
-    descripcion: "Top con breteles, como el Top Granny o la remera con breteles.",
-    opciones: ["talle", "largo", "ajuste"],
-    defecto: { ajuste: "ajustado", manga: "sin" },
-    largoBase: (m) => m.total - 8,
-    zonas: [
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: [...DELICADO, "texturas"], piezas: (c) => cuerpoTorso(c).map((p) => ({ ...p, alto: p.alto - 11 })) },
-      { id: "breteles", nombre: "Breteles", sugeridas: FIRME, piezas: () => [{ nombre: "Bretel", ancho: 4, alto: 45, cantidad: 2, nota: "4 o 5 cadenas de ancho, del largo deseado" }] },
-      { id: "borde", nombre: "Borde", sugeridas: BORDES, piezas: (c) => [{ nombre: "Borde", ancho: c.m.busto + c.holgura, alto: 3, cantidad: 1 }] },
-    ],
-    armado: [
-      "Tejer espalda y delantero por separado (o en granny squares, según el talle).",
-      "Unir los laterales con punto bajo o aguja lanera.",
-      "Tejer los breteles de 4 o 5 cadenas de ancho y coserlos adelante y atrás.",
-      "Dar una vuelta de punto bajo alrededor del contorno; opcional, borde de conchas.",
-    ],
-  },
-  {
-    id: "chaleco",
-    nombre: "Chaleco",
-    icono: "🦺",
-    grupo: "cuerpo",
-    descripcion: "Chaleco abierto adelante, sin mangas.",
-    opciones: ["talle", "largo", "ajuste"],
-    defecto: { ajuste: "normal", manga: "sin" },
-    largoBase: (m) => m.total + 6,
-    zonas: [
-      { id: "espalda", nombre: "Espalda", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Espalda", ancho: anchoPanel(c), alto: c.largo, cantidad: 1 }] },
-      { id: "delanteros", nombre: "Delanteros", sugeridas: [...CUERPO, "motivos_cuadrados"], piezas: (c) => [{ nombre: "Delantero", ancho: Math.round(anchoPanel(c) / 2 + 2), alto: c.largo, cantidad: 2 }] },
-      { id: "ribete", nombre: "Ribete", sugeridas: BORDES, piezas: (c) => [{ nombre: "Ribete del frente y el escote", ancho: 3, alto: c.largo * 2 + 40, cantidad: 1 }] },
-    ],
-    armado: [
-      "Tejer la espalda y los dos delanteros por separado.",
-      "Unir los hombros y cerrar los laterales.",
-      "Ribetear el contorno de las sisas, el frente y el cuello con 1 hilera de medio punto.",
-      "Esconder las hebras y bloquear.",
-    ],
-  },
-  {
-    id: "cardigan",
-    nombre: "Cárdigan",
-    icono: "🧶",
-    grupo: "cuerpo",
-    descripcion: "Saco abierto con mangas, como el cárdigan con un botón.",
-    opciones: ["talle", "manga", "largo", "ajuste"],
-    defecto: { manga: "larga", ajuste: "normal" },
-    largoBase: (m) => m.total + 10,
-    zonas: [
-      { id: "espalda", nombre: "Espalda", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Espalda", ancho: anchoPanel(c), alto: c.largo, cantidad: 1 }] },
-      { id: "delanteros", nombre: "Delanteros", sugeridas: [...CUERPO, "motivos_cuadrados"], piezas: (c) => [{ nombre: "Delantero", ancho: Math.round(anchoPanel(c) / 2 + 2), alto: c.largo, cantidad: 2 }] },
-      { id: "mangas", nombre: "Mangas", sugeridas: CUERPO, piezas: mangas },
-      { id: "ribete", nombre: "Ribete del frente", sugeridas: BORDES, piezas: (c) => [{ nombre: "Ribete", ancho: 3, alto: c.largo * 2 + 40, cantidad: 1 }] },
-    ],
-    armado: [
-      "Tejer espalda, delanteros y mangas por separado.",
-      "Unir los hombros. Coser las mangas y cerrar los laterales.",
-      "Ribetear el frente, el cuello, los puños y los bordes inferiores.",
-      "Si lleva botón, tejer una presilla (arco de cadenas del tamaño del botón).",
-    ],
-  },
-  {
-    id: "poncho",
-    nombre: "Poncho",
-    icono: "🪭",
-    grupo: "cuerpo",
-    descripcion: "Poncho de cuadrados o de una pieza, con cuello y flecos.",
-    opciones: ["talle", "largo"],
-    defecto: {},
-    largoBase: () => 70,
-    zonas: [
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: [...DELICADO, "texturas"], piezas: (c) => [{ nombre: "Paño", ancho: Math.round(c.largo * 1.4), alto: Math.round(c.largo * 1.4), cantidad: 2, nota: "delantero y espalda; o motivos cuadrados unidos" }] },
-      { id: "cuello", nombre: "Cuello", sugeridas: ELASTICO, piezas: () => [{ nombre: "Cuello", ancho: 52, alto: 10, cantidad: 1 }] },
-      { id: "flecos", nombre: "Flecos", sugeridas: BORDES, piezas: () => [{ nombre: "Flecos", ancho: 140, alto: 12, cantidad: 1, nota: "hebras de 25 a 30 cm" }] },
-    ],
-    armado: [
-      "Tejer los dos paños (o los motivos cuadrados) y unirlos dejando la abertura del cuello.",
-      "Levantar puntos alrededor del escote y tejer el cuello.",
-      "Colocar los flecos en el borde inferior: 3 o 4 hebras dobladas por la mitad, pasadas con la aguja y atadas.",
-      "Bloquear y emparejar los flecos.",
-    ],
-  },
-  {
-    id: "chal",
-    nombre: "Chal triangular",
-    icono: "🔺",
-    grupo: "accesorios",
-    descripcion: "Chal en triángulo con flecos, como el Chal Encanto.",
-    opciones: [],
-    defecto: {},
-    largoBase: () => 80,
-    zonas: [
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: DELICADO, piezas: (c) => [{ nombre: "Chal", ancho: 160, alto: c.largo, cantidad: 1, nota: "se empieza por el centro y se aumenta a los lados" }] },
-      { id: "borde", nombre: "Borde", sugeridas: BORDES, piezas: () => [{ nombre: "Puntilla", ancho: 3, alto: 260, cantidad: 1 }] },
-      { id: "flecos", nombre: "Flecos", sugeridas: BORDES, piezas: () => [{ nombre: "Flecos", ancho: 6, alto: 28, cantidad: 40, nota: "hebras de 25 a 30 cm" }] },
-    ],
-    armado: [
-      "Empezar en el centro: 4 cadenas cerradas con punto raso, luego los abanicos centrales.",
-      "Girar en cada vuelta, aumentando en el centro y en los dos extremos hasta el tamaño deseado.",
-      "Cortar hebras de 25 a 30 cm, doblarlas por la mitad y pasarlas por los espacios de los lados inferiores.",
-      "Atar, emparejar y bloquear.",
-    ],
-  },
-  {
-    id: "vestido",
-    nombre: "Vestido",
+    id: "vestido_canesu",
+    nombre: "Vestido con canesú de crochet",
     icono: "👗",
     grupo: "cuerpo",
-    descripcion: "Vestido con corpiño, cintura y falda de vuelo.",
-    opciones: ["talle", "largo", "ajuste"],
-    defecto: { ajuste: "ajustado", largo: "medio" },
-    largoBase: (m) => m.total + 38,
+    descripcion: "Vestido de gasa o algodón con canesú tejido, franja bajo el busto y ruedo de crochet.",
+    opciones: ["talle", "manga", "largo", "ajuste"],
+    defecto: { manga: "corta" },
+    largoBase: (m) => m.total + 34,
     zonas: [
-      { id: "tirantes", nombre: "Tirantes", sugeridas: FIRME, piezas: () => [{ nombre: "Tirante", ancho: 4, alto: 40, cantidad: 2 }] },
-      { id: "corpino", nombre: "Corpiño", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Corpiño", ancho: Math.round((c.m.busto + c.holgura) / 2), alto: 24, cantidad: 2 }] },
-      { id: "falda", nombre: "Falda", sugeridas: DELICADO, piezas: (c) => [{ nombre: "Falda", ancho: Math.round((c.m.cadera + c.holgura) / 2 + 20), alto: c.largo - 30, cantidad: 2, nota: "vuelo con aumentos" }] },
-      { id: "cintura", nombre: "Cintura", sugeridas: ["relieve", "variaciones_lazada"], piezas: (c) => [{ nombre: "Cintura", ancho: anchoCintura(c), alto: 4, cantidad: 2 }] },
-      { id: "ruedo", nombre: "Ruedo", sugeridas: BORDES, piezas: () => [{ nombre: "Ruedo", ancho: 150, alto: 6, cantidad: 1 }] },
+      {
+        id: "canesu",
+        nombre: "Canesú",
+        sugeridas: DELICADO,
+        piezas: (c) => [{ nombre: "Canesú", ancho: anchoPanel(c), alto: 25, cantidad: 2, nota: "delantero y espalda, del escote hasta debajo del busto" }],
+      },
+      {
+        id: "falda",
+        nombre: "Falda",
+        sugeridas: CUERPO,
+        piezas: (c) => [{ nombre: "Falda", ancho: r(ruedoConVuelo(c.m.busto * 0.86, c.largo - 30, 0.26) / 2), alto: c.largo - 36, cantidad: 2 }],
+      },
+      { id: "mangas", nombre: "Mangas", sugeridas: DELICADO, piezas: (c) => mangaRecta(c, 0) },
+      {
+        id: "cintura",
+        nombre: "Franja de cintura",
+        sugeridas: ["texturas", "calados", "relieve"],
+        piezas: (c) => [{ nombre: "Franja de cintura", ancho: r(c.m.busto * 0.86 + c.holgura / 2), alto: 5, cantidad: 1 }],
+      },
+      {
+        id: "ruedo",
+        nombre: "Ruedo",
+        sugeridas: BORDES,
+        piezas: (c) => [{ nombre: "Ruedo", ancho: ruedoConVuelo(c.m.busto * 0.86, c.largo - 30, 0.26), alto: 6, cantidad: 1 }],
+      },
     ],
     armado: [
-      "Tejer el corpiño (delantero y espalda) y la falda por separado o de corrido desde la cintura.",
-      "Unir los laterales y levantar los puntos de la cintura.",
-      "Coser o tejer los tirantes.",
-      "Dar el borde del ruedo y bloquear.",
+      "Tejer el canesú delantero y el de espalda; unir los hombros.",
+      "Tejer la franja de cintura y coserla al borde inferior del canesú.",
+      "Cortar la falda en la tela, fruncirla apenas y coserla a la franja.",
+      "Coser las mangas a la sisa y cerrar los costados.",
+      "Tejer el ruedo sobre el borde de la falda: una vuelta de punto bajo y después el remate.",
+      "Esconder las hebras, bloquear el crochet y planchar la tela.",
     ],
+    inicial: {
+      canesu: tela("staggered_shell_lace", CRUDO),
+      falda: tela("gasa", "#f6d5dc"),
+      mangas: tela("gasa", "#f6d5dc"),
+      cintura: tela("v_stitch", CRUDO),
+      ruedo: tela("shell_stitch", CRUDO),
+    },
   },
   {
-    id: "falda",
-    nombre: "Falda",
-    icono: "🩰",
-    grupo: "abajo",
-    descripcion: "Falda recta o con vuelo, con pretina y volado.",
-    opciones: ["talle", "largo", "ajuste"],
-    defecto: { ajuste: "normal", largo: "medio" },
-    largoBase: () => 58,
+    id: "kimono",
+    nombre: "Kimono",
+    icono: "🥻",
+    grupo: "cuerpo",
+    descripcion: "Kimono abierto de gasa o muselina, con solapa y ruedo tejidos.",
+    opciones: ["talle", "manga", "largo", "ajuste"],
+    defecto: { manga: "tres_cuartos", ajuste: "suelto" },
+    largoBase: (m) => m.total + 8,
     zonas: [
-      { id: "pretina", nombre: "Pretina", sugeridas: ["relieve", "variaciones_lazada"], piezas: (c) => [{ nombre: "Pretina", ancho: cintura(c.m) + 4, alto: 5, cantidad: 1 }] },
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Panel", ancho: anchoCadera(c), alto: c.largo - 12, cantidad: 2 }] },
-      { id: "volado", nombre: "Volado", sugeridas: BORDES, piezas: (c) => [{ nombre: "Volado", ancho: c.m.cadera + 40, alto: 12, cantidad: 1 }] },
+      { id: "espalda", nombre: "Espalda", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Espalda", ancho: anchoPanel(c) + 4, alto: c.largo - 5, cantidad: 1 }] },
+      { id: "delanteros", nombre: "Delanteros", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Delantero", ancho: r(anchoPanel(c) / 2 - 4), alto: c.largo - 5, cantidad: 2 }] },
+      { id: "mangas", nombre: "Mangas anchas", sugeridas: DELICADO, piezas: (c) => mangaRecta(c, 4, c.m.busto * 0.45 + c.holgura) },
+      {
+        id: "solapa",
+        nombre: "Solapa",
+        sugeridas: SUAVE,
+        piezas: (c) => [
+          { nombre: "Solapa", ancho: 4.5, alto: r(c.largo * 2 + 20), cantidad: 1, nota: "una tira continua: sube por un delantero, rodea el cuello y baja por el otro" },
+        ],
+      },
+      {
+        id: "ruedo",
+        nombre: "Ruedo",
+        sugeridas: BORDES,
+        piezas: (c) => [
+          { nombre: "Ruedo", ancho: r(c.m.cadera + c.holgura + 10), alto: 5, cantidad: 1 },
+          ...(c.manga > 0 ? [{ nombre: "Borde de manga", ancho: r(c.m.busto * 0.75), alto: 4, cantidad: 2 }] : []),
+        ],
+      },
     ],
     armado: [
-      "Tejer la pretina a lo ancho (hilera de ida y vuelta) y cerrarla en redondo.",
-      "Levantar los puntos de la pretina y tejer el cuerpo hacia abajo, aumentando para el vuelo.",
-      "Tejer el volado o la puntilla del ruedo.",
-      "Pasar un elástico o cordón por la pretina y bloquear.",
+      "Cortar espalda, delanteros y mangas en la tela; las mangas van rectas y anchas.",
+      "Unir hombros, pegar las mangas y cerrar costados y mangas en una sola costura.",
+      "Tejer el ruedo sobre el borde inferior y el de las mangas.",
+      "Tejer la solapa en una tira continua y coserla desde el ruedo de un delantero, alrededor del cuello, hasta el otro.",
+      "Esconder las hebras y planchar la tela al vapor, sin apoyar sobre el crochet.",
     ],
+    inicial: {
+      espalda: tela("gasa", "#b9cbb1"),
+      delanteros: tela("gasa", "#b9cbb1"),
+      mangas: tela("gasa", "#b9cbb1"),
+      solapa: tela("chain_arc_mesh", CRUDO),
+      ruedo: tela("picot_fans", CRUDO),
+    },
   },
   {
-    id: "pollera",
-    nombre: "Pollera con lazo",
+    id: "falda_franja",
+    nombre: "Falda semicampana con franja",
     icono: "💃",
     grupo: "abajo",
-    descripcion: "Pollera de vuelo con lazo en la cintura, como la «Gracia y movimiento».",
-    opciones: ["talle", "largo"],
-    defecto: { largo: "medio" },
-    largoBase: () => 52,
-    zonas: [
-      { id: "pretina", nombre: "Pretina", sugeridas: ["relieve", "variaciones_lazada"], piezas: (c) => [{ nombre: "Pretina", ancho: cintura(c.m) + 4, alto: 6, cantidad: 1 }] },
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: [...DELICADO, "texturas"], piezas: (c) => [{ nombre: "Panel", ancho: Math.round(c.m.cadera / 2 + 25), alto: c.largo - 14, cantidad: 2, nota: "aumentos cada pocas hileras" }] },
-      { id: "volado", nombre: "Volado", sugeridas: BORDES, piezas: (c) => [{ nombre: "Volado", ancho: Math.round(c.m.cadera + 80), alto: 14, cantidad: 1 }] },
-      { id: "lazo", nombre: "Lazo", sugeridas: FIRME, piezas: () => [{ nombre: "Lazo", ancho: 5, alto: 150, cantidad: 1 }] },
-    ],
-    armado: [
-      "Tejer la pretina y el cuerpo en redondo, aumentando para el vuelo.",
-      "Tejer el volado inferior (o una guarda calada).",
-      "Hacer el lazo: una tira de 5 puntos de ancho por 150 cm.",
-      "Pasar el lazo por los ojales de la pretina y bloquear.",
-    ],
-  },
-  {
-    id: "short",
-    nombre: "Short",
-    icono: "🩳",
-    grupo: "abajo",
-    descripcion: "Short de crochet con pretina; también para decorar un short de jean.",
+    descripcion: "Falda de lino o denim con una franja de crochet que la cruza en diagonal.",
     opciones: ["talle", "largo", "ajuste"],
-    defecto: { ajuste: "normal", largo: "medio" },
-    largoBase: () => 42,
+    largoBase: () => 58,
     zonas: [
-      { id: "pretina", nombre: "Pretina", sugeridas: ELASTICO, piezas: (c) => [{ nombre: "Pretina", ancho: cintura(c.m) + 4, alto: 5, cantidad: 1 }] },
-      { id: "piernas", nombre: "Piernas", sugeridas: CUERPO, piezas: (c) => [{ nombre: "Pierna", ancho: Math.round(c.m.cadera / 2 + 6), alto: c.largo - 5, cantidad: 2 }] },
-      { id: "puños", nombre: "Puños", sugeridas: BORDES, piezas: (c) => [{ nombre: "Puño", ancho: Math.round(c.m.cadera / 2 + 8), alto: 5, cantidad: 2 }] },
+      {
+        id: "pretina",
+        nombre: "Pretina",
+        sugeridas: ELASTICO,
+        piezas: (c) => [{ nombre: "Pretina", ancho: r(cintura(c.m) + 3), alto: 4, cantidad: 1, nota: "con botón o elástico" }],
+      },
+      {
+        id: "paneles",
+        nombre: "Paneles",
+        sugeridas: CUERPO,
+        piezas: (c) => [{ nombre: "Panel", ancho: r(ruedoConVuelo(cintura(c.m), c.largo, 0.36) / 2), alto: c.largo - 10, cantidad: 2, nota: "delantero y trasero" }],
+      },
+      {
+        id: "franja",
+        nombre: "Franja",
+        sugeridas: SUAVE,
+        piezas: (c) => [
+          {
+            nombre: "Franja",
+            ancho: 9,
+            alto: r(Math.hypot((0.75 * (cintura(c.m) + ruedoConVuelo(cintura(c.m), c.largo, 0.36))) / 2, c.largo - 10)),
+            cantidad: 1,
+            nota: "se cose en diagonal sobre los paneles",
+          },
+        ],
+      },
+      { id: "ruedo", nombre: "Ruedo", sugeridas: BORDES, piezas: (c) => [{ nombre: "Ruedo", ancho: ruedoConVuelo(cintura(c.m), c.largo, 0.36), alto: 6, cantidad: 1 }] },
     ],
     armado: [
-      "Tejer las dos piernas por separado.",
-      "Coser la entrepierna y unir las dos piernas.",
-      "Levantar los puntos de la cintura y tejer la pretina; pasar un elástico.",
-      "Terminar los bajos con una puntilla.",
+      "Cortar los dos paneles en la tela y unir un costado.",
+      "Tejer la franja, bloquearla y coserla en diagonal: nace en la pretina de un lado y termina en el ruedo del otro.",
+      "Cerrar el otro costado dejando la abertura para el cierre o el botón.",
+      "Pegar la pretina.",
+      "Tejer el ruedo sobre el borde de la tela y esconder las hebras.",
     ],
-  },
-  {
-    id: "bikini",
-    nombre: "Bikini",
-    icono: "👙",
-    grupo: "abajo",
-    descripcion: "Corpiño de tazas y bombacha con tiras, como el bikini «a puro sol».",
-    opciones: ["talle"],
-    defecto: {},
-    largoBase: () => 20,
-    zonas: [
-      { id: "tazas", nombre: "Tazas", sugeridas: [...DELICADO, "texturas"], piezas: () => [{ nombre: "Taza", ancho: 15, alto: 13, cantidad: 2, nota: "triángulo: aumentando desde la punta" }] },
-      { id: "bombacha", nombre: "Bombacha", sugeridas: [...DELICADO, "texturas"], piezas: (c) => [{ nombre: "Bombacha", ancho: 23, alto: 20, cantidad: 1, nota: "empieza en la entrepierna" }] },
-      { id: "tiras", nombre: "Tiras", sugeridas: FIRME, piezas: () => [{ nombre: "Tira", ancho: 3, alto: 65, cantidad: 4, nota: "cordones de cadeneta o punto bajo" }] },
-    ],
-    armado: [
-      "Tejer las dos tazas (triángulos) y la parte delantera de la bombacha.",
-      "Tejer las tiras para atar: de cadenas o de punto bajo.",
-      "Pasar las tiras por la última vuelta de cada pieza y anudar.",
-    ],
-  },
-  {
-    id: "bolso",
-    nombre: "Bolso",
-    icono: "👜",
-    grupo: "accesorios",
-    descripcion: "Bolso de motivos unidos, como el Natural Pocket.",
-    opciones: [],
-    defecto: {},
-    largoBase: () => 24,
-    zonas: [
-      { id: "asa", nombre: "Asas", sugeridas: FIRME, piezas: () => [{ nombre: "Asa", ancho: 3, alto: 55, cantidad: 2, nota: "o asas de cuero con herrajes" }] },
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: [...FIRME, "motivos", "motivos_cuadrados", "calados"], piezas: () => [{ nombre: "Frente o espalda", ancho: 32, alto: 24, cantidad: 2 }] },
-      { id: "solapa", nombre: "Borde superior", sugeridas: ["flores", "racimos", "motivos_cuadrados"], piezas: () => [{ nombre: "Borde", ancho: 90, alto: 5, cantidad: 1, nota: "4 o 5 vueltas de punto alto" }] },
-      { id: "base", nombre: "Base", sugeridas: FIRME, piezas: () => [{ nombre: "Base", ancho: 32, alto: 12, cantidad: 1 }] },
-    ],
-    armado: [
-      "Tejer los motivos (17 en el Natural Pocket): 6 al frente, 6 atrás, 2 a los lados y 3 en la base.",
-      "Unirlos con aguja lanera por el revés, tomando solo las hebras traseras.",
-      "Tejer 4 o 5 vueltas de punto alto en el borde superior, con 2 puntos en las esquinas.",
-      "Fijar las asas con remaches o coserlas firme; agregar forro de tela si querés.",
-    ],
-  },
-  {
-    id: "gorro",
-    nombre: "Gorro",
-    icono: "🧢",
-    grupo: "accesorios",
-    descripcion: "Gorro tejido en redondo con puño y pompón.",
-    opciones: [],
-    defecto: {},
-    largoBase: () => 22,
-    zonas: [
-      { id: "copa", nombre: "Copa", sugeridas: CUERPO, piezas: () => [{ nombre: "Copa", ancho: 54, alto: 18, cantidad: 1, nota: "en redondo, empezando por el anillo mágico" }] },
-      { id: "puño", nombre: "Puño", sugeridas: ELASTICO, piezas: () => [{ nombre: "Puño", ancho: 52, alto: 6, cantidad: 1 }] },
-      { id: "pompon", nombre: "Pompón", sugeridas: ["racimos", "flores"], piezas: () => [{ nombre: "Pompón", ancho: 8, alto: 8, cantidad: 1 }] },
-    ],
-    armado: [
-      "Empezar con anillo mágico y aumentar 6 puntos por vuelta hasta el diámetro deseado.",
-      "Tejer la altura sin aumentos y terminar con el puño elástico.",
-      "Agregar el pompón y esconder las hebras.",
-    ],
-  },
-  {
-    id: "bufanda",
-    nombre: "Bufanda",
-    icono: "🧣",
-    grupo: "accesorios",
-    descripcion: "Bufanda larga con flecos, como las bufandas con flores.",
-    opciones: [],
-    defecto: {},
-    largoBase: () => 170,
-    zonas: [
-      { id: "cuerpo", nombre: "Cuerpo", sugeridas: [...CUERPO, "motivos_cuadrados"], piezas: (c) => [{ nombre: "Bufanda", ancho: 22, alto: c.largo, cantidad: 1 }] },
-      { id: "borde", nombre: "Borde", sugeridas: BORDES, piezas: () => [{ nombre: "Borde", ancho: 3, alto: 400, cantidad: 1 }] },
-      { id: "flecos", nombre: "Flecos", sugeridas: BORDES, piezas: () => [{ nombre: "Flecos", ancho: 22, alto: 15, cantidad: 2 }] },
-    ],
-    armado: [
-      "Tejer una tira de 20 a 25 cm de ancho y el largo deseado.",
-      "Colocar los flecos en las dos puntas: hebras dobladas por la mitad, pasadas con la aguja y atadas.",
-      "Bloquear y emparejar los flecos.",
-    ],
+    inicial: {
+      pretina: tela("lino", "#c98b6b"),
+      paneles: tela("lino", "#c98b6b"),
+      franja: tela("fan_stitch", CRUDO),
+      ruedo: tela("shell_stitch", CRUDO),
+    },
   },
 ];
+
+export const PRENDAS: Prenda[] = [...NUEVAS];
 
 export const GRUPOS: { id: Grupo; nombre: string }[] = [
   { id: "cuerpo", nombre: "Parte de arriba" },
@@ -508,10 +511,35 @@ export const COLORES = [
   { nombre: "Bordó", hex: "#a14a5a" },
 ];
 
-/** Textura que se dibuja en el modelo para cada punto. */
-function texturaDePunto(p: Punto) {
-  if (["shell_stitch", "fan_stitch", "scallop_edging"].includes(p.id)) return "concha";
-  if (["granny_stitch", "granny_square", "corner_to_corner"].includes(p.id)) return "granny";
+/** Textura que se dibuja en el modelo (y en la miniatura del selector) para cada punto. */
+const TEXTURA_DIRECTA: Record<string, string> = {
+  single_crochet: "bajo",
+  half_double_crochet: "bajo",
+  double_crochet: "vareta",
+  treble_crochet: "vareta",
+  corner_to_corner: "vareta",
+  linked_double_crochet: "vareta",
+  granny_stitch: "granny_filas",
+  granny_square: "granny",
+  granny_square_flower: "granny",
+  multicolor_granny_square: "granny",
+  v_stitch: "uves",
+  chained_v_stitch: "uves",
+  v_stitch_dc_blocks: "uves",
+  v_mesh_with_sc_crowns: "uves",
+  woven_dc_mesh: "filete",
+};
+
+export function texturaDePunto(p: Punto) {
+  const id = p.id;
+  if (TEXTURA_DIRECTA[id]) return TEXTURA_DIRECTA[id];
+  const lazo = ["calados", "bordes", "texturas", "relieve"].includes(p.category);
+  if (lazo && /shell/.test(id)) return "concha";
+  if (lazo && /fan|scallop/.test(id)) return "abanico";
+  if (p.category === "calados") {
+    if (/filet|checkerboard|aligned_blocks/.test(id)) return /block|checker|polka|aligned/.test(id) ? "filete_bloques" : "filete";
+    if (/mesh|net|arch|lattice|solomon|bridges|ladder/.test(id)) return "red";
+  }
   const porCategoria: Record<string, string> = {
     calados: "red",
     racimos: "motas",
@@ -520,6 +548,7 @@ function texturaDePunto(p: Punto) {
     bordes: "concha",
     motivos: "granny",
     motivos_cuadrados: "granny",
+    granny: "granny",
     flores: "flores",
     tunecino: "tunecino",
   };

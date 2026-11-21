@@ -119,7 +119,7 @@ export default function ChatLuna() {
           e.preventDefault();
           enviar(texto);
         }}
-        className="sticky bottom-24 mt-2 flex items-end gap-2 rounded-3xl border border-borde bg-papel p-2 shadow-lg md:bottom-4"
+        className="sticky bottom-24 mt-2 flex items-end gap-2 rounded-3xl border border-borde bg-papel p-2 shadow-lg lg:bottom-4"
       >
         <textarea
           value={texto}

@@ -138,7 +138,7 @@ function Pieza({
       c.needsUpdate = true;
       return c;
     };
-    return { map: clonar(t.map), normal: clonar(t.normal) };
+    return { map: clonar(t.map), normal: clonar(t.normal), calado: t.transparente };
   }, [textura, color, parte.rep]);
 
   const geo = useMemo(() => (parte.zona && SIN_GROSOR.has(parte.zona) ? parte.geo : conGrosor(parte.geo)), [parte.geo, parte.zona]);
@@ -178,7 +178,7 @@ function Pieza({
         document.body.style.cursor = "";
       }}
     >
-      {/* Lana: opaca, mate y con relieve real de puntadas */}
+      {/* Lana mate con relieve real de puntadas; en los calados los huecos se recortan y se ve lo que hay detrás */}
       <meshStandardMaterial
         map={texturas.map}
         normalMap={texturas.normal}
@@ -187,6 +187,7 @@ function Pieza({
         metalness={0}
         side={DoubleSide}
         transparent={false}
+        alphaTest={texturas.calado ? 0.5 : 0}
         opacity={1}
         emissive="#8e7cc3"
         emissiveIntensity={resaltado}

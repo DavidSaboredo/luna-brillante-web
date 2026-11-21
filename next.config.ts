@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   // Evita que Next.js tome como raíz otra carpeta del usuario con package-lock.json
   outputFileTracingRoot: __dirname,
   poweredByHeader: false,
+  // Los diseños sueltos de la revista ya no se publican: los enlaces viejos van a la página de revistas.
+  async redirects() {
+    return [{ source: "/proyectos/:id", destination: "/proyectos", permanent: false }];
+  },
   async headers() {
     return [
       {

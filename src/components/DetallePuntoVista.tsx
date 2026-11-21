@@ -8,7 +8,7 @@ import { Nivel } from "@/components/TarjetaPunto";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
 import { fotosTejedora } from "@/lib/fotos-tejedora";
-import { diagramaDeRevista, textosDiagramas } from "@/lib/diagramas";
+import { diagramaDeRevista, diagramasPorVueltas, textosDiagramas } from "@/lib/diagramas";
 import {
   buscarPunto,
   fondoCategoria,
@@ -44,9 +44,13 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
   const { idioma } = useIdioma();
   const k = textosPuntos[idioma].puntos;
   const nombre = tx(punto.name, idioma);
-  const ilustracion = rutaIlustracion(punto);
-  const muestras = fotosTejedora(punto.id);
+  // Si Monica tejió una muestra, arriba va su foto real en lugar del modelado 3D.
+  const [fotoReal, ...otrasMuestras] = fotosTejedora(punto.id);
+  const ilustracion = fotoReal ? null : rutaIlustracion(punto);
   const deRevista = diagramaDeRevista(punto.id);
+  // Los puntos armados en etapas traen una lámina por tramo de vueltas en lugar de un solo diagrama.
+  const laminas = diagramasPorVueltas(punto.id);
+  const diagramaUnico = laminas.length === 0;
   const seTeje = { rows: k.filas, rounds: k.redondo, "n/a": "—" }[punto.worked_in];
   const aka = txLista(punto.aka, idioma);
   const datos: [string, string][] = [
@@ -76,7 +80,19 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
         <p className="mt-3 max-w-2xl">{tx(punto.description, idioma)}</p>
       </header>
 
-      <section className={`grid gap-4 ${ilustracion ? "md:grid-cols-2" : ""}`}>
+      <section className={`grid gap-4 ${(fotoReal || ilustracion) && diagramaUnico ? "md:grid-cols-2" : ""}`}>
+        {fotoReal && (
+          <figure className="tarjeta overflow-hidden">
+            {/* Fotos recortadas sin fondo: se ven enteras sobre un fondo suave. */}
+            <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-b from-crema to-papel ${diagramaUnico ? "" : "md:aspect-[2/1]"}`}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={fotoReal.archivo} alt={`${nombre}: ${fotoReal.leyenda[idioma]}`} className="relative h-full w-full object-contain p-5 drop-shadow-[0_6px_10px_rgba(60,40,30,0.25)]" />
+            </div>
+            <figcaption className="px-3 py-2 text-xs text-tinta-suave">
+              {k.muestraReal} · {fotoReal.leyenda[idioma]}
+            </figcaption>
+          </figure>
+        )}
         {ilustracion && (
           <figure className="tarjeta overflow-hidden bg-gradient-to-b from-crema to-papel">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -84,12 +100,34 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
             <figcaption className="px-3 py-2 text-xs text-tinta-suave">{k.modelado}</figcaption>
           </figure>
         )}
-        <figure className="tarjeta flex flex-col justify-center overflow-x-auto p-4">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={rutaDiagrama(punto)} alt={nombre} className="mx-auto max-h-80 min-w-[320px]" />
-          <figcaption className="mt-2 text-center text-xs text-tinta-suave">{k.diagrama}</figcaption>
-        </figure>
+        {diagramaUnico && (
+          <figure className="tarjeta flex flex-col justify-center overflow-x-auto p-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={rutaDiagrama(punto)} alt={nombre} className="mx-auto max-h-80 min-w-[320px]" />
+            <figcaption className="mt-2 text-center text-xs text-tinta-suave">{k.diagrama}</figcaption>
+          </figure>
+        )}
       </section>
+
+      {laminas.length > 0 && (
+        <section className="space-y-3">
+          <div>
+            <h2 className="text-2xl">{k.diagramasVueltas}</h2>
+            <p className="text-sm text-tinta-suave">{k.diagramasVueltasTexto}</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {laminas.map((l) => (
+              <figure key={l.archivo} className="tarjeta overflow-hidden">
+                <a href={l.archivo} target="_blank" rel="noopener noreferrer" className="block bg-white">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={l.archivo} alt={`${nombre}: ${l.nombre[idioma]}`} loading="lazy" className="w-full transition hover:opacity-90" />
+                </a>
+                <figcaption className="px-3 py-2 text-sm">{l.nombre[idioma]}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       {deRevista && (
         <section className="space-y-2">
@@ -103,14 +141,14 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
         </section>
       )}
 
-      {muestras.length > 0 && (
+      {otrasMuestras.length > 0 && (
         <section className="space-y-2">
           <h2 className="text-xl">{k.muestraReal}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
-            {muestras.map((m) => (
+            {otrasMuestras.map((m) => (
               <figure key={m.archivo} className="tarjeta overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={m.archivo} alt={`${nombre}: ${m.leyenda[idioma]}`} loading="lazy" className="max-h-[28rem] w-full object-cover" />
+                <img src={m.archivo} alt={`${nombre}: ${m.leyenda[idioma]}`} loading="lazy" className="max-h-[28rem] w-full bg-gradient-to-b from-crema to-papel object-contain p-4 drop-shadow-[0_6px_10px_rgba(60,40,30,0.25)]" />
                 <figcaption className="px-3 py-2 text-xs text-tinta-suave">{m.leyenda[idioma]}</figcaption>
               </figure>
             ))}
@@ -164,7 +202,7 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
                 <p className="mb-2 text-sm text-tinta-suave">{k.enRevista}</p>
                 <div className="flex flex-wrap gap-2">
                   {enRevista.map((r) => (
-                    <Link key={r.id} href={`/proyectos/${r.id}`} className="chip hover:border-lavanda-fuerte">
+                    <Link key={r.id} href="/proyectos" className="chip hover:border-lavanda-fuerte">
                       ❀ {r.titulo}
                     </Link>
                   ))}

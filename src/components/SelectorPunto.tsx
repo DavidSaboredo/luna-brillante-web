@@ -1,11 +1,45 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Nivel } from "./TarjetaPunto";
 import { categorias, coincide, nombreCategoria, puntosParaPrenda, rutaIlustracion, tx } from "@/lib/puntos";
 import { textosPuntos } from "@/lib/textos-puntos";
 import { useIdioma } from "./Idioma";
+import { texturaDePunto } from "@/lib/taller";
+import { muestraTextura } from "@/lib/texturas3d";
+import type { Punto } from "@/lib/puntos";
+
+/** Miniatura con la misma baldosa que se aplica sobre la pieza en 3D, en el color de la zona.
+ *  Se dibuja recién cuando entra en pantalla, para no generar todas las texturas de golpe. */
+function MiniTextura({ punto, color }: { punto: Punto; color: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [visible, setVisible] = useState(false);
+  const [url, setUrl] = useState<string | null>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => e.isIntersecting && setVisible(true), { rootMargin: "120px" });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!visible) return;
+    try {
+      setUrl(muestraTextura(texturaDePunto(punto), color));
+    } catch {
+      setUrl(null);
+    }
+  }, [visible, punto, color]);
+  return (
+    <span
+      ref={ref}
+      aria-hidden
+      className="h-12 w-16 shrink-0 rounded-lg border border-borde bg-crema"
+      style={url ? { backgroundImage: `url(${url})`, backgroundSize: "48px 48px" } : undefined}
+    />
+  );
+}
 
 const CATEGORIAS_PRENDA = categorias.filter((c) => puntosParaPrenda.some((p) => p.category === c.id));
 
@@ -13,10 +47,13 @@ const CATEGORIAS_PRENDA = categorias.filter((c) => puntosParaPrenda.some((p) => 
 export default function SelectorPunto({
   sugeridas,
   seleccionado,
+  color,
   onElegir,
 }: {
   sugeridas: string[];
   seleccionado?: string;
+  /** color de la zona: la miniatura muestra el punto con ese color */
+  color?: string;
   onElegir: (id: string) => void;
 }) {
   const { idioma } = useIdioma();
@@ -68,9 +105,13 @@ export default function SelectorPunto({
                 seleccionado === p.id ? "border-lavanda-fuerte bg-lavanda/30" : "border-borde hover:bg-crema"
               }`}
             >
-              {rutaIlustracion(p) && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={rutaIlustracion(p)!} alt="" loading="lazy" className="h-12 w-16 shrink-0 rounded-lg object-cover" />
+              {color ? (
+                <MiniTextura punto={p} color={color} />
+              ) : (
+                rutaIlustracion(p) && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={rutaIlustracion(p)!} alt="" loading="lazy" className="h-12 w-16 shrink-0 rounded-lg object-cover" />
+                )
               )}
               <span className="flex-1">
                 <span className="block font-semibold">{tx(p.name, idioma)}</span>
