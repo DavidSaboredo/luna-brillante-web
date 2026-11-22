@@ -220,7 +220,7 @@ export default function GuiaPrenda({ prendaId, puntos, vueltas }: { prendaId: st
           <Link href="/puntos/chain" className="chip">Cadeneta</Link>
           <Link href="/puntos/slip_stitch" className="chip">Punto raso</Link>
           <Link href="/puntos/single_crochet" className="chip">Punto bajo</Link>
-          <Link href="/puntos/double_crochet" className="chip">Punto alto</Link>
+          <Link href="/puntos/double_crochet" className="chip">Punto vareta</Link>
           <Link href="/puntos/magic_ring" className="chip">Anillo mágico</Link>
         </p>
       </details>

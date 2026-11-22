@@ -15,14 +15,14 @@ export const GUIAS: Guia[] = [
     resumen: "Cada parte del suéter pide un punto distinto: el cuello y los puños, firmes y elásticos; el cuerpo, el que más te guste.",
     pasos: [
       "Para empezar (cuello, puños y borde de abajo): punto bajo en hebra trasera o varetas en relieve alternadas. Quedan elásticos y no se abren.",
-      "Para el canesú y el cuerpo, cerrado: medio punto alto o punto alto. Tejen rápido y caen bien.",
+      "Para el canesú y el cuerpo, cerrado: medio punto vareta o punto vareta. Tejen rápido y caen bien.",
       "Para el cuerpo, calado: punto V, abanico o granny. Medí la muestra con el punto calado, porque rinde distinto que el cerrado.",
       "Si el punto calado tiene un múltiplo (por ejemplo 3 + 1), ajustá la cadena inicial para que cierre la repetición.",
     ],
     puntos: [
       { id: "back_loop_only", nombre: "Punto bajo en hebra trasera" },
-      { id: "half_double_crochet", nombre: "Medio punto alto" },
-      { id: "double_crochet", nombre: "Punto alto" },
+      { id: "half_double_crochet", nombre: "Medio punto vareta" },
+      { id: "double_crochet", nombre: "Punto vareta" },
       { id: "v_stitch", nombre: "Punto V" },
       { id: "shell_stitch", nombre: "Abanico (concha)" },
       { id: "granny_stitch", nombre: "Punto granny" },
@@ -76,8 +76,8 @@ export const GUIAS: Guia[] = [
       "El resultado queda como un pantalón oxford: pierna más ancha, con una franja de crochet a cada lado.",
     ],
     puntos: [
-      { id: "half_double_crochet", nombre: "Medio punto alto" },
-      { id: "double_crochet", nombre: "Punto alto" },
+      { id: "half_double_crochet", nombre: "Medio punto vareta" },
+      { id: "double_crochet", nombre: "Punto vareta" },
       { id: "filet_mesh", nombre: "Filet (si lo querés calado)" },
     ],
   },
@@ -88,7 +88,7 @@ export const GUIAS: Guia[] = [
     pasos: [
       "Medí el largo de la abertura y cuánto ancho querés en la punta de abajo.",
       "Empezá desde la punta: 2 cadenas y 2 puntos en la primera cadena, y en cada vuelta sumá un punto a cada lado hasta llegar al ancho.",
-      "Para la trama usá punto alto o medio punto alto en hileras. Si lo querés calado, punto V o abanico.",
+      "Para la trama usá punto vareta o medio punto vareta en hileras. Si lo querés calado, punto V o abanico.",
       "Verificá el largo con la prenda puesta antes de coser.",
     ],
   },
@@ -121,7 +121,7 @@ export const GUIAS: Guia[] = [
     pasos: [
       "Tejé la blusa en una sola pieza empezando por una esquina con aumentos (esquina a esquina) y después disminuí del otro lado.",
       "Si trabajan entre dos, cada una teje una mitad y se unen por la línea diagonal con una costura plana o con punto bajo.",
-      "Elegí un punto que se vea bien cruzado en diagonal, como punto alto o el esquina a esquina.",
+      "Elegí un punto que se vea bien cruzado en diagonal, como punto vareta o el esquina a esquina.",
     ],
     puntos: [{ id: "corner_to_corner", nombre: "Esquina a esquina (C2C)" }],
   },

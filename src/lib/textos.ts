@@ -7,7 +7,7 @@ export const IDIOMAS: { id: Idioma; corto: string; nombre: string }[] = [
 ];
 
 const es = {
-  nav: { inicio: "Inicio", puntos: "Puntos", revista: "Revista", crear: "Crear prenda", herramientas: "Herramientas", videos: "Videos", luna: "Luna IA", idioma: "Idioma" },
+  nav: { inicio: "Inicio", puntos: "Puntos", revista: "Revista", crear: "Crear prenda", herramientas: "Herramientas", videos: "Videos", modelos: "Modelos", luna: "Luna IA", idioma: "Idioma" },
   inicio: {
     bienvenida: "BIENVENIDA",
     titulo: "Teje con calma, crea con brillo",
@@ -89,7 +89,7 @@ const es = {
       agujasTitulo: "Tabla de agujas de crochet",
       mm: "Milímetros",
       us: "Medida USA",
-      aviso: "Cuidado: un patrón británico llama “punto alto” a lo que en Estados Unidos es “punto bajo”. Fijate siempre de qué país es el patrón.",
+      aviso: "Cuidado: un patrón británico llama “punto vareta” a lo que en Estados Unidos es “punto bajo”. Fijate siempre de qué país es el patrón.",
       columnas: { es: "Español", en: "English (US)", uk: "English (UK)", pt: "Português" },
     },
   },
@@ -98,7 +98,7 @@ const es = {
 type Dic = typeof es;
 
 const en: Dic = {
-  nav: { inicio: "Home", puntos: "Stitches", revista: "Magazines", crear: "Design", herramientas: "Tools", videos: "Videos", luna: "Luna AI", idioma: "Language" },
+  nav: { inicio: "Home", puntos: "Stitches", revista: "Magazines", crear: "Design", herramientas: "Tools", videos: "Videos", modelos: "Models", luna: "Luna AI", idioma: "Language" },
   inicio: {
     bienvenida: "WELCOME",
     titulo: "Crochet calmly, create brightly",
@@ -187,7 +187,7 @@ const en: Dic = {
 };
 
 const pt: Dic = {
-  nav: { inicio: "Início", puntos: "Pontos", revista: "Revistas", crear: "Criar peça", herramientas: "Ferramentas", videos: "Vídeos", luna: "Luna IA", idioma: "Idioma" },
+  nav: { inicio: "Início", puntos: "Pontos", revista: "Revistas", crear: "Criar peça", herramientas: "Ferramentas", videos: "Vídeos", modelos: "Modelos", luna: "Luna IA", idioma: "Idioma" },
   inicio: {
     bienvenida: "BEM-VINDA",
     titulo: "Crochê com calma, crie com brilho",

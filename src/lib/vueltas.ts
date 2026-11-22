@@ -29,15 +29,15 @@ export const ABREVIATURAS: { abbr: string; singular: string; plural: string }[] 
   { abbr: "cad", singular: "cadeneta", plural: "cadenetas" },
   { abbr: "pr", singular: "punto raso", plural: "puntos rasos" },
   { abbr: "pb", singular: "punto bajo", plural: "puntos bajos" },
-  { abbr: "mpa", singular: "medio punto alto", plural: "medios puntos altos" },
-  { abbr: "pa", singular: "punto alto", plural: "puntos altos" },
-  { abbr: "pad", singular: "punto alto doble", plural: "puntos altos dobles" },
-  { abbr: "pat", singular: "punto alto triple", plural: "puntos altos triples" },
-  { abbr: "pac", singular: "punto alto cuádruple", plural: "puntos altos cuádruples" },
-  { abbr: "pa rel ad", singular: "punto alto en relieve por delante", plural: "puntos altos en relieve por delante" },
-  { abbr: "pa rel at", singular: "punto alto en relieve por detrás", plural: "puntos altos en relieve por detrás" },
-  { abbr: "pad rel ad", singular: "punto alto doble en relieve por delante", plural: "puntos altos dobles en relieve por delante" },
-  { abbr: "pad rel at", singular: "punto alto doble en relieve por detrás", plural: "puntos altos dobles en relieve por detrás" },
+  { abbr: "mpa", singular: "medio punto vareta", plural: "medios puntos vareta" },
+  { abbr: "pa", singular: "punto vareta", plural: "puntos vareta" },
+  { abbr: "pad", singular: "punto vareta doble", plural: "puntos vareta dobles" },
+  { abbr: "pat", singular: "punto vareta triple", plural: "puntos vareta triples" },
+  { abbr: "pac", singular: "punto vareta cuádruple", plural: "puntos vareta cuádruples" },
+  { abbr: "pa rel ad", singular: "punto vareta en relieve por delante", plural: "puntos vareta en relieve por delante" },
+  { abbr: "pa rel at", singular: "punto vareta en relieve por detrás", plural: "puntos vareta en relieve por detrás" },
+  { abbr: "pad rel ad", singular: "punto vareta doble en relieve por delante", plural: "puntos vareta dobles en relieve por delante" },
+  { abbr: "pad rel at", singular: "punto vareta doble en relieve por detrás", plural: "puntos vareta dobles en relieve por detrás" },
   { abbr: "aum", singular: "aumento (2 puntos en el mismo punto)", plural: "aumentos (2 puntos en el mismo punto)" },
   { abbr: "dism", singular: "disminución (2 puntos cerrados juntos)", plural: "disminuciones (2 puntos cerrados juntos)" },
   { abbr: "ht", singular: "hebra trasera", plural: "hebras traseras" },
@@ -50,7 +50,7 @@ const FIN = "(?![\\p{L}])";
 // Más largas primero para que "pa rel ad" gane a "pa".
 const ORDENADAS = [...ABREVIATURAS].sort((a, b) => b.abbr.length - a.abbr.length);
 
-/** Convierte "5 pa en el 1.er pb" en "5 puntos altos en el 1.er punto bajo". */
+/** Convierte "5 pa en el 1.er pb" en "5 puntos vareta en el 1.er punto bajo". */
 export function expandir(receta: string): string {
   let t = receta;
 
@@ -66,7 +66,7 @@ export function expandir(receta: string): string {
 
   for (const { abbr, singular, plural } of ORDENADAS) {
     const base = abbr.replace(/ /g, "\\s+");
-    // Con cantidad: "5 pa" -> "5 puntos altos"
+    // Con cantidad: "5 pa" -> "5 puntos vareta"
     t = t.replace(new RegExp(`${LETRA}(\\d+)\\s*${base}${FIN}`, "gu"), (_, n) => `${n} ${n === "1" ? singular : plural}`);
     // Suelta: "pb en la 2.ª cad" -> "punto bajo en la 2.ª cadeneta"
     t = t.replace(new RegExp(`${LETRA}${base}${FIN}`, "gu"), singular);

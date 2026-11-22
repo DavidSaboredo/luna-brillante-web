@@ -42,7 +42,7 @@ interface Motivo {
   el: Elemento[];
 }
 
-/** Vareta (o punto alto): poste con la lazada cruzada y las dos hebras de arriba. */
+/** Vareta (o punto vareta): poste con la lazada cruzada y las dos hebras de arriba. */
 function vareta(el: Elemento[], x0: number, y0: number, x1: number, y1: number, w: number, cabeza = true) {
   el.push({ t: "hebra", p: [[x0, y0], [x1, y1]], w });
   const L = Math.hypot(x1 - x0, y1 - y0);

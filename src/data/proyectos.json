@@ -30,7 +30,7 @@
       "puntosUsados": [
         { "texto": "Cadeneta (cad)", "punto": "chain" },
         { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
-        { "texto": "Punto alto o vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Punto vareta o vareta (pa)", "punto": "double_crochet" },
         { "texto": "Punto fantasía", "punto": null },
         { "texto": "Piña, según diagrama", "punto": "pineapple_lace" },
         { "texto": "Abanico", "punto": "fan_stitch" }
@@ -84,7 +84,7 @@
       "nivelNum": 2,
       "categoria": "Prenda",
       "talles": ["S", "M", "L", "XL"],
-      "descripcion": "Suéter en punto alto con flores aplicadas. Cómodo, versátil y fácil de tejer, ideal para cualquier ocasión.",
+      "descripcion": "Suéter en punto vareta con flores aplicadas. Cómodo, versátil y fácil de tejer, ideal para cualquier ocasión.",
       "portada": "/revista/sueter-romantico.webp",
       "imagenes": [
         { "src": "/revista/sueter-flores.webp", "alt": "Diagramas de la flor grande y la flor chica", "pie": "Flor grande (8-9 cm) y flor chica (5-6 cm)" }
@@ -98,7 +98,7 @@
       ],
       "puntosUsados": [
         { "texto": "Cadeneta (cad)", "punto": "chain" },
-        { "texto": "Punto alto o vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Punto vareta o vareta (pa)", "punto": "double_crochet" },
         { "texto": "Punto enano o raso (pr)", "punto": "slip_stitch" },
         { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
         { "texto": "Anillo mágico", "punto": "magic_ring" },
@@ -111,11 +111,11 @@
         "XL · busto 116 cm · largo total 60 cm · manga 59 cm"
       ],
       "explicacion": [
-        "Se teje en punto alto, en filas de ida y vuelta, con las piezas por separado: delantero, espalda y mangas."
+        "Se teje en punto vareta, en filas de ida y vuelta, con las piezas por separado: delantero, espalda y mangas."
       ],
       "puntoFantasia": {
-        "titulo": "Punto alto en filas (el punto del suéter)",
-        "texto": "El ancho lo da la cantidad de puntos que elijas. Se teje de ida y vuelta. La revista no indica la cadena base: la fila 1 sigue la regla habitual del punto alto (puntos + 2 cadenetas).",
+        "titulo": "Punto vareta en filas (el punto del suéter)",
+        "texto": "El ancho lo da la cantidad de puntos que elijas. Se teje de ida y vuelta. La revista no indica la cadena base: la fila 1 sigue la regla habitual del punto vareta (puntos + 2 cadenetas).",
         "filas": [
           { "t": "Cadena base", "r": "Cad de la cantidad de puntos que necesites + 2." },
           { "t": "Fila 1", "r": "1 pa en la 4.ª cad desde la aguja y 1 pa en cada cad." },
@@ -146,9 +146,9 @@
         }
       ],
       "terminaciones": [
-        "Tejer delantero, espalda y mangas por separado en punto alto.",
+        "Tejer delantero, espalda y mangas por separado en punto vareta.",
         "Coser los hombros.",
-        "Levantar puntos alrededor del escote y tejer 2 o 3 filas en punto alto o bajo.",
+        "Levantar puntos alrededor del escote y tejer 2 o 3 filas en punto vareta o bajo.",
         "Coser las mangas y los costados.",
         "Tejer las flores según los diagramas.",
         "Distribuir las flores sobre la prenda, sujetarlas con alfileres y coserlas."
@@ -168,7 +168,7 @@
       "nivelNum": 3,
       "categoria": "Accesorio",
       "talles": [],
-      "descripcion": "Bolso hecho con motivos florales unidos y un borde de punto alto. Amplio, resistente y de diseño atemporal.",
+      "descripcion": "Bolso hecho con motivos florales unidos y un borde de punto vareta. Amplio, resistente y de diseño atemporal.",
       "portada": "/revista/bolso-bolsillo-natural.webp",
       "imagenes": [
         { "src": "/revista/bolso-motivo.webp", "alt": "Diagrama del motivo floral y del cuadrado completo", "pie": "Motivo floral y cuadrado completo" }
@@ -185,7 +185,7 @@
         { "texto": "Cadeneta (cad)", "punto": "chain" },
         { "texto": "Punto enano o raso (pr)", "punto": "slip_stitch" },
         { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
-        { "texto": "Punto alto o vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Punto vareta o vareta (pa)", "punto": "double_crochet" },
         { "texto": "Motivo floral, según diagrama", "punto": null },
         { "texto": "Unión de motivos", "punto": null }
       ],
@@ -207,7 +207,7 @@
       },
       "terminaciones": [
         "Unir los motivos con aguja lanera y el mismo hilo, con pb o puntada invisible por el revés, tomando solo las hebras traseras para que quede prolijo.",
-        "Con todos los motivos unidos, tejer 4 a 5 vueltas de punto alto alrededor de todo el borde superior.",
+        "Con todos los motivos unidos, tejer 4 a 5 vueltas de punto vareta alrededor de todo el borde superior.",
         "En las esquinas, tejer 2 puntos en el mismo punto para que acompañe la forma.",
         "Cerrar con punto raso.",
         "Fijar las asas con remaches o coserlas firme. Para más resistencia, agregar un forro de tela con bolsillo interior. Opcional: cierre magnético o botón."
@@ -242,9 +242,9 @@
         { "texto": "Cadeneta (cad)", "punto": "chain" },
         { "texto": "Punto raso (pr)", "punto": "slip_stitch" },
         { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
-        { "texto": "Medio punto alto (mpa)", "punto": "half_double_crochet" },
-        { "texto": "Punto alto (pa)", "punto": "double_crochet" },
-        { "texto": "Punto alto doble (pad)", "punto": "treble_crochet" },
+        { "texto": "Medio punto vareta (mpa)", "punto": "half_double_crochet" },
+        { "texto": "Punto vareta (pa)", "punto": "double_crochet" },
+        { "texto": "Punto vareta doble (pad)", "punto": "treble_crochet" },
         { "texto": "Abanico de 3 pa en el mismo punto", "punto": "fan_stitch" },
         { "texto": "Arco de cadenetas", "punto": "chain_arc_mesh" }
       ],
@@ -367,8 +367,8 @@
         { "texto": "Cadeneta (cad)", "punto": "chain" },
         { "texto": "Punto raso (pr)", "punto": "slip_stitch" },
         { "texto": "Punto bajo (pb)", "punto": "single_crochet" },
-        { "texto": "Medio punto alto (mpa)", "punto": "half_double_crochet" },
-        { "texto": "Punto alto (pa)", "punto": "double_crochet" },
+        { "texto": "Medio punto vareta (mpa)", "punto": "half_double_crochet" },
+        { "texto": "Punto vareta (pa)", "punto": "double_crochet" },
         { "texto": "Anillo mágico", "punto": "magic_ring" },
         { "texto": "Abanico de 5 pa en el mismo punto", "punto": "fan_stitch" },
         { "texto": "Picot", "punto": "picot" }
@@ -428,10 +428,10 @@
       { "simbolo": "○", "nombre": "Cadeneta", "abreviatura": "cad", "punto": "chain" },
       { "simbolo": "●", "nombre": "Punto raso o enano", "abreviatura": "pr", "punto": "slip_stitch" },
       { "simbolo": "+", "nombre": "Punto bajo", "abreviatura": "pb", "punto": "single_crochet" },
-      { "simbolo": "T", "nombre": "Media vareta (medio punto alto)", "abreviatura": "mpa", "punto": "half_double_crochet" },
-      { "simbolo": "Ƭ", "nombre": "Vareta (punto alto)", "abreviatura": "pa", "punto": "double_crochet" },
-      { "simbolo": "‡", "nombre": "Vareta doble (punto alto doble)", "abreviatura": "pad", "punto": "treble_crochet" },
-      { "simbolo": "Ⅲ", "nombre": "Vareta triple (punto alto triple)", "abreviatura": "pat", "punto": "double_treble_crochet" },
+      { "simbolo": "T", "nombre": "Media vareta (medio punto vareta)", "abreviatura": "mpa", "punto": "half_double_crochet" },
+      { "simbolo": "Ƭ", "nombre": "Vareta (punto vareta)", "abreviatura": "pa", "punto": "double_crochet" },
+      { "simbolo": "‡", "nombre": "Vareta doble (punto vareta doble)", "abreviatura": "pad", "punto": "treble_crochet" },
+      { "simbolo": "Ⅲ", "nombre": "Vareta triple (punto vareta triple)", "abreviatura": "pat", "punto": "double_treble_crochet" },
       { "simbolo": "◯", "nombre": "Anillo mágico", "abreviatura": "AM", "punto": "magic_ring" },
       { "simbolo": "⬮", "nombre": "Picot (3 cad y 1 pr en la 1.ª cad)", "abreviatura": "pic", "punto": "picot" },
       { "simbolo": "⌒", "nombre": "Espacio o arco de cadenetas", "abreviatura": "—", "punto": "chain_arc_mesh" }

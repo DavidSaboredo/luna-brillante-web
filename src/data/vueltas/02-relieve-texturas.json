@@ -84,7 +84,7 @@
     ]
   },
   "crossed_double_crochet": {
-    "intro": "Dos puntos altos que se cruzan en forma de «X».",
+    "intro": "Dos puntos vareta que se cruzan en forma de «X».",
     "vueltas": [
       { "t": "Paso 1", "r": "Saltar 1 · 1 pa en el siguiente", "d": "Salteá un punto y tejé 1 pa en el siguiente.", "n": "1 pa corrido." },
       { "t": "Paso 2", "r": "1 pa en el punto saltado, por delante", "d": "Volvé al punto saltado y tejé 1 pa en él, pasando la aguja por delante del pa que acabás de hacer (por detrás si el patrón lo pide).", "n": "Cruz armada." },
@@ -110,7 +110,7 @@
     ]
   },
   "suzette_stitch": {
-    "intro": "Pares de punto bajo y punto alto en el mismo punto, saltando uno: queda un tejido liviano de textura fina.",
+    "intro": "Pares de punto bajo y punto vareta en el mismo punto, saltando uno: queda un tejido liviano de textura fina.",
     "vueltas": [
       { "t": "Cadena base", "r": "cad × par", "d": "Cantidad par de cadenetas.", "n": "Par de cad." },
       { "t": "Fila 1", "r": "(pb, pa) en la 2.ª cad, *saltar 1, (pb, pa) en la siguiente*; terminá con pb", "d": "En la misma cadeneta tejé 1 pb y 1 pa. Salteá una cad y repetí. Al final, 1 pb solo.", "n": "Pares (pb, pa)." },
@@ -208,7 +208,7 @@
     ]
   },
   "cluster_stitch": {
-    "intro": "Varios puntos altos incompletos que convergen en la punta: forma triángulos y puntas.",
+    "intro": "Varios puntos vareta incompletos que convergen en la punta: forma triángulos y puntas.",
     "vueltas": [
       { "t": "Paso 1", "r": "*Hilo, insertar, lazada, hilo y pasar por 2*", "d": "En el punto indicado, hacé un pa dejando la última lazada sin cerrar.", "n": "2 lazadas." },
       { "t": "Paso 2", "r": "Repetir 3 veces (4 lazadas)", "d": "Repetí en el mismo punto o en puntos distintos según el patrón.", "n": "4 lazadas." },

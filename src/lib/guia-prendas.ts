@@ -18,7 +18,7 @@ export const BASICOS: { termino: string; explicacion: string }[] = [
   { termino: "Cadeneta", explicacion: "Es la base de todo: una cadena de lazadas. Se cuenta cada «V» del frente. Con ella armás la primera fila." },
   { termino: "Punto raso", explicacion: "Un punto muy bajito que sirve para unir o cerrar una vuelta. Casi no se ve." },
   { termino: "Punto bajo", explicacion: "El punto más firme y fácil. Queda compacto, ideal para bolsos, bordes y puños." },
-  { termino: "Punto alto", explicacion: "Más alto y suelto que el bajo. Teje rápido y cae mejor: ideal para prendas." },
+  { termino: "Punto vareta", explicacion: "Más alto y suelto que el bajo. Teje rápido y cae mejor: ideal para prendas." },
   { termino: "Vuelta e hilera", explicacion: "Vuelta: cuando tejés en redondo y volvés al principio. Hilera: cuando tejés de ida y de vuelta, girando la labor." },
   { termino: "Muestra", explicacion: "Un cuadradito de prueba de 10 x 10 cm. Contás cuántos puntos y cuántas vueltas entran. Con eso la guía te calcula todo para que la prenda te quede del tamaño justo." },
   { termino: "Marcador", explicacion: "Un hilo de color o un broche que ponés en un punto para no perder dónde empieza la vuelta o dónde aumentás." },
@@ -140,7 +140,7 @@ export const GUIA_PRENDAS: Record<string, GuiaDePrenda> = {
     pasos: [
       { titulo: "Tejé la muestra", texto: "Es el paso más importante: de eso depende que el suéter te quede bien. Hacé el cuadrado de 10 x 10 cm y contá puntos y vueltas." },
       { titulo: "Elegí cómo tejerlo", texto: "Podés tejerlo en piezas (espalda, delantero y mangas) o desde el cuello hacia abajo, sin costuras. El de abajo, «Tejido desde el cuello», te da el cálculo paso a paso." },
-      { titulo: "Cuerpo", texto: "Tejé el ancho que te indica la tabla hasta llegar al largo elegido. Un punto simple (alto o medio punto alto) es el más fácil para empezar." },
+      { titulo: "Cuerpo", texto: "Tejé el ancho que te indica la tabla hasta llegar al largo elegido. Un punto simple (alto o medio punto vareta) es el más fácil para empezar." },
       { titulo: "Mangas", texto: "Empezá por el puño con la cantidad de puntos que dice la tabla y andá aumentando un punto a cada lado cada pocas vueltas hasta llegar al ancho del brazo." },
       { titulo: "Unir las partes", texto: "Cosé los hombros, después las mangas a la sisa y por último los costados. Usá la aguja lanera y puntadas chiquitas." },
       { titulo: "Cuello y puños", texto: "Levantá puntos alrededor del cuello y tejé 4 o 5 vueltas en punto bajo en hebra trasera: queda elástico y firme." },
@@ -295,7 +295,7 @@ export const GUIA_PRENDAS: Record<string, GuiaDePrenda> = {
     pasos: [
       { titulo: "Base", texto: "Tejé la base en óvalo o rectángulo con punto bajo bien apretado, para que se mantenga firme." },
       { titulo: "Cuerpo", texto: "Seguí en redondo hacia arriba con punto bajo, sin aumentos, hasta la altura deseada." },
-      { titulo: "Borde", texto: "Dale 4 o 5 vueltas de punto alto en el borde superior." },
+      { titulo: "Borde", texto: "Dale 4 o 5 vueltas de punto vareta en el borde superior." },
       { titulo: "Asas", texto: "Tejé dos tiras o usá asas de cuero. Cosélas bien firmes, por dentro y por fuera." },
     ],
     cuidado: ["Usá punto bajo apretado: es más resistente al peso.", "Un forro de tela lo hace más durable."],

@@ -51,7 +51,7 @@
     ]
   },
   "double_crochet": {
-    "intro": "El punto alto es la base de calados, mantas y granny squares. Crece rápido porque es alto.",
+    "intro": "El punto vareta es la base de calados, mantas y granny squares. Crece rápido porque es alto.",
     "vueltas": [
       { "t": "Cadena base", "r": "cad × N + 2", "d": "Armá los puntos que querés y sumá 2 cadenetas de más.", "n": "N + 2 cad." },
       { "t": "Fila 1", "r": "1 pa en la 4.ª cad desde la aguja, 1 pa en cada cad", "d": "Echá hilo, metí la aguja en la 4.ª cad, echá hilo y sacá lazada (3 lazadas). Echá hilo y pasá por 2 lazadas (quedan 2). Echá hilo y pasá por las 2 restantes. Eso es 1 pa. Seguí con 1 pa en cada cadeneta.", "n": "N pa (las 3 cad salteadas cuentan como el 1.er pa)." },
@@ -60,7 +60,7 @@
     ]
   },
   "treble_crochet": {
-    "intro": "Punto alto doble: más alto todavía que el pa, para calados abiertos y de caída suave.",
+    "intro": "Punto vareta doble: más alto todavía que el pa, para calados abiertos y de caída suave.",
     "vueltas": [
       { "t": "Cadena base", "r": "cad × N + 3", "d": "Los puntos que necesites más 3 cadenetas.", "n": "N + 3 cad." },
       { "t": "Fila 1", "r": "1 pad en la 5.ª cad desde la aguja, 1 pad en cada cad", "d": "Echá hilo 2 veces, metí la aguja en la 5.ª cad, echá hilo y sacá lazada (4 lazadas). *Echá hilo y pasá por 2 lazadas*, 3 veces, hasta que quede 1 sola. Seguí con 1 pad en cada cadeneta.", "n": "N pad (las 4 cad salteadas cuentan como el 1.er pad)." },
@@ -69,7 +69,7 @@
     ]
   },
   "double_treble_crochet": {
-    "intro": "Punto alto triple: muy alto, se usa en calados grandes y para estirar bucles.",
+    "intro": "Punto vareta triple: muy alto, se usa en calados grandes y para estirar bucles.",
     "vueltas": [
       { "t": "Cadena base", "r": "cad × N + 4", "d": "Los puntos que necesites más 4 cadenetas.", "n": "N + 4 cad." },
       { "t": "Fila 1", "r": "1 pat en la 6.ª cad desde la aguja, 1 pat en cada cad", "d": "Echá hilo 3 veces, metí la aguja en la 6.ª cad, echá hilo y sacá lazada (5 lazadas). *Echá hilo y pasá por 2*, 4 veces, hasta que quede 1.", "n": "N pat." },
@@ -77,7 +77,7 @@
     ]
   },
   "triple_treble_crochet": {
-    "intro": "Punto alto cuádruple: el más alto de los básicos. Lo vas a ver en motivos especiales y en calados muy aireados.",
+    "intro": "Punto vareta cuádruple: el más alto de los básicos. Lo vas a ver en motivos especiales y en calados muy aireados.",
     "vueltas": [
       { "t": "Cadena base", "r": "cad × N + 5", "d": "Los puntos que necesites más 5 cadenetas.", "n": "N + 5 cad." },
       { "t": "Fila 1", "r": "1 pac en la 7.ª cad desde la aguja, 1 pac en cada cad", "d": "Echá hilo 4 veces, metí la aguja en la 7.ª cad, echá hilo y sacá lazada (6 lazadas). *Echá hilo y pasá por 2*, 5 veces.", "n": "N pac." },
@@ -94,7 +94,7 @@
     ]
   },
   "foundation_double_crochet": {
-    "intro": "Igual que el pbsc pero en punto alto: base y primera fila juntas, bien elásticas.",
+    "intro": "Igual que el pbsc pero en punto vareta: base y primera fila juntas, bien elásticas.",
     "vueltas": [
       { "t": "El primer punto", "r": "3 cad · echar hilo, insertar en la 3.ª cad", "d": "Hacé 3 cad, echá hilo y metí la aguja en la 3.ª cad desde la aguja. Echá hilo y sacá lazada (3 lazadas).", "n": "3 lazadas en la aguja." },
       { "t": "La «cadeneta» del punto", "r": "Hilo y pasar por 1 lazada", "d": "Echá hilo y pasá por 1 lazada: esa es la cadeneta base de este punto.", "n": "3 lazadas en la aguja." },
@@ -156,14 +156,14 @@
     ]
   },
   "dc_increase": {
-    "intro": "Agrega un punto alto en la fila.",
+    "intro": "Agrega un punto vareta en la fila.",
     "vueltas": [
       { "t": "El aumento", "r": "aum pa = 2 pa en el mismo punto", "d": "Tejé 1 pa en el punto. Sin avanzar, tejé un segundo pa en ese mismo punto.", "n": "De 1 punto salen 2." },
       { "t": "Ejemplo · fila de 4 pa", "r": "1 pa, aum, 1 pa, aum", "d": "Así la fila crece de 4 a 6 puntos.", "n": "6 pa." }
     ]
   },
   "dc2tog": {
-    "intro": "Dos puntos altos cerrados juntos en la punta.",
+    "intro": "Dos puntos vareta cerrados juntos en la punta.",
     "vueltas": [
       { "t": "1.er pa a medias", "r": "Hilo · insertar · lazada · hilo y pasar por 2", "d": "Echá hilo, metí la aguja en el punto, sacá lazada y pasá por 2 lazadas. No cierres el último paso.", "n": "2 lazadas." },
       { "t": "2.º pa a medias", "r": "Hilo · insertar en el siguiente · lazada · hilo y pasar por 2", "d": "Repetí en el punto siguiente.", "n": "3 lazadas." },
@@ -171,7 +171,7 @@
     ]
   },
   "dc3tog": {
-    "intro": "Tres puntos altos cerrados juntos: una disminución más fuerte.",
+    "intro": "Tres puntos vareta cerrados juntos: una disminución más fuerte.",
     "vueltas": [
       { "t": "Tres pa a medias", "r": "*Hilo · insertar · lazada · hilo y pasar por 2* × 3", "d": "En cada uno de los 3 puntos siguientes, hacé un pa dejando el último paso sin cerrar.", "n": "4 lazadas." },
       { "t": "Cerrar", "r": "Hilo y pasar por las 4", "d": "Echá hilo y pasá por las 4 lazadas a la vez.", "n": "3 puntos convertidos en 1." }

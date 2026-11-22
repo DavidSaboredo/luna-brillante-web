@@ -194,25 +194,25 @@
     {
       "token": "hdc",
       "symbol": "T",
-      "es": "medio punto alto",
+      "es": "medio punto vareta",
       "en": "half double crochet"
     },
     {
       "token": "dc",
       "symbol": "T con 1 barra",
-      "es": "punto alto",
+      "es": "punto vareta",
       "en": "double crochet"
     },
     {
       "token": "tr",
       "symbol": "T con 2 barras",
-      "es": "punto alto doble",
+      "es": "punto vareta doble",
       "en": "treble crochet"
     },
     {
       "token": "dtr",
       "symbol": "T con 3 barras",
-      "es": "punto alto triple",
+      "es": "punto vareta triple",
       "en": "double treble"
     },
     {
@@ -822,13 +822,13 @@
     {
       "id": "half_double_crochet",
       "name": {
-        "es": "Medio punto alto",
+        "es": "Medio punto vareta",
         "en": "Half double crochet"
       },
       "aka": {
         "es": [
           "media vareta",
-          "medio punto alto"
+          "medio punto vareta"
         ],
         "en": []
       },
@@ -910,7 +910,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Medio punto alto",
+          "es": "Ilustración de muestra tejida: Medio punto vareta",
           "en": "Illustrated swatch: Half double crochet"
         }
       },
@@ -925,7 +925,7 @@
           "license": null,
           "license_status": "verify_before_publishing",
           "caption": {
-            "es": "Símbolo de medio punto alto",
+            "es": "Símbolo de medio punto vareta",
             "en": "Half double crochet symbol"
           }
         }
@@ -935,7 +935,7 @@
     {
       "id": "double_crochet",
       "name": {
-        "es": "Punto alto",
+        "es": "Punto vareta",
         "en": "Double crochet"
       },
       "aka": {
@@ -959,7 +959,7 @@
       "worked_in": "rows",
       "repeat": null,
       "description": {
-        "es": "Punto alto y flexible, base de muchísimos calados. En terminología británica es 'treble'.",
+        "es": "Punto vareta y flexible, base de muchísimos calados. En terminología británica es 'treble'.",
         "en": "Tall, flexible stitch at the heart of countless lace patterns. Called 'treble' in UK terms."
       },
       "steps": {
@@ -1025,7 +1025,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto",
+          "es": "Ilustración de muestra tejida: Punto vareta",
           "en": "Illustrated swatch: Double crochet"
         }
       },
@@ -1040,7 +1040,7 @@
           "license": null,
           "license_status": "verify_before_publishing",
           "caption": {
-            "es": "Símbolo de punto alto",
+            "es": "Símbolo de punto vareta",
             "en": "Double crochet symbol"
           }
         }
@@ -1050,7 +1050,7 @@
     {
       "id": "treble_crochet",
       "name": {
-        "es": "Punto alto doble",
+        "es": "Punto vareta doble",
         "en": "Treble crochet"
       },
       "aka": {
@@ -1076,7 +1076,7 @@
       "worked_in": "rows",
       "repeat": null,
       "description": {
-        "es": "Punto alto con dos lazadas previas; produce un tejido muy abierto.",
+        "es": "Punto vareta con dos lazadas previas; produce un tejido muy abierto.",
         "en": "Tall stitch with two initial yarn overs; produces a very open fabric."
       },
       "steps": {
@@ -1140,7 +1140,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto doble",
+          "es": "Ilustración de muestra tejida: Punto vareta doble",
           "en": "Illustrated swatch: Treble crochet"
         }
       },
@@ -1155,7 +1155,7 @@
           "license": null,
           "license_status": "verify_before_publishing",
           "caption": {
-            "es": "Símbolo de punto alto doble",
+            "es": "Símbolo de punto vareta doble",
             "en": "Treble crochet symbol"
           }
         }
@@ -1165,7 +1165,7 @@
     {
       "id": "double_treble_crochet",
       "name": {
-        "es": "Punto alto triple",
+        "es": "Punto vareta triple",
         "en": "Double treble crochet"
       },
       "aka": {
@@ -1248,7 +1248,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto triple",
+          "es": "Ilustración de muestra tejida: Punto vareta triple",
           "en": "Illustrated swatch: Double treble crochet"
         }
       },
@@ -1263,7 +1263,7 @@
           "license": null,
           "license_status": "verify_before_publishing",
           "caption": {
-            "es": "Símbolo de punto alto triple",
+            "es": "Símbolo de punto vareta triple",
             "en": "Double treble symbol"
           }
         }
@@ -1273,7 +1273,7 @@
     {
       "id": "triple_treble_crochet",
       "name": {
-        "es": "Punto alto cuádruple",
+        "es": "Punto vareta cuádruple",
         "en": "Triple treble crochet"
       },
       "aka": {
@@ -1351,7 +1351,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto cuádruple",
+          "es": "Ilustración de muestra tejida: Punto vareta cuádruple",
           "en": "Illustrated swatch: Triple treble crochet"
         }
       },
@@ -1366,7 +1366,7 @@
           "license": null,
           "license_status": "verify_before_publishing",
           "caption": {
-            "es": "Símbolo de punto alto cuádruple",
+            "es": "Símbolo de punto vareta cuádruple",
             "en": "Triple treble symbol"
           }
         }
@@ -1510,7 +1510,7 @@
     {
       "id": "foundation_double_crochet",
       "name": {
-        "es": "Punto alto sin cadeneta base",
+        "es": "Punto vareta sin cadeneta base",
         "en": "Foundation double crochet"
       },
       "aka": {
@@ -1531,7 +1531,7 @@
       "worked_in": "rows",
       "repeat": null,
       "description": {
-        "es": "Igual que el pb sin cadeneta, pero con puntos altos.",
+        "es": "Igual que el pb sin cadeneta, pero con puntos vareta.",
         "en": "Same idea as foundation sc, but with double crochets."
       },
       "steps": {
@@ -1586,7 +1586,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto sin cadeneta base",
+          "es": "Ilustración de muestra tejida: Punto vareta sin cadeneta base",
           "en": "Illustrated swatch: Foundation double crochet"
         }
       },
@@ -2207,7 +2207,7 @@
     {
       "id": "dc_increase",
       "name": {
-        "es": "Aumento de punto alto",
+        "es": "Aumento de punto vareta",
         "en": "Double crochet increase"
       },
       "aka": {
@@ -2285,7 +2285,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Aumento de punto alto",
+          "es": "Ilustración de muestra tejida: Aumento de punto vareta",
           "en": "Illustrated swatch: Double crochet increase"
         }
       },
@@ -2310,7 +2310,7 @@
     {
       "id": "dc2tog",
       "name": {
-        "es": "Disminución de punto alto (2 juntos)",
+        "es": "Disminución de punto vareta (2 juntos)",
         "en": "Double crochet two together"
       },
       "aka": {
@@ -2389,7 +2389,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Disminución de punto alto (2 juntos)",
+          "es": "Ilustración de muestra tejida: Disminución de punto vareta (2 juntos)",
           "en": "Illustrated swatch: Double crochet two together"
         }
       },
@@ -2414,7 +2414,7 @@
     {
       "id": "dc3tog",
       "name": {
-        "es": "Disminución de 3 puntos altos",
+        "es": "Disminución de 3 puntos vareta",
         "en": "Double crochet three together"
       },
       "aka": {
@@ -2491,7 +2491,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Disminución de 3 puntos altos",
+          "es": "Ilustración de muestra tejida: Disminución de 3 puntos vareta",
           "en": "Illustrated swatch: Double crochet three together"
         }
       },
@@ -2888,7 +2888,7 @@
     {
       "id": "herringbone_half_double",
       "name": {
-        "es": "Medio punto alto espiga",
+        "es": "Medio punto vareta espiga",
         "en": "Herringbone half double crochet"
       },
       "aka": {
@@ -2964,7 +2964,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Medio punto alto espiga",
+          "es": "Ilustración de muestra tejida: Medio punto vareta espiga",
           "en": "Illustrated swatch: Herringbone half double crochet"
         }
       },
@@ -2974,7 +2974,7 @@
     {
       "id": "linked_double_crochet",
       "name": {
-        "es": "Punto alto enlazado",
+        "es": "Punto vareta enlazado",
         "en": "Linked double crochet"
       },
       "aka": {
@@ -3049,7 +3049,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto enlazado",
+          "es": "Ilustración de muestra tejida: Punto vareta enlazado",
           "en": "Illustrated swatch: Linked double crochet"
         }
       },
@@ -3455,7 +3455,7 @@
     {
       "id": "front_post_double_crochet",
       "name": {
-        "es": "Punto alto en relieve por delante",
+        "es": "Punto vareta en relieve por delante",
         "en": "Front post double crochet"
       },
       "aka": {
@@ -3538,7 +3538,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto en relieve por delante",
+          "es": "Ilustración de muestra tejida: Punto vareta en relieve por delante",
           "en": "Illustrated swatch: Front post double crochet"
         }
       },
@@ -3563,7 +3563,7 @@
     {
       "id": "back_post_double_crochet",
       "name": {
-        "es": "Punto alto en relieve por detrás",
+        "es": "Punto vareta en relieve por detrás",
         "en": "Back post double crochet"
       },
       "aka": {
@@ -3641,7 +3641,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto en relieve por detrás",
+          "es": "Ilustración de muestra tejida: Punto vareta en relieve por detrás",
           "en": "Illustrated swatch: Back post double crochet"
         }
       },
@@ -4099,7 +4099,7 @@
       "worked_in": "rows",
       "repeat": null,
       "description": {
-        "es": "Puntos altos dobles en relieve que se cruzan por delante para formar una trenza.",
+        "es": "Puntos vareta dobles en relieve que se cruzan por delante para formar una trenza.",
         "en": "Front post treble crochets crossed in front of each other to form a cable."
       },
       "steps": {
@@ -4265,7 +4265,7 @@
     {
       "id": "crossed_double_crochet",
       "name": {
-        "es": "Punto alto cruzado",
+        "es": "Punto vareta cruzado",
         "en": "Crossed double crochet"
       },
       "aka": {
@@ -4353,7 +4353,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto cruzado",
+          "es": "Ilustración de muestra tejida: Punto vareta cruzado",
           "en": "Illustrated swatch: Crossed double crochet"
         }
       },
@@ -5261,7 +5261,7 @@
     {
       "id": "dc_between_stitches",
       "name": {
-        "es": "Punto alto entre puntos",
+        "es": "Punto vareta entre puntos",
         "en": "Double crochet between stitches"
       },
       "aka": {
@@ -5342,7 +5342,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Punto alto entre puntos",
+          "es": "Ilustración de muestra tejida: Punto vareta entre puntos",
           "en": "Illustrated swatch: Double crochet between stitches"
         }
       },
@@ -5705,7 +5705,7 @@
     {
       "id": "cluster_stitch",
       "name": {
-        "es": "Racimo de puntos altos",
+        "es": "Racimo de puntos vareta",
         "en": "Cluster stitch"
       },
       "aka": {
@@ -5788,7 +5788,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Racimo de puntos altos",
+          "es": "Ilustración de muestra tejida: Racimo de puntos vareta",
           "en": "Illustrated swatch: Cluster stitch"
         }
       },
@@ -10143,7 +10143,7 @@
     {
       "id": "checkerboard_hdc",
       "name": {
-        "es": "Damero en medio punto alto",
+        "es": "Damero en medio punto vareta",
         "en": "Half double crochet checkerboard"
       },
       "aka": {
@@ -10175,7 +10175,7 @@
         }
       },
       "description": {
-        "es": "Cuadros de dos colores tejidos en medio punto alto, llevando por detrás el color que no se usa.",
+        "es": "Cuadros de dos colores tejidos en medio punto vareta, llevando por detrás el color que no se usa.",
         "en": "Two-color checks worked in half double crochet, carrying the unused color along the back."
       },
       "steps": {
@@ -10237,7 +10237,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Damero en medio punto alto",
+          "es": "Ilustración de muestra tejida: Damero en medio punto vareta",
           "en": "Illustrated swatch: Half double crochet checkerboard"
         }
       },
@@ -10279,7 +10279,7 @@
         }
       },
       "description": {
-        "es": "Filas de pa y de pb con puntos altos dobles en relieve que se corren de lugar y dibujan un zigzag sobre el tejido.",
+        "es": "Filas de pa y de pb con puntos vareta dobles en relieve que se corren de lugar y dibujan un zigzag sobre el tejido.",
         "en": "Rows of dc and sc with front post trebles that shift position to draw a zigzag across the fabric."
       },
       "steps": {
@@ -10387,7 +10387,7 @@
         }
       },
       "description": {
-        "es": "Abanicos apilados separados por columnas de puntos altos en relieve; tejido con textura y buena caída.",
+        "es": "Abanicos apilados separados por columnas de puntos vareta en relieve; tejido con textura y buena caída.",
         "en": "Stacked fans separated by columns of post stitches; textured fabric with good drape."
       },
       "steps": {
@@ -10500,7 +10500,7 @@
         }
       },
       "description": {
-        "es": "Malla de puntos altos y cadenetas por donde después se pasan hebras de otro color, como en un telar.",
+        "es": "Malla de puntos vareta y cadenetas por donde después se pasan hebras de otro color, como en un telar.",
         "en": "A mesh of double crochets and chains that is later woven with strands of another color, like on a loom."
       },
       "steps": {
@@ -10705,7 +10705,7 @@
         }
       },
       "description": {
-        "es": "Hojitas y uves de puntos altos en relieve, tejidas de un color sobre un fondo de otro; muy vistoso.",
+        "es": "Hojitas y uves de puntos vareta en relieve, tejidas de un color sobre un fondo de otro; muy vistoso.",
         "en": "Little leaves and V shapes of post stitches in one color over a background of another; very eye-catching."
       },
       "steps": {
@@ -10813,7 +10813,7 @@
         }
       },
       "description": {
-        "es": "Columnas de abanicos apilados unos sobre otros, separadas por un punto alto; textura abullonada.",
+        "es": "Columnas de abanicos apilados unos sobre otros, separadas por un punto vareta; textura abullonada.",
         "en": "Columns of fans stacked on top of each other, separated by a single double crochet; puffy texture."
       },
       "steps": {
@@ -10914,7 +10914,7 @@
         }
       },
       "description": {
-        "es": "Puntos V alternados con grupos de puntos altos sobre los que se cruzan dos varetas en relieve.",
+        "es": "Puntos V alternados con grupos de puntos vareta sobre los que se cruzan dos varetas en relieve.",
         "en": "V-stitches alternating with groups of double crochets crossed by two raised trebles."
       },
       "steps": {
@@ -11016,7 +11016,7 @@
         }
       },
       "description": {
-        "es": "Abanicos de 7 puntos altos que se alternan fila por medio, unidos por arcos de cadenetas.",
+        "es": "Abanicos de 7 puntos vareta que se alternan fila por medio, unidos por arcos de cadenetas.",
         "en": "7-dc fans that alternate every other row, joined by chain arches."
       },
       "steps": {
@@ -11120,7 +11120,7 @@
         }
       },
       "description": {
-        "es": "Racimos de 5 puntos altos cerrados arriba, como estrellitas, separados por filas de punto bajo.",
+        "es": "Racimos de 5 puntos vareta cerrados arriba, como estrellitas, separados por filas de punto bajo.",
         "en": "Clusters of 5 dc closed at the top, like little stars, separated by rows of single crochet."
       },
       "steps": {
@@ -11224,7 +11224,7 @@
         }
       },
       "description": {
-        "es": "Bloquecitos de 3 puntos altos apoyados sobre arcos de cadenetas; queda un tejido en cuadritos con caída.",
+        "es": "Bloquecitos de 3 puntos vareta apoyados sobre arcos de cadenetas; queda un tejido en cuadritos con caída.",
         "en": "Little blocks of 3 dc resting on chain arches; a drapey grid-like fabric."
       },
       "steps": {
@@ -11326,7 +11326,7 @@
         }
       },
       "description": {
-        "es": "Abanicos grandes de 9 puntos altos que se apoyan sobre puntos V, desplazados fila por medio.",
+        "es": "Abanicos grandes de 9 puntos vareta que se apoyan sobre puntos V, desplazados fila por medio.",
         "en": "Large 9-dc fans resting on V-stitches, offset every other row."
       },
       "steps": {
@@ -11534,7 +11534,7 @@
         }
       },
       "description": {
-        "es": "Columnas de 3 puntos altos separadas por cadenetas que se cruzan y forman rombos calados.",
+        "es": "Columnas de 3 puntos vareta separadas por cadenetas que se cruzan y forman rombos calados.",
         "en": "Columns of 3 dc separated by crossing chains that form open diamonds."
       },
       "steps": {
@@ -11741,7 +11741,7 @@
         }
       },
       "description": {
-        "es": "Puntos altos largos que atraviesan filas de punto bajo de otro color, formando rayas entrecortadas.",
+        "es": "Puntos vareta largos que atraviesan filas de punto bajo de otro color, formando rayas entrecortadas.",
         "en": "Long double crochets that cross over rows of single crochet in another color, forming broken stripes."
       },
       "steps": {
@@ -11846,7 +11846,7 @@
         }
       },
       "description": {
-        "es": "Bloques de puntos altos con ventanas atravesadas por cadenetas en cruz; las ventanas se desplazan cada dos filas.",
+        "es": "Bloques de puntos vareta con ventanas atravesadas por cadenetas en cruz; las ventanas se desplazan cada dos filas.",
         "en": "Blocks of double crochet with windows crossed by chains; the windows shift every two rows."
       },
       "steps": {
@@ -11952,7 +11952,7 @@
         }
       },
       "description": {
-        "es": "Red liviana de arcos de cadenetas con campanitas de puntos altos que se alternan fila por medio.",
+        "es": "Red liviana de arcos de cadenetas con campanitas de puntos vareta que se alternan fila por medio.",
         "en": "Light chain-arch mesh with little double crochet bells that alternate every other row."
       },
       "steps": {
@@ -12056,7 +12056,7 @@
         }
       },
       "description": {
-        "es": "Columnas verticales de abanicos separadas por una red de arcos con puntos altos; ideal para prendas.",
+        "es": "Columnas verticales de abanicos separadas por una red de arcos con puntos vareta; ideal para prendas.",
         "en": "Vertical columns of shells separated by a mesh of arches and double crochets; great for garments."
       },
       "steps": {
@@ -12161,7 +12161,7 @@
         }
       },
       "description": {
-        "es": "Grupos de 3 puntos altos inclinados dentro de arcos de cadenetas; calado rápido de tejer y con mucho movimiento.",
+        "es": "Grupos de 3 puntos vareta inclinados dentro de arcos de cadenetas; calado rápido de tejer y con mucho movimiento.",
         "en": "Groups of 3 slanted dc worked into chain arches; a quick lace with lots of movement."
       },
       "steps": {
@@ -12264,7 +12264,7 @@
         }
       },
       "description": {
-        "es": "Conchas de 5 puntos altos unidas por arcos de cadenetas; cada fila de conchas queda entre las de abajo.",
+        "es": "Conchas de 5 puntos vareta unidas por arcos de cadenetas; cada fila de conchas queda entre las de abajo.",
         "en": "5-dc shells joined by chain arches; each row of shells sits between the ones below."
       },
       "steps": {
@@ -12582,7 +12582,7 @@
         }
       },
       "description": {
-        "es": "Bloquecitos de 4 puntos altos unidos por arcos de cadenetas; cada fila de bloques queda corrida medio motivo.",
+        "es": "Bloquecitos de 4 puntos vareta unidos por arcos de cadenetas; cada fila de bloques queda corrida medio motivo.",
         "en": "Small 4-dc blocks joined by chain arches; each row of blocks is shifted half a motif."
       },
       "steps": {
@@ -12687,7 +12687,7 @@
         }
       },
       "description": {
-        "es": "Paneles de 5 puntos altos que enmarcan un abanico calado y, más arriba, un rombo de cadenetas.",
+        "es": "Paneles de 5 puntos vareta que enmarcan un abanico calado y, más arriba, un rombo de cadenetas.",
         "en": "5-dc panels framing an open fan and, above it, a chain diamond."
       },
       "steps": {
@@ -13002,7 +13002,7 @@
         }
       },
       "description": {
-        "es": "Abanicos de 9 puntos altos alternados con franjas de red y uves; un calado amplio y elegante.",
+        "es": "Abanicos de 9 puntos vareta alternados con franjas de red y uves; un calado amplio y elegante.",
         "en": "9-dc fans alternating with bands of net and V-stitches; a wide, elegant lace."
       },
       "steps": {
@@ -13109,7 +13109,7 @@
         }
       },
       "description": {
-        "es": "Una franja calada de cruces y abanicos entre dos filas de puntos altos; se puede repetir o usar como guarda.",
+        "es": "Una franja calada de cruces y abanicos entre dos filas de puntos vareta; se puede repetir o usar como guarda.",
         "en": "An openwork band of crosses and fans between two rows of double crochet; repeat it or use it as a border."
       },
       "steps": {
@@ -13429,7 +13429,7 @@
         }
       },
       "description": {
-        "es": "Bloques de 4 puntos altos unidos por un enrejado de cadenetas que se cruzan entre fila y fila.",
+        "es": "Bloques de 4 puntos vareta unidos por un enrejado de cadenetas que se cruzan entre fila y fila.",
         "en": "4-dc blocks joined by a lattice of chains that cross between rows."
       },
       "steps": {
@@ -13534,7 +13534,7 @@
         }
       },
       "description": {
-        "es": "Filas de uves interrumpidas por bloques de puntos altos y ventanas largas; muy usado en cárdigans.",
+        "es": "Filas de uves interrumpidas por bloques de puntos vareta y ventanas largas; muy usado en cárdigans.",
         "en": "Rows of V-stitches interrupted by double crochet blocks and long windows; popular for cardigans."
       },
       "steps": {
@@ -13637,7 +13637,7 @@
         }
       },
       "description": {
-        "es": "Grupos de 3 puntos altos separados por una cadeneta, cambiando de color cada 2 filas; ideal para usar restos.",
+        "es": "Grupos de 3 puntos vareta separados por una cadeneta, cambiando de color cada 2 filas; ideal para usar restos.",
         "en": "Groups of 3 dc separated by a chain, changing color every 2 rows; great for using up leftovers."
       },
       "steps": {
@@ -13742,7 +13742,7 @@
         }
       },
       "description": {
-        "es": "Bloques de 4 puntos altos y ventanas de 2 cadenetas que se alternan en cada fila como un tablero.",
+        "es": "Bloques de 4 puntos vareta y ventanas de 2 cadenetas que se alternan en cada fila como un tablero.",
         "en": "4-dc blocks and ch-2 windows alternating every row like a checkerboard."
       },
       "steps": {
@@ -13847,7 +13847,7 @@
         }
       },
       "description": {
-        "es": "Racimos y pares de puntos altos que forman ondas; cambiando de color cada 2 filas el dibujo se destaca.",
+        "es": "Racimos y pares de puntos vareta que forman ondas; cambiando de color cada 2 filas el dibujo se destaca.",
         "en": "Clusters and pairs of dc forming waves; changing color every 2 rows makes the design stand out."
       },
       "steps": {
@@ -13953,7 +13953,7 @@
         }
       },
       "description": {
-        "es": "Malla de puntos altos y cadenetas con una franja de bloques inclinados que dan movimiento al tejido.",
+        "es": "Malla de puntos vareta y cadenetas con una franja de bloques inclinados que dan movimiento al tejido.",
         "en": "A double crochet and chain mesh with a band of slanted blocks that adds movement."
       },
       "steps": {
@@ -14058,7 +14058,7 @@
         }
       },
       "description": {
-        "es": "Pares de puntos altos que se cierran arriba formando picos (A), unidos por cadenetas; red liviana y firme.",
+        "es": "Pares de puntos vareta que se cierran arriba formando picos (A), unidos por cadenetas; red liviana y firme.",
         "en": "Pairs of double crochets closed at the top into peaks (A shapes), joined by chains; a light yet firm mesh."
       },
       "steps": {
@@ -14265,7 +14265,7 @@
         }
       },
       "description": {
-        "es": "Pequeños abanicos de 4 puntos altos repartidos en una red de arcos, alternados fila por medio.",
+        "es": "Pequeños abanicos de 4 puntos vareta repartidos en una red de arcos, alternados fila por medio.",
         "en": "Small 4-dc fans spread over an arch mesh, alternating every other row."
       },
       "steps": {
@@ -14371,7 +14371,7 @@
         }
       },
       "description": {
-        "es": "Una cuadrícula de puntos altos y cadenetas con florcitas de cuatro pétalos dentro de algunos cuadros.",
+        "es": "Una cuadrícula de puntos vareta y cadenetas con florcitas de cuatro pétalos dentro de algunos cuadros.",
         "en": "A grid of double crochets and chains with little four-petal flowers inside some squares."
       },
       "steps": {
@@ -14481,7 +14481,7 @@
         }
       },
       "description": {
-        "es": "Bloques de puntos altos que se tejen inclinados alrededor de un punto de la fila anterior; tejido con relieve en diagonal.",
+        "es": "Bloques de puntos vareta que se tejen inclinados alrededor de un punto de la fila anterior; tejido con relieve en diagonal.",
         "en": "Double crochet blocks worked on a slant around a stitch of the previous row; a fabric with diagonal relief."
       },
       "steps": {
@@ -14586,14 +14586,14 @@
         }
       },
       "description": {
-        "es": "Filet donde pequeñas ventanas de cadenetas se reparten sobre un fondo de puntos altos como lunares.",
+        "es": "Filet donde pequeñas ventanas de cadenetas se reparten sobre un fondo de puntos vareta como lunares.",
         "en": "A filet where small chain windows are scattered over a double crochet background like polka dots."
       },
       "steps": {
         "es": [
           "Cadena base múltiplo de 12 + 4. Fila 1: 2 pa (contando las 3 cad), *3 cad, saltá 3, 1 pa, 1 cad, saltá 1, 1 pa, 3 cad, saltá 3, 3 pa*.",
           "Fila 2: 3 cad, tejé 3 pa sobre cada ventana de 3 cad de abajo que deba cerrarse y abrí ventanas nuevas (3 cad saltando 3) donde había bloque.",
-          "Seguí el gráfico: cada casilla vacía es una ventana y cada casilla llena, puntos altos.",
+          "Seguí el gráfico: cada casilla vacía es una ventana y cada casilla llena, puntos vareta.",
           "Repetí las 7 filas del gráfico."
         ],
         "en": [
@@ -14798,7 +14798,7 @@
         }
       },
       "description": {
-        "es": "Puntos altos abiertos en V coronados por grupos de puntos bajos; red pareja y firme, ideal para bolsos.",
+        "es": "Puntos vareta abiertos en V coronados por grupos de puntos bajos; red pareja y firme, ideal para bolsos.",
         "en": "Double crochets opened in a V and crowned by groups of single crochet; an even, firm mesh, ideal for bags."
       },
       "steps": {
@@ -15007,7 +15007,7 @@
         }
       },
       "description": {
-        "es": "Bloques de puntos altos con forma de triángulo, separados por ventanas en V; queda un zigzag calado.",
+        "es": "Bloques de puntos vareta con forma de triángulo, separados por ventanas en V; queda un zigzag calado.",
         "en": "Triangle-shaped double crochet blocks separated by V windows; an openwork zigzag."
       },
       "steps": {

@@ -2,7 +2,7 @@
 // - Archivos estáticos (_next/static, imágenes, diagramas): primero la copia guardada.
 // - Páginas: primero la red; si no hay señal, la última copia guardada.
 // - /api nunca se guarda.
-const VERSION = "v14";
+const VERSION = "v16";
 const CACHE = `luna-${VERSION}`;
 const RUTAS = ["/", "/puntos", "/puntadas", "/proyectos", "/herramientas", "/crear", "/videos", "/guia", "/privacidad"];
 

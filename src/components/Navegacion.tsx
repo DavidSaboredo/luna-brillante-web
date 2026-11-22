@@ -11,6 +11,7 @@ const SECCIONES = [
   { href: "/proyectos", clave: "revista", icono: "❀" },
   { href: "/crear", clave: "crear", icono: "✂" },
   { href: "/videos", clave: "videos", icono: "▶︎" }, // ▶ como texto, no como emoji
+  { href: "/modelos", clave: "modelos", icono: "❖" },
   { href: "/herramientas", clave: "herramientas", icono: "✚" },
 ] as const;
 
@@ -52,7 +53,7 @@ export default function Navegacion() {
 
       {/* Barra inferior en celulares */}
       <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-borde bg-papel/95 backdrop-blur lg:hidden">
-        <div className="mx-auto grid max-w-lg grid-cols-[repeat(6,minmax(0,1fr))] pb-[env(safe-area-inset-bottom)]">
+        <div className="mx-auto grid max-w-xl grid-cols-[repeat(7,minmax(0,1fr))] pb-[env(safe-area-inset-bottom)]">
           {SECCIONES.map((s) => (
             <Link
               key={s.href}
