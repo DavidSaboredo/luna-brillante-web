@@ -8,7 +8,7 @@ import { Nivel } from "@/components/TarjetaPunto";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
 import { fotosTejedora } from "@/lib/fotos-tejedora";
-import { diagramaDeRevista, diagramasPorVueltas, textosDiagramas } from "@/lib/diagramas";
+import { diagramaDeRevista, diagramasPorVueltas, pasosDe, textosDiagramas } from "@/lib/diagramas";
 import {
   buscarPunto,
   fondoCategoria,
@@ -48,6 +48,7 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
   const [fotoReal, ...otrasMuestras] = fotosTejedora(punto.id);
   const ilustracion = fotoReal ? null : rutaIlustracion(punto);
   const deRevista = diagramaDeRevista(punto.id);
+  const pasos = pasosDe(punto.id);
   // Los puntos armados en etapas traen una lámina por tramo de vueltas en lugar de un solo diagrama.
   const laminas = diagramasPorVueltas(punto.id);
   const diagramaUnico = laminas.length === 0;
@@ -126,6 +127,18 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
               </figure>
             ))}
           </div>
+        </section>
+      )}
+
+      {pasos && (
+        <section className="space-y-2">
+          <h2 className="text-xl">{textosDiagramas[idioma].pasoAPaso}</h2>
+          <figure className="tarjeta overflow-hidden">
+            <a href={pasos.archivo} target="_blank" rel="noopener noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={pasos.archivo} alt={`${nombre}: ${pasos.nombre[idioma]}`} loading="lazy" className="w-full bg-white object-contain" />
+            </a>
+          </figure>
         </section>
       )}
 

@@ -75,6 +75,12 @@ export const diagramaDeRevista = (id: string): Diagrama | undefined => {
   return n ? diagramas.fantasia[n - 1] : undefined;
 };
 
+/** Láminas de paso a paso que se muestran debajo del punto. */
+const pasoAPaso: Record<string, Diagrama> = {
+  magic_ring: fijo("anillo-magico-pasos", "Anillo mágico, paso a paso", "Magic ring, step by step", "Anel mágico, passo a passo"),
+};
+export const pasosDe = (id: string): Diagrama | undefined => pasoAPaso[id];
+
 /** Puntos armados en etapas: una lámina de Monica por cada tramo de vueltas, en orden. */
 const porVueltas: Record<string, Diagrama[]> = {
   granny_square_flower: [
@@ -96,6 +102,7 @@ export const textosDiagramas = {
     sub: "Puntos fantasía, puntillas, motivos y esquemas de prendas de Luna Brillante. Tocá un diagrama para verlo grande.",
     volver: "← Volver a puntos",
     deRevista: "Diagrama de la revista (pasado por Monica)",
+    pasoAPaso: "Paso a paso",
     enlace: "📐 Diagramas de Monica →",
     grupos: { fantasia: "Puntos fantasía", puntilla: "Puntillas", motivo: "Motivos", esquema: "Esquemas de prendas" } as Record<Grupo, string>,
   },
@@ -104,6 +111,7 @@ export const textosDiagramas = {
     sub: "Fancy stitches, lace edgings, motifs and garment schematics from Luna Brillante. Tap a chart to see it larger.",
     volver: "← Back to stitches",
     deRevista: "Chart from the magazine (shared by Monica)",
+    pasoAPaso: "Step by step",
     enlace: "📐 Monica's charts →",
     grupos: { fantasia: "Fancy stitches", puntilla: "Lace edgings", motivo: "Motifs", esquema: "Garment schematics" } as Record<Grupo, string>,
   },
@@ -112,6 +120,7 @@ export const textosDiagramas = {
     sub: "Pontos fantasia, bicos, motivos e esquemas de peças da Luna Brillante. Toque em um diagrama para ver maior.",
     volver: "← Voltar aos pontos",
     deRevista: "Diagrama da revista (enviado pela Monica)",
+    pasoAPaso: "Passo a passo",
     enlace: "📐 Diagramas da Monica →",
     grupos: { fantasia: "Pontos fantasia", puntilla: "Bicos", motivo: "Motivos", esquema: "Esquemas de peças" } as Record<Grupo, string>,
   },

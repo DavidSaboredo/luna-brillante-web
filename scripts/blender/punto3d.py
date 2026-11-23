@@ -478,6 +478,32 @@ def nudo_corredizo(E):
     E.hilo([(0.6, 0.0, 0.0), (0.2, 0.35, 0.15), (-0.2, 0.35, -0.1), (-0.6, 0.1, 0.0), (-1.4, -0.4, 0.0), (-2.0, -1.0, 0.1)], 1, r=0.12)
 
 
+def anillo_inicial(E, n=14, color=2):
+    """Anillo inicial hecho con cadenas (eslabones alternados de frente y de canto) cerradas en círculo, con la hebra suelta."""
+    R_ = 1.55
+    cy = 2.1
+    L, W = 0.5, 0.21
+    for i in range(n):
+        a = TAU * i / n + math.pi / 2
+        cx, cyy = math.cos(a) * R_, cy + math.sin(a) * R_
+        tx, ty = -math.sin(a), math.cos(a)
+        rx, ry = math.cos(a), math.sin(a)
+        fi = 0.0
+        pts = []
+        for k in range(18):
+            u = TAU * k / 18
+            ax, bw = math.cos(u) * L, math.sin(u) * W
+            dx = rx * math.cos(fi) * bw
+            dy = ry * math.cos(fi) * bw
+            dz = math.sin(fi) * bw
+            pts.append((cx + tx * ax + dx, cyy + ty * ax + dy, dz + (0.11 if i % 2 else -0.11) + 0.1 * math.sin(u) * 0))
+        E.hilo(pts, color, cerrado=True, r=0.12)
+    # hebra suelta que sale del anillo
+    a0 = math.pi / 2 + 0.0
+    base = (math.cos(a0) * R_ + 0.5, cy + math.sin(a0) * R_ + 0.05, 0.05)
+    E.hilo([base, (base[0] + 1.0, base[1] + 0.25, 0.15), (base[0] + 1.9, base[1] - 0.1, 0.3), (base[0] + 2.7, base[1] - 0.5, 0.25)], color, r=0.13)
+
+
 def bullion(E):
     # tres columnas de vueltas enroscadas
     for i, x in enumerate((-1.6, 0, 1.6)):
@@ -526,7 +552,7 @@ ESPECIALES = {
     "chain": lambda E: construir_filas(E, ["ch*10"]),
     "foundation_single_crochet": lambda E: construir_filas(E, ["sc*10"]),
     "foundation_double_crochet": lambda E: construir_filas(E, ["dc*10"]),
-    "magic_ring": lambda E: disco(E, 3),
+    "magic_ring": anillo_inicial,
     "spiral_rounds": lambda E: disco(E, 4, lambda r: 0),
     "crochet_cord": cordon,
     "crocodile_stitch": escalas,

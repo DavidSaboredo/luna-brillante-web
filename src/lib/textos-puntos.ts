@@ -11,7 +11,7 @@ const es = {
     volver: "← Volver a puntos",
     tambien: "También",
     modelado: "Modelado 3D en Blender · hilo de tres cabos, visto de frente",
-    diagrama: "Diagrama · se lee de abajo hacia arriba",
+    diagrama: "Diagrama",
     muestraReal: "Muestra de Monica (Luna Brillante)",
     granny: "Granny squares",
     grannyTexto:
@@ -77,7 +77,7 @@ const en: Dic = {
     volver: "← Back to stitches",
     tambien: "Also called",
     modelado: "3D model made in Blender · three-ply yarn, front view",
-    diagrama: "Chart · read from bottom to top",
+    diagrama: "Chart",
     muestraReal: "Swatch by Monica (Luna Brillante)",
     granny: "Granny squares",
     grannyTexto:
@@ -140,7 +140,7 @@ const pt: Dic = {
     volver: "← Voltar aos pontos",
     tambien: "Também chamado",
     modelado: "Modelo 3D feito no Blender · fio de três cabos, visto de frente",
-    diagrama: "Gráfico · lê-se de baixo para cima",
+    diagrama: "Gráfico",
     muestraReal: "Amostra da Monica (Luna Brillante)",
     granny: "Granny squares",
     grannyTexto:

@@ -8,13 +8,13 @@
     ]
   },
   "magic_ring": {
-    "intro": "Anillo ajustable para trabajar en redondo sin dejar agujero en el centro (amigurumis, flores, gorros). Tejé la primera vuelta ADENTRO del anillo y después cerrá tirando de la cola.",
+    "intro": "Paso a paso para comenzar a tejer en círculo.",
     "vueltas": [
-      { "t": "Paso 1 · Armar el anillo", "r": "Enrollar el hilo 2 veces en los dedos", "d": "Poné la cola sobre el índice y el medio de la mano izquierda y dale dos vueltas al hilo. El hilo del ovillo queda sobre el dedo, formando una X donde se cruza.", "n": "Un aro de hilo sobre los dedos." },
-      { "t": "Paso 2 · Sacar lazada", "r": "Insertar en el aro, lazada, sacar", "d": "Metí la aguja por dentro del aro (por debajo de las dos hebras), tomá el hilo del ovillo y sacá una lazada hacia vos.", "n": "1 lazada en la aguja." },
-      { "t": "Paso 3 · Cadeneta de seguridad", "r": "1 cad", "d": "Echá hilo y pasalo por la lazada de la aguja: es una cadeneta que traba el anillo. No cuenta como punto.", "n": "Anillo trabado, listo para tejer." },
-      { "t": "Vuelta 1", "r": "6 pb en el anillo", "d": "Insertá la aguja por dentro del aro y tejé 6 pb, abrazando con cada punto las dos hebras del aro y la cola. Podés cambiar 6 por la cantidad que pida tu patrón.", "n": "6 pb." },
-      { "t": "Cierre", "r": "Tirar de la cola · pr en el 1.er pb", "d": "Tirá de la cola: se cierra el centro como una bolsita. Unís con 1 pr en el primer pb de la vuelta (o seguís en espiral si el patrón lo pide).", "n": "Centro cerrado, 6 puntos." }
+      { "t": "Paso 1 · Armar el anillo mágico", "r": "Vuelta de hilo en el dedo índice", "d": "Tomá el hilo y dale una vuelta alrededor de tu dedo índice, formando un aro." },
+      { "t": "Paso 2 · Sacar la lazada", "r": "Aguja en el anillo, tomar la hebra, pasarla por el aro", "d": "Introducí la aguja por dentro del anillo y tomá la hebra que viene del ovillo. Pasala a través del aro para formar la primera lazada sobre la aguja." },
+      { "t": "Paso 3 · Cadena de seguridad", "r": "1 cad", "d": "Tomá nuevamente la hebra y tejé una cadena de seguridad para asegurar el anillo y comenzar a trabajar." },
+      { "t": "Paso 4 · ¡A tejer en círculo!", "r": "Puntos del patrón dentro del aro", "d": "Introducí la aguja dentro del aro, tomá la hebra y comenzá a tejer los puntos indicados en tu patrón, ya sean puntos bajos o varetas." },
+      { "t": "Cierre", "r": "Tirar suavemente de la cola", "d": "Una vez que hayas tejido la cantidad de puntos necesaria, tirá suavemente del extremo del hilo que quedó suelto para cerrar el centro del anillo.", "n": "¡Listo! Ya tenés tu anillo mágico y podés continuar tejiendo en círculo." }
     ]
   },
   "chain": {
