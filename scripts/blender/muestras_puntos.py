@@ -625,7 +625,6 @@ def flor(E, petalos, col=0, capas=1, puntas=False):
 ESPECIALES = {
     "foundation_single_crochet": (["sc*9", "sc*9"], 0),
     "foundation_double_crochet": (["dc*9", "dc*9"], 0),
-    "tapestry_crochet": (["sc*9", "sc*9", "sc*9", "sc*9"], 0),
     "crocodile_stitch": (["dc*3 shell5:dc dc*3", "shell5:dc dc shell5:dc"], 0),
     "solomon_knot": (["sc arc5 sc arc5 sc arc5 sc", "arc5 sc arc5 sc arc5 sc arc5", "sc arc5 sc arc5 sc arc5 sc"], 0),
     "broomstick_lace": (["sc arc5 sc arc5 sc arc5 sc", "sc arc5 sc arc5 sc arc5 sc"], 0),

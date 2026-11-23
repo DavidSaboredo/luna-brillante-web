@@ -529,7 +529,6 @@ ESPECIALES = {
     "magic_ring": lambda E: disco(E, 3),
     "spiral_rounds": lambda E: disco(E, 4, lambda r: 0),
     "crochet_cord": cordon,
-    "tapestry_crochet": lambda E: construir_filas(E, ["sc c2:sc sc c2:sc sc c2:sc sc c2:sc", "c2:sc sc c2:sc sc c2:sc sc c2:sc sc", "sc c2:sc sc c2:sc sc c2:sc sc c2:sc", "c2:sc sc c2:sc sc c2:sc sc c2:sc sc"]),
     "crocodile_stitch": escalas,
     "solomon_knot": lambda E: construir_filas(E, ["sol sol sol sol", "sc sol sol sol sc", "sol sol sol sol"]),
     "broomstick_lace": lazos_escoba,

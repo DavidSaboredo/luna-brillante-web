@@ -120,16 +120,6 @@
       { "t": "Repetir", "r": "*Girar · 1 pb en las 2 lazadas del costado izquierdo* hasta el largo", "d": "Girá de nuevo y tejé 1 pb en las dos hebras del costado del punto que recién hiciste. Seguí girando en cada punto, siempre hacia el mismo lado.", "n": "El cordón se enrolla solo." }
     ]
   },
-  "tapestry_crochet": {
-    "intro": "Tejés con dos colores a la vez: el que no usás lo llevás escondido dentro de los puntos. Con eso se dibujan motivos a partir de un gráfico.",
-    "vueltas": [
-      { "t": "Preparación", "r": "Dos ovillos · base en pb", "d": "Armá la cadena base y la primera fila en pb con el color de fondo. Tené los dos ovillos a mano, uno a cada lado.", "n": "N pb." },
-      { "t": "Llevar el hilo", "r": "Tejer sobre el hilo del 2.º color", "d": "Apoyá el hilo que no usás sobre los puntos de la fila anterior y tejé los pb por encima, envolviéndolo dentro del punto.", "n": "El hilo queda oculto." },
-      { "t": "Cambiar de color", "r": "Último paso del pb con el nuevo color", "d": "En el punto anterior al cambio, hacé la primera parte del pb y, al pasar por las 2 lazadas, usá el color nuevo. Ahora el color viejo pasa a ser el que llevás.", "n": "Cambio limpio." },
-      { "t": "Leer el gráfico", "r": "1 casilla = 1 pb", "d": "Cada cuadradito del gráfico es 1 pb del color indicado. En las filas de ida leé de derecha a izquierda y en las de vuelta, de izquierda a derecha.", "n": "El dibujo aparece de a poco." },
-      { "t": "Tensión", "r": "Hilo llevado flojo", "d": "Si tirás de más el hilo llevado, la labor se frunce. Dejalo sin tensión.", "n": "Tejido plano." }
-    ]
-  },
   "sc_increase": {
     "intro": "Un aumento agrega un punto: sirve para ensanchar la labor.",
     "vueltas": [

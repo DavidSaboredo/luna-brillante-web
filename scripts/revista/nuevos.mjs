@@ -66,7 +66,7 @@ export const NUEVOS = [
     uses: { es: ["Almohadones", "Bolsos", "Mantas"], en: ["Pillows", "Bags", "Blankets"] },
     tags: ["color", "damero"],
     prerequisites: ["half_double_crochet"],
-    related: ["tapestry_crochet"],
+    related: [],
     grafico: ["hdc*6 c2:hdc*6 hdc*6", "hdc*6 c2:hdc*6 hdc*6", "c2:hdc*6 hdc*6 c2:hdc*6", "c2:hdc*6 hdc*6 c2:hdc*6"],
   },
   {

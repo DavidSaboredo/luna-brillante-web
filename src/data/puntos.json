@@ -1799,114 +1799,6 @@
       "source_ref": null
     },
     {
-      "id": "tapestry_crochet",
-      "name": {
-        "es": "Crochet tapestry (cambio de color)",
-        "en": "Tapestry crochet"
-      },
-      "aka": {
-        "es": [
-          "intarsia en crochet (a veces)"
-        ],
-        "en": [
-          "colorwork"
-        ]
-      },
-      "abbreviation": {
-        "es": "—",
-        "us": "—",
-        "uk": "—"
-      },
-      "category": "tecnicas",
-      "difficulty": 3,
-      "difficulty_label": {
-        "es": "Intermedio",
-        "en": "Intermediate"
-      },
-      "worked_in": "rows",
-      "repeat": null,
-      "description": {
-        "es": "Dibujos en varios colores tejidos en pb, llevando el hilo que no se usa dentro de los puntos.",
-        "en": "Multicolor designs worked in sc, carrying the unused yarn inside the stitches."
-      },
-      "steps": {
-        "es": [
-          "Tejé pb normalmente, apoyando el hilo del segundo color sobre los puntos de la fila anterior para envolverlo.",
-          "Para cambiar de color, hacé el último paso del punto anterior (pasar por 2 lazadas) con el nuevo color.",
-          "Seguí el gráfico: cada casilla es 1 pb.",
-          "Mantené la tensión del hilo llevado floja para que no frunza."
-        ],
-        "en": [
-          "Work sc as usual, laying the second color over the previous row so it gets enclosed.",
-          "To change color, complete the last step of the previous stitch (draw through 2) with the new color.",
-          "Follow the chart: each square is 1 sc.",
-          "Keep the carried yarn relaxed so the fabric doesn't pucker."
-        ]
-      },
-      "tips": {
-        "es": [],
-        "en": []
-      },
-      "uses": {
-        "es": [
-          "Bolsos",
-          "Tapices",
-          "Almohadones"
-        ],
-        "en": [
-          "Bags",
-          "Wall hangings",
-          "Pillows"
-        ]
-      },
-      "tags": [
-        "color"
-      ],
-      "prerequisites": [
-        "single_crochet"
-      ],
-      "related": [
-        "single_crochet"
-      ],
-      "diagram": {
-        "file": "diagrams/tapestry_crochet.svg",
-        "format": "svg",
-        "style": "schematic",
-        "rows_bottom_to_top": null,
-        "themable": "Los trazos usan currentColor: cambiá la propiedad CSS color para tematizar."
-      },
-      "illustration": {
-        "png": "illustrations/tapestry_crochet.png",
-        "svg": "illustrations/tapestry_crochet.svg",
-        "webp": "illustrations/tapestry_crochet.webp",
-        "width": 1200,
-        "height": 900,
-        "style": "generated_yarn",
-        "license": "original — libre uso en la app",
-        "alt": {
-          "es": "Ilustración de muestra tejida: Crochet tapestry (cambio de color)",
-          "en": "Illustrated swatch: Tapestry crochet"
-        }
-      },
-      "images": [
-        {
-          "type": "photo",
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BeadTapestryCrochet.jpg",
-          "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/BeadTapestryCrochet.jpg?width=400",
-          "source_page": "https://commons.wikimedia.org/wiki/File:BeadTapestryCrochet.jpg",
-          "source": "Wikimedia Commons",
-          "author": "ArtProf",
-          "license": "CC BY-SA 3.0 / GFDL",
-          "license_status": "verified",
-          "caption": {
-            "es": "Tapestry con cuentas",
-            "en": "Bead tapestry crochet"
-          }
-        }
-      ],
-      "source_ref": null
-    },
-    {
       "id": "sc_increase",
       "name": {
         "es": "Aumento de punto bajo",
@@ -7436,9 +7328,7 @@
       "prerequisites": [
         "double_crochet"
       ],
-      "related": [
-        "tapestry_crochet"
-      ],
+      "related": [],
       "diagram": {
         "file": "diagrams/corner_to_corner.svg",
         "format": "svg",
@@ -10215,9 +10105,7 @@
       "prerequisites": [
         "half_double_crochet"
       ],
-      "related": [
-        "tapestry_crochet"
-      ],
+      "related": [],
       "diagram": {
         "file": "diagrams/checkerboard_hdc.svg",
         "format": "svg",
