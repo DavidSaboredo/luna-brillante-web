@@ -78,6 +78,7 @@ export const diagramaDeRevista = (id: string): Diagrama | undefined => {
 /** Láminas de paso a paso que se muestran debajo del punto. */
 const pasoAPaso: Record<string, Diagrama> = {
   magic_ring: fijo("anillo-magico-pasos", "Anillo mágico, paso a paso", "Magic ring, step by step", "Anel mágico, passo a passo"),
+  broomstick_lace: fijo("punto-peruano-pasos", "Punto peruano, paso a paso", "Broomstick lace, step by step", "Ponto peruano, passo a passo"),
 };
 export const pasosDe = (id: string): Diagrama | undefined => pasoAPaso[id];
 

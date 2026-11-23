@@ -6933,7 +6933,7 @@
     {
       "id": "broomstick_lace",
       "name": {
-        "es": "Encaje de escoba",
+        "es": "Punto peruano (encaje de escoba)",
         "en": "Broomstick lace"
       },
       "aka": {
@@ -7562,7 +7562,7 @@
     {
       "id": "scallop_edging",
       "name": {
-        "es": "Borde de conchas",
+        "es": "Borde de abanicos",
         "en": "Scallop edging"
       },
       "aka": {
@@ -7650,7 +7650,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Borde de conchas",
+          "es": "Ilustración de muestra tejida: Borde de abanicos",
           "en": "Illustrated swatch: Scallop edging"
         }
       },
@@ -8425,7 +8425,7 @@
     {
       "id": "two_color_shells",
       "name": {
-        "es": "Conchas bicolor",
+        "es": "Abanicos bicolor",
         "en": "Two-color shells"
       },
       "aka": {
@@ -8513,7 +8513,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Conchas bicolor",
+          "es": "Ilustración de muestra tejida: Abanicos bicolor",
           "en": "Illustrated swatch: Two-color shells"
         }
       },
@@ -12124,7 +12124,7 @@
     {
       "id": "staggered_shell_lace",
       "name": {
-        "es": "Conchas escalonadas caladas",
+        "es": "Abanicos escalonados calados",
         "en": "Staggered open shells"
       },
       "aka": {
@@ -12214,7 +12214,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Conchas escalonadas caladas",
+          "es": "Ilustración de muestra tejida: Abanicos escalonados calados",
           "en": "Illustrated swatch: Staggered open shells"
         }
       },
@@ -15483,7 +15483,7 @@
     {
       "id": "open_shells",
       "name": {
-        "es": "Conchas caladas",
+        "es": "Abanicos calados",
         "en": "Open shells"
       },
       "aka": {
@@ -15571,7 +15571,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Conchas caladas",
+          "es": "Ilustración de muestra tejida: Abanicos calados",
           "en": "Illustrated swatch: Open shells"
         }
       },
@@ -15779,7 +15779,7 @@
     {
       "id": "eyelets_and_shells",
       "name": {
-        "es": "Ojales y conchas",
+        "es": "Ojales y abanicos",
         "en": "Eyelets and shells"
       },
       "aka": {
@@ -15867,7 +15867,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Ojales y conchas",
+          "es": "Ilustración de muestra tejida: Ojales y abanicos",
           "en": "Illustrated swatch: Eyelets and shells"
         }
       },
@@ -16075,7 +16075,7 @@
     {
       "id": "shells_between_arches",
       "name": {
-        "es": "Conchas entre arcos",
+        "es": "Abanicos entre arcos",
         "en": "Shells between arches"
       },
       "aka": {
@@ -16164,7 +16164,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Conchas entre arcos",
+          "es": "Ilustración de muestra tejida: Abanicos entre arcos",
           "en": "Illustrated swatch: Shells between arches"
         }
       },
@@ -16860,7 +16860,7 @@
     {
       "id": "grand_shells",
       "name": {
-        "es": "Conchas grandes",
+        "es": "Abanicos grandes",
         "en": "Grand shells"
       },
       "aka": {
@@ -16950,7 +16950,7 @@
         "style": "generated_yarn",
         "license": "original — libre uso en la app",
         "alt": {
-          "es": "Ilustración de muestra tejida: Conchas grandes",
+          "es": "Ilustración de muestra tejida: Abanicos grandes",
           "en": "Illustrated swatch: Grand shells"
         }
       },
