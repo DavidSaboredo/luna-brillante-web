@@ -231,7 +231,7 @@ export const NUEVOS = [
     uses: { es: ["Almohadones", "Mantas", "Gorros"], en: ["Pillows", "Blankets", "Hats"] },
     tags: ["relieve", "color"],
     prerequisites: ["front_post_double_crochet", "dc3tog"],
-    related: ["tricolor_triangles", "raised_lattice"],
+    related: ["raised_lattice"],
     grafico: ["dc*12", "sc*12", "c2:dc dc fp:dc c2:dc*3 fp:dc c2:dc*2 fp:dc c2:dc", "c2:sc*12", "dc*5 fp:tr dc*5 fp:tr", "sc*12"],
   },
   {
@@ -400,39 +400,6 @@ export const NUEVOS = [
     grafico: ["dc*3 ch dc*3 ch dc*3 ch dc*3", "sc arc3 sc arc3 sc arc3 sc", "dc*3 ch dc*3 ch dc*3 ch dc*3"],
   },
   {
-    num: 30,
-    id: "fans_and_v_lace",
-    name: { es: "Abanicos y uves", en: "Fans and V-stitch lace" },
-    aka: { es: [], en: [] },
-    category: "calados",
-    difficulty: 2,
-    worked_in: "rows",
-    repeat: rep(10, 2),
-    description: {
-      es: "Abanicos grandes de 9 puntos altos que se apoyan sobre puntos V, desplazados fila por medio.",
-      en: "Large 9-dc fans resting on V-stitches, offset every other row.",
-    },
-    steps: {
-      es: [
-        "Cadena base múltiplo de 10 + 2. Fila 1: pb en la 2.ª cad desde la aguja, *saltá 4, 9 pa en la siguiente, saltá 4, 1 pb*.",
-        "Fila 2: 3 cad, 1 pa en el primer pb, *2 cad, 1 pb en el pa central del abanico, 2 cad, (1 pa, 1 cad, 1 pa) en el pb*.",
-        "Fila 3: 1 cad, 1 pb en el primer pa, *9 pa en el espacio de la V, 1 pb en el pb*.",
-        "Fila 4: como la fila 2. Repetí las filas 3 y 4: cada abanico nuevo queda entre dos abanicos de abajo.",
-      ],
-      en: [
-        "Chain a multiple of 10 + 2. Row 1: sc in 2nd ch from hook, *skip 4, 9 dc in next, skip 4, sc*.",
-        "Row 2: ch 3, dc in the first sc, *ch 2, sc in the center dc of the fan, ch 2, (dc, ch 1, dc) in the sc*.",
-        "Row 3: ch 1, sc in the first dc, *9 dc in the V-space, sc in the sc*.",
-        "Row 4: as row 2. Repeat rows 3–4: each new fan sits between two fans below.",
-      ],
-    },
-    uses: { es: ["Chales", "Blusas", "Mantas de bebé"], en: ["Shawls", "Tops", "Baby blankets"] },
-    tags: ["calado", "abanico"],
-    prerequisites: ["shell_stitch", "v_stitch"],
-    related: ["shell_stitch", "grand_shells"],
-    grafico: ["sc sk shell9 sk sc sk shell9 sk sc", "V arc2 sc arc2 V arc2 sc arc2 V", "sc shell9 sc shell9 sc"],
-  },
-  {
     num: 31,
     id: "raised_sc_ridges",
     name: { es: "Punto bajo en relieve alternado", en: "Alternating raised single crochet" },
@@ -563,7 +530,7 @@ export const NUEVOS = [
     uses: { es: ["Mantas", "Almohadones", "Bolsos"], en: ["Blankets", "Pillows", "Bags"] },
     tags: ["color"],
     prerequisites: ["spike_stitch", "double_crochet"],
-    related: ["spike_stitch", "long_dc_two_color"],
+    related: ["spike_stitch"],
     grafico: ["dc ch dc ch dc ch dc ch dc ch dc", "c2:sc*11", "dc ch long:dc ch long:dc ch long:dc ch long:dc ch dc", "c2:sc*11"],
   },
   {

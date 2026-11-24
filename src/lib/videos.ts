@@ -54,6 +54,7 @@ export const VIDEOS: Video[] = [
   // Para empezar
   { id: "2oVNwTv0Phc", titulo: "Puntos básicos: vareta, media vareta, punto raso y anillo mágico", duracion: "16:54", categoria: "basicos" },
   { id: "-qMI9VyLhFo", titulo: "Cómo empezar un tejido sin cadenetas", duracion: "6:52", categoria: "basicos" },
+  { id: "MD9cCqxzc1o", titulo: "Corazón al crochet: técnica básica esquina a esquina (C2C)", duracion: "51:58", categoria: "basicos" },
   { id: "8XoWspeyH18", titulo: "Punto jazmín", duracion: "15:55", categoria: "basicos" },
   { id: "LrHx-lLuCsA", titulo: "Cuadrados granny square para empezar", duracion: "8:08", categoria: "basicos", decoraciones: ["granny"] },
 
@@ -114,6 +115,15 @@ export const DESTACADOS = ["CYiWR2wLKh0", "3Gy0nIpg-Bs", "0Zx_-Su4pgc", "_AD0ABv
 export const videosDePrenda = (id: string) => VIDEOS.filter((v) => v.prendas?.includes(id));
 export const videosDeDecoracion = (id: string) => VIDEOS.filter((v) => v.decoraciones?.includes(id));
 export const buscarVideo = (id: string) => VIDEOS.find((v) => v.id === id);
+
+/** Tutorial propio que se muestra en la ficha de un punto (id de punto → id de video). */
+const VIDEO_DE_PUNTO: Record<string, string> = {
+  corner_to_corner: "MD9cCqxzc1o",
+};
+export const videoDePunto = (puntoId: string) => {
+  const id = VIDEO_DE_PUNTO[puntoId];
+  return id ? buscarVideo(id) : undefined;
+};
 
 /** Miniatura que genera YouTube para cada video. */
 export const miniatura = (id: string, grande = false) => `https://i.ytimg.com/vi/${id}/${grande ? "maxresdefault" : "hqdefault"}.jpg`;

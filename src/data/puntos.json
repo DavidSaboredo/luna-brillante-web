@@ -8826,107 +8826,6 @@
       }
     },
     {
-      "id": "tricolor_triangles",
-      "name": {
-        "es": "Triángulos tricolor",
-        "en": "Tricolor triangles"
-      },
-      "aka": {
-        "es": [],
-        "en": []
-      },
-      "abbreviation": {
-        "es": "—",
-        "us": "—",
-        "uk": "—"
-      },
-      "category": "texturas",
-      "difficulty": 2,
-      "difficulty_label": {
-        "es": "Fácil",
-        "en": "Easy"
-      },
-      "worked_in": "rows",
-      "repeat": {
-        "multiple": 3,
-        "plus": 2,
-        "note": {
-          "es": "múltiplo de 3 + 2",
-          "en": "multiple of 3 + 2"
-        }
-      },
-      "description": {
-        "es": "Grupos (pb, 2 cad, 2 pa) que forman triangulitos; con tres colores rotando fila a fila se ve un mosaico.",
-        "en": "(sc, ch 2, 2 dc) groups that form small triangles; rotating three colors row by row creates a mosaic."
-      },
-      "steps": {
-        "es": [
-          "Cadena base múltiplo de 3 + 2.",
-          "Fila 1: (pb, 2 cad, 2 pa) en la 2.ª cad, *saltar 2, (pb, 2 cad, 2 pa) en la siguiente*; pb en la última.",
-          "Fila 2 (otro color): 2 cad, *(pb, 2 cad, 2 pa) en cada espacio de 2 cad*; pb en el último.",
-          "Tejé las 3 primeras filas con 3 colores distintos y repetí la secuencia de colores."
-        ],
-        "en": [
-          "Chain a multiple of 3 + 2.",
-          "Row 1: (sc, ch 2, 2 dc) in 2nd ch, *skip 2, (sc, ch 2, 2 dc) in next*; sc in last.",
-          "Row 2 (new color): ch 2, *(sc, ch 2, 2 dc) in each ch-2 space*; sc in last.",
-          "Work the first 3 rows in 3 different colors and repeat the color sequence."
-        ]
-      },
-      "tips": {
-        "es": [],
-        "en": []
-      },
-      "uses": {
-        "es": [
-          "Mantas",
-          "Almohadones"
-        ],
-        "en": [
-          "Blankets",
-          "Pillows"
-        ]
-      },
-      "tags": [
-        "color"
-      ],
-      "prerequisites": [
-        "double_crochet"
-      ],
-      "related": [
-        "suzette_stitch"
-      ],
-      "diagram": {
-        "file": "diagrams/tricolor_triangles.svg",
-        "format": "svg",
-        "style": "standard_symbols",
-        "rows_bottom_to_top": [
-          "sc inc3:dc sk sc inc3:dc sk sc inc3:dc sk sc",
-          "@2inc3:dc sk sc inc3:dc sk sc inc3:dc sk sc inc3:dc",
-          "sc inc3:dc sk sc inc3:dc sk sc inc3:dc sk sc"
-        ],
-        "themable": "Los trazos usan currentColor: cambiá la propiedad CSS color para tematizar."
-      },
-      "illustration": {
-        "png": "illustrations/tricolor_triangles.png",
-        "svg": "illustrations/tricolor_triangles.svg",
-        "webp": "illustrations/tricolor_triangles.webp",
-        "width": 1200,
-        "height": 900,
-        "style": "generated_yarn",
-        "license": "original — libre uso en la app",
-        "alt": {
-          "es": "Ilustración de muestra tejida: Triángulos tricolor",
-          "en": "Illustrated swatch: Tricolor triangles"
-        }
-      },
-      "images": [],
-      "source_ref": {
-        "pattern_number": 5,
-        "note": "Número del patrón en la revista de referencia (estructura reinterpretada; texto, diagrama e ilustración originales)."
-      }
-    },
-    {
       "id": "mini_arch_mesh",
       "name": {
         "es": "Red de arquitos",
@@ -9229,109 +9128,6 @@
       "images": [],
       "source_ref": {
         "pattern_number": 8,
-        "note": "Número del patrón en la revista de referencia (estructura reinterpretada; texto, diagrama e ilustración originales)."
-      }
-    },
-    {
-      "id": "long_dc_two_color",
-      "name": {
-        "es": "Varetas largas bicolor",
-        "en": "Two-color long double crochet"
-      },
-      "aka": {
-        "es": [],
-        "en": []
-      },
-      "abbreviation": {
-        "es": "—",
-        "us": "—",
-        "uk": "—"
-      },
-      "category": "texturas",
-      "difficulty": 3,
-      "difficulty_label": {
-        "es": "Intermedio",
-        "en": "Intermediate"
-      },
-      "worked_in": "rows",
-      "repeat": {
-        "multiple": 4,
-        "plus": 0,
-        "note": {
-          "es": "múltiplo de 4",
-          "en": "multiple of 4"
-        }
-      },
-      "description": {
-        "es": "Filas de pa en un color y de pb en otro; algunos pa se pinchan dos filas más abajo y cruzan la franja de color.",
-        "en": "Rows of dc in one color and sc in another; some dc reach two rows down and cross the color stripe."
-      },
-      "steps": {
-        "es": [
-          "Fila 1 (color A): pa en cada punto.",
-          "Fila 2 (color B): pb en cada punto.",
-          "Fila 3 (color A): *3 pa, 1 pa largo pinchando en la fila 1 (dos filas más abajo)*.",
-          "Fila 4 (color B): pb en cada punto. En la fila 5, desplazá los pa largos."
-        ],
-        "en": [
-          "Row 1 (color A): dc across.",
-          "Row 2 (color B): sc across.",
-          "Row 3 (color A): *3 dc, 1 long dc into row 1 (two rows below)*.",
-          "Row 4 (color B): sc across. On row 5, offset the long dc."
-        ]
-      },
-      "tips": {
-        "es": [],
-        "en": []
-      },
-      "uses": {
-        "es": [
-          "Mantas",
-          "Almohadones"
-        ],
-        "en": [
-          "Blankets",
-          "Pillows"
-        ]
-      },
-      "tags": [
-        "color"
-      ],
-      "prerequisites": [
-        "spike_stitch"
-      ],
-      "related": [
-        "spike_stitch"
-      ],
-      "diagram": {
-        "file": "diagrams/long_dc_two_color.svg",
-        "format": "svg",
-        "style": "standard_symbols",
-        "rows_bottom_to_top": [
-          "dc dc dc dc dc dc dc dc",
-          "@2sc sc sc sc sc sc sc sc",
-          "dc dc dc spike:dc dc dc dc spike:dc",
-          "@2sc sc sc sc sc sc sc sc",
-          "dc spike:dc dc dc dc spike:dc dc dc"
-        ],
-        "themable": "Los trazos usan currentColor: cambiá la propiedad CSS color para tematizar."
-      },
-      "illustration": {
-        "png": "illustrations/long_dc_two_color.png",
-        "svg": "illustrations/long_dc_two_color.svg",
-        "webp": "illustrations/long_dc_two_color.webp",
-        "width": 1200,
-        "height": 900,
-        "style": "generated_yarn",
-        "license": "original — libre uso en la app",
-        "alt": {
-          "es": "Ilustración de muestra tejida: Varetas largas bicolor",
-          "en": "Illustrated swatch: Two-color long double crochet"
-        }
-      },
-      "images": [],
-      "source_ref": {
-        "pattern_number": 9,
         "note": "Número del patrón en la revista de referencia (estructura reinterpretada; texto, diagrama e ilustración originales)."
       }
     },
@@ -10635,7 +10431,6 @@
         "dc3tog"
       ],
       "related": [
-        "tricolor_triangles",
         "raised_lattice"
       ],
       "diagram": {
@@ -11184,111 +10979,6 @@
       }
     },
     {
-      "id": "fans_and_v_lace",
-      "name": {
-        "es": "Abanicos y uves",
-        "en": "Fans and V-stitch lace"
-      },
-      "aka": {
-        "es": [],
-        "en": []
-      },
-      "abbreviation": {
-        "es": "—",
-        "us": "—",
-        "uk": "—"
-      },
-      "category": "calados",
-      "difficulty": 2,
-      "difficulty_label": {
-        "es": "Fácil",
-        "en": "Easy"
-      },
-      "worked_in": "rows",
-      "repeat": {
-        "multiple": 10,
-        "plus": 2,
-        "note": {
-          "es": "múltiplo de 10 + 2",
-          "en": "multiple of 10 + 2"
-        }
-      },
-      "description": {
-        "es": "Abanicos grandes de 9 puntos vareta que se apoyan sobre puntos V, desplazados fila por medio.",
-        "en": "Large 9-dc fans resting on V-stitches, offset every other row."
-      },
-      "steps": {
-        "es": [
-          "Cadena base múltiplo de 10 + 2. Fila 1: pb en la 2.ª cad desde la aguja, *saltá 4, 9 pa en la siguiente, saltá 4, 1 pb*.",
-          "Fila 2: 3 cad, 1 pa en el primer pb, *2 cad, 1 pb en el pa central del abanico, 2 cad, (1 pa, 1 cad, 1 pa) en el pb*.",
-          "Fila 3: 1 cad, 1 pb en el primer pa, *9 pa en el espacio de la V, 1 pb en el pb*.",
-          "Fila 4: como la fila 2. Repetí las filas 3 y 4: cada abanico nuevo queda entre dos abanicos de abajo."
-        ],
-        "en": [
-          "Chain a multiple of 10 + 2. Row 1: sc in 2nd ch from hook, *skip 4, 9 dc in next, skip 4, sc*.",
-          "Row 2: ch 3, dc in the first sc, *ch 2, sc in the center dc of the fan, ch 2, (dc, ch 1, dc) in the sc*.",
-          "Row 3: ch 1, sc in the first dc, *9 dc in the V-space, sc in the sc*.",
-          "Row 4: as row 2. Repeat rows 3–4: each new fan sits between two fans below."
-        ]
-      },
-      "tips": {
-        "es": [],
-        "en": []
-      },
-      "uses": {
-        "es": [
-          "Chales",
-          "Blusas",
-          "Mantas de bebé"
-        ],
-        "en": [
-          "Shawls",
-          "Tops",
-          "Baby blankets"
-        ]
-      },
-      "tags": [
-        "calado",
-        "abanico"
-      ],
-      "prerequisites": [
-        "shell_stitch",
-        "v_stitch"
-      ],
-      "related": [
-        "shell_stitch",
-        "grand_shells"
-      ],
-      "diagram": {
-        "file": "diagrams/fans_and_v_lace.svg",
-        "format": "svg",
-        "style": "standard_symbols",
-        "rows_bottom_to_top": [
-          "sc sk shell9 sk sc sk shell9 sk sc",
-          "V arc2 sc arc2 V arc2 sc arc2 V",
-          "sc shell9 sc shell9 sc"
-        ],
-        "themable": "Los trazos usan currentColor: cambiá la propiedad CSS color para tematizar."
-      },
-      "illustration": {
-        "webp": "illustrations/fans_and_v_lace.webp",
-        "width": 1200,
-        "height": 900,
-        "style": "generated_yarn",
-        "license": "original — libre uso en la app",
-        "alt": {
-          "es": "Ilustración de muestra tejida: Abanicos y uves",
-          "en": "Illustrated swatch: Fans and V-stitch lace"
-        }
-      },
-      "images": [],
-      "source_ref": {
-        "pattern_number": 30,
-        "note": "Número del patrón en la revista de referencia (estructura reinterpretada; texto, diagrama e ilustración originales).",
-        "needs_review": true
-      }
-    },
-    {
       "id": "raised_sc_ridges",
       "name": {
         "es": "Punto bajo en relieve alternado",
@@ -11670,8 +11360,7 @@
         "double_crochet"
       ],
       "related": [
-        "spike_stitch",
-        "long_dc_two_color"
+        "spike_stitch"
       ],
       "diagram": {
         "file": "diagrams/spike_dc_stripes.svg",

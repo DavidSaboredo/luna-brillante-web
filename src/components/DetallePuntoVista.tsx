@@ -4,6 +4,8 @@ import Link from "next/link";
 import CalculadoraCadena from "@/components/CalculadoraCadena";
 import PasoAPaso from "@/components/PasoAPaso";
 import PasosRevista from "@/components/PasosRevista";
+import ReproductorVideo from "@/components/VideoYoutube";
+import { enlaceYoutube, textosVideos, videoDePunto } from "@/lib/videos";
 import { Nivel } from "@/components/TarjetaPunto";
 import { useIdioma } from "@/components/Idioma";
 import { textosPuntos } from "@/lib/textos-puntos";
@@ -49,6 +51,8 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
   const ilustracion = fotoReal ? null : rutaIlustracion(punto);
   const deRevista = diagramaDeRevista(punto.id);
   const pasos = pasosDe(punto.id);
+  const video = videoDePunto(punto.id);
+  const tv = textosVideos[idioma];
   // Los puntos armados en etapas traen una lámina por tramo de vueltas en lugar de un solo diagrama.
   const laminas = diagramasPorVueltas(punto.id);
   const diagramaUnico = laminas.length === 0;
@@ -127,6 +131,20 @@ export default function DetallePuntoVista({ punto, enRevista }: { punto: Punto; 
               </figure>
             ))}
           </div>
+        </section>
+      )}
+
+      {video && (
+        <section className="space-y-2">
+          <h2 className="text-xl">{{ es: "Tutorial en video", en: "Video tutorial", pt: "Tutorial em vídeo" }[idioma]}</h2>
+          <ReproductorVideo video={video} etiqueta={tv.reproducir} />
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-base">
+            <strong className="font-medium">{video.titulo}</strong>
+            <span className="text-tinta-suave">⏱ {video.duracion}</span>
+            <a href={enlaceYoutube(video.id)} target="_blank" rel="noopener noreferrer" className="chip">
+              {tv.verEnYoutube} ↗
+            </a>
+          </p>
         </section>
       )}
 
